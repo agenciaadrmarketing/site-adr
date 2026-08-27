@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mega ADS — Bento Grid com Glow (Por que escolher)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#080C17;font-family:Montserrat,Arial,sans-serif}
+
+  /* ---- variável animável do ângulo do glow (Chrome/Edge/Safari 16.4+) ---- */
+  @property --mega-ang{syntax:'<number>';inherits:true;initial-value:0}
+
+  /* ---- borda cônica que gira acompanhando o cursor ---- */
+  .mega-bglow{position:absolute;inset:0;border-radius:24px;pointer-events:none;opacity:var(--mega-glow,0);transition:opacity .35s ease}
+  .mega-bglow::after{
+    content:"";position:absolute;inset:0;border-radius:24px;padding:1.5px;
+    background:conic-gradient(from calc((var(--mega-ang,0) - 55)*1deg) at 50% 50%,
+      transparent 0deg, hsl(214,100%,62%) 30deg, hsl(200,100%,74%) 62deg, transparent 108deg);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    mask-composite:exclude;
+  }
+
+  /* ---- grid ---- */
+  .mega-bento{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(2,minmax(15rem,1fr));gap:16px;list-style:none;margin:0;padding:0}
+  @media(max-width:900px){
+    .mega-bento{grid-template-columns:1fr !important;grid-template-rows:auto !important}
+    .mega-bento > li{grid-column:auto !important;grid-row:auto !important;min-height:0}
+  }
+  @media (max-width:640px){
+    section h2{text-align:center !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= BENTO / GLOWING GRID ================= -->
+<section style="padding:64px 0;position:relative">
+  <div style="max-width:1280px;margin:0 auto;padding:0 16px">
+    <div style="text-align:center;max-width:760px;margin:0 auto 48px">
+      <span style="display:inline-block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:hsl(222,100%,62%);margin:0 0 14px">Por que escolher a Mega ADS</span>
+      <h2 style="font-size:clamp(30px,4.6vw,48px);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:#fff;margin:0 0 16px;text-wrap:balance">A agência que mais escala escritórios de advocacia no <span style="color:hsl(222,100%,60%)">Brasil</span></h2>
+    </div>
+
+    <ul class="mega-bento">
+      <!-- 1 -->
+      <li style="grid-column:1/5;grid-row:1/2;list-style:none">
+        <div style="position:relative;height:100%;border-radius:24px;border:.75px solid hsl(217,30%,18%);padding:12px"><div class="mega-bglow"></div>
+          <div style="position:absolute;inset:0;border-radius:24px;opacity:var(--mega-glow,0);background:radial-gradient(300px circle at var(--mega-x,50%) var(--mega-y,50%),hsla(214,100%,50%,.5),transparent 60%);transition:opacity .3s;pointer-events:none;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:3px"></div>
+          <div style="position:relative;display:flex;height:100%;flex-direction:column;justify-content:space-between;gap:24px;overflow:hidden;border-radius:12px;border:.75px solid hsl(217,30%,18%);padding:24px;box-shadow:0 0 27px 0 #10151f;background:#111318">
+            <div style="width:fit-content;border-radius:8px;border:.75px solid hsl(217,30%,18%);background:rgba(38,38,38,.5);padding:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a3a3a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="m9 15 2 2 4-4"></path></svg></div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font-size:24px;font-weight:600;letter-spacing:-.02em;color:#fff">Fechamos o Contrato</h3>
+              <p style="margin:0;font-size:16px;line-height:1.4;color:#a3a3a3">Não entregamos só leads: o nosso time de pré-vendas e closers atende, qualifica e fecha — você recebe o cliente com o contrato de honorários e a procuração já assinados.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- 2 -->
+      <li style="grid-column:1/5;grid-row:2/3;list-style:none">
+        <div style="position:relative;height:100%;border-radius:24px;border:.75px solid hsl(217,30%,18%);padding:12px"><div class="mega-bglow"></div>
+          <div style="position:absolute;inset:0;border-radius:24px;opacity:var(--mega-glow,0);background:radial-gradient(300px circle at var(--mega-x,50%) var(--mega-y,50%),hsla(214,100%,50%,.5),transparent 60%);transition:opacity .3s;pointer-events:none;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:3px"></div>
+          <div style="position:relative;display:flex;height:100%;flex-direction:column;justify-content:space-between;gap:24px;overflow:hidden;border-radius:12px;border:.75px solid hsl(217,30%,18%);padding:24px;box-shadow:0 0 27px 0 #10151f;background:#111318">
+            <div style="width:fit-content;border-radius:8px;border:.75px solid hsl(217,30%,18%);background:rgba(38,38,38,.5);padding:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a3a3a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font-size:24px;font-weight:600;letter-spacing:-.02em;color:#fff">Tráfego Validado</h3>
+              <p style="margin:0;font-size:16px;line-height:1.4;color:#a3a3a3">Você entra replicando o que já funciona em escritórios como o seu — tráfego no Google e Meta Ads com CPL baixo e previsível, sem testar com o seu dinheiro.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- 3 (destaque central) -->
+      <li style="grid-column:5/9;grid-row:1/3;list-style:none">
+        <div style="position:relative;height:100%;border-radius:24px;border:.75px solid hsl(217,30%,18%);padding:12px"><div class="mega-bglow"></div>
+          <div style="position:absolute;inset:0;border-radius:24px;opacity:var(--mega-glow,0);background:radial-gradient(300px circle at var(--mega-x,50%) var(--mega-y,50%),hsla(214,100%,50%,.5),transparent 60%);transition:opacity .3s;pointer-events:none;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:3px"></div>
+          <div style="position:relative;display:flex;height:100%;flex-direction:column;justify-content:space-between;gap:24px;overflow:hidden;border-radius:12px;border:.75px solid hsl(217,30%,18%);padding:24px;box-shadow:0 0 27px 0 #10151f;background:#111318">
+            <div style="width:fit-content;border-radius:8px;border:.75px solid hsl(217,30%,18%);background:rgba(38,38,38,.5);padding:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a3a3a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font-size:24px;font-weight:600;letter-spacing:-.02em;color:#fff">Só Advocacia, Há 7 Anos</h3>
+              <p style="margin:0;font-size:16px;line-height:1.4;color:#a3a3a3">Mais de 3.000 escritórios atendidos e 10 mil campanhas executadas exclusivamente no nicho jurídico. Conhecemos o seu cliente melhor do que qualquer agência generalista.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- 4 -->
+      <li style="grid-column:9/13;grid-row:1/2;list-style:none">
+        <div style="position:relative;height:100%;border-radius:24px;border:.75px solid hsl(217,30%,18%);padding:12px"><div class="mega-bglow"></div>
+          <div style="position:absolute;inset:0;border-radius:24px;opacity:var(--mega-glow,0);background:radial-gradient(300px circle at var(--mega-x,50%) var(--mega-y,50%),hsla(214,100%,50%,.5),transparent 60%);transition:opacity .3s;pointer-events:none;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:3px"></div>
+          <div style="position:relative;display:flex;height:100%;flex-direction:column;justify-content:space-between;gap:24px;overflow:hidden;border-radius:12px;border:.75px solid hsl(217,30%,18%);padding:24px;box-shadow:0 0 27px 0 #10151f;background:#111318">
+            <div style="width:fit-content;border-radius:8px;border:.75px solid hsl(217,30%,18%);background:rgba(38,38,38,.5);padding:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a3a3a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"></path></svg></div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font-size:24px;font-weight:600;letter-spacing:-.02em;color:#fff">Garantia do Dono</h3>
+              <p style="margin:0;font-size:16px;line-height:1.4;color:#a3a3a3">A gente corre o risco junto: se em 90 dias a meta não for batida, o próprio CEO entra e trabalha pessoalmente até bater — sem custo extra.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- 5 -->
+      <li style="grid-column:9/13;grid-row:2/3;list-style:none">
+        <div style="position:relative;height:100%;border-radius:24px;border:.75px solid hsl(217,30%,18%);padding:12px"><div class="mega-bglow"></div>
+          <div style="position:absolute;inset:0;border-radius:24px;opacity:var(--mega-glow,0);background:radial-gradient(300px circle at var(--mega-x,50%) var(--mega-y,50%),hsla(214,100%,50%,.5),transparent 60%);transition:opacity .3s;pointer-events:none;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:3px"></div>
+          <div style="position:relative;display:flex;height:100%;flex-direction:column;justify-content:space-between;gap:24px;overflow:hidden;border-radius:12px;border:.75px solid hsl(217,30%,18%);padding:24px;box-shadow:0 0 27px 0 #10151f;background:#111318">
+            <div style="width:fit-content;border-radius:8px;border:.75px solid hsl(217,30%,18%);background:rgba(38,38,38,.5);padding:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a3a3a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font-size:24px;font-weight:600;letter-spacing:-.02em;color:#fff">Você Paga pelo Resultado</h3>
+              <p style="margin:0;font-size:16px;line-height:1.4;color:#a3a3a3">No formato Performance não há mensalidade nem fidelidade: você paga por contrato entregue assinado. Tudo formalizado, sem letra miúda.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<script>
+/* ---------------------------------------------------------------
+   ANIMAÇÃO: glow que segue o cursor
+   - --mega-x / --mega-y  : posição do mouse dentro do card (glow radial)
+   - --mega-ang           : ângulo do cursor em relação ao centro (borda cônica)
+   - --mega-glow          : 0/1 liga e desliga com transição suave
+   Delegação de evento: funciona para qualquer nº de cards.
+----------------------------------------------------------------*/
+(function () {
+  var cards = document.querySelectorAll('.mega-bento > li');
+
+  cards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var el = e.currentTarget;
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--mega-x', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--mega-y', (e.clientY - r.top) + 'px');
+      var ang = Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI + 90;
+      el.style.setProperty('--mega-ang', ang.toFixed(1));
+      el.style.setProperty('--mega-glow', '1');
+    });
+
+    card.addEventListener('mouseleave', function (e) {
+      e.currentTarget.style.setProperty('--mega-glow', '0');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
