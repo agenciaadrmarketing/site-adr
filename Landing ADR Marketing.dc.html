@@ -6,8 +6,15 @@
 <script src="./support.js"></script>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDFHMCXG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <x-dc>
 <helmet>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PDFHMCXG');</script>
 <link rel="stylesheet" href="_ds/industry-5769e836-d900-443d-b051-88e29d4abe25/styles.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="preload" as="image" href="assets/bg-hero.webp" fetchpriority="high">
@@ -1851,9 +1858,25 @@ class Component extends DCLogic {
   iniciarBolha() {
     try { this._dispensada = sessionStorage.getItem('adr_bolha') === 'off'; } catch (e) { this._dispensada = false; }
     if (this._dispensada) return;
-    this._tBolha = setTimeout(() => {
-      this.setState({ bolha: true }, () => this.cicloBolha());
-    }, 2800);
+    const mostrar = () => this.setState({ bolha: true }, () => this.cicloBolha());
+    const mq = window.matchMedia;
+    const mobile = mq && mq('(max-width: 900px)').matches;
+    /* No mobile a bolha só aparece depois que a segunda seção (Controle na
+       mão) entra na tela — antes disso ela some por trás do hero e fica
+       estranha. No desktop mantém o atraso fixo de sempre. */
+    if (mobile && typeof IntersectionObserver === 'function') {
+      const alvo = this._palco || document.querySelector('[data-screen-label="Controle na mão"]');
+      if (alvo) {
+        this._ioBolha = new IntersectionObserver((ents) => {
+          if (!ents.some((e) => e.isIntersecting)) return;
+          this._ioBolha.disconnect();
+          this._tBolha = setTimeout(mostrar, 400);
+        }, { threshold: 0.2 });
+        this._ioBolha.observe(alvo);
+        return;
+      }
+    }
+    this._tBolha = setTimeout(mostrar, 2800);
   }
 
   /* Marquees e fitas só animam quando estão na tela: o compositor para de
@@ -1885,6 +1908,7 @@ class Component extends DCLogic {
   fecharBolha = () => {
     clearTimeout(this._tRecado);
     clearTimeout(this._tBolha);
+    if (this._ioBolha) this._ioBolha.disconnect();
     this._dispensada = true;
     try { sessionStorage.setItem('adr_bolha', 'off'); } catch (e) { /* ignore */ }
     this.setState({ saindo: true });
@@ -2100,6 +2124,7 @@ class Component extends DCLogic {
     clearTimeout(this._resgate);
     clearTimeout(this._tBolha);
     clearTimeout(this._tRecado);
+    if (this._ioBolha) this._ioBolha.disconnect();
     clearInterval(this._iMetrica);
     clearInterval(this._iCases);
     if (this._ioCases) this._ioCases.disconnect();
