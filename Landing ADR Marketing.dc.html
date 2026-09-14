@@ -52,7 +52,6 @@ document.addEventListener('click', function(e){
 }, true);
 })();</script>
 <link rel="stylesheet" href="_ds/industry-5769e836-d900-443d-b051-88e29d4abe25/styles.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="preload" as="image" href="assets/bg-hero.webp" fetchpriority="high">
 <script src="_ds/industry-5769e836-d900-443d-b051-88e29d4abe25/_ds_bundle.js"></script>
 <title>Marketing para Clínicas, Médicos e Dentistas | ADR</title>
@@ -1908,7 +1907,7 @@ class Component extends DCLogic {
      é pausado quando sai do viewport e retomado quando volta. */
   iniciarEconomia() {
     if (typeof IntersectionObserver !== 'function') return;
-    const animados = Array.prototype.slice.call(document.querySelectorAll('[style*="animation:"]'));
+    const animados = Array.prototype.slice.call(document.querySelectorAll('[style*="animation:"], .brilho'));
     if (!animados.length) return;
     const mapa = new Map();
     animados.forEach((el) => {
