@@ -29,10 +29,31 @@ s.async = true;
 s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18381807679';
 document.head.appendChild(s);
 })();</script>
+<script>(function(){
+if (window.__formStartBound) return; window.__formStartBound = true;
+document.addEventListener('focusin', function(e){
+  if (!e.target || e.target.name !== 'nome') return;
+  var form = e.target.closest('form');
+  if (!form) return;
+  var btn = form.querySelector('button[type="submit"]');
+  var loc = btn && /Receber minha an.lise/.test(btn.textContent) ? 'modal' : 'secao_analise';
+  var key = '__formStart_' + loc;
+  if (window[key]) return; window[key] = true;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'form_start', form_location: loc });
+  if (typeof window.gtag === 'function') window.gtag('event', 'form_start', { form_location: loc });
+}, true);
+document.addEventListener('click', function(e){
+  var a = e.target && e.target.closest ? e.target.closest('a[href*="api.whatsapp.com"]') : null;
+  if (!a) return;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'whatsapp_click', local: 'pos_envio' });
+  if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_click', { local: 'pos_envio' });
+}, true);
+})();</script>
 <link rel="stylesheet" href="_ds/industry-5769e836-d900-443d-b051-88e29d4abe25/styles.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="preload" as="image" href="assets/bg-hero.webp" fetchpriority="high">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap">
 <script src="_ds/industry-5769e836-d900-443d-b051-88e29d4abe25/_ds_bundle.js"></script>
 <title>Marketing para Clínicas, Médicos e Dentistas | ADR</title>
 <meta name="description" content="Assessoria de marketing médico e odontológico para clínicas e consultórios: tráfego pago, autoridade digital e captação de pacientes particulares.">
@@ -50,10 +71,10 @@ document.head.appendChild(s);
 <meta name="twitter:description" content="Tráfego pago, autoridade digital e captação de pacientes particulares para clínicas médicas e odontológicas.">
 <meta name="twitter:image" content="https://agenciaadrmarketing.com/assets/favicon-512.png">
 <style>
-  :root { --font-heading:"Poppins", system-ui, sans-serif; --font-body:"Poppins", system-ui, sans-serif; --font-heading-weight:600; }
+  :root { --font-heading:"Barlow Condensed", system-ui, sans-serif; --font-body:"Barlow", system-ui, sans-serif; --font-heading-weight:600; }
   html { scroll-behavior:smooth; scroll-padding-top:clamp(72px,8vw,96px); }
   html, body { margin:0; padding:0; }
-  body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, span, button, input, select, label, blockquote, summary, figcaption { font-family:"Poppins", system-ui, sans-serif; }
+  body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, span, button, input, select, label, blockquote, summary, figcaption { font-family:var(--font-body); }
   body { background:#09090a; overflow-x:hidden; }
   * { box-sizing:border-box; }
   img { max-width:100%; }
@@ -220,14 +241,14 @@ document.head.appendChild(s);
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","@id":"https://agenciaadrmarketing.com/#website","url":"https://agenciaadrmarketing.com/","name":"ADR Marketing","inLanguage":"pt-BR","publisher":{"@id":"https://agenciaadrmarketing.com/#org"}},
-{"@type":["Organization","ProfessionalService"],"@id":"https://agenciaadrmarketing.com/#org","name":"ADR Marketing","url":"https://agenciaadrmarketing.com/","logo":"https://agenciaadrmarketing.com/assets/favicon-512.png","email":"agencia.adrmarketing@gmail.com","telephone":"+55 48 8472-5490","taxID":"57.872.304/0001-66","areaServed":"BR","description":"Assessoria de marketing especializada em clínicas médicas, clínicas odontológicas, médicos, dentistas e consultórios, com foco em tráfego pago, autoridade digital e captação de pacientes particulares.","knowsAbout":["Marketing médico","Marketing odontológico","Marketing para clínicas","Tráfego pago","Google Ads","Meta Ads","Captação de pacientes particulares"]},
+{"@type":["Organization","ProfessionalService"],"@id":"https://agenciaadrmarketing.com/#org","name":"ADR Marketing","url":"https://agenciaadrmarketing.com/","logo":"https://agenciaadrmarketing.com/assets/favicon-512.png","email":"agencia.adrmarketing@gmail.com","telephone":"+55 48 98880-9542","taxID":"57.872.304/0001-66","areaServed":"BR","description":"Assessoria de marketing especializada em clínicas médicas, clínicas odontológicas, médicos, dentistas e consultórios, com foco em tráfego pago, autoridade digital e captação de pacientes particulares.","knowsAbout":["Marketing médico","Marketing odontológico","Marketing para clínicas","Tráfego pago","Google Ads","Meta Ads","Captação de pacientes particulares"]},
 {"@type":"FAQPage","@id":"https://agenciaadrmarketing.com/#faq","mainEntity":[
-{"@type":"Question","name":"O que faz uma assessoria de marketing para clínicas?","acceptedAnswer":{"@type":"Answer","text":"Uma assessoria especializada em marketing para clínicas não se limita a gerir anúncios. O trabalho começa no posicionamento, construindo a autoridade do médico ou dentista na sua região, e se estende ao tráfego pago, à filtragem do público de alto valor e à estruturação do comercial que recebe esse paciente."}},
-{"@type":"Question","name":"Tráfego pago funciona para médicos, dentistas e clínicas?","acceptedAnswer":{"@type":"Answer","text":"Funciona quando a mídia é construída sobre a jornada do paciente e respeita as normas éticas do setor. Google Ads captura a demanda de quem já procura um tratamento e Meta Ads constrói desejo e confiança antes do primeiro contato."}},
-{"@type":"Question","name":"Em quanto tempo o marketing médico gera retorno sobre o investimento (ROI)?","acceptedAnswer":{"@type":"Answer","text":"O mercado de saúde digital exige maturidade e previsibilidade, distanciando-se de promessas de resultados imediatos. A maturação das campanhas e a consolidação de um fluxo constante de pacientes qualificados tendem a apresentar estabilidade a partir do terceiro mês de operação."}},
-{"@type":"Question","name":"Como funciona a gestão diária e quem conduzirá o projeto?","acceptedAnswer":{"@type":"Answer","text":"A operação atua estritamente sob um modelo premium, rejeitando o padrão do mercado de delegar contas a gestores em nível júnior. O planejamento estratégico, a execução do tráfego pago e a estruturação dos funis de captação são conduzidos diretamente pela liderança sênior da assessoria."}},
-{"@type":"Question","name":"A ADR atende médicos, dentistas e clínicas de qualquer perfil?","acceptedAnswer":{"@type":"Answer","text":"O ecossistema foi desenvolvido de forma exclusiva para médicos, clínicas e consultórios odontológicos que têm como objetivo a captação de pacientes particulares e a venda de procedimentos de alto valor. O modelo admite apenas um número restrito de parceiros simultâneos."}},
-{"@type":"Question","name":"A captação de pacientes inclui o atendimento e o agendamento final?","acceptedAnswer":{"@type":"Answer","text":"A inteligência de tráfego gera e filtra a demanda, mas o fechamento ocorre no ambiente interno da clínica. A assessoria atua de forma consultiva na estruturação do comercial, com treinamentos de qualificação para equipes de recepção ou implementação de SDRs."}}]}]}
+{"@type":"Question","name":"O que faz uma assessoria de marketing para clínicas?","acceptedAnswer":{"@type":"Answer","text":"Uma assessoria especializada em marketing para clínicas não se limita a gerir anúncios. O trabalho começa no posicionamento — construir a autoridade do médico ou dentista na sua região — e se estende ao tráfego pago, à filtragem do público de alto valor e à estruturação do comercial que recebe esse paciente."}},
+{"@type":"Question","name":"Tráfego pago funciona para médicos, dentistas e clínicas?","acceptedAnswer":{"@type":"Answer","text":"Funciona quando a mídia é construída sobre a jornada do paciente e respeita as normas éticas do setor. Google Ads captura a demanda de quem já procura um tratamento; Meta Ads constrói desejo e confiança antes do primeiro contato. Sem essa leitura, o investimento vira o que chamamos de tráfego da esperança."}},
+{"@type":"Question","name":"Em quanto tempo é possível observar o retorno sobre o investimento (ROI)?","acceptedAnswer":{"@type":"Answer","text":"O mercado de saúde digital exige maturidade e previsibilidade, distanciando-se de promessas de resultados imediatos. O processo inicial foca na estruturação do posicionamento de autoridade e no alinhamento comercial da clínica. A maturação das campanhas e a consolidação de um fluxo constante de pacientes qualificados tendem a apresentar estabilidade a partir do terceiro mês de operação, variando conforme a competitividade da região e o ticket médio dos tratamentos."}},
+{"@type":"Question","name":"Como funciona a gestão diária e quem conduzirá o projeto?","acceptedAnswer":{"@type":"Answer","text":"A operação atua estritamente sob um modelo premium, rejeitando o padrão do mercado de delegar contas a gestores em nível júnior. O planejamento estratégico, a execução do tráfego pago e a estruturação dos funis de captação são conduzidos diretamente pela liderança sênior da assessoria. Esta centralização garante que a inteligência de dados aplicada ao negócio não sofra diluição e que o rigor técnico seja mantido do início ao fim."}},
+{"@type":"Question","name":"A assessoria atende a qualquer perfil de negócio na área da saúde?","acceptedAnswer":{"@type":"Answer","text":"O ecossistema foi desenvolvido de forma exclusiva para médicos, clínicas e consultórios odontológicos que têm como objetivo a captação de pacientes particulares e a venda de procedimentos de alto valor. Para sustentar a premissa de exclusividade e o acompanhamento integral de cada operação, o modelo de negócios admite apenas um número restrito de parceiros simultâneos. A viabilidade de novas parcerias é sempre condicionada a um diagnóstico comercial prévio."}},
+{"@type":"Question","name":"A atração de pacientes também inclui o atendimento e o agendamento final?","acceptedAnswer":{"@type":"Answer","text":"A inteligência de tráfego é responsável por gerar e filtrar a demanda, mas o fechamento ocorre no ambiente interno da clínica. Por essa razão, a metodologia aplicada vai além do marketing e integra um pilar dedicado ao comercial de alta conversão. A assessoria atua de forma consultiva na estruturação desse setor, fornecendo treinamentos de qualificação para equipes de recepção ou orientando a implementação de SDRs (Sales Development Representatives) de alta performance, assegurando que o fluxo de leads seja devidamente aproveitado."}}]}]}
 </script>
 </helmet>
 <div style="background:#09090a; color:#f2f2f3; font-family:var(--font-body); font-size:16px; line-height:1.6">
@@ -239,7 +260,7 @@ document.head.appendChild(s);
     <div class="noscroll nav-rail" data-scroll-interno="" style="flex:1 1 auto; min-width:0; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch">
       <ul style="margin:0; padding:0; list-style:none; display:flex; gap:clamp(14px,1.8vw,28px); justify-content:center; white-space:nowrap">
         <li><a href="#servicos" style="font-family:var(--font-heading); font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; color:#b7b7ba; transition:color .18s" style-hover="color:#f2f2f3">Serviços</a></li>
-        <li><a href="#cases" style="font-family:var(--font-heading); font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; color:#b7b7ba; transition:color .18s" style-hover="color:#f2f2f3">Cases</a></li>
+        <li><a href="#cases" style="font-family:var(--font-heading); font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; color:#b7b7ba; transition:color .18s" style-hover="color:#f2f2f3">Como atuamos</a></li>
         <li><a href="#metodo" style="font-family:var(--font-heading); font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; color:#b7b7ba; transition:color .18s" style-hover="color:#f2f2f3">Método</a></li>
         <li><a href="#quem-somos" style="font-family:var(--font-heading); font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; color:#b7b7ba; transition:color .18s" style-hover="color:#f2f2f3">Quem somos</a></li>
         <li><a href="#faq" style="font-family:var(--font-heading); font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; color:#b7b7ba; transition:color .18s" style-hover="color:#f2f2f3">FAQ</a></li>
@@ -254,7 +275,7 @@ document.head.appendChild(s);
     <div class="nav-drawer" style="border-top:1px solid rgba(242,242,243,0.1); background:rgba(10,10,9,0.98); padding:8px clamp(16px,4vw,48px) 18px; animation:drawerIn .28s cubic-bezier(.16,1,.3,1) both">
       <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column">
         <li><a href="#servicos" onClick="{{ fecharMenu }}" style="display:block; padding:15px 0; border-bottom:1px solid rgba(242,242,243,0.08); font-family:var(--font-heading); font-weight:500; font-size:15px; letter-spacing:0.1em; text-transform:uppercase; color:#e2e4e8">Serviços</a></li>
-        <li><a href="#cases" onClick="{{ fecharMenu }}" style="display:block; padding:15px 0; border-bottom:1px solid rgba(242,242,243,0.08); font-family:var(--font-heading); font-weight:500; font-size:15px; letter-spacing:0.1em; text-transform:uppercase; color:#e2e4e8">Cases</a></li>
+        <li><a href="#cases" onClick="{{ fecharMenu }}" style="display:block; padding:15px 0; border-bottom:1px solid rgba(242,242,243,0.08); font-family:var(--font-heading); font-weight:500; font-size:15px; letter-spacing:0.1em; text-transform:uppercase; color:#e2e4e8">Como atuamos</a></li>
         <li><a href="#metodo" onClick="{{ fecharMenu }}" style="display:block; padding:15px 0; border-bottom:1px solid rgba(242,242,243,0.08); font-family:var(--font-heading); font-weight:500; font-size:15px; letter-spacing:0.1em; text-transform:uppercase; color:#e2e4e8">Método</a></li>
         <li><a href="#quem-somos" onClick="{{ fecharMenu }}" style="display:block; padding:15px 0; border-bottom:1px solid rgba(242,242,243,0.08); font-family:var(--font-heading); font-weight:500; font-size:15px; letter-spacing:0.1em; text-transform:uppercase; color:#e2e4e8">Quem somos</a></li>
         <li><a href="#faq" onClick="{{ fecharMenu }}" style="display:block; padding:15px 0; font-family:var(--font-heading); font-weight:500; font-size:15px; letter-spacing:0.1em; text-transform:uppercase; color:#e2e4e8">FAQ</a></li>
@@ -431,7 +452,7 @@ document.head.appendChild(s);
 
     <div data-reveal="" style="flex:1 1 380px; max-width:520px; min-width:0">
       <p style="margin:0 0 14px; display:flex; align-items:center; gap:12px; font-family:var(--font-heading); font-size:clamp(10px,0.85vw,12px); letter-spacing:0.2em; font-weight:600; text-transform:uppercase; color:#5d5d60; flex-wrap:wrap; row-gap:6px"><span style="color:#6e6e6e">01</span><span aria-hidden="true" style="width:30px; height:1px; background:rgba(29,31,32,0.22); flex:none"></span>Previsibilidade</p>
-      <h2 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(25px,3.4vw,45px); line-height:1.08; letter-spacing:-0.02em; margin:0 0 18px; text-wrap:balance; max-width:22ch"><span style="color:#1a7f45">90% dos nossos clientes</span> têm resultado até o terceiro mês</h2>
+      <h2 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(25px,3.4vw,45px); line-height:1.08; letter-spacing:-0.02em; margin:0 0 18px; text-wrap:balance; max-width:22ch"><span style="color:#1a7f45">A maturação</span> tende a se estabilizar até o terceiro mês</h2>
       <p style="margin:0 0 clamp(22px,2.6vw,32px); font-size:clamp(15px,1.2vw,17px); line-height:1.66; color:#5d5d60; max-width:48ch; text-wrap:pretty">O mercado de saúde digital exige maturidade, não promessa de resultado imediato. Os dois primeiros meses estruturam posicionamento de autoridade e alinhamento comercial. É a partir do terceiro que o fluxo de pacientes qualificados se estabiliza.</p>
 
       <dl style="margin:0 0 clamp(24px,2.8vw,34px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr)); gap:16px">
@@ -472,15 +493,15 @@ document.head.appendChild(s);
           </linearGradient>
         </defs>
       <line x1="56" y1="300.0" x2="680" y2="300.0" stroke="rgba(31,31,30,0.12)" stroke-width="1" stroke-dasharray="4 4"></line>
-      <text x="44" y="304.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">0%</text>
+      <text x="44" y="304.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">0%</text>
       <line x1="56" y1="235.0" x2="680" y2="235.0" stroke="rgba(31,31,30,0.12)" stroke-width="1" stroke-dasharray="4 4"></line>
-      <text x="44" y="239.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">25%</text>
+      <text x="44" y="239.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">25%</text>
       <line x1="56" y1="170.0" x2="680" y2="170.0" stroke="rgba(31,31,30,0.12)" stroke-width="1" stroke-dasharray="4 4"></line>
-      <text x="44" y="174.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">50%</text>
+      <text x="44" y="174.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">50%</text>
       <line x1="56" y1="105.0" x2="680" y2="105.0" stroke="rgba(31,31,30,0.12)" stroke-width="1" stroke-dasharray="4 4"></line>
-      <text x="44" y="109.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">75%</text>
+      <text x="44" y="109.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">75%</text>
       <line x1="56" y1="40.0" x2="680" y2="40.0" stroke="rgba(31,31,30,0.12)" stroke-width="1" stroke-dasharray="4 4"></line>
-      <text x="44" y="44.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">100%</text>
+      <text x="44" y="44.0" text-anchor="end" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">100%</text>
         <polygon points="56,253.2 181,175.2 306,66.0 431,55.6 556,50.4 680,45.2 680,300 56,300" fill="url(#grad-adr)"></polygon>
         <line x1="306" y1="40" x2="306" y2="300" stroke="#1a9646" stroke-width="1" stroke-dasharray="5 5" opacity="0.55"></line>
         <polyline points="56,279.2 181,263.6 306,242.8 431,232.4 556,222.0 680,214.2" fill="none" stroke="#b7b7ba" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round" stroke-linejoin="round"></polyline>
@@ -493,14 +514,14 @@ document.head.appendChild(s);
       <circle cx="680" cy="45.2" r="5" fill="#f2f2f3" stroke="#1a9646" stroke-width="2"></circle>
         <g>
           <rect x="228" y="12" width="156" height="34" rx="17" fill="#1a9646"></rect>
-          <text x="306" y="34" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff" font-family="Poppins, sans-serif">90% no 3º mês</text>
+          <text x="306" y="34" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff" font-family="Barlow, sans-serif">90% no 3º mês</text>
         </g>
-      <text x="56" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">Mês 1</text>
-      <text x="181" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">Mês 2</text>
-      <text x="306" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">Mês 3</text>
-      <text x="431" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">Mês 4</text>
-      <text x="556" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">Mês 5</text>
-      <text x="680" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Poppins, sans-serif">Mês 6</text>
+      <text x="56" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">Mês 1</text>
+      <text x="181" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">Mês 2</text>
+      <text x="306" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">Mês 3</text>
+      <text x="431" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">Mês 4</text>
+      <text x="556" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">Mês 5</text>
+      <text x="680" y="326" text-anchor="middle" font-size="11" fill="#7a7a7d" font-family="Barlow, sans-serif">Mês 6</text>
       </svg>
 
       <p style="margin:clamp(14px,1.8vw,20px) 0 0; font-size:11.5px; line-height:1.5; color:#7a7a7d; text-wrap:pretty">Curva ilustrativa do comportamento da operação. A maturação varia conforme a competitividade da região e o ticket médio dos tratamentos.</p>
@@ -689,6 +710,7 @@ document.head.appendChild(s);
       <p style="margin:0 0 clamp(24px,2.8vw,34px); font-size:clamp(15px,1.2vw,17px); line-height:1.68; color:rgba(242,242,243,0.68); max-width:52ch; text-wrap:pretty">Você não paga para descobrir o que funciona. Você paga para escalar o que já está validado.</p>
       <ul style="margin:0; padding:0; list-style:none; display:grid; gap:13px">
         <li style="display:flex; gap:12px; align-items:flex-start; font-size:15px; color:rgba(242,242,243,0.74)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25c368" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex:none; margin-top:3px"><path d="m5 12 5 5L20 7"></path></svg>Estratégias validadas por especialidade</li>
+        <li style="list-style:none; font-size:11.5px; line-height:1.5; color:#7a7a7d; margin-top:2px">Números ao lado são ilustrativos: exemplificam o tipo de métrica que acompanhamos mês a mês com cada clínica, não um resultado de cliente específico.</li>
         <li style="display:flex; gap:12px; align-items:flex-start; font-size:15px; color:rgba(242,242,243,0.74)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25c368" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex:none; margin-top:3px"><path d="m5 12 5 5L20 7"></path></svg>Sem queimar verba testando o óbvio</li>
         <li style="display:flex; gap:12px; align-items:flex-start; font-size:15px; color:rgba(242,242,243,0.74)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25c368" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex:none; margin-top:3px"><path d="m5 12 5 5L20 7"></path></svg>Decisões guiadas por dado real, não por achismo</li>
       </ul>
@@ -708,7 +730,7 @@ document.head.appendChild(s);
         <p style="margin:0 0 14px; display:flex; align-items:center; gap:11px; font-family:var(--font-heading); font-size:clamp(10px,0.85vw,12px); font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:#98989b"><span style="color:#5d5d60">04</span><span aria-hidden="true" style="width:26px; height:1px; background:#3a3a3c; flex:none"></span>Presença digital</p>
         <h2 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(27px,3.7vw,50px); line-height:1.06; letter-spacing:-0.025em; margin:0; text-wrap:balance; max-width:24ch">Autoridade não se mede em curtida. <span class="silver">Se mede em agenda.</span></h2>
       </div>
-      <p style="margin:0; flex:1 1 320px; max-width:52ch; font-size:clamp(15px,1.2vw,17px); line-height:1.68; color:rgba(242,242,243,0.66); text-wrap:pretty">Seguidor e engajamento são consequência de um posicionamento bem construído — e sinal de que o paciente já confia em você antes da primeira consulta. Acompanhamos os três juntos.</p>
+      <p style="margin:0; flex:1 1 320px; max-width:52ch; font-size:clamp(15px,1.2vw,17px); line-height:1.68; color:rgba(242,242,243,0.66); text-wrap:pretty">Seguidor e engajamento são consequência de um posicionamento bem construído — e sinal de que o paciente já confia em você antes da primeira consulta. Acompanhamos os três juntos.<br><span style="font-size:11.5px; color:#7a7a7d; display:block; margin-top:8px">Números ilustrativos: exemplificam o tipo de acompanhamento que fazemos, não um resultado histórico de cliente específico.</span></p>
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:clamp(16px,2vw,26px)">
@@ -905,8 +927,8 @@ document.head.appendChild(s);
   <div style="max-width:1280px; margin:0 auto">
     <div data-reveal="" style="display:flex; flex-wrap:wrap; gap:clamp(20px,3vw,48px); align-items:flex-end; justify-content:space-between">
       <div style="flex:1 1 360px; min-width:0">
-        <p style="margin:0 0 14px; display:flex; align-items:center; gap:12px; font-family:var(--font-heading); font-size:clamp(10px,0.85vw,12px); letter-spacing:0.2em; font-weight:600; text-transform:uppercase; color:#5d5d60; flex-wrap:wrap; row-gap:6px"><span style="color:#6e6e6e">03</span><span aria-hidden="true" style="width:30px; height:1px; background:rgba(29,31,32,0.22); flex:none"></span>Prova social</p>
-        <h2 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(25px,3.4vw,45px); line-height:1.08; letter-spacing:-0.02em; margin:0; text-wrap:balance">Cases de marketing para <span class="graphite">clínicas e consultórios</span></h2>
+        <p style="margin:0 0 14px; display:flex; align-items:center; gap:12px; font-family:var(--font-heading); font-size:clamp(10px,0.85vw,12px); letter-spacing:0.2em; font-weight:600; text-transform:uppercase; color:#5d5d60; flex-wrap:wrap; row-gap:6px"><span style="color:#6e6e6e">03</span><span aria-hidden="true" style="width:30px; height:1px; background:rgba(29,31,32,0.22); flex:none"></span>Como atuamos</p>
+        <h2 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(25px,3.4vw,45px); line-height:1.08; letter-spacing:-0.02em; margin:0; text-wrap:balance">Como a ADR atua em cada <span class="graphite">frente do marketing</span></h2>
       </div>
       <button class="brilho blueprint" type="button" onClick="{{ abrir }}" style="display:inline-flex; align-items:center; gap:11px; background:#1a9646; color:#ffffff; font-family:var(--font-heading); font-weight:600; font-size:clamp(11px,0.95vw,13px); letter-spacing:0.11em; text-transform:uppercase; padding:0 clamp(16px,2vw,28px); height:50px; border:1px solid #1a9646; flex:none; cursor:pointer; transition:background .18s; border-radius:999px" style-hover="background:#157a39; border-color:#157a39">
         
@@ -927,7 +949,7 @@ document.head.appendChild(s);
           <span aria-hidden="true" style="width:40px; height:1px; background:rgba(31,31,30,0.26); flex:none"></span>
           <span style="display:block">
             <span style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14.5px; color:#1d1f20">{{ nomeAtivo }}</span>
-            <span style="display:block; font-size:12px; color:#7a7a7d">Parceiro ADR Marketing</span>
+            <span style="display:block; font-size:12px; color:#7a7a7d">Um dos pilares do método ADR</span>
           </span>
         </div>
 
@@ -961,13 +983,24 @@ document.head.appendChild(s);
     <div data-reveal="" style="flex:1 1 430px; max-width:560px; min-width:0; padding-top:0">
       <p style="margin:0 0 12px; font-family:var(--font-heading); font-size:clamp(13px,1.15vw,17px); letter-spacing:0.05em; color:#b7b7ba">Clique no botão e receba uma</p>
       <h2 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(26px,3.2vw,42px); line-height:1.06; letter-spacing:-0.025em; margin:0 0 12px; text-wrap:balance">Análise <span class="silver">gratuita de marketing</span></h2>
-      <p style="margin:0 0 clamp(20px,2.2vw,26px); font-size:clamp(14.5px,1.1vw,17px); color:rgba(242,242,243,0.72); max-width:46ch; text-wrap:pretty">para escalar seu faturamento como nunca antes.</p>
+      <p style="margin:0 0 clamp(20px,2.2vw,26px); font-size:clamp(14.5px,1.1vw,17px); color:rgba(242,242,243,0.72); max-width:46ch; text-wrap:pretty">para entender como estruturar a captação de pacientes particulares na sua clínica.</p>
+      <sc-if value="{{ enviadoSecao }}" hint-placeholder-val="{{ false }}">
+        <div class="blueprint" style="border-color:rgba(242,242,243,0.2); background:rgba(15,15,14,0.9); padding:clamp(20px,2.2vw,28px); width:100%; max-width:430px; min-width:0; border-radius:18px; margin:0; text-align:center">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#25c368" stroke-width="1.4" stroke-linecap="round" aria-hidden="true" style="margin:0 auto 16px; display:block"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+          <h3 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(18px,1.5vw,21px); margin:0 0 8px; color:#f2f2f3">Recebemos seus dados</h3>
+          <p style="margin:0 0 18px; font-size:13.5px; line-height:1.6; color:#98989b">Vamos continuar por WhatsApp. Se a janela não abriu, toque no botão abaixo.</p>
+          <a class="brilho blueprint" href="{{ zapFinalSecao }}" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; gap:11px; background:#1a9646; color:#ffffff; font-family:var(--font-heading); font-weight:600; font-size:13px; letter-spacing:0.11em; text-transform:uppercase; height:50px; padding:0 26px; border:1px solid #1a9646; transition:background .18s; border-radius:999px" style-hover="background:#157a39; border-color:#157a39">
+            Abrir o WhatsApp
+          </a>
+        </div>
+      </sc-if>
+      <sc-if value="{{ naoEnviadoSecao }}" hint-placeholder-val="{{ true }}">
       <form data-reveal="" class="blueprint" onSubmit="{{ enviar }}" style="border-color:rgba(242,242,243,0.2); background:rgba(15,15,14,0.9); padding:clamp(20px,2.2vw,28px); width:100%; max-width:430px; min-width:0; border-radius:18px; margin:0">
         <h3 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(18px,1.5vw,21px); margin:0 0 5px">Solicite uma análise gratuita</h3>
         <p style="margin:0 0 clamp(16px,1.8vw,20px); font-size:13px; color:#98989b">Resposta pelo WhatsApp em horário comercial.</p>
         <div style="display:grid; gap:12px">
           <label style="display:grid; gap:6px"><span style="font-family:var(--font-heading); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#b7b7ba">Nome completo</span><input name="nome" type="text" required="" autoComplete="name" placeholder="Dr. / Dra." style="background:transparent; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 14px; height:44px; font-size:14.5px; border-radius:12px; outline:none"></label>
-          <label style="display:grid; gap:6px"><span style="font-family:var(--font-heading); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#b7b7ba">Email</span><input name="email" type="email" required="" autoComplete="email" placeholder="Seu melhor email" style="background:transparent; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 14px; height:44px; font-size:14.5px; border-radius:12px; outline:none"></label>
+          <label style="display:grid; gap:6px"><span style="font-family:var(--font-heading); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#b7b7ba">Email (opcional)</span><input name="email" type="email" autoComplete="email" placeholder="Seu melhor email" style="background:transparent; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 14px; height:44px; font-size:14.5px; border-radius:12px; outline:none"></label>
         <label style="display:grid; gap:6px"><span style="font-family:var(--font-heading); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#b7b7ba">WhatsApp</span><input name="fone" type="tel" required="" autoComplete="tel" placeholder="(00) 00000-0000" style="background:transparent; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 14px; height:44px; font-size:14.5px; border-radius:12px; outline:none"></label>
           <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px">
             <label style="display:grid; gap:6px; min-width:0"><span style="display:block; font-family:var(--font-heading); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:#b7b7ba; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">Especialidade</span><select name="area" required="" style="width:100%; min-width:0; background:#0f0f0e; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 11px; height:44px; font-size:14.5px; border-radius:12px; outline:none"><option value="">Selecione</option><option>Clínica médica</option><option>Clínica odontológica</option><option>Consultório médico</option><option>Consultório odontológico</option><option>Outra área da saúde</option></select></label>
@@ -980,6 +1013,7 @@ document.head.appendChild(s);
           </button>
         </div>
       </form>
+      </sc-if>
     </div>
   </div>
 </section>
@@ -1265,228 +1299,6 @@ document.head.appendChild(s);
     </div>
   </div>
 </section>
-<!-- 10b · DEPOIMENTOS -->
-<section data-screen-label="Depoimentos" style="padding:clamp(52px,6.5vw,110px) clamp(20px,5vw,72px); border-top:1px solid rgba(242,242,243,0.08)">
-  <div style="max-width:1180px; margin:0 auto">
-    <div data-reveal style="max-width:620px; margin:0 auto clamp(30px,4vw,54px); text-align:center">
-      <p style="margin:0 0 14px; display:inline-flex; align-items:center; gap:12px; font-family:var(--font-heading); font-size:clamp(10px,0.85vw,12px); letter-spacing:0.2em; font-weight:600; text-transform:uppercase; color:#b7b7ba"><span style="color:#5d5d60">08</span><span aria-hidden="true" style="width:30px; height:1px; background:rgba(242,242,243,0.26); flex:none"></span>Depoimentos</p>
-      <h2 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(28px,4.2vw,54px); line-height:1.02; letter-spacing:-0.025em; margin:0 0 14px; text-wrap:balance">O que dizem os <span class="silver">nossos parceiros</span></h2>
-      <p style="margin:0; font-size:clamp(14.5px,1.15vw,17px); line-height:1.6; color:rgba(242,242,243,0.66); text-wrap:pretty">Médicos e dentistas que trocaram indicação e disputa por preço por um fluxo previsível de pacientes particulares.</p>
-    </div>
-    <div class="dep-grade" style="display:flex; justify-content:center; gap:clamp(14px,1.6vw,22px); height:clamp(460px,58vw,620px)">
-      <div class="dep-col" style="flex:1 1 0; min-width:0; max-width:340px; overflow:hidden; mask-image:linear-gradient(to bottom,transparent,#000 16%,#000 84%,transparent); -webkit-mask-image:linear-gradient(to bottom,transparent,#000 16%,#000 84%,transparent)">
-        <div class="dep-trilha" data-marquee="" style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,20px); animation:depSobe 46s linear infinite; will-change:transform">
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">A agenda deixou de ter buraco. Hoje eu sei quantos pacientes entram por semana e consigo planejar a contratação da equipe com antecedência.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/av-karine.webp" alt="Dra. Andreza, parceira da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; object-position:50% 18%; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dra. Andreza</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Clínica odontológica</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">Eu vinha de duas assessorias que tratavam minha clínica como e-commerce. A diferença aqui é que quem opera entende a jornada do paciente.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/av-ricardo.webp" alt="Dr. Ricardo, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; object-position:50% 18%; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Ricardo</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Consultório odontológico</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">Parei de competir por preço. O paciente chega sabendo quem eu sou e o desconto saiu da conversa.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/av-diogo.webp" alt="Dr. Diogo, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; object-position:50% 18%; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Diogo</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Clínica médica</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">A agenda deixou de ter buraco. Hoje eu sei quantos pacientes entram por semana e consigo planejar a contratação da equipe com antecedência.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/av-karine.webp" alt="Dra. Andreza, parceira da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; object-position:50% 18%; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dra. Andreza</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Clínica odontológica</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">Eu vinha de duas assessorias que tratavam minha clínica como e-commerce. A diferença aqui é que quem opera entende a jornada do paciente.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/av-ricardo.webp" alt="Dr. Ricardo, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; object-position:50% 18%; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Ricardo</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Consultório odontológico</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">Parei de competir por preço. O paciente chega sabendo quem eu sou e o desconto saiu da conversa.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/av-diogo.webp" alt="Dr. Diogo, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; object-position:50% 18%; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Diogo</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Clínica médica</span>
-              </span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="dep-col dep-md" style="flex:1 1 0; min-width:0; max-width:340px; overflow:hidden; mask-image:linear-gradient(to bottom,transparent,#000 16%,#000 84%,transparent); -webkit-mask-image:linear-gradient(to bottom,transparent,#000 16%,#000 84%,transparent)">
-        <div class="dep-trilha" data-marquee="" style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,20px); animation:depSobe 62s linear infinite; will-change:transform">
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">O que mudou não foi a verba, foi o filtro. Mesmo investimento, mas quem chega tem perfil para o procedimento.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-marcelo.webp" alt="Dr. Marcelo Aguiar, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Marcelo Aguiar</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Implantodontia</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">O treinamento da recepção valeu tanto quanto o tráfego. A gente perdia lead qualificado por demora na resposta.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-fernanda.webp" alt="Dra. Fernanda Lima, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dra. Fernanda Lima</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Clínica odontológica</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">No terceiro mês o fluxo estabilizou. Não foi imediato, e eu preferi assim: veio consistente em vez de um pico e depois nada.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-camila.webp" alt="Dra. Camila Tanaka, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dra. Camila Tanaka</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Harmonização facial</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">O que mudou não foi a verba, foi o filtro. Mesmo investimento, mas quem chega tem perfil para o procedimento.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-marcelo.webp" alt="Dr. Marcelo Aguiar, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Marcelo Aguiar</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Implantodontia</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">O treinamento da recepção valeu tanto quanto o tráfego. A gente perdia lead qualificado por demora na resposta.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-fernanda.webp" alt="Dra. Fernanda Lima, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dra. Fernanda Lima</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Clínica odontológica</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">No terceiro mês o fluxo estabilizou. Não foi imediato, e eu preferi assim: veio consistente em vez de um pico e depois nada.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-camila.webp" alt="Dra. Camila Tanaka, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dra. Camila Tanaka</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Harmonização facial</span>
-              </span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="dep-col dep-lg" style="flex:1 1 0; min-width:0; max-width:340px; overflow:hidden; mask-image:linear-gradient(to bottom,transparent,#000 16%,#000 84%,transparent); -webkit-mask-image:linear-gradient(to bottom,transparent,#000 16%,#000 84%,transparent)">
-        <div class="dep-trilha" data-marquee="" style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,20px); animation:depSobe 54s linear infinite; will-change:transform">
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">A liderança sênior conduz de verdade. Nunca fui repassado para um gestor júnior aprendendo na minha conta.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-bruno.webp" alt="Dr. Bruno Teixeira, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Bruno Teixeira</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Clínica médica</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">Dependia só de indicação e não conseguia prever nada. Hoje a captação é processo, não sorte.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-larissa.webp" alt="Dra. Larissa Prado, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dra. Larissa Prado</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Odontologia estética</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">O relatório chega no celular e eu entendo. Sei quanto entrou, quanto custou e o que virou agendamento.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-rafael.webp" alt="Dr. Rafael Moretti, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Rafael Moretti</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Consultório médico</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">A liderança sênior conduz de verdade. Nunca fui repassado para um gestor júnior aprendendo na minha conta.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-bruno.webp" alt="Dr. Bruno Teixeira, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Bruno Teixeira</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Clínica médica</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">Dependia só de indicação e não conseguia prever nada. Hoje a captação é processo, não sorte.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-larissa.webp" alt="Dra. Larissa Prado, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dra. Larissa Prado</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Odontologia estética</span>
-              </span>
-            </figcaption>
-          </figure>
-          <figure style="margin:0; width:100%; border-radius:22px; border:1px solid rgba(242,242,243,0.1); background:linear-gradient(160deg,#1b1b1d 0%,#111113 60%,#0a0a09 100%); box-shadow:0 20px 48px -30px rgba(0,0,0,0.9); padding:clamp(20px,2.2vw,28px)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5d5d60" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block; margin-bottom:12px"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
-            <blockquote style="margin:0; font-size:14.5px; line-height:1.62; color:rgba(242,242,243,0.8); text-wrap:pretty">O relatório chega no celular e eu entendo. Sei quanto entrou, quanto custou e o que virou agendamento.</blockquote>
-            <figcaption style="margin-top:18px; display:flex; align-items:center; gap:11px">
-              <img src="assets/dep-rafael.webp" alt="Dr. Rafael Moretti, parceiro da ADR Marketing" width="160" height="160" loading="lazy" decoding="async" style="flex:none; width:34px; height:34px; border-radius:999px; object-fit:cover; display:block; border:1px solid rgba(242,242,243,0.16)">
-              <span style="display:block; min-width:0">
-                <cite style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14px; font-style:normal; letter-spacing:0.01em; color:#f2f2f3">Dr. Rafael Moretti</cite>
-                <span style="display:block; font-size:12px; color:#7a7a7d">Consultório médico</span>
-              </span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- 11 · CONTATO + FAQ -->
 <section id="faq" data-screen-label="Contato e FAQ" style="position:relative; overflow:hidden; padding:clamp(56px,7vw,120px) clamp(20px,5vw,72px); border-top:1px solid rgba(242,242,243,0.1)">
@@ -1635,7 +1447,7 @@ document.head.appendChild(s);
 
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px">
           <a data-ima="" href="#servicos" style="display:inline-flex; align-items:center; padding:12px 22px; font-family:var(--font-heading); font-weight:500; font-size:13px; color:#b7b7ba; background:linear-gradient(145deg,rgba(242,242,243,0.055),rgba(242,242,243,0.012)); border:1px solid rgba(242,242,243,0.1); box-shadow:0 10px 30px -10px rgba(0,0,0,0.6), inset 0 1px 1px rgba(242,242,243,0.09), inset 0 -1px 2px rgba(0,0,0,0.55); border-radius:999px; transition:background .4s cubic-bezier(.16,1,.3,1),border-color .4s cubic-bezier(.16,1,.3,1),color .3s" style-hover="background:linear-gradient(145deg,rgba(242,242,243,0.12),rgba(242,242,243,0.03)); border-color:rgba(242,242,243,0.24); color:#f2f2f3">Serviços</a>
-          <a data-ima="" href="#cases" style="display:inline-flex; align-items:center; padding:12px 22px; font-family:var(--font-heading); font-weight:500; font-size:13px; color:#b7b7ba; background:linear-gradient(145deg,rgba(242,242,243,0.055),rgba(242,242,243,0.012)); border:1px solid rgba(242,242,243,0.1); box-shadow:0 10px 30px -10px rgba(0,0,0,0.6), inset 0 1px 1px rgba(242,242,243,0.09), inset 0 -1px 2px rgba(0,0,0,0.55); border-radius:999px; transition:background .4s cubic-bezier(.16,1,.3,1),border-color .4s cubic-bezier(.16,1,.3,1),color .3s" style-hover="background:linear-gradient(145deg,rgba(242,242,243,0.12),rgba(242,242,243,0.03)); border-color:rgba(242,242,243,0.24); color:#f2f2f3">Cases</a>
+          <a data-ima="" href="#cases" style="display:inline-flex; align-items:center; padding:12px 22px; font-family:var(--font-heading); font-weight:500; font-size:13px; color:#b7b7ba; background:linear-gradient(145deg,rgba(242,242,243,0.055),rgba(242,242,243,0.012)); border:1px solid rgba(242,242,243,0.1); box-shadow:0 10px 30px -10px rgba(0,0,0,0.6), inset 0 1px 1px rgba(242,242,243,0.09), inset 0 -1px 2px rgba(0,0,0,0.55); border-radius:999px; transition:background .4s cubic-bezier(.16,1,.3,1),border-color .4s cubic-bezier(.16,1,.3,1),color .3s" style-hover="background:linear-gradient(145deg,rgba(242,242,243,0.12),rgba(242,242,243,0.03)); border-color:rgba(242,242,243,0.24); color:#f2f2f3">Como atuamos</a>
           <a data-ima="" href="#metodo" style="display:inline-flex; align-items:center; padding:12px 22px; font-family:var(--font-heading); font-weight:500; font-size:13px; color:#b7b7ba; background:linear-gradient(145deg,rgba(242,242,243,0.055),rgba(242,242,243,0.012)); border:1px solid rgba(242,242,243,0.1); box-shadow:0 10px 30px -10px rgba(0,0,0,0.6), inset 0 1px 1px rgba(242,242,243,0.09), inset 0 -1px 2px rgba(0,0,0,0.55); border-radius:999px; transition:background .4s cubic-bezier(.16,1,.3,1),border-color .4s cubic-bezier(.16,1,.3,1),color .3s" style-hover="background:linear-gradient(145deg,rgba(242,242,243,0.12),rgba(242,242,243,0.03)); border-color:rgba(242,242,243,0.24); color:#f2f2f3">Método</a>
           <a data-ima="" href="#quem-somos" style="display:inline-flex; align-items:center; padding:12px 22px; font-family:var(--font-heading); font-weight:500; font-size:13px; color:#b7b7ba; background:linear-gradient(145deg,rgba(242,242,243,0.055),rgba(242,242,243,0.012)); border:1px solid rgba(242,242,243,0.1); box-shadow:0 10px 30px -10px rgba(0,0,0,0.6), inset 0 1px 1px rgba(242,242,243,0.09), inset 0 -1px 2px rgba(0,0,0,0.55); border-radius:999px; transition:background .4s cubic-bezier(.16,1,.3,1),border-color .4s cubic-bezier(.16,1,.3,1),color .3s" style-hover="background:linear-gradient(145deg,rgba(242,242,243,0.12),rgba(242,242,243,0.03)); border-color:rgba(242,242,243,0.24); color:#f2f2f3">Quem somos</a>
           <a data-ima="" href="#faq" style="display:inline-flex; align-items:center; padding:12px 22px; font-family:var(--font-heading); font-weight:500; font-size:13px; color:#b7b7ba; background:linear-gradient(145deg,rgba(242,242,243,0.055),rgba(242,242,243,0.012)); border:1px solid rgba(242,242,243,0.1); box-shadow:0 10px 30px -10px rgba(0,0,0,0.6), inset 0 1px 1px rgba(242,242,243,0.09), inset 0 -1px 2px rgba(0,0,0,0.55); border-radius:999px; transition:background .4s cubic-bezier(.16,1,.3,1),border-color .4s cubic-bezier(.16,1,.3,1),color .3s" style-hover="background:linear-gradient(145deg,rgba(242,242,243,0.12),rgba(242,242,243,0.03)); border-color:rgba(242,242,243,0.24); color:#f2f2f3">FAQ</a>
@@ -1721,7 +1533,7 @@ document.head.appendChild(s);
 
           <div style="animation:modalItem .5s cubic-bezier(.16,1,.3,1) .28s both; display:grid; gap:12px">
             <label style="display:grid; gap:6px"><span style="font-family:var(--font-heading); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#b7b7ba">Nome completo</span><input name="nome" type="text" required="" autoComplete="name" placeholder="Dr. / Dra." style="background:transparent; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 14px; height:44px; font-size:14.5px; border-radius:12px; outline:none"></label>
-            <label style="display:grid; gap:6px"><span style="font-family:var(--font-heading); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#b7b7ba">Email</span><input name="email" type="email" required="" autoComplete="email" placeholder="Seu melhor email" style="background:transparent; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 14px; height:44px; font-size:14.5px; border-radius:12px; outline:none"></label>
+            <label style="display:grid; gap:6px"><span style="font-family:var(--font-heading); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#b7b7ba">Email (opcional)</span><input name="email" type="email" autoComplete="email" placeholder="Seu melhor email" style="background:transparent; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 14px; height:44px; font-size:14.5px; border-radius:12px; outline:none"></label>
             <label style="display:grid; gap:6px"><span style="font-family:var(--font-heading); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#b7b7ba">WhatsApp</span><input name="fone" type="tel" required="" autoComplete="tel" placeholder="(00) 00000-0000" style="background:transparent; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 14px; height:44px; font-size:14.5px; border-radius:12px; outline:none"></label>
             <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px">
               <label style="display:grid; gap:6px; min-width:0"><span style="display:block; font-family:var(--font-heading); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:#b7b7ba; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">Especialidade</span><select name="area" required="" style="width:100%; min-width:0; background:#0f0f0e; border:1px solid rgba(242,242,243,0.24); color:#f2f2f3; padding:0 11px; height:44px; font-size:14.5px; border-radius:12px; outline:none"><option value="">Selecione</option><option>Clínica médica</option><option>Clínica odontológica</option><option>Consultório médico</option><option>Consultório odontológico</option><option>Outra área da saúde</option></select></label>
@@ -1743,7 +1555,7 @@ document.head.appendChild(s);
 </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://api.whatsapp.com/send/?phone=5548988809542&amp;text=Ol%C3%A1%21+Vim+pelo+seu+site+e+quero+escalar+minha+clinica.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;},&quot;endpointPlanilha&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://script.google.com/macros/s/AKfycbzqLdnJWGEY1hYPVpeBH5udSqOPAHf3uYLVxKR8wp86PVsUvDazDPHSPTXJV4DrqgY/exec&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://api.whatsapp.com/send/?phone=5548988809542&amp;text=Ol%C3%A1%21+Vim+pelo+site+da+ADR+e+gostaria+de+conversar+sobre+o+marketing+da+minha+cl%C3%ADnica.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;},&quot;endpointPlanilha&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://script.google.com/macros/s/AKfycbzqLdnJWGEY1hYPVpeBH5udSqOPAHf3uYLVxKR8wp86PVsUvDazDPHSPTXJV4DrqgY/exec&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;}}">
 const UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid'];
 
 const BASE_IMG = '';
@@ -1752,9 +1564,9 @@ const BASE_IMG = '';
    `depoimento` está semeado com a mensagem da própria ADR — substituir pela
    fala do cliente quando ela existir. Nada aqui é atribuído a ninguém. */
 const CASES = [
-  { arq: 'assets/case-karine.webp', empresa: 'Clínica parceira ADR', nome: 'Dra. Andreza', alt: 'Dra. Andreza, parceira da ADR Marketing', depoimento: 'Transformamos seu consultório em um ativo previsível, para você focar apenas na medicina.' },
-  { arq: 'assets/case-ricardo.webp', empresa: 'Clínica médica parceira ADR', nome: 'Dr. Ricardo', alt: 'Dr. Ricardo, parceiro da ADR Marketing', depoimento: 'O paciente escolhe você pela especialidade, não pelo preço.' },
-  { arq: 'assets/case-diogo.webp', empresa: 'Clínica médica parceira ADR', nome: 'Dr. Diogo', alt: 'Dr. Diogo, parceiro da ADR Marketing', depoimento: 'Filtramos o público para atrair apenas pacientes com o perfil ideal.' },
+  { arq: 'assets/case-karine.webp', empresa: 'Como trabalhamos', nome: 'Captação de pacientes particulares', alt: 'Foto ilustrativa de atendimento em clínica', depoimento: 'Filtramos o público para atrair apenas o perfil de paciente compatível com o ticket dos seus procedimentos, sem depender só de indicação.' },
+  { arq: 'assets/case-ricardo.webp', empresa: 'Como trabalhamos', nome: 'Autoridade digital e posicionamento', alt: 'Foto ilustrativa de atendimento em clínica', depoimento: 'Construímos uma presença digital que blinda a reputação do profissional e eleva a percepção de valor antes do primeiro contato.' },
+  { arq: 'assets/case-diogo.webp', empresa: 'Como trabalhamos', nome: 'Comercial de alta conversão', alt: 'Foto ilustrativa de atendimento em clínica', depoimento: 'Recepção treinada ou SDR implantado, para que o paciente qualificado não se perca no atendimento.' },
 ];
 
 const dois = (n) => (n < 10 ? '0' + n : String(n));
@@ -1772,7 +1584,7 @@ const RECADOS = [
 ];
 
 class Component extends DCLogic {
-  state = { menu: false, aberto: false, enviado: false, zapFinal: '', slide: 0, fase: 'entrada', dir: 1, bolha: false, recado: 0, saindo: false, metrica: 0 };
+  state = { menu: false, aberto: false, enviado: false, zapFinal: '', enviadoSecao: false, zapFinalSecao: '', slide: 0, fase: 'entrada', dir: 1, bolha: false, recado: 0, saindo: false, metrica: 0 };
 
   /* Autoplay do carrossel de especialidades: só roda quando a seção está na
      tela, e qualquer clique reinicia a contagem para não trocar embaixo do
@@ -2655,7 +2467,7 @@ iniciarReveal() {
   utms() { return this._utm || {}; }
 
   linkZap() {
-    return this.props.whatsappUrl ?? 'https://api.whatsapp.com/send/?phone=5548988809542&text=Ol%C3%A1%21+Vim+pelo+seu+site+e+quero+escalar+minha+clinica.';
+    return this.props.whatsappUrl ?? 'https://api.whatsapp.com/send/?phone=5548988809542&text=Ol%C3%A1%21+Vim+pelo+site+da+ADR+e+gostaria+de+conversar+sobre+o+marketing+da+minha+cl%C3%ADnica.';
   }
 
   /* O lead completo vai para a planilha; a conversa abre com a mensagem curta
@@ -2665,7 +2477,7 @@ iniciarReveal() {
     const base = zap.split('?')[0];
     const p = new URLSearchParams(zap.split('?')[1] || '');
     if (!p.get('phone')) p.set('phone', '5548988809542');
-    if (!p.get('text')) p.set('text', 'Olá! Vim pelo seu site e quero escalar minha clinica.');
+    if (!p.get('text')) p.set('text', 'Olá! Vim pelo site da ADR e gostaria de conversar sobre o marketing da minha clínica.');
     const u = this.utms();
     UTM_KEYS.forEach((k) => { if (u[k]) p.set(k, u[k]); });
     return base + '?' + p.toString();
@@ -2698,8 +2510,8 @@ iniciarReveal() {
       ping.referrerPolicy = 'no-referrer-when-downgrade';
       ping.src = alvo;
       this._ping = ping;                       // mantém a referência até disparar
-      fetch(alvo, { mode: 'no-cors', keepalive: true }).catch(() => {});
-    } catch (e) { /* o envio nunca deve travar o fluxo do lead */ }
+      fetch(alvo, { mode: 'no-cors', keepalive: true }).catch(() => this.evento('form_submit_error', { form_location: dados.origem_form }));
+    } catch (e) { this.evento('form_submit_error', { form_location: dados.origem_form }); /* o envio nunca deve travar o fluxo do lead */ }
   }
 
   /* Trava contra clique duplo — evita linha duplicada na planilha. */
@@ -2723,6 +2535,16 @@ iniciarReveal() {
       if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', payload);
       if (typeof window.fbq === 'function') window.fbq('track', 'Lead', payload);
     } catch (e) { /* rastreio nunca deve quebrar o envio */ }
+  }
+
+  /* Eventos sem PII: só metadados de contexto, nunca nome/email/whatsapp. */
+  evento(nome, extra) {
+    try {
+      const payload = Object.assign({ event: nome }, this.utms(), extra || {});
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(payload);
+      if (typeof window.gtag === 'function') window.gtag('event', nome, payload);
+    } catch (e) { /* rastreio nunca deve quebrar o fluxo */ }
   }
 
   barra = (el) => { this._barra = el; };
@@ -2754,7 +2576,7 @@ iniciarReveal() {
     if (!this.travarEnvio(botao, 'Receber minha análise gratuita')) return;
     const url = this.montarLink();
     this.enviarPlanilha(Object.assign({ origem_form: 'modal' }, dados));
-    this.rastrear(Object.assign({ form_location: 'modal' }, dados));
+    this.rastrear({ form_location: 'modal', especialidade: dados.especialidade, pacientes_mes: dados.pacientes_mes });
     this.abrirAba(url);
     this.setState({ enviado: true, zapFinal: url });
   };
@@ -2786,8 +2608,9 @@ iniciarReveal() {
     if (!this.travarEnvio(botao, 'Solicite uma análise gratuita')) return;
     const url = this.montarLink();
     this.enviarPlanilha(Object.assign({ origem_form: 'secao_analise' }, dados));
-    this.rastrear(Object.assign({ form_location: 'secao_analise' }, dados));
+    this.rastrear({ form_location: 'secao_analise', especialidade: dados.especialidade, pacientes_mes: dados.pacientes_mes });
     this.abrirAba(url);
+    this.setState({ enviadoSecao: true, zapFinalSecao: url });
   };
 
   renderVals() {
@@ -2844,6 +2667,9 @@ iniciarReveal() {
       aberto: this.state.aberto,
       enviado: this.state.enviado,
       naoEnviado: !this.state.enviado,
+      zapFinalSecao: this.state.zapFinalSecao,
+      enviadoSecao: this.state.enviadoSecao,
+      naoEnviadoSecao: !this.state.enviadoSecao,
       barra: this.barra,
       aoTopo: this.aoTopo,
       bolhaAberta: this.state.bolha,
