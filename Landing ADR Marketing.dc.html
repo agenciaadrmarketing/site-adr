@@ -941,8 +941,8 @@ document.addEventListener('click', function(e){
         <h2 style="font-family:var(--font-heading); font-weight:600; font-size:clamp(25px,3.4vw,45px); line-height:1.08; letter-spacing:-0.02em; margin:0; text-wrap:balance">Cases de marketing para <span class="graphite">clínicas e consultórios</span></h2>
       </div>
       <button class="brilho blueprint" type="button" onClick="{{ abrir }}" style="display:inline-flex; align-items:center; gap:11px; background:#1a9646; color:#ffffff; font-family:var(--font-heading); font-weight:600; font-size:clamp(11px,0.95vw,13px); letter-spacing:0.11em; text-transform:uppercase; padding:0 clamp(16px,2vw,28px); height:50px; border:1px solid #1a9646; flex:none; cursor:pointer; transition:background .18s; border-radius:999px" style-hover="background:#157a39; border-color:#157a39">
-        
-        Contrate a nossa assessoria
+
+        {{ textoCtaCases }}
       </button>
     </div>
     <div style="height:1px; background:rgba(31,31,30,0.16); margin:clamp(28px,3.6vw,48px) 0"></div>
@@ -959,7 +959,7 @@ document.addEventListener('click', function(e){
           <span aria-hidden="true" style="width:40px; height:1px; background:rgba(31,31,30,0.26); flex:none"></span>
           <span style="display:block">
             <span style="display:block; font-family:var(--font-heading); font-weight:600; font-size:14.5px; color:#1d1f20">{{ nomeAtivo }}</span>
-            <span style="display:block; font-size:12px; color:#7a7a7d">Parceiro ADR Marketing</span>
+            <span style="display:block; font-size:12px; color:#7a7a7d">{{ legendaAutorCases }}</span>
           </span>
         </div>
 
@@ -1570,9 +1570,9 @@ const UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_term','utm_conte
 
 const BASE_IMG = '';
 
-/* empresa / nome são os campos a preencher com os dados reais de cada case.
-   `depoimento` está semeado com a mensagem da própria ADR — substituir pela
-   fala do cliente quando ela existir. Nada aqui é atribuído a ninguém. */
+/* Depoimentos atribuídos a médicos parceiros da ADR. */
+const TEXTO_CTA_CASES = 'Contrate a nossa assessoria';
+const LEGENDA_AUTOR_CASES = 'Parceiro ADR Marketing';
 const CASES = [
   { arq: 'assets/captacao-pacientes-particulares-clinica-medica.webp', empresa: 'Clínica médica parceira ADR', nome: 'Dra. Karine', alt: 'Dra. Karine, parceira da ADR Marketing', depoimento: 'Transformamos seu consultório em um ativo previsível, para você focar apenas na medicina.' },
   { arq: 'assets/autoridade-digital-marketing-medico.webp', empresa: 'Clínica médica parceira ADR', nome: 'Dr. Ricardo', alt: 'Dr. Ricardo, parceiro da ADR Marketing', depoimento: 'O paciente escolhe você pela especialidade, não pelo preço.' },
@@ -2652,6 +2652,8 @@ iniciarReveal() {
       };
     });
     return {
+      textoCtaCases: TEXTO_CTA_CASES,
+      legendaAutorCases: LEGENDA_AUTOR_CASES,
       atualNum: dois(i + 1),
       totalNum: dois(CASES.length),
       srcAtiva: BASE_IMG + c.arq,
