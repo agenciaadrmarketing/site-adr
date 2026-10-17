@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-urologistas",
+  "nome": "Urologia",
+  "plural": "urologistas",
+  "status": "publicada",
+  "title": "Marketing para Urologistas | ADR Marketing",
+  "description": "Marketing para urologistas: captação discreta de pacientes particulares, Google Ads para busca ativa por sintoma, posicionamento conforme o CFM e atendimento que vence o tabu.",
+  "h1": "Marketing para urologistas",
+  "h1Accent": "para o paciente que adia a consulta",
+  "resposta": "O paciente de urologia costuma adiar a consulta: próstata, disfunção erétil, vasectomia, infertilidade e cálculo renal envolvem tabu, vergonha ou medo. O marketing para urologistas precisa facilitar a decisão — informação clara, discrição absoluta e um atendimento que responda rápido e sem constrangimento. A ADR Marketing estrutura essa jornada do anúncio ao agendamento, dentro das normas de publicidade médica do CFM.",
+  "wa": "Olá! Vim pela página de marketing para urologistas da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de urologia decide — e por que demora",
+    "texto": "Muitas vezes quem pesquisa é a esposa ou um familiar, ou o próprio paciente em busca anônima por um sintoma. A decisão é adiada até que o incômodo supere a vergonha. Quando ele decide, quer resolver rápido: busca ativa, resposta imediata e um ambiente que trate o tema com naturalidade.",
+    "pontos": [
+      "Tabu e adiamento: o paciente demora para procurar e decide rápido quando procura",
+      "Busca por sintoma ou procedimento, muitas vezes de forma anônima",
+      "Influência de cônjuge e família na decisão e no agendamento",
+      "Procedimentos eletivos particulares (vasectomia, check-up) com decisão pesquisada"
+    ]
+  },
+  "demanda": {
+    "google": "É o canal mais forte na especialidade: buscas por 'urologista' com cidade e por procedimentos e sintomas (vasectomia, próstata, cálculo renal). Demanda ativa, intenção alta e janela curta de decisão.",
+    "meta": "Útil para educar e reduzir o tabu — prevenção, check-up, quando procurar —, mas com limites: as políticas da Meta restringem saúde sexual em anúncios e o CFM veda promessa de resultado em tratamentos como disfunção erétil.",
+    "conteudo": "Conteúdo direto e sem eufemismo sobre dúvidas comuns reduz a barreira da primeira consulta."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Referência em um tema (saúde do homem, vasectomia, próstata) com comunicação direta, discreta e dentro do CFM."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads concentrado em busca ativa por procedimento e sintoma; Meta Ads para prevenção e check-up."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por procedimento e perfil particular, com linguagem que não constrange."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "WhatsApp com resposta rápida e privacidade, triagem objetiva e agendamento em janela curta."
+    }
+  ],
+  "sensiveis": [
+    "Disfunção erétil e saúde sexual: sem promessa de resultado (CFM) e com restrições nas plataformas de anúncio",
+    "Linguagem direta, mas sem sensacionalismo ou apelo ao medo",
+    "Discrição no atendimento e nas mensagens pré-preenchidas de WhatsApp",
+    "Nenhum dado clínico no formulário do site"
+  ],
+  "faq": [
+    {
+      "q": "Dá para anunciar vasectomia?",
+      "a": "Dá, como informação sobre o procedimento e aproveitando a busca ativa no Google. Sem preço promocional nem promessa; a conversa sobre indicação e procedimento acontece na consulta."
+    },
+    {
+      "q": "Por que o paciente some depois do primeiro contato?",
+      "a": "Porque o tabu volta. Resposta lenta ou burocrática no WhatsApp dá tempo para desistir. Triagem rápida, discrição e agenda próxima fazem parte do método."
+    },
+    {
+      "q": "Instagram funciona para urologia?",
+      "a": "Funciona para educação e prevenção, com alcance dos familiares que influenciam a decisão. Para captação direta, o Google costuma ser mais eficiente nesta especialidade."
+    },
+    {
+      "q": "Como a ADR mede o retorno?",
+      "a": "Contatos, pacientes qualificados, consultas agendadas e, quando a clínica compartilha, procedimentos realizados — nunca cliques isolados."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-ginecologistas",
+    "marketing-para-cardiologistas",
+    "marketing-para-endocrinologistas"
+  ]
+}

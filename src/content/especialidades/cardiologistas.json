@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-cardiologistas",
+  "nome": "Cardiologia",
+  "plural": "cardiologistas",
+  "status": "publicada",
+  "title": "Marketing para Cardiologistas | ADR Marketing",
+  "description": "Marketing para cardiologistas: credibilidade em vez de alarmismo, Google Ads para check-up e exames, Meta Ads para prevenção e comercial que acolhe paciente e família.",
+  "h1": "Marketing para cardiologistas",
+  "h1Accent": "quando a decisão envolve a família inteira",
+  "resposta": "Na cardiologia, a decisão raramente é só do paciente: filhos e cônjuges pesquisam, comparam credenciais e cobram agilidade. Check-up cardiológico, exames (ecocardiograma, teste ergométrico, Holter, MAPA), acompanhamento de hipertensão e cardiologia do esporte são portas de entrada do atendimento particular. O marketing para cardiologistas precisa transmitir credibilidade e segurança — sem explorar o medo — e preparar a clínica para atender quem decide junto. A ADR Marketing atua nessas frentes dentro das normas de publicidade médica do CFM.",
+  "wa": "Olá! Vim pela página de marketing para cardiologistas da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de cardiologia — e a família — decide",
+    "texto": "Há dois perfis: quem chega por sintoma ou encaminhamento, com urgência e ansiedade, e quem busca prevenção — check-up, avaliação pré-esportiva, acompanhamento de pressão e colesterol. Nos dois, credenciais, estrutura e rapidez de atendimento pesam, e a família costuma participar da escolha e do agendamento.",
+    "pontos": [
+      "Decisão compartilhada com familiares, que pesquisam e agendam",
+      "Credenciais e estrutura (exames no local, quando houver) são decisivas",
+      "Prevenção, check-up e cardiologia do esporte como portas de entrada particulares",
+      "Convênio dominante: o particular precisa de agilidade e proximidade claras"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'cardiologista' com cidade e por exames e check-up (ecocardiograma, teste ergométrico, Holter). Intenção alta; separar convênio de particular e exame avulso de acompanhamento melhora a qualidade do contato.",
+    "meta": "Posicionamento em prevenção e saúde cardiovascular para o público certo, incluindo familiares que decidem. Sem mensagens baseadas em medo — o sensacionalismo é vedado pelo CFM.",
+    "conteudo": "Conteúdo sobre prevenção, exames e quando procurar o cardiologista sustenta a credibilidade antes do primeiro contato."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Credibilidade e segurança: trajetória, estrutura e forma de atendimento, sem alarmismo."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para exames, check-up e consulta com busca ativa; Meta Ads para prevenção e alcance de familiares."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil particular e por tipo de demanda: consulta, exame ou acompanhamento."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Atendimento que acolhe paciente e família, triagem de urgência × rotina e agenda ágil para exames."
+    }
+  ],
+  "sensiveis": [
+    "Sem alarmismo ou mensagens baseadas em medo — sensacionalismo é vedado pelo CFM",
+    "Sem promessa de resultado ou de prevenção garantida",
+    "Urgências não são tema de anúncio: a comunicação orienta a procurar emergência",
+    "Nenhum dado clínico em formulários do site"
+  ],
+  "faq": [
+    {
+      "q": "Posso anunciar check-up cardiológico?",
+      "a": "Pode, como informação sobre o serviço e os exames disponíveis, sem preço promocional nem promessa. O Google Ads captura essa busca ativa com boa qualidade."
+    },
+    {
+      "q": "Como lidar com a família que participa da decisão?",
+      "a": "Com comunicação clara sobre estrutura, credenciais e agilidade, e com um atendimento no WhatsApp que responda bem a quem está pesquisando pelo paciente."
+    },
+    {
+      "q": "Meta Ads faz sentido para cardiologia?",
+      "a": "Para prevenção e posicionamento, sim — inclusive alcançando familiares. Para captação direta, o Google costuma pesar mais nesta especialidade."
+    },
+    {
+      "q": "O que a ADR mede?",
+      "a": "Contatos, pacientes qualificados, consultas e exames agendados e, quando a clínica compartilha, comparecimento — mês a mês, pelo WhatsApp."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-urologistas",
+    "marketing-para-nutrologos"
+  ]
+}

@@ -14,14 +14,13 @@ ErrorDocument 404 /404.html
   RewriteCond %{REQUEST_URI} !/$
   RewriteRule ^(.*)$ /$1/ [R=301,L]
 
-  # Mapa de URLs antigas → novas (Fase 2). As páginas de nicho continuam
-  # servidas em /niches/<especialidade>/ até as novas rotas existirem; só então
-  # estas regras devem ser ativadas (equivalência 1:1, nunca para a Home).
-  # RewriteRule ^niches/cardiologia/?$  /marketing-para-cardiologistas/  [R=301,L]
-  # RewriteRule ^niches/endocrino/?$    /marketing-para-endocrinologistas/ [R=301,L]
-  # RewriteRule ^niches/ginecologia/?$  /marketing-para-ginecologistas/ [R=301,L]
-  # RewriteRule ^niches/nutri/?$        /marketing-para-nutrologos/     [R=301,L]
-  # RewriteRule ^niches/urologia/?$     /marketing-para-urologistas/    [R=301,L]
+  # URLs antigas → novas (equivalência 1:1; páginas legadas removidas do pacote).
+  # /niches/odonto/ continua no ar até decisão do cliente.
+  RewriteRule ^niches/cardiologia/?(index\.html)?$  /marketing-para-cardiologistas/   [R=301,L]
+  RewriteRule ^niches/endocrino/?(index\.html)?$    /marketing-para-endocrinologistas/ [R=301,L]
+  RewriteRule ^niches/ginecologia/?(index\.html)?$  /marketing-para-ginecologistas/   [R=301,L]
+  RewriteRule ^niches/nutri/?(index\.html)?$        /marketing-para-nutrologos/       [R=301,L]
+  RewriteRule ^niches/urologia/?(index\.html)?$     /marketing-para-urologistas/      [R=301,L]
 </IfModule>
 
 # ---------------------------------------------------------------------------

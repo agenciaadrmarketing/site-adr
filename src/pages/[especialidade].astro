@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import SpecialtyPage from '../components/SpecialtyPage.astro';
+
+export async function getStaticPaths() {
+  const all = await getCollection('especialidades');
+  return all
+    .filter((e) => e.data.status === 'publicada')
+    .map((e) => ({ params: { especialidade: e.data.slug }, props: { data: e.data } }));
+}
+
+const { data } = Astro.props;
+---
+
+<SpecialtyPage data={data} />

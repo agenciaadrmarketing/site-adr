@@ -143,11 +143,11 @@ export interface Specialty {
 }
 
 export const SPECIALTIES: Specialty[] = [
-  { slug: 'marketing-para-endocrinologistas', name: 'Endocrinologia', plural: 'Endocrinologistas', priority: 1, status: 'legado', legacyHref: '/niches/endocrino/' },
-  { slug: 'marketing-para-ginecologistas', name: 'Ginecologia', plural: 'Ginecologistas', priority: 2, status: 'legado', legacyHref: '/niches/ginecologia/' },
-  { slug: 'marketing-para-urologistas', name: 'Urologia', plural: 'Urologistas', priority: 3, status: 'legado', legacyHref: '/niches/urologia/' },
-  { slug: 'marketing-para-nutrologos', name: 'Nutrologia', plural: 'Nutrólogos', priority: 4, status: 'legado', legacyHref: '/niches/nutri/' },
-  { slug: 'marketing-para-cardiologistas', name: 'Cardiologia', plural: 'Cardiologistas', priority: 5, status: 'legado', legacyHref: '/niches/cardiologia/' },
+  { slug: 'marketing-para-endocrinologistas', name: 'Endocrinologia', plural: 'Endocrinologistas', priority: 1, status: 'publicada' },
+  { slug: 'marketing-para-ginecologistas', name: 'Ginecologia', plural: 'Ginecologistas', priority: 2, status: 'publicada' },
+  { slug: 'marketing-para-urologistas', name: 'Urologia', plural: 'Urologistas', priority: 3, status: 'publicada' },
+  { slug: 'marketing-para-nutrologos', name: 'Nutrologia', plural: 'Nutrólogos', priority: 4, status: 'publicada' },
+  { slug: 'marketing-para-cardiologistas', name: 'Cardiologia', plural: 'Cardiologistas', priority: 5, status: 'publicada' },
   { slug: 'marketing-para-dermatologistas', name: 'Dermatologia', plural: 'Dermatologistas', priority: 6, status: 'pendente' },
   { slug: 'marketing-para-cirurgioes-plasticos', name: 'Cirurgia plástica', plural: 'Cirurgiões plásticos', priority: 7, status: 'pendente' },
   { slug: 'marketing-para-ortopedistas', name: 'Ortopedia', plural: 'Ortopedistas', priority: 8, status: 'pendente' },

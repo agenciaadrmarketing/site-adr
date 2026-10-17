@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-nutrologos",
+  "nome": "Nutrologia",
+  "plural": "nutrólogos",
+  "status": "publicada",
+  "title": "Marketing para Nutrólogos | ADR Marketing",
+  "description": "Marketing para nutrólogos: posicionamento médico em um mercado cheio de promessas, Google Ads e Meta Ads dentro das normas do CFM e comercial para acompanhamento.",
+  "h1": "Marketing para nutrólogos",
+  "h1Accent": "em um mercado cheio de promessas",
+  "resposta": "A nutrologia é especialidade médica — e disputa atenção com influenciadores, dietas da moda e promessas de emagrecimento rápido. O marketing para nutrólogos precisa fazer o oposto do mercado: posicionar o médico pela seriedade, educar sobre a diferença entre nutrologia e modismo e captar pacientes com perfil para acompanhamento, sem prometer resultado. A ADR Marketing constrói essa autoridade dentro das normas de publicidade médica do CFM.",
+  "wa": "Olá! Vim pela página de marketing para nutrólogos da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de nutrologia decide",
+    "texto": "O desejo é alto — emagrecer, ter mais energia, melhorar o desempenho —, mas a confiança é baixa: o paciente já tentou muita coisa. Ele compara o médico com influenciadores e com programas que prometem milagre. Decide por credibilidade, didática e sensação de acompanhamento próximo, e fica se o programa fizer sentido para a rotina dele.",
+    "pontos": [
+      "Desejo alto, confiança baixa: o paciente já foi frustrado antes",
+      "Concorrência com não médicos e com promessas irreais",
+      "Decisão por credibilidade e didática",
+      "Programas de acompanhamento: recorrência e relacionamento"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'nutrólogo' com cidade e por temas (emagrecimento, reposição de vitaminas, desempenho esportivo). Boa intenção, mas misturada com quem procura solução rápida — o filtro de público é decisivo.",
+    "meta": "Canal natural para a nutrologia, já que o público acompanha conteúdo de saúde e estética, e também o mais restrito: as políticas da Meta limitam mensagens sobre peso e imagem corporal, e o CFM veda \"antes e depois\" promocional e promessa de resultado.",
+    "conteudo": "Educar sobre o que a nutrologia faz — e o que não faz — diferencia o médico do mercado de promessas."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "O médico como referência séria em um tema (obesidade, performance, longevidade), com comunicação didática e sem promessas."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para busca pelo especialista e por temas; Meta Ads para autoridade e educação, dentro das políticas das plataformas."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil de acompanhamento particular, não por quem busca resultado imediato."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Atendimento que explica o programa e o acompanhamento, triagem de expectativas e follow-up entre consultas."
+    }
+  ],
+  "sensiveis": [
+    "Proibido \"antes e depois\" promocional, promessa de emagrecimento ou de resultado",
+    "As políticas da Meta restringem peso, imagem corporal e atributos pessoais de saúde em anúncios",
+    "Não anunciar medicamentos ou suplementos como isca",
+    "Deixar clara a atuação médica da nutrologia sem desqualificar outras profissões"
+  ],
+  "faq": [
+    {
+      "q": "Como me diferenciar de influenciadores e dietas da moda?",
+      "a": "Pela seriedade: posicionamento educativo, linguagem médica acessível e zero promessa. O público frustrado com promessas valoriza exatamente isso — e a mídia pode ser direcionada a ele."
+    },
+    {
+      "q": "Posso mostrar resultados de pacientes?",
+      "a": "Não como publicidade. O CFM veda \"antes e depois\" promocional e promessa de resultado, e as plataformas restringem imagens corporais. A autoridade é construída por educação, não por exposição de pacientes."
+    },
+    {
+      "q": "Google ou Instagram para nutrologia?",
+      "a": "Instagram e Facebook têm peso natural na especialidade, mas com as regras mais rígidas; o Google captura quem já procura o especialista. A combinação depende do posicionamento e é definida no diagnóstico."
+    },
+    {
+      "q": "Como a ADR trata as expectativas do paciente no atendimento?",
+      "a": "Com triagem: entender o que a pessoa busca antes de agendar evita consultas frustradas e protege a reputação do médico."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-cardiologistas",
+    "marketing-para-ginecologistas"
+  ]
+}

@@ -61,19 +61,25 @@ plásticos, ortopedistas, neurologistas, psiquiatras.
 
 Cada página precisa de conteúdo próprio: jornada do paciente daquela especialidade, ticket típico,
 procedimentos eletivos, canal mais adequado, perguntas específicas. Texto idêntico com troca de
-especialidade não é aceitável (hoje é o que as páginas legadas em `/niches/` fazem — por isso serão
-substituídas e redirecionadas 301 quando as novas existirem).
+especialidade não é aceitável (era o que as páginas legadas em `/niches/` faziam).
 
-Mapa de redirects (ativar só quando a página nova existir):
+**Status (Fase 2, primeira leva):** as 5 prioritárias estão publicadas com conteúdo próprio
+(`src/content/especialidades/*.json`, template `SpecialtyPage.astro`). Similaridade textual máxima
+entre pares: 0,25 (Jaccard em sequências de 4 palavras; o que coincide é cabeçalho, rodapé e CTA).
+Intenção de cada uma: "marketing para [especialidade]" / "como captar pacientes de [especialidade]" —
+jornada do paciente, onde a demanda está (Google × Meta), as quatro frentes aplicadas, pontos sensíveis
+de publicidade médica e perguntas da especialidade.
 
-| Antiga (legado, no ar) | Nova |
-|---|---|
-| `/niches/cardiologia/` | `/marketing-para-cardiologistas/` |
-| `/niches/endocrino/` | `/marketing-para-endocrinologistas/` |
-| `/niches/ginecologia/` | `/marketing-para-ginecologistas/` |
-| `/niches/nutri/` | `/marketing-para-nutrologos/` |
-| `/niches/urologia/` | `/marketing-para-urologistas/` |
-| `/niches/odonto/` | sem equivalente aprovado (odontologia está fora do posicionamento atual) — decisão do cliente |
+Mapa de redirects — **ativos** no `.htaccess` desde a Fase 2 (páginas legadas removidas do pacote):
+
+| Antiga (legado) | Nova | Status |
+|---|---|---|
+| `/niches/cardiologia/` | `/marketing-para-cardiologistas/` | 301 ativo |
+| `/niches/endocrino/` | `/marketing-para-endocrinologistas/` | 301 ativo |
+| `/niches/ginecologia/` | `/marketing-para-ginecologistas/` | 301 ativo |
+| `/niches/nutri/` | `/marketing-para-nutrologos/` | 301 ativo |
+| `/niches/urologia/` | `/marketing-para-urologistas/` | 301 ativo |
+| `/niches/odonto/` | sem equivalente aprovado (odontologia está fora do posicionamento atual) — decisão do cliente | continua no ar, no sitemap, formato antigo |
 | `cardiologia.agenciaadrmarketing.com` etc. | **verificar se existem**; se sim, 301 no vhost do subdomínio para a rota do domínio principal |
 
 ## Fase 3 — blog (publicar só artigos originais)

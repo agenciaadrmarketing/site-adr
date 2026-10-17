@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-ginecologistas",
+  "nome": "Ginecologia",
+  "plural": "ginecologistas",
+  "status": "publicada",
+  "title": "Marketing para Ginecologistas | ADR Marketing",
+  "description": "Marketing para ginecologistas: posicionamento acolhedor, Google Ads e Meta Ads conforme o CFM e atendimento que transforma a primeira consulta em vínculo duradouro.",
+  "h1": "Marketing para ginecologistas",
+  "h1Accent": "que constroem vínculo, não só agenda",
+  "resposta": "A ginecologia é uma das especialidades com maior recorrência: consulta de rotina, planejamento reprodutivo, climatério, inserção de DIU e saúde sexual mantêm a paciente na clínica por anos. O marketing para ginecologistas precisa gerar a primeira consulta com uma comunicação acolhedora e discreta — e preparar a clínica para transformar essa consulta em vínculo de longo prazo. É assim que a ADR Marketing trabalha a especialidade, dentro das normas do CFM.",
+  "wa": "Olá! Vim pela página de marketing para ginecologistas da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como a paciente escolhe uma ginecologista",
+    "texto": "A escolha é fortemente baseada em confiança, acolhimento e indicação. A paciente pesquisa o profissional — não só a clínica —, lê avaliações, observa a forma de se comunicar e valoriza discrição e tempo de consulta. Muitas chegam por uma necessidade pontual, como DIU, um sintoma ou um exame de rotina atrasado, e ficam se a experiência for boa.",
+    "pontos": [
+      "Decisão centrada na pessoa do médico e no acolhimento",
+      "Avaliações e presença digital do profissional pesam muito na escolha",
+      "Porta de entrada frequente: procedimentos e exames pontuais (DIU, rotina, planejamento)",
+      "Recorrência anual ou maior: o valor está no vínculo"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'ginecologista' com bairro ou cidade e por procedimentos específicos (inserção de DIU, consulta de rotina, menopausa). Intenção alta; o filtro entre convênio e particular decide a qualidade do contato.",
+    "meta": "Eficiente para posicionamento e proximidade com um público feminino que acompanha conteúdo de saúde. As políticas da Meta restringem temas de saúde sexual e reprodutiva em anúncios; a comunicação precisa ser educativa e não invasiva.",
+    "conteudo": "Conteúdo sobre dúvidas comuns — DIU, exames, sintomas, climatério — sustenta a autoridade e reduz a barreira da primeira consulta."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "A profissional como referência acolhedora na região, com comunicação clara sobre o que esperar da consulta."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para procedimentos e consulta com busca ativa; Meta Ads para posicionamento educativo."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro de perfil particular e por necessidade ou procedimento, com linguagem discreta."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Atendimento no WhatsApp com privacidade e rapidez, triagem do que é urgente, follow-up de retornos e exames."
+    }
+  ],
+  "sensiveis": [
+    "Saúde sexual e reprodutiva têm restrições específicas nas políticas de anúncio das plataformas",
+    "Imagens e textos não podem sensacionalizar nem expor pacientes",
+    "Sem promessa de resultado em tratamentos hormonais ou estéticos íntimos",
+    "Dados sensíveis nunca entram em formulários do site"
+  ],
+  "faq": [
+    {
+      "q": "Faz sentido anunciar procedimentos como inserção de DIU?",
+      "a": "Sim, como informação sobre o serviço e aproveitando a busca ativa no Google. Sem preço promocional, sem promessa de resultado e respeitando as políticas de saúde reprodutiva das plataformas."
+    },
+    {
+      "q": "Como o marketing ajuda a reduzir a dependência do convênio?",
+      "a": "Posicionando com clareza o que a consulta particular oferece — tempo, acolhimento, acesso — e direcionando a mídia para quem procura exatamente isso. O convênio continua existindo; o particular passa a ter um motivo."
+    },
+    {
+      "q": "A comunicação no Instagram ajuda a agenda?",
+      "a": "Ajuda quando é educativa e consistente, porque constrói confiança antes da consulta. Mas seguidor não é agenda: a ADR acompanha engajamento junto com os agendamentos, nunca isolado."
+    },
+    {
+      "q": "O que muda no atendimento da recepção?",
+      "a": "Rapidez e privacidade no WhatsApp, triagem do que é rotina ou urgência e follow-up de retornos e exames. É onde a maioria das clínicas perde pacientes que já tinham decidido."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-urologistas",
+    "marketing-para-nutrologos"
+  ]
+}

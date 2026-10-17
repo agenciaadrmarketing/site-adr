@@ -1,0 +1,46 @@
+{
+  "slug": "marketing-para-endocrinologistas",
+  "nome": "Endocrinologia",
+  "plural": "endocrinologistas",
+  "status": "publicada",
+  "title": "Marketing para Endocrinologistas | ADR Marketing",
+  "description": "Marketing para endocrinologistas: posicionamento, Google Ads e Meta Ads conforme o CFM e comercial preparado para pacientes de acompanhamento contínuo.",
+  "h1": "Marketing para endocrinologistas:",
+  "h1Accent": "do primeiro contato ao acompanhamento contínuo",
+  "resposta": "Na endocrinologia, o paciente particular raramente é de uma consulta só: diabetes, tireoide, obesidade e saúde hormonal pedem acompanhamento contínuo. O marketing para endocrinologistas, portanto, não é só gerar a primeira consulta — é posicionar o médico como referência no tema que o paciente pesquisa, filtrar quem tem perfil para o tratamento particular e preparar a clínica para manter esse paciente em acompanhamento. A ADR Marketing atua nessas três frentes, dentro das normas de publicidade médica do CFM.",
+  "wa": "Olá! Vim pela página de marketing para endocrinologistas da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de endocrinologia decide",
+    "texto": "É um paciente que pesquisa muito antes de agendar. Ele chega com sintomas difusos — cansaço, ganho de peso, alterações em exames — ou com um diagnóstico já dado e procura quem explique melhor e conduza o tratamento. A confiança se forma pela clareza das explicações; por isso conteúdo educativo pesa mais aqui do que em especialidades de procedimento único.",
+    "pontos": [
+      "Buscas informacionais longas antes da decisão: sintomas, exames, tratamentos",
+      "Decisão por confiança e didática, não por preço",
+      "Alta recorrência: o valor está no acompanhamento, não na primeira consulta",
+      "Concorrência direta com o convênio: o atendimento particular precisa de um motivo claro"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'endocrinologista' com cidade ou bairro e por condições específicas (tireoide, diabetes, reposição hormonal, obesidade). É demanda ativa e qualificada — quando a campanha separa quem busca convênio de quem busca atendimento particular.",
+    "meta": "Constrói autoridade em saúde hormonal e metabólica para um público que ainda não decidiu procurar um especialista. Exige cuidado redobrado: as políticas de anúncios da Meta restringem mensagens sobre peso e atributos pessoais de saúde, e o CFM veda promessa de resultado.",
+    "conteudo": "Posicionamento educativo — o que o exame significa, quando procurar o especialista, como funciona o acompanhamento — sustenta tanto a busca quanto a mídia social."
+  },
+  "frentes": [
+    { "t": "Posicionamento e autoridade", "d": "Referência em um tema (tireoide, obesidade, saúde hormonal) na sua região, com linguagem didática e dentro das normas do CFM." },
+    { "t": "Tráfego pago", "d": "Google Ads para quem busca o especialista ou a condição; Meta Ads para educar e aproximar quem ainda não decidiu." },
+    { "t": "Captação de pacientes particulares", "d": "Filtro por perfil de tratamento particular e acompanhamento, não por volume de contatos." },
+    { "t": "Comercial de alta conversão", "d": "Atendimento que explica como funciona o acompanhamento, triagem de convênio × particular e follow-up de retornos." }
+  ],
+  "sensiveis": [
+    "Nada de promessa de emagrecimento, \"antes e depois\" ou garantia de resultado — vedadas pelo CFM e restrito pelas plataformas",
+    "Não anunciar medicamentos ou protocolos como chamariz",
+    "Linguagem que não estigmatize peso ou condição clínica",
+    "Dados de saúde do paciente nunca entram em formulários ou ferramentas de medição"
+  ],
+  "faq": [
+    { "q": "Marketing para endocrinologista funciona com tanta concorrência de convênio?", "a": "Funciona quando o posicionamento deixa claro o que o atendimento particular oferece — tempo de consulta, acompanhamento próximo, acesso ao médico — e a mídia filtra quem procura exatamente isso. Competir por preço com o convênio não é o caminho." },
+    { "q": "Posso anunciar tratamento para obesidade?", "a": "Pode falar sobre acompanhamento de obesidade como condição clínica, sem prometer perda de peso, sem \"antes e depois\" e respeitando as políticas de anúncio das plataformas, que restringem mensagens sobre peso. A ADR estrutura a comunicação dentro desses limites." },
+    { "q": "Qual canal faz mais sentido: Google ou Instagram?", "a": "Os dois, em papéis diferentes. Google captura quem já procura o especialista ou a condição; Instagram e Facebook constroem autoridade e educam quem ainda vai procurar. A proporção depende da região e do foco da clínica e é definida no diagnóstico." },
+    { "q": "Como medir se o investimento está dando retorno?", "a": "Pelo agendamento e pelo retorno, não pelo clique: contatos, pacientes qualificados na triagem, consultas agendadas e pacientes que seguem em acompanhamento. A ADR reporta esses indicadores mês a mês, pelo WhatsApp da clínica." }
+  ],
+  "relacionadas": ["marketing-para-nutrologos", "marketing-para-ginecologistas", "marketing-para-cardiologistas"]
+}

@@ -1,5 +1,5 @@
 ---
-import { CONTACT, NAV, CONFIRMED_SERVICES, whatsappUrl } from '../data/site';
+import { CONTACT, NAV, CONFIRMED_SERVICES, SPECIALTIES, whatsappUrl } from '../data/site';
 import CtaFinal from './CtaFinal.astro';
 
 interface Props {
@@ -10,6 +10,7 @@ interface Props {
   id?: string;
 }
 const nav = NAV.filter((i) => i.status !== 'pendente');
+const especialidades = [...SPECIALTIES].filter((s) => s.status === 'publicada').sort((a, b) => a.priority - b.priority);
 const year = new Date().getFullYear();
 ---
 
@@ -49,6 +50,16 @@ const year = new Date().getFullYear();
         ))}
       </ul>
     </div>
+    {especialidades.length > 0 && (
+      <div class="footer__col">
+        <h3 class="footer__h">Especialidades</h3>
+        <ul class="footer__list">
+          {especialidades.map((s) => (
+            <li><a href={`/${s.slug}/`}>Marketing para {s.plural.toLowerCase()}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
     <div class="footer__col">
       <h3 class="footer__h">Contato</h3>
       <ul class="footer__list">
