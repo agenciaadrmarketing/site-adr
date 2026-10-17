@@ -30,8 +30,8 @@ operar.
 | Prioridade | Quantidade | O que destrava |
 |---|---|---|
 | P0 | 4 | Publicar o pacote com segurança e saber que os leads e as conversões continuam chegando |
-| P1 | 25 | Credibilidade institucional, SEO local, medição, páginas comerciais da Fase 2 |
-| P2 | 12 | Refinamentos de marca, conteúdo e inteligência de mercado |
+| P1 | 30 | Credibilidade institucional, SEO local, medição, páginas comerciais da Fase 2 |
+| P2 | 14 | Refinamentos de marca, conteúdo e inteligência de mercado |
 
 ---
 
