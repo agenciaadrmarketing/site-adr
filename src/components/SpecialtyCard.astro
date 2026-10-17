@@ -1,0 +1,30 @@
+---
+import { specialtyHref, type Specialty } from '../data/site';
+
+interface Props {
+  specialty: Specialty;
+}
+const { specialty } = Astro.props;
+const href = specialtyHref(specialty);
+const Tag = href ? 'a' : 'div';
+---
+
+<Tag class:list={['spec', { 'spec--link': !!href }]} href={href} data-reveal>
+  <span class="spec__name">{specialty.name}</span>
+  <span class="spec__for">Marketing para {specialty.plural.toLowerCase()}</span>
+  {href ? (
+    <span class="spec__go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></span>
+  ) : (
+    <span class="spec__go spec__go--soon" aria-hidden="true">·</span>
+  )}
+</Tag>
+
+<style>
+  .spec { position: relative; display: flex; flex-direction: column; gap: 6px; padding: clamp(18px, 2vw, 24px); border-radius: var(--radius-card); border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink); min-height: 120px; transition: border-color 0.35s, transform 0.35s; }
+  .spec--link:hover { border-color: rgba(242, 242, 243, 0.34); transform: translateY(-3px); }
+  .spec__name { font-weight: 600; font-size: clamp(16px, 1.3vw, 19px); letter-spacing: -0.01em; }
+  .spec__for { font-size: 12.5px; color: var(--n-500); }
+  .spec__go { position: absolute; top: 16px; right: 16px; width: 34px; height: 34px; border-radius: var(--radius-pill); border: 1px solid var(--line-2); display: inline-flex; align-items: center; justify-content: center; color: var(--n-300); }
+  .spec__go--soon { color: var(--n-700); }
+  .spec--link:hover .spec__go { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+</style>

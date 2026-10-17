@@ -1,0 +1,30 @@
+---
+interface Item {
+  q: string;
+  a: string;
+  tag?: string;
+}
+interface Props {
+  items: Item[];
+  class?: string;
+}
+const { items, class: cls = '' } = Astro.props;
+---
+
+<div class:list={['faq', cls]}>
+  {items.map((it) => (
+    <details class="faq__item" data-luz>
+      <summary class="faq__summary">
+        <span class="faq__icon"><i class="faq__plus" aria-hidden="true"></i></span>
+        <h3 class="faq__q">{it.q}</h3>
+        {it.tag && <span class="faq__tag">{it.tag}</span>}
+      </summary>
+      <p class="faq__a">{it.a}</p>
+    </details>
+  ))}
+</div>
+
+<style>
+  .faq__item::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.5s; background: radial-gradient(240px circle at var(--lx, 50%) var(--ly, 50%), rgba(242, 242, 243, 0.075), transparent 70%); }
+  .faq__item:hover::before, .faq__item[open]::before { opacity: 1; }
+</style>

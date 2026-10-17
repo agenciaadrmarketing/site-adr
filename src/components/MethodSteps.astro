@@ -1,0 +1,58 @@
+---
+interface Step {
+  n: string;
+  title: string;
+  text: string;
+  bullets?: string[];
+}
+interface Props {
+  steps?: Step[];
+}
+const DEFAULT: Step[] = [
+  { n: '01', title: 'Atendimento no WhatsApp', text: 'O primeiro contato define a percepção de valor da clínica. Padronizamos abordagem, tempo de resposta e tom de voz para que o paciente encontre do outro lado a mesma autoridade que o anúncio prometeu.' },
+  { n: '02', title: 'Qualificação e triagem', text: 'Separar o curioso do paciente com intenção real de tratamento — antes que ele ocupe um horário na agenda. A triagem protege o tempo da equipe clínica e concentra o esforço comercial em quem tem perfil para o procedimento.' },
+  { n: '03', title: 'Recepção e SDR', text: 'A assessoria atua de forma consultiva na estruturação do setor comercial, com duas frentes possíveis conforme o tamanho da operação:', bullets: ['Treinamento de qualificação para a equipe de recepção', 'Orientação para implementar SDRs de alta performance'] },
+  { n: '04', title: 'Follow-up e agendamento', text: 'Nenhum lead qualificado é perdido por silêncio. O acompanhamento é processo, não improviso: cadência definida, responsável nomeado e o agendamento como métrica final — não o clique.' },
+];
+const { steps = DEFAULT } = Astro.props;
+---
+
+<div class="trail" data-trail>
+  <div class="trail__line" aria-hidden="true"><span class="trail__fill" data-trail-fill></span></div>
+  {steps.map((s) => (
+    <div class="step">
+      <span class="step__dot" aria-hidden="true"><span></span></span>
+      <div class="step__head">
+        <p class="step__n">{s.n}</p>
+        <h3 class="step__title">{s.title}</h3>
+      </div>
+      <div class="step__body" data-reveal>
+        <p class="step__text">{s.text}</p>
+        {s.bullets && (
+          <ul class="checks step__list">
+            {s.bullets.map((b) => (
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>{b}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .trail { position: relative; }
+  .trail__line { position: absolute; left: clamp(14px, 1.6vw, 21px); top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, transparent 0%, rgba(242, 242, 243, 0.16) 7%, rgba(242, 242, 243, 0.16) 93%, transparent 100%); overflow: hidden; border-radius: var(--radius-pill); }
+  .trail__fill { position: absolute; left: 0; right: 0; top: 0; height: 0%; background: linear-gradient(180deg, rgba(242, 242, 243, 0.92) 0%, rgba(242, 242, 243, 0.55) 62%, rgba(242, 242, 243, 0.14) 100%); border-radius: var(--radius-pill); opacity: 0; transition: opacity 0.4s ease; }
+  .step { position: relative; padding: clamp(30px, 5.5vw, 96px) 0 0 clamp(48px, 5.6vw, 76px); display: flex; flex-wrap: wrap; gap: clamp(18px, 3vw, 52px); align-items: flex-start; }
+  .step__dot { position: absolute; left: calc(clamp(14px, 1.6vw, 21px) - 8px); top: clamp(34px, 5.8vw, 102px); width: 18px; height: 18px; border-radius: var(--radius-pill); background: var(--bg); border: 1px solid rgba(242, 242, 243, 0.3); display: flex; align-items: center; justify-content: center; }
+  .step__dot span { width: 7px; height: 7px; border-radius: var(--radius-pill); background: var(--n-300); }
+  .step__head { flex: 1 1 250px; max-width: 340px; min-width: 0; position: sticky; top: clamp(92px, 11vw, 158px); }
+  .step__n { margin: 0 0 6px; font-size: clamp(26px, 2.8vw, 40px); font-weight: 600; line-height: 1; color: var(--n-600); }
+  .step__title { font-weight: 600; font-size: clamp(17px, 1.6vw, 23px); line-height: 1.22; letter-spacing: -0.01em; color: var(--ink); }
+  .step__body { flex: 1 1 320px; min-width: 0; padding-bottom: clamp(8px, 1.6vw, 20px); }
+  .step__text { font-size: clamp(15px, 1.2vw, 17.5px); color: var(--ink-72); max-width: 56ch; text-wrap: pretty; }
+  .step__list { margin-top: 18px; gap: 10px; }
+  .step__list li { font-size: 14.5px; color: var(--ink-62); }
+  @media (max-width: 940px) { .step__head { position: static; } }
+</style>

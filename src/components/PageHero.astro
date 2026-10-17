@@ -1,0 +1,40 @@
+---
+import Breadcrumbs from './Breadcrumbs.astro';
+
+interface Props {
+  kicker: string;
+  title: string;
+  titleAccent?: string;
+  text: string;
+  crumbs?: { label: string; href?: string }[];
+  variant?: 'institutional' | 'service' | 'specialty';
+  image?: string;
+}
+const { kicker, title, titleAccent, text, crumbs, variant = 'institutional', image } = Astro.props;
+---
+
+<header class:list={['phero', `phero--${variant}`]}>
+  {image && <img class="phero__img" src={image} alt="" width="1920" height="1080" decoding="async" fetchpriority="high" />}
+  <div class="phero__scrim" aria-hidden="true"></div>
+  <div class="container phero__in">
+    {crumbs && <Breadcrumbs items={crumbs} class="phero__crumbs" />}
+    <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>{kicker}</p>
+    <h1 class="h1">{title}{titleAccent && <> <span class="silver">{titleAccent}</span></>}</h1>
+    <p class="phero__text">{text}</p>
+    <div class="btn-row phero__ctas"><slot /></div>
+  </div>
+</header>
+
+<style>
+  .phero { position: relative; overflow: hidden; padding: clamp(40px, 6vw, 84px) var(--gutter) clamp(44px, 5.5vw, 76px); background: var(--bg); }
+  .phero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% center; opacity: 0.55; }
+  .phero__scrim { position: absolute; inset: 0; background: linear-gradient(90deg, #09090a 0%, #09090a 34%, rgba(9, 9, 8, 0.9) 50%, rgba(9, 9, 8, 0.55) 72%, rgba(9, 9, 8, 0.2) 100%), linear-gradient(180deg, rgba(9, 9, 8, 0.4) 0%, transparent 20%, transparent 70%, #09090a 100%); }
+  .phero--service .phero__scrim, .phero--specialty .phero__scrim { background: radial-gradient(900px circle at 85% 20%, rgba(242, 242, 243, 0.06), transparent 60%); }
+  .phero__in { position: relative; display: flex; flex-direction: column; gap: clamp(14px, 1.8vw, 22px); align-items: flex-start; }
+  .phero :global(.phero__crumbs) { margin-bottom: clamp(10px, 2vw, 24px); }
+  .phero .h1 { max-width: 20ch; }
+  .phero--service .h1, .phero--specialty .h1 { font-size: clamp(29px, 4vw, 54px); }
+  .phero__text { font-size: clamp(15px, 1.25vw, 19px); line-height: 1.6; color: var(--ink-72); max-width: 56ch; text-wrap: pretty; }
+  .phero__ctas { margin-top: 8px; }
+  .phero__ctas:empty { display: none; }
+</style>

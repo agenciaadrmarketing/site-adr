@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const title = 'Página não encontrada | ADR Marketing';
+const description = 'A página que você procurou não existe ou mudou de endereço.';
+---
+
+<BaseLayout title={title} description={description} noindex noCanonical>
+  <section class="section nf">
+    <div class="container nf__in">
+      <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Erro 404</p>
+      <h1 class="h1">Essa página <span class="silver">não existe</span></h1>
+      <p class="lead">O endereço pode ter mudado ou sido digitado errado. Os caminhos abaixo levam ao que você provavelmente procurava.</p>
+      <div class="btn-row">
+        <a class="btn btn--light" href="/">Ir para a página inicial</a>
+        <a class="btn btn--outline" href="/servicos/">Ver os serviços</a>
+        <WhatsAppButton id="404" label="Falar com a ADR" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .nf { min-height: 60vh; display: flex; align-items: center; }
+  .nf__in { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; max-width: 720px; }
+</style>

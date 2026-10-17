@@ -1,0 +1,14 @@
+---
+interface Props {
+  n?: string;
+  label: string;
+  class?: string;
+}
+const { n, label, class: cls = '' } = Astro.props;
+---
+
+<p class:list={['kicker', cls]}>
+  {n && <span class="kicker__n">{n}</span>}
+  <span class="kicker__line" aria-hidden="true"></span>
+  {label}
+</p>

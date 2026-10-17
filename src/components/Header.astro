@@ -1,0 +1,74 @@
+---
+import { NAV, DEFAULT_WA_MESSAGE } from '../data/site';
+import WhatsAppButton from './WhatsAppButton.astro';
+
+interface Props {
+  waMessage?: string;
+}
+const { waMessage = DEFAULT_WA_MESSAGE } = Astro.props;
+const path = Astro.url.pathname;
+const items = NAV.filter((i) => i.status !== 'pendente');
+const current = (href: string) => (href === path ? 'page' : undefined);
+---
+
+<div class="progress" data-progress aria-hidden="true"></div>
+<header class="nav">
+  <div class="nav__in">
+    <a class="nav__logo" href="/" aria-label="ADR Marketing — página inicial">
+      <img src="/assets/logo-adr.webp" alt="ADR Marketing" width="488" height="301" decoding="async" fetchpriority="high" />
+    </a>
+    <nav class="nav__rail" aria-label="Navegação principal">
+      <ul>
+        {items.map((i) => (
+          <li><a href={i.href} aria-current={current(i.href)}>{i.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <button type="button" class="nav__burger" data-menu-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-drawer">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 7h16" /><path class="l2" d="M4 17h16" /></svg>
+    </button>
+    <WhatsAppButton id="header" size="sm" label="Falar agora" message={waMessage} class="nav__cta" />
+  </div>
+  <div class="nav__drawer" id="menu-drawer" hidden>
+    <nav aria-label="Navegação principal (menu)">
+      <ul>
+        {items.map((i) => (
+          <li><a href={i.href} aria-current={current(i.href)}>{i.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .progress { position: fixed; top: 0; left: 0; height: 2px; width: 0%; background: linear-gradient(90deg, #5d5d60, #f2f2f3); z-index: 9998; transition: width 0.1s linear; }
+  .nav { position: sticky; top: 0; z-index: 900; background: rgba(10, 10, 9, 0.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+  .nav__in { max-width: var(--container); margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); height: var(--nav-h); display: flex; align-items: center; gap: clamp(12px, 2vw, 28px); }
+  .nav__logo { flex: none; display: block; }
+  .nav__logo img { height: clamp(26px, 2.8vw, 36px); width: auto; }
+  .nav__rail { flex: 1 1 auto; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .nav__rail::-webkit-scrollbar { display: none; }
+  .nav__rail ul { display: flex; gap: clamp(14px, 1.8vw, 28px); justify-content: center; white-space: nowrap; }
+  .nav__rail a { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--n-400); transition: color 0.18s; padding: 6px 0; }
+  .nav__rail a:hover, .nav__rail a[aria-current='page'] { color: var(--ink); }
+  .nav__burger { display: none; flex: none; margin-left: auto; width: 42px; height: 42px; align-items: center; justify-content: center; background: transparent; border: 1px solid rgba(242, 242, 243, 0.2); border-radius: 12px; color: var(--ink); transition: background 0.18s; }
+  .nav__burger:hover { background: rgba(242, 242, 243, 0.1); }
+  .nav__burger .l1, .nav__burger .l2 { transition: transform 0.3s var(--ease); transform-origin: center; }
+  .nav__burger.is-open .l1 { transform: translateY(5px) rotate(45deg); }
+  .nav__burger.is-open .l2 { transform: translateY(-5px) rotate(-45deg); }
+  .nav :global(.nav__cta) { flex: none; }
+  .nav__drawer { border-top: 1px solid var(--line); background: rgba(10, 10, 9, 0.98); padding: 8px clamp(16px, 4vw, 48px) 18px; animation: drawerIn 0.28s var(--ease) both; }
+  .nav__drawer ul { display: flex; flex-direction: column; }
+  .nav__drawer a { display: block; padding: 15px 0; border-bottom: 1px solid rgba(242, 242, 243, 0.08); font-weight: 500; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--n-200); }
+  .nav__drawer li:last-child a { border-bottom: 0; }
+  .nav__drawer a[aria-current='page'] { color: var(--ink); }
+  @media (max-width: 940px) {
+    .nav__rail { display: none; }
+    .nav__burger { display: inline-flex; }
+  }
+  @media (max-width: 420px) {
+    /* Texto visualmente oculto, mas mantido na árvore de acessibilidade. */
+    .nav :global(.nav__cta span) { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .nav :global(.nav__cta) { width: 40px; padding: 0; justify-content: center; }
+  }
+</style>

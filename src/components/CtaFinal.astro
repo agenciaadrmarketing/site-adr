@@ -1,0 +1,38 @@
+---
+import WhatsAppButton from './WhatsAppButton.astro';
+import Button from './Button.astro';
+import { DEFAULT_WA_MESSAGE } from '../data/site';
+
+interface Props {
+  title?: string;
+  text?: string;
+  waLabel?: string;
+  waMessage?: string;
+  id?: string;
+  formLabel?: string;
+}
+const {
+  title = 'Vamos escalar sua clínica?',
+  text = 'A viabilidade de novas parcerias é sempre condicionada a um diagnóstico comercial prévio — e o modelo admite apenas um número restrito de parceiros simultâneos.',
+  waLabel = 'Solicitar diagnóstico pelo WhatsApp',
+  waMessage = DEFAULT_WA_MESSAGE,
+  id = 'cta-final',
+  formLabel = 'Pedir análise gratuita',
+} = Astro.props;
+---
+
+<div class="cta">
+  <h2 class="cta__title silver">{title}</h2>
+  <p class="cta__text">{text}</p>
+  <div class="btn-row cta__row">
+    <WhatsAppButton id={id} label={waLabel} message={waMessage} size="lg" arrow />
+    <Button variant="outline" size="lg" openModal={id + '-form'}>{formLabel}</Button>
+  </div>
+</div>
+
+<style>
+  .cta { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: clamp(24px, 3.4vw, 44px); text-align: center; width: 100%; max-width: var(--container-narrow); margin: 0 auto; }
+  .cta__title { font-weight: 700; font-size: clamp(32px, 6.4vw, 86px); line-height: 1.02; letter-spacing: -0.035em; text-wrap: balance; }
+  .cta__text { max-width: 52ch; font-size: clamp(14.5px, 1.15vw, 17px); line-height: 1.62; color: var(--ink-62); text-wrap: pretty; }
+  .cta__row { justify-content: center; }
+</style>

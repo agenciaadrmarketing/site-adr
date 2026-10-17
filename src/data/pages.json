@@ -1,0 +1,18 @@
+[
+  { "path": "/", "status": "publicada" },
+  { "path": "/sobre/", "status": "publicada" },
+  { "path": "/contato/", "status": "publicada" },
+  { "path": "/servicos/", "status": "publicada" },
+  { "path": "/marketing-medico/", "status": "publicada" },
+  { "path": "/metodologia/", "status": "publicada" },
+  { "path": "/politica-de-privacidade/", "status": "publicada" },
+  { "path": "/termos-de-uso/", "status": "pendente", "motivo": "rascunho aguardando revisão jurídica do cliente" },
+  { "path": "/cases/", "status": "pendente", "motivo": "sem cases verificáveis; só estrutura técnica" },
+  { "path": "/blog/", "status": "pendente", "motivo": "Fase 3" },
+  { "path": "/niches/cardiologia/", "status": "legado" },
+  { "path": "/niches/endocrino/", "status": "legado" },
+  { "path": "/niches/ginecologia/", "status": "legado" },
+  { "path": "/niches/nutri/", "status": "legado" },
+  { "path": "/niches/urologia/", "status": "legado" },
+  { "path": "/niches/odonto/", "status": "legado" }
+]

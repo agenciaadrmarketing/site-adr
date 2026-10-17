@@ -1,0 +1,47 @@
+# ADR Marketing — agenciaadrmarketing.com
+#
+# Rastreadores de BUSCA (descoberta, indexação e citação em respostas de
+# busca, inclusive as experiências de IA do Google, Bing e ChatGPT Search):
+# permitidos em todo o conteúdo público.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Rastreadores usados para TREINAMENTO de modelos (não são busca).
+# Decisão documentada: permitidos por padrão para não reduzir a presença da
+# ADR nas respostas de IA. Para bloquear, troque "Allow: /" por "Disallow: /"
+# apenas nos blocos abaixo — os robôs de busca acima não são afetados.
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Demais robôs
+User-agent: *
+Allow: /
+
+Sitemap: https://agenciaadrmarketing.com/sitemap-index.xml

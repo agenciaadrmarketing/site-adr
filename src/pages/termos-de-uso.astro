@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { CONTACT } from '../data/site';
+
+// RASCUNHO — página fora do sitemap e da navegação (status "pendente" em
+// src/data/pages.json) até revisão jurídica do cliente.
+const title = 'Termos de Uso (rascunho) | ADR Marketing';
+const description = 'Termos de uso do site agenciaadrmarketing.com — rascunho aguardando revisão jurídica.';
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Termos de uso' }];
+---
+
+<BaseLayout title={title} description={description} noindex cta={{ title: 'Dúvidas sobre estes termos?', text: 'Escreva para agencia.adrmarketing@gmail.com.', waLabel: 'Falar pelo WhatsApp', id: 'cta-termos' }}>
+  <header class="pol-head">
+    <div class="container container--prose">
+      <Breadcrumbs items={crumbs} />
+      <p class="draft" role="status">Rascunho — este texto aguarda revisão jurídica e ainda não foi publicado oficialmente.</p>
+      <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>ADR Marketing · Site</p>
+      <h1 class="h1">Termos de Uso</h1>
+    </div>
+  </header>
+
+  <section class="section section--light">
+    <article class="container container--prose prose pol">
+      <p class="pol__intro">Estes termos regulam o uso do site <strong>agenciaadrmarketing.com</strong>, operado por <strong>{CONTACT.legalName}, CNPJ {CONTACT.cnpj}</strong> ("ADR Marketing"). Ao navegar, você concorda com as condições abaixo.</p>
+      <section>
+        <h2><span class="num">01</span>Finalidade do site</h2>
+        <p>O site apresenta os serviços de marketing para médicos, clínicas e consultórios prestados pela ADR Marketing e oferece canais de contato (formulário e WhatsApp) para solicitação de diagnóstico. O conteúdo tem caráter informativo e institucional.</p>
+      </section>
+      <section>
+        <h2><span class="num">02</span>Sem garantia de resultado</h2>
+        <p>As informações publicadas descrevem a metodologia e os serviços da ADR. Elas não constituem promessa, garantia ou previsão de resultado comercial, de volume de pacientes ou de prazo. O desempenho de qualquer estratégia depende de fatores próprios de cada clínica, como especialidade, concorrência, investimento e atendimento.</p>
+      </section>
+      <section>
+        <h2><span class="num">03</span>Propriedade intelectual</h2>
+        <p>Textos, marca, logotipo, imagens e código do site pertencem à ADR Marketing ou a seus licenciadores. É permitido compartilhar links para as páginas; a reprodução de conteúdo para fins comerciais depende de autorização prévia por escrito.</p>
+      </section>
+      <section>
+        <h2><span class="num">04</span>Uso adequado</h2>
+        <p>Você se compromete a não usar o site para fins ilícitos, não tentar acessar áreas restritas, não enviar informações falsas nos formulários e não enviar dados clínicos de pacientes pelos nossos canais.</p>
+      </section>
+      <section>
+        <h2><span class="num">05</span>Links e serviços de terceiros</h2>
+        <p>O site contém links para serviços de terceiros (como WhatsApp, Google e Conselho Federal de Medicina). A ADR não controla nem se responsabiliza pelo conteúdo ou pelas práticas desses serviços.</p>
+      </section>
+      <section>
+        <h2><span class="num">06</span>Dados pessoais</h2>
+        <p>O tratamento de dados pessoais coletados no site é descrito na <a href="/politica-de-privacidade/">Política de Privacidade</a>, que integra estes termos.</p>
+      </section>
+      <section>
+        <h2><span class="num">07</span>Alterações e legislação</h2>
+        <p>Estes termos podem ser atualizados a qualquer momento; a versão vigente é a publicada nesta página. Aplica-se a legislação brasileira.</p>
+      </section>
+      <section class="pol__last">
+        <h2><span class="num">08</span>Contato</h2>
+        <p>{CONTACT.legalName} (ADR Marketing)<br />CNPJ {CONTACT.cnpj}<br />E-mail: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+      </section>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .pol-head { background: var(--bg); padding: clamp(20px, 3vw, 32px) var(--gutter) clamp(48px, 7vw, 96px); }
+  .pol-head .container { display: flex; flex-direction: column; gap: 16px; }
+  .pol-head .kicker { margin: clamp(24px, 4vw, 48px) 0 0; }
+  .pol-head .h1 { font-size: clamp(32px, 5vw, 58px); }
+  .draft { margin-top: 16px; display: inline-block; padding: 10px 14px; border: 1px dashed var(--line-3); border-radius: var(--radius-sm); font-size: 13px; color: var(--n-400); }
+  .pol { display: flex; flex-direction: column; gap: clamp(36px, 4.5vw, 52px); }
+  .pol section { display: flex; flex-direction: column; gap: 12px; }
+  .pol__intro { font-size: clamp(17px, 1.4vw, 20px); line-height: 1.6; color: var(--text); text-wrap: pretty; }
+  .pol__last { padding-top: clamp(28px, 3vw, 40px); border-top: 1px solid var(--line-light); }
+</style>

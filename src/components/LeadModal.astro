@@ -1,0 +1,28 @@
+---
+import LeadForm from './LeadForm.astro';
+---
+
+<div class="modal" data-modal hidden>
+  <div class="modal__bg" data-close-modal></div>
+  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="lf-modal-title">
+    <button type="button" class="modal__close" data-close-modal aria-label="Fechar">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+    </button>
+    <img class="modal__logo" src="/assets/logo-adr.webp" alt="ADR Marketing" width="488" height="301" loading="lazy" decoding="async" />
+    <h2 class="modal__title" id="lf-modal-title">Receba sua <span class="silver">análise gratuita</span> de marketing</h2>
+    <p class="modal__text">Preencha seus dados e um especialista te chama no WhatsApp em horário comercial — sem compromisso e sem custo.</p>
+    <LeadForm origem="modal" compact buttonLabel="Receber minha análise gratuita" class="modal__form" />
+  </div>
+</div>
+
+<style>
+  .modal { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; padding: clamp(14px, 3vw, 32px); overflow-y: auto; }
+  .modal__bg { position: absolute; inset: 0; background: rgba(4, 5, 6, 0.93); animation: modalFundo 0.32s ease both; }
+  .modal__card { position: relative; width: min(100%, 520px); background: var(--bg-2); border: 1px solid var(--line-3); padding: clamp(24px, 3.4vw, 42px); margin: auto; border-radius: 22px; animation: modalCartao 0.58s var(--ease) both; }
+  .modal__close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: 1px solid rgba(242, 242, 243, 0.22); color: var(--n-300); transition: background 0.18s, color 0.18s; border-radius: var(--radius-pill); }
+  .modal__close:hover { background: rgba(242, 242, 243, 0.12); color: var(--ink); }
+  .modal__logo { height: 38px; width: auto; margin: 0 auto 20px; animation: modalItem 0.55s var(--ease) 0.1s both; }
+  .modal__title { font-weight: 600; font-size: clamp(21px, 2.1vw, 26px); line-height: 1.16; letter-spacing: -0.015em; margin: 0 0 6px; text-align: center; text-wrap: balance; animation: modalItem 0.55s var(--ease) 0.16s both; }
+  .modal__text { margin: 0 auto clamp(18px, 2.2vw, 24px); max-width: 40ch; font-size: 13px; line-height: 1.55; color: var(--n-500); text-align: center; text-wrap: pretty; animation: modalItem 0.55s var(--ease) 0.22s both; }
+  .modal :global(.modal__form) { max-width: none; border: 0; background: transparent; padding: 0; animation: modalItem 0.5s var(--ease) 0.28s both; }
+</style>

@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import LeadForm from '../components/LeadForm.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+import { CONTACT } from '../data/site';
+import { webPage, breadcrumbList } from '../data/seo';
+
+const title = 'Contato e diagnóstico de marketing médico | ADR Marketing';
+const description =
+  'Fale com a ADR Marketing pelo WhatsApp ou pelo formulário e solicite um diagnóstico comercial prévio, sem custo, para a sua clínica ou consultório. Resposta em horário comercial.';
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Contato', href: '/contato/' }];
+const jsonLd = [webPage({ path: '/contato/', title, description, type: 'ContactPage' }), breadcrumbList(crumbs)];
+const wa = 'Olá! Vim pela página de contato do site da ADR e quero solicitar um diagnóstico para a minha clínica.';
+const passos = [
+  ['01', 'Você envia os dados', 'Pelo formulário ou direto no WhatsApp. Pedimos só o necessário: nome, WhatsApp, tipo de atuação e faixa de pacientes por mês.'],
+  ['02', 'A ADR responde pelo WhatsApp', 'Em horário comercial, um especialista entra em contato para entender o cenário da clínica.'],
+  ['03', 'Diagnóstico comercial prévio', 'Avaliamos presença digital, ticket dos procedimentos, concorrência na região e maturidade do comercial.'],
+  ['04', 'Proposta só se fizer sentido', 'O modelo admite poucos parceiros simultâneos; a proposta vem depois do diagnóstico, nunca antes.'],
+];
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd} waMessage={wa} cta={{ title: 'Pronto para o diagnóstico?', text: 'Conte o cenário da sua clínica e a ADR responde pelo WhatsApp em horário comercial.', waMessage: wa, id: 'cta-contato' }}>
+  <PageHero
+    kicker="Contato"
+    title="Fale com a"
+    titleAccent="ADR Marketing"
+    text="Diagnóstico comercial prévio, sem custo: você conta o cenário da clínica e nós respondemos pelo WhatsApp em horário comercial. Nenhuma proposta é feita antes de entender se a parceria faz sentido."
+    crumbs={crumbs}
+    variant="service"
+  >
+    <WhatsAppButton id="contato-hero" label="Chamar no WhatsApp" message={wa} size="lg" arrow />
+  </PageHero>
+
+  <section class="section contato" aria-labelledby="form-title">
+    <div class="container contato__in">
+      <div class="contato__side" data-reveal>
+        <SectionLabel n="01" label="Canais" />
+        <h2 class="h2" id="form-title">Escolha o <span class="silver">melhor caminho</span></h2>
+        <ul class="canais">
+          <li class="card card--static canal">
+            <span class="canal__k">WhatsApp</span>
+            <strong>{CONTACT.whatsappDisplay}</strong>
+            <p class="card__text">Atendimento em horário comercial. É o canal principal da ADR: o diagnóstico começa por aqui.</p>
+            <WhatsAppButton id="contato-canal" label="Abrir conversa" message={wa} size="sm" />
+          </li>
+          <li class="card card--static canal">
+            <span class="canal__k">E-mail</span>
+            <strong><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></strong>
+            <p class="card__text">Para assuntos institucionais, parcerias e pedidos relacionados a dados pessoais (<a href="/politica-de-privacidade/">política de privacidade</a>).</p>
+          </li>
+          <li class="card card--static canal">
+            <span class="canal__k">Empresa</span>
+            <strong>ADR Marketing</strong>
+            <p class="card__text">{CONTACT.legalName} · CNPJ {CONTACT.cnpj}. Atendimento remoto a clínicas em todo o Brasil.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="contato__form" data-reveal>
+        <LeadForm origem="contato" title="Solicite seu diagnóstico" text="Preencha e um especialista te chama no WhatsApp em horário comercial." buttonLabel="Solicitar diagnóstico" class="lead--wide" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light" aria-labelledby="dep-title">
+    <div class="container">
+      <div class="head-row" data-reveal>
+        <div class="head-row__title">
+          <SectionLabel n="02" label="O que acontece depois" />
+          <h2 class="h2" id="dep-title">Do primeiro contato <span class="graphite">à proposta</span></h2>
+        </div>
+        <p class="lead head-row__text">Sem etapas escondidas: é assim que a ADR trata cada novo contato.</p>
+      </div>
+      <ol class="passos">
+        {passos.map(([n, t, d]) => (
+          <li class="card card--white card--static passo" data-reveal>
+            <span class="passo__n">{n}</span>
+            <h3 class="h3">{t}</h3>
+            <p class="card__text">{d}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contato__in { display: flex; flex-wrap: wrap; gap: clamp(32px, 4vw, 64px); align-items: flex-start; }
+  .contato__side { flex: 1 1 360px; min-width: 0; }
+  .contato__side .h2 { margin-bottom: clamp(20px, 2.4vw, 28px); }
+  .canais { display: grid; gap: 14px; }
+  .canal { gap: 8px; padding: clamp(18px, 2vw, 24px); }
+  .canal__k { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--n-500); }
+  .canal strong { font-weight: 600; font-size: clamp(16px, 1.3vw, 19px); color: var(--ink); }
+  .canal strong a { color: var(--ink); }
+  .canal .card__text a { color: var(--n-300); text-decoration: underline; text-underline-offset: 3px; }
+  .canal :global(.btn) { align-self: flex-start; margin-top: 6px; }
+  .contato__form { flex: 1 1 400px; max-width: 560px; min-width: 0; }
+  .contato__form :global(.lead--wide) { max-width: none; }
+  .passos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: clamp(14px, 1.7vw, 22px); counter-reset: passo; }
+  .passo { gap: 10px; }
+  .passo__n { font-size: clamp(26px, 2.8vw, 40px); font-weight: 600; line-height: 1; color: var(--n-400); }
+</style>

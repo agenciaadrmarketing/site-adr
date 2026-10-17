@@ -1,0 +1,54 @@
+---
+/**
+ * Estrutura reutilizável para cases FUTUROS. Só renderiza com cliente
+ * autorizado e período informado; nunca com dados fictícios. Indicadores
+ * precisam vir acompanhados da evidência (relatório, print autorizado…).
+ */
+interface Indicator {
+  label: string;
+  value: string;
+  evidence: string;
+}
+interface Props {
+  client?: string;
+  segment?: string;
+  context?: string;
+  challenges?: string[];
+  strategies?: string[];
+  period?: string;
+  indicators?: Indicator[];
+  testimonial?: { quote: string; author: string; role: string; authorized: boolean };
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+const { client, segment, context, challenges = [], strategies = [], period, indicators = [], testimonial, ctaLabel = 'Conversar sobre um projeto assim', ctaHref = '/contato/' } = Astro.props;
+const canRender = Boolean(client && period && indicators.every((i) => i.evidence));
+---
+
+{canRender && (
+  <article class="case card card--static">
+    <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>{segment}</p>
+    <h3 class="h3">{client}</h3>
+    {context && <p class="card__text">{context}</p>}
+    {challenges.length > 0 && (<><h4 class="case__h">Desafios</h4><ul class="case__list">{challenges.map((c) => <li>{c}</li>)}</ul></>)}
+    {strategies.length > 0 && (<><h4 class="case__h">Estratégias aplicadas</h4><ul class="case__list">{strategies.map((s) => <li>{s}</li>)}</ul></>)}
+    <p class="small">Período analisado: {period}</p>
+    {indicators.length > 0 && (
+      <dl class="stats">
+        {indicators.map((i) => (<div><dt>{i.label}</dt><dd>{i.value}</dd><p class="caption">Evidência: {i.evidence}</p></div>))}
+      </dl>
+    )}
+    {testimonial?.authorized && (
+      <blockquote class="case__quote"><p>“{testimonial.quote}”</p><footer>{testimonial.author} · {testimonial.role}</footer></blockquote>
+    )}
+    <a class="btn btn--light btn--sm" href={ctaHref}>{ctaLabel}</a>
+  </article>
+)}
+
+<style>
+  .case { gap: 14px; }
+  .case__h { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--n-500); margin-top: 6px; }
+  .case__list { padding-left: 18px; list-style: disc; color: var(--ink-72); font-size: 14.5px; display: grid; gap: 6px; }
+  .case__quote { border-left: 2px solid var(--line-3); padding-left: 16px; color: var(--ink-80); }
+  .case__quote footer { margin-top: 8px; font-size: 12.5px; color: var(--n-500); }
+</style>

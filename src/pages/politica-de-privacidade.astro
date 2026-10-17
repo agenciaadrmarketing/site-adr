@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { CONTACT } from '../data/site';
+import { webPage, breadcrumbList } from '../data/seo';
+
+const title = 'Política de Privacidade | ADR Marketing';
+const description = 'Como a ADR Marketing trata os dados pessoais coletados no site agenciaadrmarketing.com.';
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Política de privacidade', href: '/politica-de-privacidade/' }];
+const jsonLd = [webPage({ path: '/politica-de-privacidade/', title, description, dateModified: '2026-10-09' }), breadcrumbList(crumbs)];
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd} cta={{ title: 'Alguma dúvida sobre seus dados?', text: 'Escreva para agencia.adrmarketing@gmail.com ou fale conosco pelo WhatsApp.', waLabel: 'Falar pelo WhatsApp', id: 'cta-privacidade' }}>
+  <header class="pol-head">
+    <div class="container container--prose">
+      <Breadcrumbs items={crumbs} />
+      <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>ADR Marketing · LGPD</p>
+      <h1 class="h1">Política de Privacidade</h1>
+      <p class="small">Última atualização: 9 de outubro de 2026</p>
+    </div>
+  </header>
+
+  <section class="section section--light">
+    <article class="container container--prose prose pol">
+      <p class="pol__intro">Esta política explica como tratamos os dados pessoais de quem visita o site <strong>agenciaadrmarketing.com</strong>, preenche nossos formulários ou fala conosco pelo WhatsApp. O site é operado por <strong>{CONTACT.legalName}, CNPJ {CONTACT.cnpj}</strong>, que atua com o nome <strong>ADR Marketing</strong> ("ADR", "nós").</p>
+
+      <section>
+        <h2><span class="num">01</span>Quem é o responsável</h2>
+        <p>A ADR é a <strong>controladora</strong> dos dados coletados neste site, ou seja, decide como e para que eles são usados. O responsável pelo tratamento de dados (encarregado) é <strong>{CONTACT.leader}</strong>, contato: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">02</span>Dados que coletamos</h2>
+        <h3>Quando você preenche o formulário de análise gratuita</h3>
+        <ul>
+          <li>Nome completo, e-mail e número de WhatsApp.</li>
+          <li>Tipo de atuação (clínica ou consultório médico, odontológico ou outra área da saúde).</li>
+          <li>Faixa de pacientes atendidos por mês.</li>
+        </ul>
+        <h3>Automaticamente, durante a visita</h3>
+        <ul>
+          <li>Origem da visita: parâmetros de campanha presentes no link (utm_source, utm_medium, utm_campaign, utm_term, utm_content), identificadores de clique em anúncios do Google (gclid) e da Meta (fbclid), a página de entrada e o site de onde você veio.</li>
+          <li>Data e hora do envio do formulário.</li>
+          <li>Dados técnicos de navegação (como endereço IP, navegador e dispositivo), registrados pelos serviços de hospedagem e medição descritos abaixo.</li>
+        </ul>
+        <h3>Quando você fala conosco pelo WhatsApp</h3>
+        <p>Seu número, nome de perfil e as mensagens que você nos envia. Os botões do site abrem o WhatsApp com uma mensagem inicial e os parâmetros de origem da visita, para sabermos de qual campanha você veio.</p>
+        <p class="note">Nosso formulário é voltado a profissionais e empresas da área da saúde. <strong>Não pedimos nem precisamos de informações clínicas</strong> (diagnósticos, sintomas, dados de pacientes). Por favor, não as envie nos nossos canais.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">03</span>Para que usamos</h2>
+        <ul>
+          <li>Entrar em contato para fazer a análise gratuita que você solicitou e apresentar nossos serviços.</li>
+          <li>Responder suas dúvidas pelo WhatsApp ou e-mail.</li>
+          <li>Saber quais campanhas e canais trazem contatos, para medir e melhorar nossos anúncios.</li>
+          <li>Manter a segurança do site e cumprir obrigações legais.</li>
+        </ul>
+        <p>As bases legais, conforme a Lei nº 13.709/2018 (LGPD), são: <strong>procedimentos preliminares a um contrato</strong>, a seu pedido (quando você solicita a análise ou nos chama); <strong>legítimo interesse</strong> da ADR em medir o resultado da própria publicidade; e <strong>consentimento</strong>, quando exigido para cookies e ferramentas de medição.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">04</span>Cookies e armazenamento no navegador</h2>
+        <p>O site guarda temporariamente no seu navegador (armazenamento de sessão, apagado ao fechar a aba):</p>
+        <ul>
+          <li>os parâmetros de origem da visita, para que continuem associados ao seu contato enquanto você navega;</li>
+          <li>a preferência de não exibir novamente o balão de atendimento e o convite de saída depois que você os fecha.</li>
+        </ul>
+        <p>Usamos ferramentas de medição de anúncios e audiência: Google Tag Manager, Google Ads e Microsoft Clarity, e podemos usar Google Analytics e Pixel da Meta. Quando ativas, elas usam cookies próprios e recebem o aviso de que um formulário foi enviado (evento de "lead") ou de que um botão de WhatsApp foi clicado, junto com os parâmetros de campanha — nunca com nome, e-mail ou telefone. Você pode bloquear ou apagar cookies nas configurações do seu navegador.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">05</span>Com quem compartilhamos</h2>
+        <p><strong>Não vendemos nem cedemos seus dados.</strong> Eles são tratados apenas por fornecedores que usamos para operar o site e o atendimento:</p>
+        <ul>
+          <li><strong>Google:</strong> armazenamento dos contatos em planilha (Google Sheets / Apps Script), envio de e-mails de aviso à equipe (Gmail) e ferramentas de medição.</li>
+          <li><strong>Microsoft:</strong> Clarity, para entender como o site é usado (mapas de calor e gravações anônimas de navegação).</li>
+          <li><strong>Meta Platforms:</strong> WhatsApp, para o atendimento, e, quando ativo, o Pixel da Meta para medição de anúncios.</li>
+          <li><strong>Hostinger:</strong> hospedagem do site.</li>
+          <li><strong>Autoridades:</strong> quando houver obrigação legal ou ordem judicial.</li>
+        </ul>
+        <p>Alguns desses fornecedores podem tratar dados fora do Brasil. Nesses casos, a transferência segue as salvaguardas previstas na LGPD.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">06</span>Por quanto tempo guardamos</h2>
+        <p>Os dados de contato são mantidos por até <strong>24 meses</strong> após o último contato. Se você se tornar cliente, passam a seguir o prazo do contrato e das obrigações legais. Depois disso, são excluídos ou anonimizados.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">07</span>Segurança</h2>
+        <p>O site usa conexão criptografada (HTTPS) e o acesso à planilha de contatos é restrito à equipe que faz o atendimento. Nenhum sistema é totalmente imune a incidentes. Se ocorrer um incidente relevante, comunicaremos os titulares afetados e a Autoridade Nacional de Proteção de Dados (ANPD), conforme a lei.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">08</span>Seus direitos</h2>
+        <p>Pela LGPD, você pode pedir: confirmação de que tratamos seus dados, acesso, correção, anonimização, bloqueio ou eliminação, portabilidade, informações sobre compartilhamento, revogação do consentimento e oposição a tratamentos. Também pode reclamar à ANPD.</p>
+        <p>Para exercer qualquer direito ou pedir a exclusão dos seus dados, envie um e-mail para <a href={`mailto:${CONTACT.email}?subject=Dados%20pessoais%20-%20site%20ADR`}>{CONTACT.email}</a> com o assunto "Dados pessoais – site ADR", informando o nome e o e-mail ou WhatsApp usados no contato. Respondemos em até <strong>15 dias</strong>.</p>
+        <p>Se não quiser mais receber nosso contato, basta responder pedindo para parar, pelo canal onde falamos com você.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">09</span>Alterações</h2>
+        <p>Podemos atualizar esta política para refletir mudanças no site, nos serviços ou na lei. A data da última atualização fica no topo desta página.</p>
+      </section>
+
+      <section class="pol__last">
+        <h2><span class="num">10</span>Contato</h2>
+        <p>{CONTACT.legalName} (ADR Marketing)<br />CNPJ {CONTACT.cnpj}<br />E-mail: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><br />Encarregado de dados: {CONTACT.leader}</p>
+      </section>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .pol-head { background: var(--bg); padding: clamp(20px, 3vw, 32px) var(--gutter) clamp(48px, 7vw, 96px); }
+  .pol-head .container { display: flex; flex-direction: column; gap: 16px; }
+  .pol-head .kicker { margin: clamp(24px, 4vw, 48px) 0 0; }
+  .pol-head .h1 { font-size: clamp(32px, 5vw, 58px); }
+  .pol { display: flex; flex-direction: column; gap: clamp(36px, 4.5vw, 52px); }
+  .pol section { display: flex; flex-direction: column; gap: 12px; }
+  .pol__intro { font-size: clamp(17px, 1.4vw, 20px); line-height: 1.6; color: var(--text); text-wrap: pretty; }
+  .pol__last { padding-top: clamp(28px, 3vw, 40px); border-top: 1px solid var(--line-light); }
+</style>

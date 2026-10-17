@@ -1,0 +1,128 @@
+---
+import '../styles/tokens.css';
+import '../styles/global.css';
+import { SITE, ORG_JSONLD, WEBSITE_JSONLD } from '../data/site';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LeadModal from '../components/LeadModal.astro';
+import FloatingAssistant from '../components/FloatingAssistant.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  noCanonical?: boolean;
+  jsonLd?: Record<string, unknown>[];
+  preloadHero?: string;
+  cta?: { title?: string; text?: string; waLabel?: string; waMessage?: string; id?: string };
+  waMessage?: string;
+}
+
+const {
+  title,
+  description,
+  canonical = new URL(Astro.url.pathname, SITE.url).toString(),
+  ogImage = SITE.ogImage,
+  noindex = false,
+  noCanonical = false,
+  jsonLd = [],
+  preloadHero,
+  cta,
+  waMessage,
+} = Astro.props;
+
+const graph = { '@context': 'https://schema.org', '@graph': [WEBSITE_JSONLD, ORG_JSONLD, ...jsonLd] };
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
+    {!noCanonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/assets/favicon-16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="/assets/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#09090a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="preload" href="/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+    {preloadHero && <link rel="preload" as="image" href={preloadHero} fetchpriority="high" />}
+    <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+    <!-- Google Tag Manager (tag existente, carregada uma única vez) -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PDFHMCXG');
+    </script>
+  </head>
+  <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDFHMCXG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+    <Header waMessage={waMessage} />
+    <main id="conteudo">
+      <slot />
+    </main>
+    <Footer {...(cta ?? {})} />
+    <FloatingAssistant waMessage={waMessage} />
+    <LeadModal />
+    <script>
+      import '../scripts/ui';
+      import '../scripts/lead-form';
+    </script>
+    <!-- Google Ads (gtag) e Microsoft Clarity: tags existentes, adiadas para
+         depois do carregamento para não concorrer com o LCP. -->
+    <script is:inline>
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          if (!window.__gtagAdsLoaded) {
+            window.__gtagAdsLoaded = true;
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'AW-18381807679');
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18381807679';
+            document.head.appendChild(s);
+          }
+          if (!window.__clarityLoaded) {
+            window.__clarityLoaded = true;
+            (function (c, l, a, r, i, t, y) {
+              c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+              t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+              y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+            })(window, document, 'clarity', 'script', 'yjdxdq034e');
+          }
+        }, 2500);
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  .skip { position: absolute; left: 16px; top: -60px; z-index: 10000; padding: 10px 16px; background: var(--ink); color: var(--bg); border-radius: 999px; font-weight: 600; font-size: 13px; transition: top 0.2s; }
+  .skip:focus { top: 12px; }
+</style>

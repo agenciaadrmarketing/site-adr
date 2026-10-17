@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://urologia.agenciaadrmarketing.com/sitemap.xml

@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import Button from '../components/Button.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+import Faq from '../components/Faq.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import { CONFIRMED_SERVICES, FAQ } from '../data/site';
+import { webPage, breadcrumbList, servicesJsonLd, faqPage } from '../data/seo';
+
+const title = 'Serviços de marketing médico para clínicas e consultórios | ADR Marketing';
+const description =
+  'Tráfego pago (Google Ads e Meta Ads), posicionamento e autoridade digital, captação de pacientes particulares e comercial de alta conversão: os serviços da ADR Marketing, sempre integrados e conduzidos pela liderança sênior.';
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Soluções', href: '/servicos/' }];
+const faq = [FAQ[0], FAQ[1], FAQ[5], FAQ[3]];
+const jsonLd = [webPage({ path: '/servicos/', title, description, type: 'CollectionPage' }), breadcrumbList(crumbs), ...servicesJsonLd(), faqPage(faq, '/servicos/')];
+const wa = 'Olá! Vim pela página de serviços da ADR e quero entender qual frente faz sentido para a minha clínica.';
+
+const detalhes: Record<string, { entrega: string[]; nao: string; para: string }> = {
+  'trafego-pago-para-medicos': {
+    entrega: ['Planejamento de campanhas por especialidade, região e ticket dos procedimentos', 'Google Ads para capturar quem já procura o tratamento', 'Meta Ads para construir desejo e confiança antes do primeiro contato', 'Filtragem de público para atrair o perfil compatível com o ticket', 'Acompanhamento de investimento, contatos e agendamentos, mês a mês'],
+    nao: 'Não é compra de "leads" em volume nem campanha genérica replicada entre clínicas.',
+    para: 'Médicos e clínicas que querem demanda previsível de pacientes particulares, com campanhas operadas pela liderança sênior.',
+  },
+  'posicionamento-medico': {
+    entrega: ['Posicionamento do profissional ou da clínica na sua região e especialidade', 'Linha de comunicação dentro das normas de publicidade médica', 'Presença digital que sustenta a percepção de valor antes da consulta', 'Alinhamento entre o que o anúncio promete e o que o atendimento entrega'],
+    nao: 'Não é gestão de redes sociais vendida à parte nem produção de conteúdo por volume.',
+    para: 'Profissionais que querem ser escolhidos pela especialidade — não pelo preço.',
+  },
+  'captacao-de-pacientes': {
+    entrega: ['Estratégia de captação centrada no paciente particular de alto valor', 'Jornada do anúncio ao agendamento desenhada por especialidade', 'Qualificação do contato antes de ocupar a agenda', 'Indicadores de custo por paciente qualificado e por agendamento'],
+    nao: 'Não prometemos quantidade de pacientes nem prazo de resultado: o desempenho depende de especialidade, concorrência, investimento e atendimento.',
+    para: 'Clínicas que querem reduzir a dependência de indicações e de convênios.',
+  },
+  'comercial-de-alta-conversao': {
+    entrega: ['Padronização do atendimento no WhatsApp: abordagem, tempo de resposta e tom de voz', 'Qualificação e triagem para separar o curioso do paciente com intenção real', 'Treinamento de qualificação para a recepção ou orientação para implementar SDR', 'Follow-up com cadência definida e o agendamento como métrica final'],
+    nao: 'É um pilar da metodologia, prestado de forma consultiva — não um serviço de atendimento terceirizado.',
+    para: 'Clínicas que recebem contatos e perdem oportunidades por falhas no atendimento.',
+  },
+};
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd} waMessage={wa} cta={{ waMessage: wa, id: 'cta-servicos' }}>
+  <PageHero
+    kicker="Soluções"
+    title="Serviços de marketing médico para"
+    titleAccent="clínicas e consultórios"
+    text="A ADR Marketing presta quatro frentes de serviço, sempre integradas: tráfego pago (Google Ads e Meta Ads), posicionamento e autoridade digital, captação de pacientes particulares e estruturação do comercial da clínica. Não vendemos pacotes isolados — cada frente só faz sentido conectada às outras."
+    crumbs={crumbs}
+    variant="service"
+  >
+    <WhatsAppButton id="servicos-hero" label="Qual frente faz sentido para mim?" message={wa} arrow />
+    <Button variant="outline" openModal="servicos-hero">Pedir análise gratuita</Button>
+  </PageHero>
+
+  <section class="section" aria-labelledby="lista-title">
+    <div class="container">
+      <div class="head-row" data-reveal>
+        <div class="head-row__title">
+          <SectionLabel n="01" label="O que entregamos" />
+          <h2 class="h2" id="lista-title">Quatro frentes, <span class="silver">uma operação</span></h2>
+        </div>
+        <p class="lead head-row__text">Cada serviço abaixo descreve o que está incluído, o que não é e para quem faz sentido. Serviços que a ADR ainda não presta não aparecem aqui como oferta.</p>
+      </div>
+      <div class="svcs">
+        {CONFIRMED_SERVICES.map((s, i) => {
+          const d = detalhes[s.slug];
+          return (
+            <article class="svc" id={s.slug} data-reveal>
+              <div class="svc__head">
+                <span class="card__num">{String(i + 1).padStart(2, '0')}</span>
+                <h3 class="svc__title">{s.title}</h3>
+                <p class="lead">{s.description}</p>
+              </div>
+              <div class="svc__grid">
+                <div>
+                  <h4 class="svc__h">O que está incluído</h4>
+                  <ul class="checks">{d.entrega.map((e) => (<li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>{e}</li>))}</ul>
+                </div>
+                <div class="svc__aside">
+                  <div><h4 class="svc__h">O que não é</h4><p>{d.nao}</p></div>
+                  <div><h4 class="svc__h">Para quem</h4><p>{d.para}</p></div>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light" aria-labelledby="como-title">
+    <div class="container split">
+      <div style="flex:1 1 380px; max-width:560px" data-reveal>
+        <SectionLabel n="02" label="Como contratar" />
+        <h2 class="h2" id="como-title">Começa pelo <span class="graphite">diagnóstico</span></h2>
+        <p class="lead" style="margin-top:16px">Antes de qualquer proposta, avaliamos presença digital, ticket dos procedimentos, competitividade da região e maturidade do comercial. O investimento é definido depois desse diagnóstico — e a parceria só avança se fizer sentido para os dois lados.</p>
+        <div class="btn-row" style="margin-top:24px">
+          <WhatsAppButton id="servicos-como" label="Solicitar diagnóstico pelo WhatsApp" message={wa} />
+          <a class="btn btn--outline on-light" href="/metodologia/">Ver a metodologia</a>
+        </div>
+      </div>
+      <dl class="stats" style="flex:1 1 320px">
+        <div><dt>Modelo</dt><dd>Assessoria premium, parceiros limitados</dd></div>
+        <div><dt>Execução</dt><dd>Liderança sênior em cada conta</dd></div>
+        <div><dt>Relatórios</dt><dd>Indicadores de mídia, contatos e agendamentos no WhatsApp</dd></div>
+        <div><dt>Normas</dt><dd>Publicidade médica conforme o CFM</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section container--narrow" aria-labelledby="faq-s-title">
+    <div class="container container--narrow">
+      <div data-reveal style="margin-bottom:clamp(24px,2.8vw,36px)">
+        <SectionLabel n="03" label="Dúvidas sobre os serviços" />
+        <h2 class="h2" id="faq-s-title">Perguntas frequentes</h2>
+      </div>
+      <Faq items={faq} />
+    </div>
+  </section>
+
+  <RelatedLinks
+    links={[
+      { label: 'Marketing médico', href: '/marketing-medico/', text: 'O que é, como funciona e o que a norma permite.' },
+      { label: 'Metodologia', href: '/metodologia/', text: 'As quatro etapas e o pilar comercial.' },
+      { label: 'Especialidades', href: '/#especialidades', text: 'Marketing por especialidade médica.' },
+      { label: 'Sobre a ADR', href: '/sobre/', text: 'Quem conduz e como trabalhamos.' },
+    ]}
+  />
+</BaseLayout>
+
+<style>
+  .svcs { display: flex; flex-direction: column; gap: clamp(16px, 2vw, 28px); }
+  .svc { border: 1px solid var(--line-2); background: var(--bg-2); border-radius: var(--radius-card); padding: clamp(24px, 3vw, 44px); display: grid; gap: clamp(22px, 2.6vw, 34px); scroll-margin-top: calc(var(--nav-h) + 20px); }
+  .svc__head { display: grid; gap: 10px; max-width: 760px; }
+  .svc__title { font-weight: 600; font-size: clamp(21px, 2.2vw, 30px); line-height: 1.16; letter-spacing: -0.015em; }
+  .svc__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(20px, 2.6vw, 40px); border-top: 1px solid var(--line); padding-top: clamp(20px, 2.4vw, 28px); }
+  .svc__h { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--n-500); margin-bottom: 12px; }
+  .svc__aside { display: grid; gap: 20px; align-content: start; }
+  .svc__aside p { font-size: 14.5px; line-height: 1.6; color: var(--ink-68); text-wrap: pretty; }
+</style>

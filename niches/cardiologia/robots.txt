@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://cardiologia.agenciaadrmarketing.com/sitemap.xml

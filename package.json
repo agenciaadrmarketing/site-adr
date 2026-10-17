@@ -1,0 +1,21 @@
+{
+  "name": "site-adr",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1 --port 4321"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agenciaadrmarketing/site-adr.git"
+  },
+  "author": "",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource/poppins": "^5.3.0",
+    "astro": "^7.4.0"
+  },
+  "type": "module",
+  "private": true
+}

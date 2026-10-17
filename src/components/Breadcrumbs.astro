@@ -1,0 +1,30 @@
+---
+import { breadcrumbList } from '../data/seo';
+
+interface Props {
+  items: { label: string; href?: string }[];
+  class?: string;
+}
+const { items, class: cls = '' } = Astro.props;
+const data = { '@context': 'https://schema.org', ...breadcrumbList(items) };
+---
+
+<nav class:list={['crumbs', cls]} aria-label="Você está em">
+  <ol>
+    {items.map((it, i) => (
+      <li>
+        {it.href && i < items.length - 1 ? <a href={it.href}>{it.label}</a> : <span aria-current="page">{it.label}</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(data)} />
+
+<style>
+  .crumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--n-500); }
+  .crumbs li { display: flex; align-items: center; gap: 10px; }
+  .crumbs li + li::before { content: ''; width: 14px; height: 1px; background: currentColor; opacity: 0.5; }
+  .crumbs a { color: var(--n-400); }
+  .crumbs a:hover { color: var(--ink); }
+  .crumbs [aria-current] { color: var(--ink); }
+</style>

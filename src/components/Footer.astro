@@ -1,0 +1,107 @@
+---
+import { CONTACT, NAV, CONFIRMED_SERVICES, whatsappUrl } from '../data/site';
+import CtaFinal from './CtaFinal.astro';
+
+interface Props {
+  title?: string;
+  text?: string;
+  waLabel?: string;
+  waMessage?: string;
+  id?: string;
+}
+const nav = NAV.filter((i) => i.status !== 'pendente');
+const year = new Date().getFullYear();
+---
+
+<footer class="footer" data-anim-scope>
+  <span class="footer__glow" aria-hidden="true" data-anim></span>
+  <span class="footer__grid" aria-hidden="true"></span>
+  <p class="footer__adr" aria-hidden="true">ADR</p>
+
+  <div class="ribbon ribbon--front footer__ribbon" aria-hidden="true">
+    <div class="marquee">
+      {[0, 1, 2, 3].map(() => (
+        <span><span>Marketing para clínicas</span><i>✦</i><span>Marketing médico</span><i>✦</i><span>Tráfego pago</span><i>✦</i><span>Captação de pacientes</span><i>✦</i><span>Autoridade digital</span><i>✦</i></span>
+      ))}
+    </div>
+  </div>
+
+  <div class="footer__cta">
+    <CtaFinal {...Astro.props} />
+  </div>
+
+  <div class="footer__nav">
+    <nav aria-label="Navegação do rodapé">
+      <ul class="footer__pills">
+        {nav.map((i) => (
+          <li><a class="pill" data-ima href={i.href}>{i.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+
+  <div class="footer__info">
+    <div class="footer__col">
+      <h3 class="footer__h">Soluções</h3>
+      <ul class="footer__list">
+        {CONFIRMED_SERVICES.map((s) => (
+          <li><a href="/servicos/">{s.title}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h3 class="footer__h">Contato</h3>
+      <ul class="footer__list">
+        <li><a href={whatsappUrl()} target="_blank" rel="noopener" data-wa="footer-contato">WhatsApp {CONTACT.whatsappDisplay}</a></li>
+        <li><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></li>
+        <li><a href="/contato/">Solicitar diagnóstico</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h3 class="footer__h">Institucional</h3>
+      <ul class="footer__list">
+        <li><a href="/sobre/">Sobre a ADR</a></li>
+        <li><a href="/metodologia/">Metodologia</a></li>
+        <li><a href="/politica-de-privacidade/">Política de privacidade</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__legal">
+    <div>
+      <p class="footer__copy">©{year} ADR Marketing — Todos os direitos reservados · {CONTACT.legalName} · CNPJ {CONTACT.cnpj}</p>
+      <p class="footer__fine">Não temos ligação com o Google, Meta ou outras redes sociais. Não compartilhamos seus dados — veja a política de privacidade.</p>
+    </div>
+    <div class="footer__brand">
+      <img src="/assets/logo-adr.webp" alt="ADR Marketing" width="488" height="301" loading="lazy" decoding="async" />
+      <button type="button" class="footer__top" data-ima data-top aria-label="Voltar ao topo">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10l7-7 7 7" /><path d="M12 3v18" /></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer { position: relative; width: 100%; display: flex; flex-direction: column; overflow: hidden; background: var(--bg); color: var(--ink); border-top: 1px solid var(--line); padding-top: clamp(96px, 13vw, 168px); }
+  .footer__glow { position: absolute; left: 50%; top: 40%; width: 78vw; height: min(52vh, 440px); transform: translate(-50%, -50%); pointer-events: none; background: radial-gradient(circle at 50% 50%, rgba(242, 242, 243, 0.05) 0%, rgba(242, 242, 243, 0.023) 38%, transparent 72%); animation: respira 14s ease-in-out -3.5s infinite; }
+  .footer__grid { position: absolute; inset: 0; pointer-events: none; background-size: 60px 60px; background-image: linear-gradient(to right, rgba(242, 242, 243, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(242, 242, 243, 0.03) 1px, transparent 1px); mask-image: linear-gradient(to bottom, transparent, #000 28%, #000 72%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, #000 28%, #000 72%, transparent); }
+  .footer__adr { position: absolute; bottom: clamp(-42px, -2vw, -8px); left: 50%; transform: translateX(-50%); white-space: nowrap; pointer-events: none; user-select: none; font-weight: 700; font-size: 26vw; line-height: 0.75; letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 1px rgba(242, 242, 243, 0.03); background: linear-gradient(180deg, rgba(242, 242, 243, 0.045) 0%, transparent 58%); -webkit-background-clip: text; background-clip: text; }
+  .footer__ribbon { position: absolute; top: clamp(34px, 5vw, 64px); left: -4%; width: 108%; padding: 13px 0; transform: rotate(-2deg); z-index: 1; background: rgba(12, 12, 11, 0.72); opacity: 1; }
+  .footer__ribbon .marquee { animation-duration: 44s; }
+  .footer__cta { position: relative; z-index: 2; padding: clamp(24px, 4vw, 56px) clamp(20px, 5vw, 48px) clamp(28px, 3vw, 40px); }
+  .footer__nav { position: relative; z-index: 2; padding: 0 clamp(20px, 5vw, 48px) clamp(32px, 4vw, 56px); }
+  .footer__pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .footer__info { position: relative; z-index: 2; max-width: var(--container-narrow); margin: 0 auto; width: 100%; padding: clamp(28px, 3vw, 40px) clamp(20px, 5vw, 48px); border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(22px, 3vw, 40px); text-align: left; }
+  .footer__h { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--n-500); font-weight: 600; margin-bottom: 14px; }
+  .footer__list { display: grid; gap: 9px; }
+  .footer__list a { font-size: 14px; color: var(--n-400); }
+  .footer__list a:hover { color: var(--ink); }
+  .footer__legal { position: relative; z-index: 3; width: 100%; padding: clamp(18px, 2.4vw, 28px) clamp(20px, 5vw, 52px) clamp(22px, 3.4vh, 36px); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+  .footer__legal > div:first-child { max-width: 760px; min-width: 0; }
+  .footer__copy { font-size: 11.5px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--n-600); margin-bottom: 6px; }
+  .footer__fine { font-size: 11px; line-height: 1.5; color: var(--n-600); max-width: 72ch; text-wrap: pretty; }
+  .footer__brand { display: flex; align-items: center; gap: 14px; flex: none; }
+  .footer__brand img { height: 34px; width: auto; opacity: 0.6; }
+  .footer__top { width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center; color: var(--n-400); background: linear-gradient(145deg, rgba(242, 242, 243, 0.055), rgba(242, 242, 243, 0.012)); border: 1px solid var(--line); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(242, 242, 243, 0.09), inset 0 -1px 2px rgba(0, 0, 0, 0.55); border-radius: var(--radius-pill); transition: background 0.4s var(--ease), border-color 0.4s var(--ease), color 0.3s; }
+  .footer__top:hover { background: linear-gradient(145deg, rgba(242, 242, 243, 0.12), rgba(242, 242, 243, 0.03)); border-color: var(--line-3); color: var(--ink); }
+</style>

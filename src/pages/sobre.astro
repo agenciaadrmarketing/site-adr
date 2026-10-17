@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import Button from '../components/Button.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import { CONTACT, whatsappUrl } from '../data/site';
+import { webPage, breadcrumbList, personLeader } from '../data/seo';
+
+const title = 'Sobre a ADR Marketing — assessoria de marketing médico | ADR';
+const description =
+  'Conheça a ADR Marketing: assessoria especializada em marketing para médicos, clínicas e consultórios, conduzida diretamente por Caio Souza Anderle. Modelo premium, parceiros limitados e diagnóstico comercial prévio.';
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Sobre a ADR', href: '/sobre/' }];
+const jsonLd = [webPage({ path: '/sobre/', title, description, type: 'AboutPage' }), breadcrumbList(crumbs), personLeader()];
+const wa = 'Olá! Vim pela página Sobre a ADR e quero conversar sobre a minha clínica.';
+const principios = [
+  { t: 'Parceiros limitados', d: 'O modelo admite poucos parceiros simultâneos para que a liderança sênior conduza cada conta de perto. Não operamos em escala nem delegamos a execução a gestores iniciantes.' },
+  { t: 'Diagnóstico antes de proposta', d: 'Nenhuma parceria começa sem um diagnóstico comercial prévio: presença digital, ticket dos procedimentos, concorrência na região e maturidade do comercial da clínica.' },
+  { t: 'Sem promessa de resultado', d: 'O desempenho depende de especialidade, concorrência, investimento, posicionamento e atendimento. Trabalhamos com indicadores acompanhados mês a mês — não com garantias.' },
+  { t: 'Dentro das normas do setor', d: 'As estratégias respeitam as regras de publicidade médica do Conselho Federal de Medicina. Não usamos "antes e depois" nem apelos sensacionalistas nas campanhas.' },
+  { t: 'Marketing e comercial juntos', d: 'Tráfego gera e filtra a demanda; o fechamento acontece dentro da clínica. Por isso a metodologia inclui atendimento no WhatsApp, triagem, recepção ou SDR e follow-up.' },
+  { t: 'Decisão por dado, não por achismo', d: 'Investimento, contatos, pacientes qualificados e agendamentos confirmados são acompanhados e reportados direto no WhatsApp da clínica.' },
+];
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd} waMessage={wa} cta={{ waMessage: wa, id: 'cta-sobre' }}>
+  <PageHero
+    kicker="Sobre a ADR"
+    title="Uma assessoria de marketing médico"
+    titleAccent="conduzida pela liderança sênior"
+    text="A ADR Marketing é uma assessoria especializada em marketing para médicos, clínicas e consultórios. Atuamos em posicionamento, autoridade digital, tráfego pago e estruturação comercial para captação de pacientes particulares — com cada conta conduzida diretamente por Caio Souza Anderle."
+    crumbs={crumbs}
+  >
+    <WhatsAppButton id="sobre-hero" label="Falar com a ADR" message={wa} arrow />
+    <Button variant="outline" openModal="sobre-hero">Pedir análise gratuita</Button>
+  </PageHero>
+
+  <section class="section sobre" aria-labelledby="lid-title">
+    <div class="container split">
+      <div class="sobre__photo" data-reveal>
+        <img src="/assets/caio.webp" alt="Caio Souza Anderle, fundador e responsável pela estratégia da ADR Marketing" width="900" height="1250" loading="lazy" decoding="async" />
+      </div>
+      <div class="sobre__text" data-reveal>
+        <SectionLabel n="01" label="Liderança" />
+        <h2 class="h2" id="lid-title">Quem conduz <span class="silver">a sua conta</span></h2>
+        <p class="lead"><strong>Caio Souza Anderle</strong> é fundador da ADR Marketing e responsável pela estratégia de cada parceria. A empresa é registrada como {CONTACT.legalName} (CNPJ {CONTACT.cnpj}) e atende clínicas em todo o Brasil, de forma remota.</p>
+        <p class="lead">A ADR nasceu para preencher uma lacuna no mercado: a falta de profundidade estratégica no marketing para a saúde. Enquanto o mercado opera com modelos de escala e entrega delegada a iniciantes, seguimos o caminho oposto — planejamento, execução do tráfego pago e estruturação dos funis de captação conduzidos por quem entende as complexidades regulatórias e a jornada do paciente na medicina.</p>
+        <dl class="stats sobre__stats">
+          <div><dt>Modelo</dt><dd>Premium</dd></div>
+          <div><dt>Execução</dt><dd>Liderança sênior</dd></div>
+          <div><dt>Nicho</dt><dd>Medicina</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light" aria-labelledby="pri-title">
+    <div class="container">
+      <div class="head-row" data-reveal>
+        <div class="head-row__title">
+          <SectionLabel n="02" label="Como trabalhamos" />
+          <h2 class="h2" id="pri-title">O que a ADR é — <span class="graphite">e o que não é</span></h2>
+        </div>
+        <p class="lead head-row__text">Seis compromissos que definem o modelo. Eles valem para toda parceria e estão refletidos na <a href="/metodologia/">metodologia</a> e nos <a href="/servicos/">serviços</a> que oferecemos.</p>
+      </div>
+      <ul class="pri">
+        {principios.map((p, i) => (
+          <li class="card card--white card--static pri__item" data-reveal>
+            <span class="card__num">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="h3">{p.t}</h3>
+            <p class="card__text">{p.d}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="inst-title">
+    <div class="container split">
+      <div style="flex:1 1 360px" data-reveal>
+        <SectionLabel n="03" label="Informações institucionais" />
+        <h2 class="h2" id="inst-title">Dados da <span class="silver">empresa</span></h2>
+        <p class="lead" style="margin-top:16px">As mesmas informações constam na <a href="/politica-de-privacidade/">política de privacidade</a> e nos dados estruturados do site.</p>
+      </div>
+      <dl class="inst" data-reveal>
+        <div><dt>Nome fantasia</dt><dd>ADR Marketing</dd></div>
+        <div><dt>Razão social</dt><dd>{CONTACT.legalName}</dd></div>
+        <div><dt>CNPJ</dt><dd>{CONTACT.cnpj}</dd></div>
+        <div><dt>Responsável</dt><dd>{CONTACT.leader}</dd></div>
+        <div><dt>E-mail</dt><dd><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a href={whatsappUrl(wa)} target="_blank" rel="noopener" data-wa="sobre-dados">{CONTACT.whatsappDisplay}</a></dd></div>
+        <div><dt>Atuação</dt><dd>Médicos, clínicas e consultórios em todo o Brasil (atendimento remoto)</dd></div>
+        <div><dt>Especialização</dt><dd>Marketing médico: posicionamento, tráfego pago e estruturação comercial</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <RelatedLinks
+    links={[
+      { label: 'Metodologia ADR', href: '/metodologia/', text: 'Do diagnóstico ao paciente na cadeira, em quatro etapas.' },
+      { label: 'Serviços', href: '/servicos/', text: 'Tráfego pago, posicionamento, captação e comercial.' },
+      { label: 'Marketing médico', href: '/marketing-medico/', text: 'O guia da ADR sobre marketing para saúde.' },
+      { label: 'Contato', href: '/contato/', text: 'Solicite um diagnóstico comercial prévio.' },
+    ]}
+  />
+</BaseLayout>
+
+<style>
+  .sobre__photo { flex: 1 1 380px; max-width: 480px; min-width: 0; border-radius: 28px; overflow: hidden; box-shadow: 0 40px 90px -36px rgba(0, 0, 0, 0.9); }
+  .sobre__photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
+  .sobre__text { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+  .sobre__text .lead strong { color: var(--ink); font-weight: 600; }
+  .sobre__stats { margin-top: 10px; }
+  .pri { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(14px, 1.7vw, 22px); }
+  .pri__item { gap: 10px; padding: clamp(22px, 2.4vw, 30px); }
+  .pri__item .card__num { color: var(--muted-mid); }
+  .inst { flex: 1 1 420px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 14px; }
+  .inst > div { border: 1px solid var(--line-2); border-radius: var(--radius-sm); padding: 16px; background: var(--bg-2); }
+  .inst dt { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--n-500); margin-bottom: 6px; }
+  .inst dd { font-size: 15px; color: var(--ink); }
+  .inst a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+</style>
