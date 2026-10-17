@@ -123,7 +123,7 @@ Publicidade, Google — Dicas para melhorar a classificação local, Google Sear
 | Indexabilidade | 24 páginas indexáveis (`index, follow, max-image-preview:large`); `/termos-de-uso/` e `/404.html` com `noindex` e sem canonical |
 | Status HTTP | 200 em todas as rotas locais; 404 dedicada; regras 301 no `.htaccess` (não testáveis sem Apache) |
 | robots.txt | Robôs de busca (Googlebot, Bingbot, OAI-SearchBot, PerplexityBot, DuckDuckBot) e de treinamento (GPTBot, Google-Extended, ClaudeBot, anthropic-ai, CCBot, Applebot-Extended) separados, todos permitidos; aponta para o sitemap. Sem `llms.txt` |
-| Sitemap | 25 URLs = 24 publicadas + `/niches/odonto/` (legado). Sem rascunhos, sem noindex |
+| Sitemap | `/sitemap.xml` com 25 URLs = 24 publicadas + `/niches/odonto/` (legado), `lastmod` real nos artigos; `/sitemap-index.xml` aponta para ele. Sem rascunhos, sem noindex |
 | Canonicals | 100% = própria URL, `https://agenciaadrmarketing.com`, barra final |
 | Metadados | Titles e descriptions únicos, dentro de 70/175 caracteres |
 | Headings | 1 H1 por página; sem saltos de nível no `<main>` |
@@ -176,10 +176,10 @@ Ambos devem responder 200. Um 403 ou desafio de captcha indica firewall bloquean
 
 | Integração | Identificador | Estado no site | Validação |
 |---|---|---|---|
-| Google Tag Manager | GTM-PDFHMCXG | Instalado 1× por página (head + noscript) | **Sem acesso** ao container: não foi possível ver tags e gatilhos |
-| Google Ads | AW-18381807679 | gtag carregado 2,5 s após o load; `generate_lead` enviado no envio do formulário | **Sem acesso**: conversões provavelmente dependem do GTM (o site não envia rótulo de conversão) |
-| Microsoft Clarity | yjdxdq034e | Carregado 2,5 s após o load | Rede bloqueada neste ambiente |
-| Google Analytics 4 | — | Não há ID no código | Pode estar dentro do GTM: **não confirmado** |
+| Google Tag Manager | GTM-PDFHMCXG | 1× por página; carregado na primeira interação ou 4 s após o load (seção 16) + `noscript` | **Sem acesso** ao container. O PageSpeed do site no ar mostra que ele carrega Google Ads e GA4 |
+| Google Ads | AW-18381807679 | gtag direto, carregado junto com o GTM; `generate_lead` enviado no envio do formulário. **Duplicado**: o GTM também carrega o Google Ads | **Sem acesso**: conferir no GTM se alguma conversão depende do gtag direto antes de removê-lo |
+| Microsoft Clarity | yjdxdq034e | Carregado junto com o GTM | Confirmado no PageSpeed do site no ar (1×) |
+| Google Analytics 4 | G-1YXFZQPS7P | Carregado pelo GTM (não há ID no código do site) | Localizado no PageSpeed do site no ar; **sem acesso** à propriedade |
 | Google Search Console | — | Nenhuma meta de verificação | Pode estar verificado por DNS: **não confirmado** |
 | Bing Webmaster Tools | — | Nenhuma meta de verificação | **Não confirmado** |
 | Pixel da Meta | — | Não instalado (código preparado) | Decisão pendente |
@@ -247,7 +247,7 @@ CLS ≤ 0,002 em todas. INP não é medido em laboratório (TBT ≤ 30 ms é o i
 no percentil 75 só existirão no Search Console/CrUX depois do deploy e de tráfego suficiente.
 
 Peso: HTML 22 KB (Home, gzip), CSS 57 KB sem compressão, JS 11 KB, fontes Poppins self-hosted (2 pesos
-pré-carregados), tags de terceiros adiadas 2,5 s.
+pré-carregados), tags de terceiros carregadas na primeira interação ou 4 s após o load (seção 16).
 
 ## 8. Segurança e LGPD
 
@@ -365,3 +365,59 @@ paginação/categorias se algum tema passar de ~8 artigos.
    `niches/urologia`.
 4. Testes do item 13 ("A cada deploy").
 5. Reverter: restaurar o backup (ou `git revert` e novo build).
+
+## 16. Ajuste pós-deploy: PageSpeed do site no ar (17/10/2026)
+
+O PageSpeed Insights do domínio publicado (relatório enviado pelo cliente, mobile) deu **63** em
+desempenho e 100 em acessibilidade, práticas recomendadas e SEO: FCP 3,5 s, LCP 6,3 s, TBT 200 ms,
+Speed Index 5,7 s, CLS 0.
+
+**Causa:** o GTM no `<head>` baixava ~640 KB de JavaScript logo no início (gtm.js 151 KB; Google Ads
+2 × 162 KB, uma pelo GTM e outra pelo gtag direto do site; GA4 `G-1YXFZQPS7P` 163 KB), disputando banda e
+processador com o HTML, o CSS e a imagem do topo. O LCP gastava 1,9 s em atraso de renderização. Os testes
+locais anteriores não viam isso porque a rede deste ambiente bloqueia os servidores do Google.
+
+**Reprodução:** a Home foi servida localmente com scripts substitutos do mesmo tamanho nos lugares do GTM,
+do gtag e do Clarity (mobile, gzip):
+
+| Carregamento das tags | Desempenho | LCP | TBT |
+|---|---|---|---|
+| Antes: GTM no head, Ads e Clarity 2,5 s após o load | 62 e 87 (duas rodadas) | 4,9 s e 2,7 s | 820 ms e 390 ms |
+| Depois: tudo na 1ª interação ou 4 s após o load | 100 e 100 | 1,7 s | 0 ms |
+
+**O que mudou:**
+
+- GTM, Google Ads e Clarity carregam juntos na primeira interação (toque, rolagem, tecla, movimento do mouse)
+  ou 4 s após o `load`, o que vier primeiro. `dataLayer` existe desde o início do HTML; eventos anteriores
+  ao GTM ficam na fila. Testado: sem interação as tags chegam em ~4,1 s; com rolagem, na hora; um clique no
+  WhatsApp antes do GTM dispara o carregamento e o evento `whatsapp_click` entra na fila logo depois do
+  `gtm.js`.
+- **Custo:** visitas de menos de ~4 s sem nenhuma interação não são registradas no GA4, no Google Ads
+  (remarketing) e no Clarity. Acompanhar sessões e conversões nas duas semanas após o deploy.
+- O texto já visível ao carregar não pisca mais (o script de animação ocultava e reexibia o hero).
+- Logo 240 px (6,9 KB em vez de 14 KB) sem prioridade alta, para não competir com a imagem do topo;
+  avatar do atendimento em 160 px.
+- ID duplicado no formulário do modal corrigido; na Home, os dois botões "Solicitar diagnóstico pelo
+  WhatsApp" agora têm o mesmo destino. O `npm run audit` passou a checar as duas coisas.
+- Cabeçalho `Cross-Origin-Opener-Policy: same-origin-allow-popups`.
+- Sitemap: `/sitemap.xml` único gerado de `src/data/pages.json`, com `lastmod` real nos artigos;
+  `/sitemap-index.xml` continua respondendo e aponta para ele; `robots.txt` declara `/sitemap.xml`.
+
+**Resultado local depois do ajuste** (gzip, Lighthouse 13.5), em desempenho / acessibilidade /
+práticas / SEO:
+
+| Página | Mobile | LCP mobile | Desktop |
+|---|---|---|---|
+| `/` | 100 / 100 / 100 / 100 | 1,7 s | 100 / 100 / 100 / 100 |
+| `/blog/` | 100 / 100 / 100 / 100 | 1,2 s | 100 / 100 / 100 / 100 |
+| `/blog/google-ads-ou-meta-ads-para-medicos/` | 100 / 100 / 100 / 100 | 1,4 s | 100 / 100 / 100 / 100 |
+| `/marketing-para-endocrinologistas/` | 100 / 100 / 100 / 100 | 1,2 s | 100 / 100 / 100 / 100 |
+| `/servicos/`, `/marketing-medico/`, `/contato/`, `/metodologia/` | 100 / 100 / 100 / 100 | 1,2 s | 100 / 100 / 100 / 100 |
+| `/sobre/` | 100 / 100 / 100 / 100 | 1,7 s | 100 / 100 / 100 / 100 |
+
+O PageSpeed do site no ar varia de uma rodada para outra e depende do servidor do Google; estes números
+são do laboratório local e não são garantia. Os dados reais (Core Web Vitals no Search Console) dependem
+de tráfego depois do deploy.
+
+**Pendente:** remover o gtag direto do Google Ads depois de confirmar no GTM que nenhuma conversão depende
+dele (economiza mais 162 KB para o visitante).

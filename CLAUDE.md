@@ -8,6 +8,8 @@ Fonte de verdade das decisões: Prompt Mestre V2 + Decisões Finais + Complement
 - Astro 7, saída estática em `dist/` (`npm ci`, `npm run build`, `npm run preview`).
 - Hospedagem: Hostinger (Apache). Deploy = conteúdo de `dist/` extraído na raiz de `public_html`.
   **Nunca publicar direto em produção**: gerar pacote, fazer backup do `public_html`, só então subir.
+- Sitemap: `/sitemap.xml` gerado por `src/pages/sitemap.xml.ts` a partir de `src/data/pages.json`
+  (publicada + legado); `/sitemap-index.xml` aponta para ele.
 - `npm run audit` (depois do build): links, canonicals, sitemap, JSON-LD, títulos, strings proibidas,
   órfãs e similaridade entre páginas do mesmo template. Precisa terminar com "Sem erros".
 - `public/niches/odonto/` é a única página legada restante (export antigo, ~1 MB) e segue no ar até
@@ -39,7 +41,9 @@ Fonte de verdade das decisões: Prompt Mestre V2 + Decisões Finais + Complement
    `event_type` (interacao / envio_formulario / erro); lead qualificado e agendamento só por
    importação offline a partir da planilha, nunca disparados pelo navegador.
 7. **Tags**: GTM `GTM-PDFHMCXG`, Google Ads `AW-18381807679`, Clarity `yjdxdq034e` — uma vez por
-   página, no `BaseLayout`. Não adicionar tags sem pedido explícito.
+   página, no `BaseLayout`, pelo loader adiado (primeira interação ou 4 s após o `load`). Não voltar o
+   GTM para o `<head>`: ele carrega ~640 KB (Ads + GA4 `G-1YXFZQPS7P`) e derrubou o PageSpeed mobile
+   para 63. Não adicionar tags sem pedido explícito.
 8. **Dados da empresa** (`CONTACT` em `site.ts`): WhatsApp +55 48 98880-9542,
    agencia.adrmarketing@gmail.com, CNPJ 57.872.304/0001-66, razão social
    57.872.304 CAIO SOUZA ANDERLE, liderança Caio Souza Anderle. Manter coerente em todas as páginas.

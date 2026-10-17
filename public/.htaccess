@@ -74,4 +74,7 @@ ErrorDocument 404 /404.html
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  # Isola a janela do site de páginas abertas por ele; "allow-popups" mantém
+  # o WhatsApp abrindo normalmente em nova aba.
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
 </IfModule>

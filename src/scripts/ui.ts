@@ -4,6 +4,15 @@ const mq = (q: string) => (window.matchMedia ? window.matchMedia(q).matches : fa
 const reduced = mq('(prefers-reduced-motion: reduce)');
 const semHover = mq('(hover: none)');
 
+// O que já está na tela quando o script roda não some para depois reaparecer:
+// marca como revelado antes de ativar a classe `js` (evita o "pisca" do hero,
+// que piorava Speed Index e LCP).
+{
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  document.querySelectorAll<HTMLElement>('[data-reveal]').forEach((el) => {
+    if (el.getBoundingClientRect().top < vh) el.classList.add('is-in');
+  });
+}
 document.documentElement.classList.add('js');
 bindWhatsAppLinks();
 bindCtaClicks();

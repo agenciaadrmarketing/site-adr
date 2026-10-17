@@ -67,17 +67,9 @@ const graph = { '@context': 'https://schema.org', '@graph': [WEBSITE_JSONLD, ORG
     {typeof preloadHero === 'string' && <link rel="preload" as="image" href={preloadHero} fetchpriority="high" />}
     {Array.isArray(preloadHero) && preloadHero.map((p) => <link rel="preload" as="image" href={p.href} media={p.media} fetchpriority="high" />)}
     <script type="application/ld+json" set:html={JSON.stringify(graph)} />
-    <!-- Google Tag Manager (tag existente, carregada uma única vez) -->
-    <script is:inline>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-PDFHMCXG');
-    </script>
+    <!-- dataLayer existe desde o primeiro byte: eventos anteriores ao GTM ficam
+         na fila e são processados quando ele carregar (ver loader no fim do body). -->
+    <script is:inline>window.dataLayer = window.dataLayer || [];</script>
   </head>
   <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDFHMCXG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -93,22 +85,38 @@ const graph = { '@context': 'https://schema.org', '@graph': [WEBSITE_JSONLD, ORG
       import '../scripts/ui';
       import '../scripts/lead-form';
     </script>
-    <!-- Google Ads (gtag) e Microsoft Clarity: tags existentes, adiadas para
-         depois do carregamento para não concorrer com o LCP. -->
+    <!-- Tags existentes (GTM, Google Ads, Microsoft Clarity), cada uma uma única vez.
+         O container do GTM carrega ~640 KB (Google Ads + GA4) e, no head, derrubava
+         o desempenho mobile para 63 no PageSpeed. Agora as três carregam juntas na
+         primeira interação do visitante (toque, rolagem, tecla, mouse) ou 4 s depois
+         do load, o que vier primeiro. Eventos empurrados antes disso ficam na fila
+         do dataLayer. Custo: visitas de menos de ~4 s sem nenhuma interação não são
+         registradas. -->
     <script is:inline>
-      window.addEventListener('load', function () {
-        setTimeout(function () {
+      (function () {
+        var feito = false;
+        var gatilhos = ['pointerdown', 'keydown', 'touchstart', 'scroll', 'mousemove'];
+        function carregar() {
+          if (feito) return;
+          feito = true;
+          gatilhos.forEach(function (g) { window.removeEventListener(g, carregar, { passive: true }); });
+          var d = document;
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var j = d.createElement('script');
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PDFHMCXG';
+          d.head.appendChild(j);
           if (!window.__gtagAdsLoaded) {
             window.__gtagAdsLoaded = true;
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+            function gtag() { window.dataLayer.push(arguments); }
             window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', 'AW-18381807679');
-            var s = document.createElement('script');
+            var s = d.createElement('script');
             s.async = true;
             s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18381807679';
-            document.head.appendChild(s);
+            d.head.appendChild(s);
           }
           if (!window.__clarityLoaded) {
             window.__clarityLoaded = true;
@@ -116,10 +124,14 @@ const graph = { '@context': 'https://schema.org', '@graph': [WEBSITE_JSONLD, ORG
               c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
               t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
               y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-            })(window, document, 'clarity', 'script', 'yjdxdq034e');
+            })(window, d, 'clarity', 'script', 'yjdxdq034e');
           }
-        }, 2500);
-      });
+        }
+        gatilhos.forEach(function (g) { window.addEventListener(g, carregar, { passive: true }); });
+        function temporizador() { setTimeout(carregar, 4000); }
+        if (document.readyState === 'complete') temporizador();
+        else window.addEventListener('load', temporizador);
+      })();
     </script>
   </body>
 </html>

@@ -30,7 +30,7 @@ operar.
 | Prioridade | Quantidade | O que destrava |
 |---|---|---|
 | P0 | 4 | Publicar o pacote com segurança e saber que os leads e as conversões continuam chegando |
-| P1 | 30 | Credibilidade institucional, SEO local, medição, páginas comerciais da Fase 2 |
+| P1 | 32 | Credibilidade institucional, SEO local, medição, páginas comerciais da Fase 2 |
 | P2 | 14 | Refinamentos de marca, conteúdo e inteligência de mercado |
 
 ---
@@ -93,7 +93,9 @@ Não é necessário: faturamento do cliente, dados de pacientes, contratos, valo
 | P1 | O Apps Script recebe os dados do lead por URL (método GET: nome, e-mail e WhatsApp ficam no endereço da requisição). Decisão: migrar o script para POST | Sem acesso (o script está na conta Google do cliente) | URLs com dados pessoais podem ficar em logs; não é o ideal pela LGPD | Caio + quem mantém o script | `src/scripts/lead-form.ts` e o Apps Script | Risco de exposição de dados pessoais em registros técnicos |
 | P1 | Critério de lead qualificado (quem decide e com que informações) | Inexistente | Separar "contato" de "lead qualificado" nos relatórios e no Google Ads | Caio | Relatórios, importação offline de conversões | Campanhas otimizam por contato, não por qualidade |
 | P1 | Onde os agendamentos/fechamentos são registrados (planilha, CRM, outro) e se é possível marcar o `gclid` de cada lead | Inexistente | Base para importar conversões offline (lead qualificado, contrato fechado) no Google Ads e GA4 | Caio | Medição de resultado comercial | Não é possível medir resultado real por canal |
-| P1 | GA4: ID de medição (G-XXXXXXX) e confirmação de que está configurado dentro do GTM | Sem acesso | Medir tráfego orgânico, blog, origem de IA e conversões no site | Caio / gestor | Todas as páginas | Sem medição de SEO, blog e referências de IA |
+| P1 | Acesso de leitura à propriedade do GA4 `G-1YXFZQPS7P` (o ID foi localizado no PageSpeed do site no ar: é carregado pelo GTM) | Sem acesso | Montar os relatórios de tráfego orgânico, blog, origem de IA e conversões | Caio / gestor | Todas as páginas | Os dados são coletados, mas ninguém da operação do site consegue ler |
+| P1 | O Google Ads é carregado duas vezes (gtag direto no site + Google tag dentro do GTM). Confirmar no GTM se alguma conversão depende do gtag direto, para removê-lo | Sem acesso | Remover 162 KB de JavaScript duplicado para cada visitante | Gestor do Google Ads / GTM | Todas as páginas | Tag duplicada continua pesando no carregamento |
+| P1 | Acompanhar, nas duas semanas após o deploy, se sessões no GA4 e conversões no Google Ads ficaram coerentes com o novo carregamento das tags (na primeira interação ou 4 s após o load) | Sem acesso | O ajuste levou o desempenho de 63 para 100 no laboratório, mas visitas muito curtas sem interação deixam de ser registradas | Gestor do Google Ads / GA4 | Medição | Queda inesperada de dados passaria despercebida |
 | P1 | Banner de consentimento de cookies (e Consent Mode do Google): decisão sobre implantar | Inexistente (a política de privacidade informa os cookies, mas não há coleta de consentimento) | Avaliação de LGPD; exige decisão jurídica | Caio + jurídico | Todas as páginas, tags | Risco regulatório; decisão fora do escopo técnico |
 | P2 | Pixel da Meta: instalar ou não? (o código já está preparado e a política menciona a possibilidade) | Inexistente | Campanhas de Meta Ads sem pixel otimizam pior | Caio / gestor | Tags | Nenhuma conversão de Meta Ads medida no site |
 
@@ -167,7 +169,9 @@ Copie e envie. Itens marcados com ⚠️ bloqueiam a publicação.
 **Medição e domínio** (por convite, nunca por senha)
 
 - [ ] Convite no Google Search Console e no Bing Webmaster Tools.
-- [ ] ID do GA4 e confirmação se ele está no GTM.
+- [ ] Acesso de leitura ao GA4 `G-1YXFZQPS7P` (já localizado dentro do GTM).
+- [ ] Conferir no GTM se a conversão do Google Ads depende do gtag direto do site (ele está duplicado).
+- [ ] Comparar sessões e conversões das duas semanas após o deploy com as anteriores.
 - [ ] Onde os leads qualificados e os fechamentos são registrados; critério de lead qualificado.
 - [ ] Decisão sobre banner de cookies (com o jurídico) e sobre o Pixel da Meta.
 - [ ] Os subdomínios de especialidade existem? Há CDN/firewall na Hostinger?

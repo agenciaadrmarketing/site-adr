@@ -41,7 +41,7 @@ const ribbon1 = ['Marketing para clínicas', 'Marketing médico', 'Tráfego pago
 const ribbon2 = ['Google Ads e Meta Ads', 'Pacientes particulares', 'Comercial de alta conversão', 'Previsibilidade', 'Modelo premium'];
 ---
 
-<BaseLayout title={title} description={description} jsonLd={jsonLd} preloadHero={[{ href: '/assets/bg-hero-mobile.webp', media: '(max-width: 760px)' }, { href: '/assets/bg-hero.webp', media: '(min-width: 761px)' }]} waMessage={waHome}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd} preloadHero={[{ href: '/assets/bg-hero-mobile.webp', media: '(max-width: 760px)' }, { href: '/assets/bg-hero.webp', media: '(min-width: 761px)' }]} waMessage={waHome} cta={{ waMessage: waHome }}>
   <!-- 01 · HERO (preservado; copy refinada; CTA WhatsApp + formulário) -->
   <section id="home" class="hero" aria-labelledby="hero-title">
     <picture>

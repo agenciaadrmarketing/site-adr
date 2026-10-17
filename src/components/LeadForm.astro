@@ -19,14 +19,14 @@ const uid = `lf-${origem.replace(/[^a-z0-9]/gi, '')}`;
 ---
 
 <div class:list={['lead', cls]} data-lead>
-  <form class="lead__form" data-lead-form data-origem={origem} novalidate aria-labelledby={`${uid}-title`}>
+  <form class="lead__form" data-lead-form data-origem={origem} novalidate aria-labelledby={`${uid}-titulo`}>
     {!compact && (
       <>
-        <h3 class="lead__title" id={`${uid}-title`}>{title}</h3>
+        <h3 class="lead__title" id={`${uid}-titulo`}>{title}</h3>
         <p class="lead__text">{text}</p>
       </>
     )}
-    {compact && <h3 class="sr-only" id={`${uid}-title`}>{title}</h3>}
+    {compact && <h3 class="sr-only" id={`${uid}-titulo`}>{title}</h3>}
     <div class="form">
       <label class="field"><span class="field__label">Nome completo</span><input class="input" name="nome" type="text" required autocomplete="name" placeholder="Dr. / Dra." maxlength="120" /></label>
       <label class="field"><span class="field__label">Email (opcional)</span><input class="input" name="email" type="email" autocomplete="email" placeholder="Seu melhor email" maxlength="160" /></label>

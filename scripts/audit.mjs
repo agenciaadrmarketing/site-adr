@@ -236,11 +236,51 @@ for (const p of pages) {
   if (inbound.get(p.path).size === 0) errors.push(`página órfã (sem links internos de entrada): ${p.path}`);
 }
 
+// ---- links de WhatsApp com o mesmo texto e destinos diferentes -------------
+// (Lighthouse: "links idênticos têm a mesma finalidade")
+for (const file of htmlFiles) {
+  const path = urlPathOf(file);
+  if (legacy.has(path)) continue;
+  const html = readFileSync(file, 'utf8');
+  const porTexto = new Map();
+  for (const m of html.matchAll(/<a\b([^>]*\bdata-wa=[^>]*)>([\s\S]*?)<\/a>/gi)) {
+    const href = attr(`<a ${m[1]}>`, 'href');
+    const texto = textOf(m[2]).toLowerCase();
+    if (!texto || !href) continue;
+    if (!porTexto.has(texto)) porTexto.set(texto, new Set());
+    porTexto.get(texto).add(href);
+  }
+  for (const [texto, hrefs] of porTexto) {
+    if (hrefs.size > 1) errors.push(`${path}: links de WhatsApp "${texto}" com ${hrefs.size} destinos diferentes`);
+  }
+}
+
+// ---- ids duplicados --------------------------------------------------------
+for (const file of htmlFiles) {
+  const path = urlPathOf(file);
+  if (legacy.has(path)) continue;
+  const html = readFileSync(file, 'utf8');
+  const vistos = new Map();
+  for (const m of html.matchAll(/\sid\s*=\s*"([^"]+)"/g)) vistos.set(m[1], (vistos.get(m[1]) || 0) + 1);
+  for (const [id, n] of vistos) if (n > 1) errors.push(`${path}: id duplicado "${id}" (${n}×)`);
+}
+
 // ---- sitemap -------------------------------------------------------------
-const sitemapFile = join(DIST, 'sitemap-0.xml');
+const sitemapFile = join(DIST, 'sitemap.xml');
+const sitemapIndex = join(DIST, 'sitemap-index.xml');
 let sitemapUrls = [];
+if (!existsSync(sitemapIndex) || !readFileSync(sitemapIndex, 'utf8').includes(`<loc>${SITE}/sitemap.xml</loc>`)) {
+  errors.push('sitemap-index.xml ausente ou sem apontar para /sitemap.xml');
+}
+const robots = existsSync(join(DIST, 'robots.txt')) ? readFileSync(join(DIST, 'robots.txt'), 'utf8') : '';
+if (!robots.includes(`Sitemap: ${SITE}/sitemap.xml`)) errors.push('robots.txt não declara /sitemap.xml');
 if (existsSync(sitemapFile)) {
-  sitemapUrls = [...readFileSync(sitemapFile, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(SITE, ''));
+  const xmlText = readFileSync(sitemapFile, 'utf8');
+  sitemapUrls = [...xmlText.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(SITE, ''));
+  if (new Set(sitemapUrls).size !== sitemapUrls.length) errors.push('sitemap.xml com URLs repetidas');
+  for (const m of xmlText.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(m[1])) errors.push(`lastmod inválido no sitemap: ${m[1]}`);
+  }
   const expected = new Set([...published, ...legacy]);
   for (const u of sitemapUrls) {
     if (!expected.has(u)) errors.push(`sitemap contém URL não aprovada: ${u}`);
@@ -250,7 +290,7 @@ if (existsSync(sitemapFile)) {
   }
   for (const u of expected) if (!sitemapUrls.includes(u)) errors.push(`sitemap não contém ${u}`);
 } else {
-  errors.push('sitemap-0.xml não encontrado');
+  errors.push('sitemap.xml não encontrado');
 }
 
 // ---- similaridade entre páginas do mesmo template -------------------------

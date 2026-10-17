@@ -44,4 +44,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://agenciaadrmarketing.com/sitemap-index.xml
+Sitemap: https://agenciaadrmarketing.com/sitemap.xml
