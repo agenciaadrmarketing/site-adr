@@ -15,7 +15,8 @@ interface Props {
   noindex?: boolean;
   noCanonical?: boolean;
   jsonLd?: Record<string, unknown>[];
-  preloadHero?: string;
+  // Uma URL, ou várias com media query (imagem diferente no mobile).
+  preloadHero?: string | { href: string; media: string }[];
   cta?: { title?: string; text?: string; waLabel?: string; waMessage?: string; id?: string };
   waMessage?: string;
 }
@@ -63,7 +64,8 @@ const graph = { '@context': 'https://schema.org', '@graph': [WEBSITE_JSONLD, ORG
     <meta name="twitter:image" content={ogImage} />
     <link rel="preload" href="/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
-    {preloadHero && <link rel="preload" as="image" href={preloadHero} fetchpriority="high" />}
+    {typeof preloadHero === 'string' && <link rel="preload" as="image" href={preloadHero} fetchpriority="high" />}
+    {Array.isArray(preloadHero) && preloadHero.map((p) => <link rel="preload" as="image" href={p.href} media={p.media} fetchpriority="high" />)}
     <script type="application/ld+json" set:html={JSON.stringify(graph)} />
     <!-- Google Tag Manager (tag existente, carregada uma única vez) -->
     <script is:inline>

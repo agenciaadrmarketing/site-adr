@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import SectionLabel from '../../components/SectionLabel.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import RelatedLinks from '../../components/RelatedLinks.astro';
+import { SPECIALTIES } from '../../data/site';
+import { webPage, breadcrumbList, blogJsonLd } from '../../data/seo';
+import { CATEGORIAS, categoria, formatDate, readingTime, BLOG_WA } from '../../data/blog';
+
+const title = 'Conteúdos sobre marketing médico para clínicas | ADR Marketing';
+const description =
+  'Artigos da ADR Marketing sobre captação de pacientes particulares, Google Ads e Meta Ads, atendimento no WhatsApp, indicadores e publicidade médica.';
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Conteúdos', href: '/blog/' }];
+
+const all = (await getCollection('artigos')).filter((e) => e.data.status === 'publicada');
+const porOrdem = [...all].sort((a, b) => a.data.ordem - b.data.ordem);
+const destaques = porOrdem.filter((e) => e.data.destaque).slice(0, 3);
+const porCategoria = CATEGORIAS.map((c) => ({ cat: c, artigos: porOrdem.filter((e) => e.data.categoria === c.id) })).filter((g) => g.artigos.length > 0);
+const card = (e: (typeof all)[number]) => ({
+  href: `/blog/${e.id}/`,
+  title: e.data.h1,
+  description: e.data.description,
+  categoria: categoria(e.data.categoria).short,
+  date: `${e.data.datePublished} ${formatDate(e.data.datePublished)}`,
+  minutes: readingTime(e.body ?? ''),
+});
+const jsonLd = [
+  webPage({ path: '/blog/', title, description, type: 'CollectionPage' }),
+  breadcrumbList(crumbs),
+  blogJsonLd(porOrdem.map((e) => ({ path: `/blog/${e.id}/`, headline: e.data.h1, datePublished: e.data.datePublished, description: e.data.description }))),
+];
+const especialidades = SPECIALTIES.filter((s) => s.status === 'publicada').slice(0, 3);
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd} waMessage={BLOG_WA} cta={{ title: 'Prefere conversar sobre o seu caso?', text: 'Os artigos explicam o método. O diagnóstico comercial prévio aplica o método à sua clínica — sem custo e sem compromisso.', waMessage: BLOG_WA, id: 'cta-blog' }}>
+  <PageHero kicker="Conteúdos ADR" title="Marketing médico" titleAccent="explicado com método" text="Artigos sobre o que acontece entre o anúncio e o paciente na cadeira: captação de pacientes particulares, Google Ads e Meta Ads, atendimento no WhatsApp, indicadores e os limites da publicidade médica. Sem promessas, com fontes." crumbs={crumbs} variant="service">
+    <nav class="topics" aria-label="Navegar por tema">
+      <ul class="topics__list">
+        {CATEGORIAS.map((c) => (
+          <li><a class="pill" data-ima href={`#${c.id}`}>{c.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </PageHero>
+
+  {destaques.length > 0 && (
+    <section class="section section--light" aria-labelledby="dest-title">
+      <div class="container">
+        <div class="head-row" data-reveal>
+          <div class="head-row__title">
+            <SectionLabel n="01" label="Em destaque" />
+            <h2 class="h2" id="dest-title">Por onde <span class="graphite">começar</span></h2>
+          </div>
+          <p class="lead head-row__text">Três leituras que resumem a visão da ADR: de onde vem o paciente particular, como escolher o canal e por que o comercial decide o resultado.</p>
+        </div>
+        <div class="grid-cards">
+          {destaques.map((e) => <ArticleCard {...card(e)} onLight large />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {porCategoria.map((g, i) => (
+    <section id={g.cat.id} class:list={['section', 'section--line', { 'section--light': i % 2 === 1 }]} aria-labelledby={`cat-${g.cat.id}`}>
+      <div class="container">
+        <div class="head-row" data-reveal>
+          <div class="head-row__title">
+            <SectionLabel n={String(i + 2).padStart(2, '0')} label={g.cat.label} />
+            <h2 class="h2" id={`cat-${g.cat.id}`}>{g.cat.label}</h2>
+          </div>
+          <p class="lead head-row__text">{g.cat.texto} <a href={g.cat.comercial.href}>{g.cat.comercial.label}</a>.</p>
+        </div>
+        <div class="grid-cards">
+          {g.artigos.map((e) => <ArticleCard {...card(e)} onLight={i % 2 === 1} />)}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section section--line bcta" aria-labelledby="bcta-title">
+    <div class="container bcta__in">
+      <div data-reveal>
+        <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Do conteúdo à prática</p>
+        <h2 class="h2" id="bcta-title">Quer aplicar isso <span class="silver">na sua clínica?</span></h2>
+        <p class="lead bcta__text">A ADR conduz tráfego pago, posicionamento e estruturação comercial para médicos e clínicas, com liderança sênior na operação. O primeiro passo é um diagnóstico comercial prévio.</p>
+      </div>
+      <div class="btn-row" data-reveal>
+        <WhatsAppButton id="blog-cta" label="Falar pelo WhatsApp" message={BLOG_WA} arrow />
+        <a class="btn btn--outline" href="/servicos/">Conhecer os serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <RelatedLinks title="Páginas comerciais relacionadas" links={[
+    { label: 'Serviços da ADR', href: '/servicos/', text: 'Tráfego pago, posicionamento, captação e comercial.' },
+    { label: 'Metodologia', href: '/metodologia/', text: 'Do diagnóstico ao paciente na cadeira.' },
+    { label: 'Guia de marketing médico', href: '/marketing-medico/', text: 'Definições, canais e publicidade médica.' },
+    ...especialidades.map((s) => ({ label: `Marketing para ${s.plural.toLowerCase()}`, href: `/${s.slug}/`, text: `Jornada e demanda em ${s.name.toLowerCase()}.` })),
+  ]} />
+</BaseLayout>
+
+<style>
+  .topics { width: 100%; }
+  .topics__list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .head-row__text a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+  .bcta__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: clamp(20px, 3vw, 48px); }
+  .bcta__in > div:first-child { flex: 1 1 420px; max-width: 640px; }
+  .bcta__text { margin-top: 14px; }
+</style>

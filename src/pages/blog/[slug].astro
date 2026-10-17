@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import ArticlePage from '../../components/ArticlePage.astro';
+
+// Artigos com status "revisao" NÃO entram no build de produção. Para gerar
+// uma cópia de revisão (noindex, sem canonical, fora do sitemap e das
+// listagens): ADR_PREVIEW=1 npm run build
+export async function getStaticPaths() {
+  const all = await getCollection('artigos');
+  const preview = process.env.ADR_PREVIEW === '1';
+  return all
+    .filter((e) => e.data.status === 'publicada' || preview)
+    .map((e) => ({ params: { slug: e.id }, props: { entry: e, all } }));
+}
+
+const { entry, all } = Astro.props;
+---
+
+<ArticlePage entry={entry} all={all} />

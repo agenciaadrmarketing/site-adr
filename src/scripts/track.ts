@@ -39,16 +39,42 @@ export function getUtms(): Utms {
   return cache || captureUtms();
 }
 
+// Classificação dos eventos: interação (intenção do visitante) × resultado
+// (envio de formulário). Lead qualificado e agendamento são resultados
+// comerciais que só existem na planilha/CRM da clínica — devem entrar no
+// GA4/Google Ads por importação offline, nunca disparados pelo navegador.
+const TIPO: Record<string, string> = {
+  whatsapp_click: 'interacao',
+  cta_click: 'interacao',
+  lead_modal_open: 'interacao',
+  exit_intent_popup: 'interacao',
+  form_start: 'interacao',
+  lead_form_submit: 'envio_formulario',
+  form_submit_error: 'erro',
+};
+
 // Eventos sem PII: só metadados de contexto, nunca nome/email/whatsapp.
 export function track(event: string, extra: Record<string, unknown> = {}): void {
   try {
-    const payload = { event, page_path: window.location.pathname, ...getUtms(), ...extra };
+    const payload = { event, event_type: TIPO[event] ?? 'interacao', page_path: window.location.pathname, ...getUtms(), ...extra };
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(payload);
     if (typeof window.gtag === 'function') window.gtag('event', event, payload);
   } catch {
     /* rastreio nunca deve quebrar o fluxo */
   }
+}
+
+// CTAs internos (botões preto/branco que levam a páginas comerciais). Registra
+// o texto do botão e o destino — nada digitado pelo visitante.
+export function bindCtaClicks(): void {
+  document.addEventListener('click', (e) => {
+    const a = (e.target as Element | null)?.closest?.<HTMLAnchorElement>('a.btn:not([data-wa]), a.toc__cta');
+    if (!a) return;
+    const href = a.getAttribute('href') || '';
+    if (!href.startsWith('/')) return;
+    track('cta_click', { cta_text: (a.textContent || '').trim().slice(0, 60), cta_href: href });
+  });
 }
 
 // Anexa a origem da visita aos links de WhatsApp e registra o clique uma única vez.

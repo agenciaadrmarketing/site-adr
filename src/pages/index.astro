@@ -8,8 +8,16 @@ import SpecialtyCard from '../components/SpecialtyCard.astro';
 import MethodSteps from '../components/MethodSteps.astro';
 import Faq from '../components/Faq.astro';
 import LeadForm from '../components/LeadForm.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
 import { CONFIRMED_SERVICES, SPECIALTIES, FAQ, RECADOS } from '../data/site';
 import { webPage, faqPage } from '../data/seo';
+import { categoria, formatDate, readingTime } from '../data/blog';
+
+const artigos = (await getCollection('artigos'))
+  .filter((e) => e.data.status === 'publicada' && e.data.destaque)
+  .sort((a, b) => a.data.ordem - b.data.ordem)
+  .slice(0, 3);
 
 const title = 'Assessoria de Marketing Médico para Clínicas e Médicos | ADR Marketing';
 const description =
@@ -33,10 +41,13 @@ const ribbon1 = ['Marketing para clínicas', 'Marketing médico', 'Tráfego pago
 const ribbon2 = ['Google Ads e Meta Ads', 'Pacientes particulares', 'Comercial de alta conversão', 'Previsibilidade', 'Modelo premium'];
 ---
 
-<BaseLayout title={title} description={description} jsonLd={jsonLd} preloadHero="/assets/bg-hero.webp" waMessage={waHome}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd} preloadHero={[{ href: '/assets/bg-hero-mobile.webp', media: '(max-width: 760px)' }, { href: '/assets/bg-hero.webp', media: '(min-width: 761px)' }]} waMessage={waHome}>
   <!-- 01 · HERO (preservado; copy refinada; CTA WhatsApp + formulário) -->
   <section id="home" class="hero" aria-labelledby="hero-title">
-    <img class="hero__img" src="/assets/bg-hero.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
+    <picture>
+      <source media="(max-width: 760px)" srcset="/assets/bg-hero-mobile.webp" width="700" height="1080" />
+      <img class="hero__img" src="/assets/bg-hero.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
+    </picture>
     <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__fade" aria-hidden="true"></div>
     <div class="container hero__in">
@@ -407,6 +418,26 @@ const ribbon2 = ['Google Ads e Meta Ads', 'Pacientes particulares', 'Comercial d
     </div>
   </section>
 
+  <!-- 12b · CONTEÚDOS (Fase 3: liga a Home ao blog) -->
+  {artigos.length > 0 && (
+    <section id="conteudos" class="section section--line" aria-labelledby="cont-title">
+      <div class="container">
+        <div class="head-row" data-reveal>
+          <div class="head-row__title">
+            <SectionLabel n="10" label="Conteúdos" />
+            <h2 class="h2" id="cont-title">Marketing médico <span class="silver">explicado com método</span></h2>
+          </div>
+          <p class="lead head-row__text">Artigos sobre captação de pacientes particulares, Google Ads × Meta Ads e o comercial da clínica. <a href="/blog/" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px">Ver todos os conteúdos</a>.</p>
+        </div>
+        <div class="grid-cards">
+          {artigos.map((e) => (
+            <ArticleCard href={`/blog/${e.id}/`} title={e.data.h1} description={e.data.description} categoria={categoria(e.data.categoria).short} date={`${e.data.datePublished} ${formatDate(e.data.datePublished)}`} minutes={readingTime(e.body ?? '')} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- 13 · ANÁLISE GRATUITA (preservado; mesmo formulário e integração) -->
   <section class="section section--tight section--line analise" aria-labelledby="an-title">
     <img class="analise__img" src="/assets/bg-analise-opt.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async" />
@@ -428,7 +459,7 @@ const ribbon2 = ['Google Ads e Meta Ads', 'Pacientes particulares', 'Comercial d
     <div class="faqsec__scrim" aria-hidden="true"></div>
     <div class="container container--narrow faqsec__in">
       <div data-reveal>
-        <SectionLabel n="10" label="Restou alguma dúvida?" />
+        <SectionLabel n="11" label="Restou alguma dúvida?" />
         <h2 class="h2" id="faq-title">Perguntas frequentes sobre <span class="silver">marketing médico</span></h2>
       </div>
       <Faq items={FAQ} class="faqsec__list" />
@@ -456,7 +487,9 @@ const ribbon2 = ['Google Ads e Meta Ads', 'Pacientes particulares', 'Comercial d
   .hero__down { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--n-500); }
   @media (max-width: 760px) {
     .hero__scrim { background: linear-gradient(178deg, rgba(9, 9, 8, 0.82) 0%, rgba(9, 9, 8, 0.72) 42%, rgba(9, 9, 8, 0.86) 74%, #09090a 100%); }
-    .hero__img { object-position: 64% 12%; opacity: 0.5; }
+    /* No mobile a fonte é um recorte retrato (bg-hero-mobile.webp) da mesma
+       região que antes aparecia com object-position 64% 12%. */
+    .hero__img { object-position: 50% 12%; opacity: 0.5; }
     .hero__down { display: none; }
   }
 

@@ -58,6 +58,60 @@ export function servicesJsonLd(): Json[] {
   }));
 }
 
+// Artigo do blog. Autor institucional (Organization) até que o cliente confirme
+// quem assina cada texto; sem ratings, sem imagem inventada.
+export function articleJsonLd(a: {
+  path: string;
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified?: string;
+  section: string;
+  keywords: string[];
+  wordCount: number;
+}): Json {
+  const url = `${SITE.url}${a.path}`;
+  return {
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: a.headline,
+    description: a.description,
+    url,
+    mainEntityOfPage: { '@id': `${url}#webpage` },
+    isPartOf: { '@id': `${SITE.url}/blog/#blog` },
+    datePublished: a.datePublished,
+    dateModified: a.dateModified ?? a.datePublished,
+    inLanguage: 'pt-BR',
+    articleSection: a.section,
+    keywords: a.keywords.join(', '),
+    wordCount: a.wordCount,
+    image: SITE.ogImage,
+    author: { '@id': `${SITE.url}/#org` },
+    publisher: { '@id': `${SITE.url}/#org` },
+  };
+}
+
+export function blogJsonLd(posts: { path: string; headline: string; datePublished: string; description: string }[]): Json {
+  return {
+    '@type': 'Blog',
+    '@id': `${SITE.url}/blog/#blog`,
+    url: `${SITE.url}/blog/`,
+    name: 'Conteúdos ADR Marketing',
+    description: 'Artigos sobre captação de pacientes, tráfego pago, gestão comercial e publicidade médica para clínicas e consultórios.',
+    inLanguage: 'pt-BR',
+    publisher: { '@id': `${SITE.url}/#org` },
+    blogPost: posts.map((p) => ({
+      '@type': 'BlogPosting',
+      '@id': `${SITE.url}${p.path}#article`,
+      headline: p.headline,
+      description: p.description,
+      url: `${SITE.url}${p.path}`,
+      datePublished: p.datePublished,
+      author: { '@id': `${SITE.url}/#org` },
+    })),
+  };
+}
+
 export function personLeader(): Json {
   return {
     '@type': 'Person',

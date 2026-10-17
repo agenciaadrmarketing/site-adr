@@ -1,0 +1,47 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  categoria: string;
+  date: string;
+  minutes: number;
+  onLight?: boolean;
+  large?: boolean;
+}
+const { href, title, description, categoria, date, minutes, onLight = false, large = false } = Astro.props;
+---
+
+<a class:list={['acard', { 'acard--light': onLight, 'acard--large': large }]} href={href} data-reveal>
+  <span class="acard__top">
+    <span class="acard__cat">{categoria}</span>
+    <span class="acard__meta">{minutes} min</span>
+  </span>
+  <span class="acard__title">{title}</span>
+  <span class="acard__text">{description}</span>
+  <span class="acard__foot">
+    <time datetime={date.slice(0, 10)}>{date.slice(11)}</time>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+  </span>
+</a>
+
+<style>
+  .acard { position: relative; display: flex; flex-direction: column; gap: 12px; padding: clamp(20px, 2.2vw, 28px); border-radius: var(--radius-card); border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink); min-height: 220px; transition: border-color 0.35s, transform 0.35s; }
+  .acard:hover { border-color: rgba(242, 242, 243, 0.34); transform: translateY(-3px); color: var(--ink); }
+  .acard--light { background: var(--white); border-color: var(--line-light-2); color: var(--text); box-shadow: var(--shadow-white); }
+  .acard--light:hover { border-color: var(--line-light-3); color: var(--text); }
+  .acard--large { min-height: 280px; }
+  .acard__top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .acard__cat { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--n-500); }
+  .acard--light .acard__cat { color: var(--muted-mid); }
+  .acard__meta { font-size: 11px; color: var(--n-600); letter-spacing: 0.08em; }
+  .acard--light .acard__meta { color: var(--muted-mid); }
+  .acard__title { font-weight: 600; font-size: clamp(16.5px, 1.35vw, 20px); line-height: 1.24; letter-spacing: -0.012em; text-wrap: pretty; }
+  .acard--large .acard__title { font-size: clamp(19px, 1.7vw, 25px); }
+  .acard__text { font-size: 13.5px; line-height: 1.6; color: var(--ink-62); text-wrap: pretty; margin-bottom: auto; }
+  .acard--light .acard__text { color: var(--muted-dark); font-size: 14.5px; }
+  .acard__foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12px; color: var(--n-500); }
+  .acard--light .acard__foot { border-top-color: var(--line-light-2); color: var(--muted-mid); }
+  .acard__foot svg { color: var(--n-400); transition: transform 0.3s; }
+  .acard:hover .acard__foot svg { transform: translateX(4px); }
+</style>

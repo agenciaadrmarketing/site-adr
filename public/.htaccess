@@ -66,9 +66,9 @@ ErrorDocument 404 /404.html
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 
-  # Headers de segurança. Sem Content-Security-Policy nesta fase: as páginas
-  # de nicho legadas em /niches/ ainda usam o runtime antigo (eval). Avaliar
-  # uma CSP na Fase 2, quando essas páginas forem substituídas.
+  # Headers de segurança. Sem Content-Security-Policy enquanto /niches/odonto/
+  # (única página legada restante) usar o runtime antigo com eval. Quando ela
+  # for removida ou redirecionada, uma CSP pode ser adicionada com segurança.
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"

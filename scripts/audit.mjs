@@ -118,6 +118,14 @@ for (const file of htmlFiles) {
   const lang = attr((html.match(/<html\b[^>]*>/i) || [''])[0], 'lang');
   const h1s = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/gi)].map((m) => textOf(m[1]));
   const noindex = /noindex/i.test(robots);
+  // Hierarquia de títulos dentro de <main>: nenhum salto (h2 → h4) e nenhum h3 antes do primeiro h2.
+  const mainHtml = (html.match(/<main[\s\S]*?<\/main>/i) || [''])[0];
+  const levels = [...mainHtml.matchAll(/<h([1-6])\b/gi)].map((m) => Number(m[1]));
+  let prev = 1;
+  for (const l of levels) {
+    if (l > prev + 1) { errors.push(`${path}: salto de título h${prev} → h${l}`); break; }
+    prev = l;
+  }
 
   const jsonld = [];
   for (const m of html.matchAll(/<script\b[^>]*type\s*=\s*"application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)) {

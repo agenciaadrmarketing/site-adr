@@ -8,8 +8,15 @@ Fonte de verdade das decisões: Prompt Mestre V2 + Decisões Finais + Complement
 - Astro 7, saída estática em `dist/` (`npm ci`, `npm run build`, `npm run preview`).
 - Hospedagem: Hostinger (Apache). Deploy = conteúdo de `dist/` extraído na raiz de `public_html`.
   **Nunca publicar direto em produção**: gerar pacote, fazer backup do `public_html`, só então subir.
-- `public/niches/` são as páginas de nicho legadas (export antigo, ~1 MB) que seguem no ar até a
-  Fase 2; `legacy/` guarda os exports originais só como referência (não é publicado).
+- `npm run audit` (depois do build): links, canonicals, sitemap, JSON-LD, títulos, strings proibidas,
+  órfãs e similaridade entre páginas do mesmo template. Precisa terminar com "Sem erros".
+- `public/niches/odonto/` é a única página legada restante (export antigo, ~1 MB) e segue no ar até
+  decisão do cliente; `legacy/` guarda os exports originais só como referência (não é publicado).
+- Especialidades: um JSON por especialidade em `src/content/especialidades/` (template
+  `SpecialtyPage.astro`). Blog: um `.md` por artigo em `src/content/artigos/` (template
+  `ArticlePage.astro`, hub `src/pages/blog/index.astro`, categorias em `src/data/blog.ts`).
+- Artigos com `status: revisao` **não entram no build de produção**. Cópia de revisão (noindex):
+  `ADR_PREVIEW=1 npm run build`. Ao aprovar: `status: publicada` + rota em `pages.json` como publicada.
 
 ## Regras invioláveis
 
@@ -23,10 +30,14 @@ Fonte de verdade das decisões: Prompt Mestre V2 + Decisões Finais + Complement
    investimento, posicionamento, atendimento).
 4. **Matriz de serviços** em `src/data/site.ts`: só `status: 'confirmado'` vira oferta pública.
    Pendentes (SEO, sites, redes sociais, atendimento como serviço) só como conteúdo educativo.
-5. **Status de páginas** em `src/data/pages.json` controla sitemap e menu. `/cases/` e `/blog/`
-   não existem até haver conteúdo real; `/termos-de-uso/` é rascunho `noindex` até revisão jurídica.
+5. **Status de páginas** em `src/data/pages.json` controla sitemap e menu. `/cases/` não existe até
+   haver conteúdo verificável; `/termos-de-uso/` é rascunho `noindex` até revisão jurídica. Artigos
+   sobre regulamentação (CFM, LGPD) só são publicados depois de validados por profissional habilitado.
+   Autoria dos artigos é institucional (ADR Marketing) até o cliente confirmar quem assina.
 6. **Formulários**: manter a integração com o Google Apps Script, campos, UTMs first-touch e abertura
-   do WhatsApp (`src/scripts/lead-form.ts`). Sem PII em eventos de analytics.
+   do WhatsApp (`src/scripts/lead-form.ts`). Sem PII em eventos de analytics. Eventos carregam
+   `event_type` (interacao / envio_formulario / erro); lead qualificado e agendamento só por
+   importação offline a partir da planilha, nunca disparados pelo navegador.
 7. **Tags**: GTM `GTM-PDFHMCXG`, Google Ads `AW-18381807679`, Clarity `yjdxdq034e` — uma vez por
    página, no `BaseLayout`. Não adicionar tags sem pedido explícito.
 8. **Dados da empresa** (`CONTACT` em `site.ts`): WhatsApp +55 48 98880-9542,

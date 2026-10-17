@@ -6,14 +6,14 @@ import Button from '../components/Button.astro';
 import SectionLabel from '../components/SectionLabel.astro';
 import Faq from '../components/Faq.astro';
 import RelatedLinks from '../components/RelatedLinks.astro';
-import { CONFIRMED_SERVICES, FAQ } from '../data/site';
+import { CONFIRMED_SERVICES, FAQ, FAQ_CONTRATACAO } from '../data/site';
 import { webPage, breadcrumbList, servicesJsonLd, faqPage } from '../data/seo';
 
-const title = 'Serviços de marketing médico para clínicas e consultórios | ADR Marketing';
+const title = 'Serviços de marketing médico para clínicas | ADR Marketing';
 const description =
-  'Tráfego pago (Google Ads e Meta Ads), posicionamento e autoridade digital, captação de pacientes particulares e comercial de alta conversão: os serviços da ADR Marketing, sempre integrados e conduzidos pela liderança sênior.';
+  'Tráfego pago (Google Ads e Meta Ads), posicionamento e autoridade digital, captação de pacientes particulares e comercial de alta conversão, conduzidos pela liderança sênior.';
 const crumbs = [{ label: 'Início', href: '/' }, { label: 'Soluções', href: '/servicos/' }];
-const faq = [FAQ[0], FAQ[1], FAQ[5], FAQ[3]];
+const faq = [FAQ[0], FAQ_CONTRATACAO[0], FAQ_CONTRATACAO[1], FAQ[1], FAQ_CONTRATACAO[2], FAQ[5], FAQ[3]];
 const jsonLd = [webPage({ path: '/servicos/', title, description, type: 'CollectionPage' }), breadcrumbList(crumbs), ...servicesJsonLd(), faqPage(faq, '/servicos/')];
 const wa = 'Olá! Vim pela página de serviços da ADR e quero entender qual frente faz sentido para a minha clínica.';
 
@@ -125,6 +125,8 @@ const detalhes: Record<string, { entrega: string[]; nao: string; para: string }>
       { label: 'Marketing médico', href: '/marketing-medico/', text: 'O que é, como funciona e o que a norma permite.' },
       { label: 'Metodologia', href: '/metodologia/', text: 'As quatro etapas e o pilar comercial.' },
       { label: 'Especialidades', href: '/#especialidades', text: 'Marketing por especialidade médica.' },
+      { label: 'Google Ads ou Meta Ads para médicos?', href: '/blog/google-ads-ou-meta-ads-para-medicos/', text: 'Quando cada canal faz sentido.' },
+      { label: 'Quanto investir em marketing médico', href: '/blog/quanto-investir-em-marketing-medico/', text: 'Como planejar a verba sem chute.' },
       { label: 'Sobre a ADR', href: '/sobre/', text: 'Quem conduz e como trabalhamos.' },
     ]}
   />

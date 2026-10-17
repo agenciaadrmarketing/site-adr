@@ -10,9 +10,9 @@ import RelatedLinks from '../components/RelatedLinks.astro';
 import { SPECIALTIES } from '../data/site';
 import { webPage, breadcrumbList, faqPage } from '../data/seo';
 
-const title = 'Marketing médico: como clínicas e médicos atraem pacientes particulares | ADR';
+const title = 'Marketing médico: como atrair pacientes particulares | ADR Marketing';
 const description =
-  'O que é marketing médico, o que a publicidade médica permite (Resolução CFM nº 2.336/2023), Google Ads × Meta Ads e como escolher uma agência especializada. Guia da ADR Marketing para clínicas e consultórios.';
+  'O que é marketing médico, o que a Resolução CFM nº 2.336/2023 permite, Google Ads × Meta Ads e como escolher uma agência especializada. Guia da ADR Marketing.';
 const crumbs = [{ label: 'Início', href: '/' }, { label: 'Marketing médico', href: '/marketing-medico/' }];
 const wa = 'Olá! Li o guia de marketing médico da ADR e quero conversar sobre a minha clínica.';
 const especialidades = [...SPECIALTIES].sort((a, b) => a.priority - b.priority);
@@ -128,6 +128,10 @@ const jsonLd = [webPage({ path: '/marketing-medico/', title, description }), bre
     links={[
       { label: 'Serviços da ADR', href: '/servicos/', text: 'Tráfego pago, posicionamento, captação e comercial.' },
       { label: 'Metodologia', href: '/metodologia/', text: 'Do diagnóstico ao paciente na cadeira.' },
+      { label: 'Como atrair pacientes particulares', href: '/blog/como-atrair-pacientes-particulares/', text: 'Artigo: os três caminhos que se reforçam.' },
+      { label: 'Google Ads ou Meta Ads para médicos?', href: '/blog/google-ads-ou-meta-ads-para-medicos/', text: 'Artigo: comparação por intenção e especialidade.' },
+      { label: 'Autoridade digital para médicos', href: '/blog/autoridade-digital-para-medicos/', text: 'Artigo: presença e reconhecimento dentro das normas.' },
+      { label: 'SEO local para clínicas', href: '/blog/seo-local-para-clinicas/', text: 'Artigo: o básico para aparecer nas buscas locais.' },
       { label: 'Sobre a ADR', href: '/sobre/', text: 'Quem conduz e como trabalhamos.' },
       { label: 'Contato', href: '/contato/', text: 'Solicite um diagnóstico comercial prévio.' },
     ]}

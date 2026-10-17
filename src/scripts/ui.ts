@@ -1,4 +1,4 @@
-import { bindWhatsAppLinks, track } from './track';
+import { bindWhatsAppLinks, bindCtaClicks, track } from './track';
 
 const mq = (q: string) => (window.matchMedia ? window.matchMedia(q).matches : false);
 const reduced = mq('(prefers-reduced-motion: reduce)');
@@ -6,6 +6,7 @@ const semHover = mq('(hover: none)');
 
 document.documentElement.classList.add('js');
 bindWhatsAppLinks();
+bindCtaClicks();
 
 /* ── Menu mobile ─────────────────────────────────────────────── */
 (() => {

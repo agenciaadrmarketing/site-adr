@@ -1,0 +1,229 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+import Faq from './Faq.astro';
+import ArticleCard from './ArticleCard.astro';
+import RelatedLinks from './RelatedLinks.astro';
+import { CONTACT } from '../data/site';
+import { webPage, breadcrumbList, faqPage, articleJsonLd } from '../data/seo';
+import { categoria, formatDate, readingTime, AUTOR } from '../data/blog';
+
+interface Props {
+  entry: CollectionEntry<'artigos'>;
+  all: CollectionEntry<'artigos'>[];
+}
+const { entry, all } = Astro.props;
+const d = entry.data;
+const path = `/blog/${entry.id}/`;
+const { Content, headings } = await render(entry);
+const toc = headings.filter((h) => h.depth === 2);
+const body = entry.body ?? '';
+const minutes = readingTime(body);
+const words = body.trim().split(/\s+/).filter(Boolean).length;
+const cat = categoria(d.categoria);
+const draft = d.status !== 'publicada';
+const published = all.filter((e) => e.data.status === 'publicada' && e.id !== entry.id);
+const related = d.relacionados
+  .map((slug) => published.find((e) => e.id === slug))
+  .filter((e): e is CollectionEntry<'artigos'> => !!e)
+  .slice(0, 3);
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Conteúdos', href: '/blog/' }, { label: d.h1, href: path }];
+const faq = d.faq.map((f) => ({ ...f, tag: cat.short }));
+const jsonLd = draft
+  ? []
+  : [
+      webPage({ path, title: d.title, description: d.description, datePublished: d.datePublished, dateModified: d.dateModified }),
+      breadcrumbList(crumbs),
+      articleJsonLd({ path, headline: d.h1, description: d.description, datePublished: d.datePublished, dateModified: d.dateModified, section: cat.label, keywords: [d.palavraChave, ...d.termos], wordCount: words }),
+      ...(faq.length ? [faqPage(d.faq, path)] : []),
+    ];
+const comercial = d.comerciais[0];
+---
+
+<BaseLayout title={d.title} description={d.description} noindex={draft} noCanonical={draft} jsonLd={jsonLd} waMessage={d.wa} cta={{ title: d.cta.title, text: d.cta.text, waMessage: d.wa, id: `cta-${entry.id}` }}>
+  {draft && (
+    <div class="draft" role="status">
+      <div class="container"><strong>Rascunho em revisão.</strong> {d.motivoRevisao ?? 'Este artigo aguarda validação antes de ser publicado.'} A página não está indexada nem listada no blog.</div>
+    </div>
+  )}
+
+  <header class="ahero">
+    <div class="container ahero__in">
+      <Breadcrumbs items={crumbs} class="ahero__crumbs" />
+      <a class="tag ahero__cat" href={`/blog/#${cat.id}`}>{cat.label}</a>
+      <h1 class="h1 ahero__title">{d.h1}</h1>
+      <p class="ahero__dek">{d.description}</p>
+      <dl class="ahero__meta">
+        <div><dt>Por</dt><dd><a href={AUTOR.href}>{AUTOR.nome}</a></dd></div>
+        <div><dt>Publicado em</dt><dd><time datetime={d.datePublished}>{formatDate(d.datePublished)}</time></dd></div>
+        {d.dateModified && d.dateModified !== d.datePublished && (
+          <div><dt>Atualizado em</dt><dd><time datetime={d.dateModified}>{formatDate(d.dateModified)}</time></dd></div>
+        )}
+        <div><dt>Leitura</dt><dd>{minutes} min</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <div class="section section--light abody">
+    <div class="container abody__grid">
+      {toc.length >= 3 && (
+        <aside class="toc" aria-labelledby="toc-title">
+          <p class="kicker" id="toc-title"><span class="kicker__line" aria-hidden="true"></span>Neste artigo</p>
+          <nav aria-label="Sumário do artigo">
+            <ol class="toc__list">
+              {toc.map((h) => (
+                <li><a href={`#${h.slug}`}>{h.text}</a></li>
+              ))}
+            </ol>
+          </nav>
+          <a class="toc__cta" href={comercial.href}>{comercial.label} →</a>
+        </aside>
+      )}
+      <article class="article">
+        <div class="article__sum" data-reveal>
+          <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Em resumo</p>
+          <p class="article__sumtext">{d.resumo}</p>
+        </div>
+        <div class="article__content">
+          <Content />
+        </div>
+        {d.fontes.length > 0 && (
+          <section class="article__fontes" aria-labelledby="fontes-title">
+            <h2 class="article__fontes-h" id="fontes-title">Fontes e referências</h2>
+            <ul>
+              {d.fontes.map((f) => (
+                <li><a href={f.url} target="_blank" rel="noopener noreferrer">{f.label}</a> <span class="article__host">({new URL(f.url).hostname.replace(/^www\./, '')})</span></li>
+              ))}
+            </ul>
+          </section>
+        )}
+        <div class="article__author">
+          <img src="/assets/logo-adr.webp" alt="" width="488" height="301" loading="lazy" decoding="async" />
+          <div>
+            <p class="article__author-k">Publicado por</p>
+            <p class="article__author-n"><a href={AUTOR.href}>{AUTOR.nome}</a> · {CONTACT.legalName} · CNPJ {CONTACT.cnpj}</p>
+            <p class="article__author-t">{AUTOR.texto}</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  {faq.length > 0 && (
+    <section class="section section--line" aria-labelledby="afaq-title">
+      <div class="container container--narrow">
+        <div data-reveal style="margin-bottom:clamp(24px,2.8vw,36px)">
+          <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Perguntas sobre o tema</p>
+          <h2 class="h2" id="afaq-title">O que mais se pergunta <span class="silver">sobre isso</span></h2>
+        </div>
+        <Faq items={faq} />
+      </div>
+    </section>
+  )}
+
+  <section class="section section--line acta" aria-labelledby="acta-title">
+    <div class="container acta__in">
+      <div data-reveal>
+        <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Próximo passo</p>
+        <h2 class="h2" id="acta-title">{d.cta.title}</h2>
+        <p class="lead acta__text">{d.cta.text}</p>
+      </div>
+      <div class="btn-row" data-reveal>
+        <WhatsAppButton id={`artigo-${entry.id}`} label="Conversar pelo WhatsApp" message={d.wa} arrow />
+        <a class="btn btn--outline" href={comercial.href}>{comercial.label}</a>
+      </div>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section section--line" aria-labelledby="arel-title">
+      <div class="container">
+        <div class="head-row" data-reveal>
+          <div class="head-row__title">
+            <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Leitura relacionada</p>
+            <h2 class="h2" id="arel-title">Continue <span class="silver">lendo</span></h2>
+          </div>
+          <a class="btn btn--outline btn--sm" href="/blog/">Todos os conteúdos</a>
+        </div>
+        <div class="grid-cards">
+          {related.map((r) => (
+            <ArticleCard href={`/blog/${r.id}/`} title={r.data.h1} description={r.data.description} categoria={categoria(r.data.categoria).short} date={`${r.data.datePublished} ${formatDate(r.data.datePublished)}`} minutes={readingTime(r.body ?? '')} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <RelatedLinks title="Páginas relacionadas" links={d.comerciais} />
+</BaseLayout>
+
+<style>
+  .draft { background: var(--light); color: var(--text); padding: 12px var(--gutter); font-size: 13.5px; border-bottom: 1px solid var(--line-light); }
+  .ahero { padding: clamp(36px, 5vw, 72px) var(--gutter) clamp(40px, 5vw, 64px); background: var(--bg); position: relative; overflow: hidden; }
+  .ahero::after { content: ''; position: absolute; inset: auto 0 0 0; height: 1px; background: var(--line); }
+  .ahero__in { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(14px, 1.6vw, 20px); max-width: 860px; }
+  .ahero :global(.ahero__crumbs) { margin-bottom: clamp(6px, 1vw, 12px); }
+  .ahero__cat { color: var(--n-300); }
+  .ahero__cat:hover { border-color: var(--line-3); color: var(--ink); }
+  .ahero__title { font-size: clamp(29px, 3.9vw, 52px); max-width: 24ch; }
+  .ahero__dek { font-size: clamp(15.5px, 1.25vw, 19px); line-height: 1.6; color: var(--ink-72); max-width: 58ch; text-wrap: pretty; }
+  .ahero__meta { display: flex; flex-wrap: wrap; gap: 18px 32px; padding-top: 10px; }
+  .ahero__meta div { display: grid; gap: 3px; }
+  .ahero__meta dt { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--n-600); font-weight: 600; }
+  .ahero__meta dd { font-size: 13.5px; color: var(--n-300); }
+  .ahero__meta a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+  .abody { padding-top: clamp(40px, 5vw, 72px); }
+  .abody__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); align-items: start; }
+  @media (min-width: 1000px) { .abody__grid { grid-template-columns: 240px minmax(0, 760px); justify-content: center; } }
+  .toc { position: sticky; top: calc(var(--nav-h) + 24px); display: grid; gap: 12px; }
+  .toc .kicker { margin: 0; }
+  .toc__list { counter-reset: toc; display: grid; gap: 2px; border-left: 1px solid var(--line-light); }
+  .toc__list li { counter-increment: toc; }
+  .toc__list a { display: block; padding: 7px 0 7px 14px; margin-left: -1px; border-left: 1px solid transparent; font-size: 13.5px; line-height: 1.4; color: var(--muted-dark); transition: color 0.2s, border-color 0.2s; }
+  .toc__list a:hover { color: var(--text); border-left-color: var(--text); }
+  .toc__cta { font-size: 13px; font-weight: 600; color: var(--text); margin-top: 6px; }
+  @media (max-width: 999px) { .toc { position: static; padding: 18px 20px; border: 1px solid var(--line-light-2); border-radius: var(--radius-card); background: var(--white); } }
+
+  .article { min-width: 0; }
+  .article__sum { padding: clamp(20px, 2.4vw, 28px); border-radius: var(--radius-card); background: var(--white); border: 1px solid var(--line-light-2); box-shadow: var(--shadow-white); margin-bottom: clamp(28px, 3.5vw, 44px); }
+  .article__sum .kicker { margin-bottom: 10px; }
+  .article__sumtext { font-size: clamp(15.5px, 1.2vw, 17.5px); line-height: 1.65; color: var(--text); text-wrap: pretty; }
+
+  .article__content { font-size: clamp(16px, 1.15vw, 17.5px); line-height: 1.75; color: var(--text-2); }
+  .article__content :global(h2) { font-weight: 600; font-size: clamp(22px, 2.1vw, 30px); line-height: 1.18; letter-spacing: -0.018em; color: var(--text); margin: clamp(36px, 4vw, 56px) 0 14px; text-wrap: balance; scroll-margin-top: calc(var(--nav-h) + 20px); }
+  .article__content :global(h3) { font-weight: 600; font-size: clamp(17.5px, 1.45vw, 21px); line-height: 1.3; color: var(--text); margin: 28px 0 10px; }
+  .article__content :global(p) { margin: 0 0 16px; text-wrap: pretty; }
+  .article__content :global(ul), .article__content :global(ol) { margin: 0 0 18px; padding-left: 22px; display: grid; gap: 8px; }
+  .article__content :global(ul) { list-style: disc; }
+  .article__content :global(ol) { list-style: decimal; }
+  .article__content :global(li::marker) { color: var(--muted-mid); }
+  .article__content :global(strong) { color: var(--text); font-weight: 600; }
+  .article__content :global(a) { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(29, 31, 32, 0.4); }
+  .article__content :global(a:hover) { text-decoration-color: var(--text); }
+  .article__content :global(blockquote) { margin: 26px 0; padding: 18px 22px; border-left: 2px solid var(--text); background: var(--white); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; color: var(--text); font-size: 0.98em; }
+  .article__content :global(blockquote p:last-child) { margin-bottom: 0; }
+  .article__content :global(hr) { border: 0; border-top: 1px solid var(--line-light); margin: 32px 0; }
+  .article__content :global(table) { width: 100%; border-collapse: collapse; margin: 22px 0 26px; font-size: 0.92em; display: block; overflow-x: auto; }
+  .article__content :global(th), .article__content :global(td) { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line-light); }
+  .article__content :global(th) { font-weight: 600; color: var(--text); font-size: 0.86em; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .article__fontes { margin-top: clamp(32px, 4vw, 48px); padding-top: 22px; border-top: 1px solid var(--line-light); }
+  .article__fontes-h { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-mid); font-weight: 600; margin-bottom: 12px; }
+  .article__fontes ul { display: grid; gap: 8px; font-size: 14.5px; }
+  .article__fontes a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+  .article__host { color: var(--muted-mid); font-size: 12.5px; }
+
+  .article__author { display: flex; gap: 18px; align-items: flex-start; margin-top: clamp(32px, 4vw, 48px); padding: clamp(18px, 2vw, 24px); border-radius: var(--radius-card); background: var(--white); border: 1px solid var(--line-light-2); }
+  .article__author img { width: 64px; height: auto; flex: none; filter: invert(1); opacity: 0.85; margin-top: 2px; }
+  .article__author-k { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-mid); font-weight: 600; }
+  .article__author-n { font-size: 14px; color: var(--text); margin: 4px 0 6px; }
+  .article__author-n a { font-weight: 600; color: var(--text); }
+  .article__author-t { font-size: 13.5px; line-height: 1.55; color: var(--muted-dark); }
+
+  .acta__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: clamp(20px, 3vw, 48px); }
+  .acta__in > div:first-child { flex: 1 1 420px; max-width: 640px; }
+  .acta__text { margin-top: 14px; }
+</style>

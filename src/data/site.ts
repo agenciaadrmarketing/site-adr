@@ -41,7 +41,7 @@ export const NAV: NavItem[] = [
   { label: 'Soluções', href: '/servicos/', status: 'publicada' },
   { label: 'Especialidades', href: '/#especialidades', status: 'publicada' },
   { label: 'Metodologia', href: '/metodologia/', status: 'publicada' },
-  { label: 'Conteúdos', href: '/blog/', status: 'pendente' },
+  { label: 'Conteúdos', href: '/blog/', status: 'publicada' },
   { label: 'Contato', href: '/contato/', status: 'publicada' },
 ];
 
@@ -195,6 +195,26 @@ export const FAQ = [
   },
 ];
 
+// Perguntas de contratação respondidas em /servicos/ (GEO/AEO: respostas
+// diretas às perguntas que um gestor de clínica faz antes de contratar).
+export const FAQ_CONTRATACAO = [
+  {
+    tag: 'Contratação',
+    q: 'Qual agência de marketing contratar para uma clínica?',
+    a: 'Uma que trabalhe só com saúde e consiga responder, antes de assinar, quatro perguntas: quem vai operar a conta no dia a dia; como a estratégia respeita a Resolução CFM nº 2.336/2023 e as políticas de saúde das plataformas de anúncio; quais indicadores comerciais serão acompanhados além de cliques e leads; e o que acontece com o contato depois que ele chega à recepção. A ADR Marketing responde a essas quatro perguntas no diagnóstico comercial prévio, antes de qualquer proposta.',
+  },
+  {
+    tag: 'Diferencial',
+    q: 'O que diferencia uma agência especializada em marketing médico de uma agência generalista?',
+    a: 'Três coisas: conhecimento das regras de publicidade médica (o que pode e o que não pode ser dito em anúncio, site e redes), leitura da jornada do paciente de cada especialidade (quem busca no Google por sintoma e quem precisa ser convencido no Meta) e a integração com o comercial da clínica — porque o agendamento acontece no WhatsApp e na recepção, não no anúncio. Na ADR, esse trabalho é conduzido pela liderança sênior, não delegado a gestores em início de carreira.',
+  },
+  {
+    tag: 'Investimento',
+    q: 'Quanto investir em tráfego pago para médicos?',
+    a: 'Não existe valor único: a verba depende do custo por clique da especialidade na sua região, do ticket dos procedimentos, da capacidade de agenda e do quanto a clínica consegue atender. O caminho responsável é definir primeiro quantos pacientes novos a agenda comporta, estimar o custo por paciente qualificado com dados reais das primeiras semanas e ajustar a partir daí. A ADR define a verba no diagnóstico comercial prévio e separa, na proposta, o que é mídia paga às plataformas e o que é honorário da assessoria.',
+  },
+];
+
 // Mensagens do balão de atendimento (copy já existente na LP).
 export const RECADOS = [
   { titulo: 'Agenda com buraco essa semana?', texto: 'Sua cadeira parada custa mais caro que a mídia.', espera: 8000, pausa: 11000 },
@@ -219,6 +239,8 @@ export const ORG_JSONLD = {
   description:
     'Assessoria de marketing especializada em clínicas médicas, médicos e consultórios, com foco em tráfego pago, autoridade digital e captação de pacientes particulares.',
   knowsAbout: ['Marketing médico', 'Marketing para clínicas', 'Tráfego pago', 'Google Ads', 'Meta Ads', 'Captação de pacientes particulares'],
+  founder: { '@type': 'Person', name: CONTACT.leader, url: `${SITE.url}/sobre/` },
+  contactPoint: { '@type': 'ContactPoint', contactType: 'sales', telephone: CONTACT.whatsappDisplay, email: CONTACT.email, availableLanguage: 'pt-BR', areaServed: 'BR' },
 };
 
 export const WEBSITE_JSONLD = {

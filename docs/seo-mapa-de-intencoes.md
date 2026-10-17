@@ -82,25 +82,41 @@ Mapa de redirects — **ativos** no `.htaccess` desde a Fase 2 (páginas legadas
 | `/niches/odonto/` | sem equivalente aprovado (odontologia está fora do posicionamento atual) — decisão do cliente | continua no ar, no sitemap, formato antigo |
 | `cardiologia.agenciaadrmarketing.com` etc. | **verificar se existem**; se sim, 301 no vhost do subdomínio para a rota do domínio principal |
 
-## Fase 3 — blog (publicar só artigos originais)
+## Fase 3 — blog (implementado)
 
-| Artigo | Intenção | Página comercial relacionada |
-|---|---|---|
-| `/blog/como-atrair-pacientes-particulares/` | Aquisição | `/captacao-de-pacientes/`, `/servicos/` |
-| `/blog/por-que-clinicas-perdem-agendamentos/` | Gestão comercial | `/metodologia/` |
-| `/blog/google-ads-ou-meta-ads-para-medicos/` | Comparação | `/google-ads-para-medicos/`, `/meta-ads-para-medicos/` |
-| `/blog/quanto-investir-em-marketing-medico/` | Investimento | `/contato/` |
-| `/blog/como-avaliar-campanhas-de-marketing-medico/` | Mensuração | `/metodologia/` |
-| `/blog/atendimento-whatsapp-para-clinicas/` | Gestão comercial | `/metodologia/` |
-| `/blog/follow-up-de-pacientes/` | Gestão comercial | `/metodologia/` |
-| `/blog/indicadores-de-marketing-para-clinicas/` | Mensuração | `/metodologia/` |
-| `/blog/autoridade-digital-para-medicos/` | Posicionamento | `/posicionamento-medico/` |
-| `/blog/regras-de-publicidade-medica-cfm/` | Conformidade | `/marketing-medico/` |
-| `/blog/seo-local-para-clinicas/` | Comparação / educativo | `/marketing-medico/` (SEO não é oferta confirmada) |
-| `/blog/do-anuncio-ao-agendamento/` | Jornada | `/metodologia/`, `/servicos/` |
+Hub `/blog/` (CollectionPage + Blog) com navegação por tema em âncoras (`#captacao`, `#trafego`,
+`#comercial`, `#autoridade`). Sem páginas de categoria nem paginação: com 2–3 artigos por tema, seriam
+páginas finas. Reavaliar quando um tema passar de ~8 artigos.
 
-Autoria: identificar o autor real (Caio Souza Anderle) com `Person` JSON-LD quando ele assinar o texto.
-Afirmações técnicas sobre publicidade médica devem citar a Resolução CFM nº 2.336/2023.
+Os links comerciais apontam só para páginas **publicadas**. As páginas comerciais planejadas
+(`/captacao-de-pacientes/`, `/google-ads-para-medicos/`, `/posicionamento-medico/`…) ainda não existem;
+quando forem criadas, atualizar o campo `comerciais` dos artigos correspondentes.
+
+| Artigo | Cluster | Intenção | Palavra-chave (hipótese) | Status | Links comerciais hoje |
+|---|---|---|---|---|---|
+| `/blog/como-atrair-pacientes-particulares/` | Captação | Informacional → comercial | como atrair pacientes particulares | publicada | `/servicos/`, `/metodologia/`, `/marketing-medico/` |
+| `/blog/por-que-clinicas-perdem-agendamentos/` | Captação | Diagnóstico | clínica não converte contatos em agendamentos | publicada | `/metodologia/`, `/servicos/` |
+| `/blog/do-anuncio-ao-agendamento/` | Captação | Estrutural | jornada do paciente do anúncio ao agendamento | publicada | `/metodologia/`, `/servicos/` |
+| `/blog/google-ads-ou-meta-ads-para-medicos/` | Tráfego | Comparação | google ads ou meta ads para médicos | publicada | `/servicos/`, `/marketing-medico/`, especialidades |
+| `/blog/quanto-investir-em-marketing-medico/` | Tráfego | Investimento | quanto investir em marketing médico | publicada | `/servicos/`, `/contato/` |
+| `/blog/como-avaliar-campanhas-de-marketing-medico/` | Tráfego | Mensuração | como avaliar campanhas de marketing médico | publicada | `/metodologia/`, `/servicos/` |
+| `/blog/atendimento-whatsapp-para-clinicas/` | Comercial | Operacional | atendimento whatsapp para clínicas | publicada | `/metodologia/`, `/servicos/` |
+| `/blog/follow-up-de-pacientes/` | Comercial | Processo | follow-up de pacientes | publicada | `/metodologia/`, `/servicos/` |
+| `/blog/indicadores-de-marketing-para-clinicas/` | Comercial | Referência | indicadores de marketing para clínicas | publicada | `/metodologia/`, `/servicos/` |
+| `/blog/autoridade-digital-para-medicos/` | Autoridade | Posicionamento | autoridade digital para médicos | publicada | `/servicos/`, `/marketing-medico/` |
+| `/blog/regras-de-publicidade-medica-cfm/` | Autoridade | Conformidade | regras de publicidade médica CFM | **revisão** (fora do build de produção) | `/marketing-medico/`, `/servicos/` |
+| `/blog/seo-local-para-clinicas/` | Autoridade | Educativa (SEO não é oferta) | seo local para clínicas | publicada | `/marketing-medico/`, `/servicos/` |
+
+Separação de intenções para evitar canibalização: "avaliar campanhas" (como decidir se a mídia/agência
+funciona) × "indicadores" (quais números montar no painel) — similaridade textual 0,11; "por que perdem
+agendamentos" (diagnóstico dos pontos de perda) × "do anúncio ao agendamento" (desenho do processo) ×
+"atendimento no WhatsApp" (operação da conversa).
+
+Perguntas de contratação respondidas em `/servicos/` (FAQ visível + FAQPage): qual agência contratar
+para uma clínica; o que diferencia uma agência especializada; quanto investir em tráfego pago para médicos.
+
+Autoria: institucional (`Organization`) até o cliente confirmar quem assina; quando houver autor real,
+trocar `author` para `Person` com página de autor.
 
 ## Rotina de monitoramento (mensal)
 
