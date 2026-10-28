@@ -1,0 +1,93 @@
+/* ADR Marketing — popup de análise gratuita (pacote independente)
+   Tudo fica dentro de .adrp para não interferir no site onde for instalado.
+   Identidade: preto, off-white e cinzas; verde só no botão de WhatsApp. */
+
+@font-face { font-family: 'ADR Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/poppins-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'ADR Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/poppins-latin-600-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'ADR Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/poppins-latin-ext-400-normal.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'ADR Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/poppins-latin-ext-600-normal.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+.adrp {
+  --adrp-bg: #09090a;
+  --adrp-bg-2: #0f0f0e;
+  --adrp-ink: #f2f2f3;
+  --adrp-n-300: #d4d4d7;
+  --adrp-n-400: #b7b7ba;
+  --adrp-n-500: #98989b;
+  --adrp-n-600: #7a7a7d;
+  --adrp-line-3: rgba(242, 242, 243, 0.24);
+  --adrp-wa: #25d366;
+  --adrp-wa-hover: #1fc45c;
+  --adrp-wa-ink: #062e18;
+  --adrp-wa-glow: rgba(37, 211, 102, 0.55);
+  --adrp-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  position: fixed; inset: 0; z-index: 2147483000;
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(14px, 3vw, 32px); overflow-y: auto;
+  font-family: 'ADR Poppins', 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 16px; line-height: 1.6; color: var(--adrp-ink);
+  text-align: left; text-transform: none; letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.adrp[hidden] { display: none !important; }
+/* Neutraliza regras genéricas do site anfitrião (h2, p, label, img, * {font-family})
+   antes dos estilos do popup, que vêm depois e têm prioridade igual ou maior. */
+.adrp *, .adrp *::before, .adrp *::after { box-sizing: border-box; font-family: inherit; text-transform: inherit; letter-spacing: inherit; }
+.adrp h2, .adrp h3, .adrp p, .adrp form, .adrp label { margin: 0; padding: 0; border: 0; font-weight: inherit; float: none; }
+.adrp img, .adrp svg { display: block; max-width: 100%; border: 0; box-shadow: none; }
+
+.adrp-bg { position: absolute; inset: 0; background: rgba(4, 5, 6, 0.93); animation: adrpFundo 0.32s ease both; }
+.adrp-card { position: relative; width: min(100%, 520px); margin: auto; padding: clamp(24px, 3.4vw, 42px); background: var(--adrp-bg-2); border: 1px solid var(--adrp-line-3); border-radius: 22px; animation: adrpCartao 0.58s var(--adrp-ease) both; }
+.adrp .adrp-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; padding: 0; background: transparent; border: 1px solid rgba(242, 242, 243, 0.22); border-radius: 999px; color: var(--adrp-n-300); cursor: pointer; transition: background 0.18s, color 0.18s; }
+.adrp .adrp-close:hover { background: rgba(242, 242, 243, 0.12); color: var(--adrp-ink); }
+.adrp-logo { height: 38px; width: auto; margin: 0 auto 20px; animation: adrpItem 0.55s var(--adrp-ease) 0.1s both; }
+.adrp .adrp-title { font-weight: 600; font-size: clamp(21px, 2.1vw, 26px); line-height: 1.16; letter-spacing: -0.015em; margin: 0 0 6px; text-align: center; text-wrap: balance; color: var(--adrp-ink); animation: adrpItem 0.55s var(--adrp-ease) 0.16s both; }
+.adrp-silver { background: linear-gradient(178deg, #ffffff 4%, #e6e8ec 32%, #9aa0a8 72%, #dcdee2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.adrp .adrp-text { margin: 0 auto clamp(18px, 2.2vw, 24px); max-width: 40ch; font-size: 13px; line-height: 1.55; color: var(--adrp-n-500); text-align: center; text-wrap: pretty; animation: adrpItem 0.55s var(--adrp-ease) 0.22s both; }
+.adrp-body { animation: adrpItem 0.5s var(--adrp-ease) 0.28s both; }
+
+.adrp-form { display: grid; gap: 12px; }
+.adrp-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.adrp .adrp-field { display: grid; gap: 6px; min-width: 0; margin: 0; }
+.adrp .adrp-label { display: block; font-size: 11px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: var(--adrp-n-400); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.adrp .adrp-input { width: 100%; min-width: 0; height: 44px; margin: 0; padding: 0 14px; font: inherit; font-weight: 400; font-size: 14.5px; line-height: normal; color: var(--adrp-ink); background: transparent; border: 1px solid var(--adrp-line-3); border-radius: 12px; outline: none; box-shadow: none; transition: border-color 0.18s; -webkit-appearance: none; appearance: none; }
+.adrp .adrp-input::placeholder { color: var(--adrp-n-600); opacity: 1; }
+.adrp .adrp-input:focus-visible { border-color: var(--adrp-ink); }
+.adrp select.adrp-input { padding: 0 34px 0 11px; background: var(--adrp-bg-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23b7b7ba' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center; }
+.adrp select.adrp-input option { color: #1d1f20; background: #ffffff; }
+.adrp-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.adrp .adrp-status { min-height: 1.2em; font-size: 13px; color: var(--adrp-n-500); }
+.adrp .adrp-status[data-tone='erro'] { color: #ffb4a8; }
+.adrp .adrp-note { margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 11.5px; color: var(--adrp-n-600); text-align: center; }
+.adrp-note a { color: var(--adrp-n-400); text-decoration: underline; text-underline-offset: 2px; }
+.adrp-note a:hover { color: var(--adrp-ink); }
+.adrp-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.adrp .adrp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 11px; width: 100%; min-height: 52px; margin: 0; padding: 0 clamp(20px, 2.4vw, 32px); font: inherit; font-weight: 600; font-size: 13px; letter-spacing: 0.11em; text-transform: uppercase; line-height: 1.3; text-align: center; text-decoration: none; border: 1px solid transparent; border-radius: 999px; cursor: pointer; transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.2s, box-shadow 0.2s; }
+.adrp .adrp-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.adrp .adrp-btn svg { flex: none; }
+.adrp .adrp-btn--light { background: var(--adrp-ink); color: var(--adrp-bg); border-color: var(--adrp-ink); }
+.adrp .adrp-btn--light:hover, .adrp .adrp-btn--light:focus-visible { background: var(--adrp-n-300); border-color: var(--adrp-n-300); color: var(--adrp-bg); transform: translateY(-2px); }
+.adrp .adrp-btn--wa { background: var(--adrp-wa); color: var(--adrp-wa-ink); border-color: var(--adrp-wa); box-shadow: 0 16px 40px -14px var(--adrp-wa-glow); }
+.adrp .adrp-btn--wa:hover, .adrp .adrp-btn--wa:focus-visible { background: var(--adrp-wa-hover); border-color: var(--adrp-wa-hover); color: var(--adrp-wa-ink); transform: translateY(-2px); box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.18), 0 16px 36px -12px var(--adrp-wa-glow); }
+.adrp :focus-visible { outline: 2px solid var(--adrp-n-300); outline-offset: 3px; }
+
+.adrp-ok { text-align: center; display: grid; gap: 6px; justify-items: center; }
+.adrp-ok[hidden] { display: none; }
+.adrp-ok > svg { color: var(--adrp-n-300); margin-bottom: 10px; }
+.adrp .adrp-ok h3 { font-weight: 600; font-size: clamp(18px, 1.5vw, 21px); color: var(--adrp-ink); outline: none; }
+.adrp .adrp-ok p { font-size: 13px; color: var(--adrp-n-500); line-height: 1.55; margin-bottom: 12px; }
+
+@media (max-width: 480px) {
+  .adrp .adrp-btn { padding-top: 13px; padding-bottom: 13px; letter-spacing: 0.08em; }
+}
+@media (max-width: 360px) {
+  .adrp-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+@keyframes adrpFundo { from { opacity: 0; } to { opacity: 1; } }
+@keyframes adrpCartao { from { opacity: 0; transform: translate3d(0, 26px, 0) scale(0.965); } to { opacity: 1; transform: none; } }
+@keyframes adrpItem { from { opacity: 0; transform: translate3d(0, 14px, 0); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .adrp *, .adrp *::before, .adrp *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
