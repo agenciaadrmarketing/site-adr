@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia como o valor da consulta é apresentado no anúncio, na página e no WhatsApp, dentro das normas da publicidade médica."
 imagemBusca: "doctor desk payment card"
 imagemAlt: "Recepção de consultório com maquininha de cartão e agenda sobre o balcão"
+imagem: { src: "/assets/blog/medico-pode-divulgar-valor-da-consulta.webp", alt: "Pessoa segurando uma máquina de cartão no balcão de atendimento", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/E2HgkL3LaFE", width: 1280, height: 720 }
 ---
 
 Sim, o médico pode divulgar o valor da consulta. A Resolução CFM nº 2.336/2023, que substituiu a norma de 2011 e está em vigor desde março de 2024, passou a admitir a divulgação de valores de consulta e de formas de pagamento. O que continua vedado é transformar o preço em chamariz: descontos promocionais, sorteios, premiações, "pacotes" promocionais e qualquer recurso que use o valor para induzir o paciente a consumir um serviço de saúde.
@@ -65,6 +66,12 @@ A pergunta útil não é "posso falar de preço?", e sim "o preço está informa
 Repare que o valor em si não é o problema. O problema é o gatilho de urgência, a comparação, o "ganhe" e o "só hoje". Esses recursos tratam a consulta como produto em liquidação, e é exatamente isso que a norma procura evitar.
 
 Também vale lembrar: preço baixo como argumento atrai quem decide só pelo preço. Para quem quer construir uma agenda de pacientes particulares, isso costuma jogar contra. O artigo sobre [como aumentar o valor da consulta](/blog/como-aumentar-o-valor-da-consulta/) trata desse posicionamento.
+
+## Um médico pode divulgar valores de consultas em anúncios?
+
+Pode, desde que o anúncio continue sendo informação e não oferta. Aqui entram duas camadas de regra. A primeira é a do CFM: o valor não pode ser o chamariz da peça, não pode vir acompanhado de desconto promocional e não pode estimular a procura por um serviço de saúde só pelo preço. A segunda é a das plataformas: Google e Meta têm políticas próprias para anúncios de saúde, que podem restringir linguagem, segmentação e determinados temas.
+
+Na prática, poucas campanhas ganham alguma coisa colocando o preço no título do anúncio. O que costuma funcionar melhor é o anúncio falar da especialidade, do tipo de atendimento e da região, e o valor aparecer na página de destino ou na conversa, com contexto. Assim o paciente que chega já sabe o que esperar, e a peça fica longe da linha do "chamariz".
 
 ## Como informar o valor da consulta ao paciente
 

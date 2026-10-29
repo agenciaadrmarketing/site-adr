@@ -33,6 +33,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia especialidade, região, ticket e atendimento antes de recomendar a ordem das frentes."
 imagemBusca: "doctor planning notebook strategy"
 imagemAlt: "Médico anotando um plano de trabalho em um caderno sobre a mesa do consultório"
+imagem: { src: "/assets/blog/estrategias-de-marketing-medico.webp", alt: "Duas pessoas desenhando um plano em um quadro branco", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/26MJGnCM0Wc", width: 1280, height: 720 }
 ---
 
 As estratégias de marketing para médicos que costumam funcionar são, em ordem: definir o posicionamento, organizar o Perfil da Empresa no Google, ter um site com páginas por especialidade, produzir conteúdo educativo, anunciar no Google Ads para quem já procura, usar Meta Ads para quem ainda não decidiu, fazer remarketing, atender rápido no WhatsApp, acompanhar quem não agendou e medir tudo até o comparecimento. A ordem importa tanto quanto a lista. Anúncio sem atendimento vaza verba; conteúdo sem posicionamento vira barulho.
@@ -48,7 +49,7 @@ Posicionamento é a resposta curta para "por que um paciente escolheria você e 
 - **forma de atendimento** (tempo de consulta, acompanhamento, retorno, telemedicina quando aplicável);
 - **faixa de valor** coerente com tudo isso.
 
-Sem essa definição, cada canal fala uma coisa e o paciente não entende o que você faz de diferente. Com ela, anúncio, site, conteúdo e recepção passam a contar a mesma história. O artigo sobre [autoridade digital para médicos](/blog/autoridade-digital-para-medicos/) aprofunda essa base.
+Sem essa definição, cada canal fala uma coisa e o paciente não entende o que você faz de diferente. Com ela, anúncio, site, conteúdo e recepção passam a contar a mesma história. Essa definição costuma ser o ponto que mais muda o desempenho das etapas seguintes.
 
 ## Passo 2: arrumar o Perfil da Empresa no Google
 
@@ -82,9 +83,13 @@ Conteúdo, no marketing médico, serve para duas coisas: ajudar o paciente a ent
 - mitos comuns da especialidade;
 - como funciona a primeira consulta.
 
-Formatos que costumam funcionar: vídeos curtos explicando um conceito, carrosséis com orientação geral, artigos no site respondendo dúvidas frequentes. O limite ético é claro: sem diagnóstico a distância, sem promessa, sem sensacionalismo. O artigo sobre [o que médico pode postar no Instagram](/blog/o-que-medico-pode-postar-no-instagram/) detalha esses limites.
+Formatos que costumam funcionar: vídeos curtos explicando um conceito, carrosséis com orientação geral, artigos no site respondendo dúvidas frequentes. O limite ético é claro: sem diagnóstico a distância, sem promessa, sem sensacionalismo. Conteúdo que parece consulta a distância é o erro mais comum nessa etapa.
 
-## Passo 5: Google Ads para quem já procura
+## Passo 5: anúncios no Google e no Meta, cada um no seu papel
+
+Anúncio pago acelera a chegada de pacientes, mas cada plataforma encontra a pessoa em um momento diferente da decisão. Vale pensar nas duas separadamente.
+
+### Google Ads para quem já procura
 
 Google Ads coloca o consultório na frente de quem pesquisa pela especialidade, sintoma, exame ou procedimento na região. É a estratégia mais direta para captar quem já decidiu procurar um médico. Cuidados:
 
@@ -95,7 +100,7 @@ Google Ads coloca o consultório na frente de quem pesquisa pela especialidade, 
 
 Como começar e o que acompanhar está em [Google Ads para médicos](/google-ads-para-medicos/). O custo por clique varia muito por especialidade e cidade; em algumas regiões, o volume de busca simplesmente não existe e o canal rende pouco.
 
-## Passo 6: Meta Ads para quem ainda não decidiu
+### Meta Ads para quem ainda não decidiu
 
 Instagram e Facebook alcançam pessoas que não estão procurando, mas que podem se identificar com o problema que você trata. O Meta Ads costuma fazer sentido para acompanhamentos longos, prevenção, procedimentos eletivos e especialidades em que a confiança na pessoa do médico pesa muito.
 
@@ -105,7 +110,7 @@ Instagram e Facebook alcançam pessoas que não estão procurando, mas que podem
 
 A comparação entre os dois canais está no artigo [Google Ads ou Meta Ads para médicos](/blog/google-ads-ou-meta-ads-para-medicos/), e a forma como a ADR opera o Meta está em [Meta Ads para médicos](/meta-ads-para-medicos/). A visão integrada das duas frentes está em [tráfego pago para médicos](/trafego-pago-para-medicos/).
 
-## Passo 7: remarketing, WhatsApp e follow-up
+## Passo 6: remarketing, WhatsApp e follow-up
 
 Boa parte dos pacientes não agenda no primeiro contato. Três estratégias trabalham juntas para não perder essas pessoas:
 
@@ -113,11 +118,11 @@ Boa parte dos pacientes não agenda no primeiro contato. Três estratégias trab
 
 **Atendimento no WhatsApp.** É aqui que o investimento vira consulta ou se perde. Tempo de resposta, roteiro claro, informação de valor e horários objetivos fazem diferença. Sem pedir dados clínicos por mensagem. Detalhes em [atendimento no WhatsApp para clínicas](/blog/atendimento-whatsapp-para-clinicas/).
 
-**Follow-up.** Quem perguntou e não marcou merece um retorno educado, com prazo e limite de tentativas. O artigo sobre [follow-up de pacientes](/blog/follow-up-de-pacientes/) traz um modelo de cadência.
+**Follow-up.** Quem perguntou e não marcou merece um retorno educado, com prazo e limite de tentativas. Duas ou três tentativas espaçadas, com mensagem curta e sem pressão, costumam bastar.
 
 Em clínicas com mais de um profissional, essa parte costuma ser o gargalo principal. A página de [marketing para clínicas](/marketing-para-clinicas/) mostra como o comercial entra na estratégia.
 
-## Passo 8: indicadores do contato ao comparecimento
+## Passo 7: indicadores do contato ao comparecimento
 
 Sem medir, não dá para saber qual estratégia trouxe paciente e qual só trouxe curtida. Os indicadores que costumam importar:
 
@@ -130,7 +135,7 @@ Sem medir, não dá para saber qual estratégia trouxe paciente e qual só troux
 | Consulta | Taxa de comparecimento | Quantos vieram? |
 | Resultado | Custo por paciente atendido | Quanto custou, no fim, cada paciente novo? |
 
-O artigo sobre [indicadores de marketing para clínicas](/blog/indicadores-de-marketing-para-clinicas/) explica como montar essa planilha sem complicar.
+Uma planilha simples, preenchida pela recepção todo dia, já responde a maior parte dessas perguntas.
 
 ## Quais são as normas do marketing médico?
 
@@ -141,7 +146,7 @@ Toda estratégia acima precisa caber na Resolução CFM nº 2.336/2023, em vigor
 - **Sem promessa de resultado.** Nada de "resolva de vez", certeza de cura ou prazos de melhora.
 - **Sem sensacionalismo nem autopromoção.** Sem alarmismo, sem "o melhor da cidade", sem comparação com colegas.
 - **Antes e depois só dentro das regras.** A norma passou a admitir imagens de pacientes com condições (finalidade educativa, autorização, contexto). Fora dessas condições, continua vedado.
-- **Preço sem chamariz.** Divulgar valor é permitido; desconto promocional, sorteio e pacote promocional, não. Veja [médico pode divulgar o valor da consulta](/blog/medico-pode-divulgar-valor-da-consulta/).
+- **Preço sem chamariz.** Divulgar valor é permitido; desconto promocional, sorteio e pacote promocional, não. Informar o preço com clareza é diferente de usar o preço para atrair.
 
 Além do CFM, Google e Meta têm políticas próprias para anúncios de saúde. A visão completa está em [regras de publicidade médica do CFM](/blog/regras-de-publicidade-medica-cfm/) e no [guia de marketing médico](/marketing-medico/).
 
@@ -156,4 +161,4 @@ Além do CFM, Google e Meta têm políticas próprias para anúncios de saúde. 
 7. Planilha com contato, qualificação, agendamento e comparecimento.
 8. Revisão de tudo pela ótica da Resolução CFM nº 2.336/2023.
 
-Na [metodologia da ADR](/metodologia/), essa ordem é definida no diagnóstico comercial prévio, a partir da especialidade, da região, do ticket e da maturidade do atendimento. Não há uma receita única: há uma sequência que precisa caber na realidade de cada consultório.
+Na ADR, essa ordem é definida no diagnóstico comercial prévio, a partir da especialidade, da região, do ticket e da maturidade do atendimento. Não há uma receita única: há uma sequência que precisa caber na realidade de cada consultório.

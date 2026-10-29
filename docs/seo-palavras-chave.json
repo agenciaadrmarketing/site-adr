@@ -10,7 +10,9 @@
   "observacoes": [
     "Buscas por especialidade ('marketing para ginecologistas' etc.) têm volume quase nulo; as páginas de especialidade servem mais para conversão e links internos do que para tráfego.",
     "A SERP de 'agência de marketing médico' é local (Florianópolis aparece no topo): um Perfil da Empresa no Google com endereço real ajudaria muito.",
-    "As SERPs de 'marketing médico' e 'marketing para médicos' são dominadas por faculdades e portais educacionais: o caminho é o guia /marketing-medico/ + artigos de apoio."
+    "As SERPs de 'marketing médico' e 'marketing para médicos' são dominadas por faculdades e portais educacionais: o caminho é o guia /marketing-medico/ + artigos de apoio.",
+    "Este arquivo é um mapa de trabalho: o Google não o lê. O que conta é o que foi aplicado nas páginas (títulos, seções, FAQ e dados estruturados) — veja 'paginas_do_site'.",
+    "No Bing, 'marketing médico' é dominado por sites em espanhol: o idioma pt-BR declarado em todas as páginas ajuda a separar o público."
   ],
   "palavras_chave": [
     {
@@ -324,6 +326,118 @@
       "lance_topo_pagina_brl": "7,61–17,38",
       "intencao": "comercial",
       "pagina_alvo": "/marketing-para-ortopedistas/"
+    },
+    {
+      "palavra": "mkt médico",
+      "volume_mensal_br": 1300,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": "5,74–21,44",
+      "intencao": "comercial/informacional",
+      "pagina_alvo": "/marketing-medico/"
+    },
+    {
+      "palavra": "marketing em saúde",
+      "volume_mensal_br": 140,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": "3,33–11,03",
+      "intencao": "informacional",
+      "pagina_alvo": "/marketing-medico/"
+    },
+    {
+      "palavra": "marketing para saúde",
+      "volume_mensal_br": 140,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": "3,33–11,03",
+      "intencao": "informacional",
+      "pagina_alvo": "/marketing-medico/"
+    },
+    {
+      "palavra": "marketing na saúde",
+      "volume_mensal_br": 140,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": "3,33–11,03",
+      "intencao": "informacional",
+      "pagina_alvo": "/marketing-medico/"
+    },
+    {
+      "palavra": "marketing para profissionais da saúde",
+      "volume_mensal_br": 20,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": "4,24–15,24",
+      "intencao": "informacional",
+      "pagina_alvo": "/marketing-medico/"
+    },
+    {
+      "palavra": "agencia de marketing odontologico",
+      "volume_mensal_br": 40,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": null,
+      "intencao": "comercial",
+      "pagina_alvo": "/marketing-para-dentistas/"
+    },
+    {
+      "palavra": "agencia de marketing para dentistas",
+      "volume_mensal_br": 20,
+      "concorrencia_ads": "Alta",
+      "lance_topo_pagina_brl": null,
+      "intencao": "comercial",
+      "pagina_alvo": "/marketing-para-dentistas/"
+    },
+    {
+      "palavra": "marketing digital na odontologia",
+      "volume_mensal_br": 30,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": null,
+      "intencao": "informacional",
+      "pagina_alvo": "/blog/marketing-para-clinica-odontologica/"
+    },
+    {
+      "palavra": "marketing para consultorios",
+      "volume_mensal_br": 20,
+      "concorrencia_ads": "Alta",
+      "lance_topo_pagina_brl": "9,44–31,41",
+      "intencao": "comercial",
+      "pagina_alvo": "/blog/marketing-para-consultorio-medico/"
+    },
+    {
+      "palavra": "instagram para médicos",
+      "volume_mensal_br": 20,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": "3,38–23,15",
+      "intencao": "informacional",
+      "pagina_alvo": "/blog/instagram-para-medicos/"
+    },
+    {
+      "palavra": "doctoralia é pago",
+      "volume_mensal_br": 40,
+      "concorrencia_ads": "Baixa",
+      "lance_topo_pagina_brl": "1,83–10,82",
+      "intencao": "informacional",
+      "pagina_alvo": "/blog/doctoralia-vale-a-pena/"
+    },
+    {
+      "palavra": "especialista em google meu negócio",
+      "volume_mensal_br": 140,
+      "concorrencia_ads": "Média",
+      "lance_topo_pagina_brl": "4,29–16,46",
+      "intencao": "informacional",
+      "pagina_alvo": "/blog/google-meu-negocio-para-medicos/"
+    },
+    {
+      "palavra": "estratégias de marketing médico",
+      "volume_mensal_br": null,
+      "concorrencia_ads": null,
+      "lance_topo_pagina_brl": null,
+      "intencao": "informacional",
+      "pagina_alvo": "/blog/estrategias-de-marketing-medico/"
+    },
+    {
+      "palavra": "médico pode divulgar o valor da consulta",
+      "volume_mensal_br": null,
+      "concorrencia_ads": null,
+      "lance_topo_pagina_brl": null,
+      "intencao": "informacional",
+      "pagina_alvo": "/blog/medico-pode-divulgar-valor-da-consulta/"
     }
   ],
   "paginas_comerciais": {
@@ -1175,6 +1289,2078 @@
         "Preciso de equipamento profissional para gravar vídeos para o YouTube?",
         "Com que frequência um médico deve publicar no YouTube?",
         "Posso responder dúvidas de pacientes nos comentários dos vídeos?"
+      ]
+    }
+  ],
+  "perguntas": [
+    {
+      "pergunta": "O que o marketing médico faz?",
+      "origem": [
+        "Google: as pessoas também perguntam (marketing digital para médicos)",
+        "Google: as pessoas também perguntam (marketing médico)"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Como fazer marketing médico?",
+      "origem": [
+        "Google: as pessoas também perguntam (marketing médico)",
+        "Google: as pessoas também perguntam (quanto custa marketing médico)"
+      ],
+      "respondida_em": "/blog/estrategias-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Quais são as normas de marketing médico?",
+      "origem": [
+        "Google: as pessoas também perguntam (marketing médico)"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Onde posso encontrar um curso de marketing para médicos?",
+      "origem": [
+        "Google: as pessoas também perguntam (marketing médico)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Quais são as estratégias de marketing para médicos?",
+      "origem": [
+        "Google: as pessoas também perguntam (marketing digital para médicos)"
+      ],
+      "respondida_em": "/blog/estrategias-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Qual empresa oferece serviços de marketing digital médico?",
+      "origem": [
+        "Google: as pessoas também perguntam (marketing digital para médicos)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "O médico pode divulgar o valor da consulta?",
+      "origem": [
+        "Google: as pessoas também perguntam (marketing digital para médicos)",
+        "Google: as pessoas também perguntam (o que o médico pode postar no instagram)"
+      ],
+      "respondida_em": "/blog/medico-pode-divulgar-valor-da-consulta/"
+    },
+    {
+      "pergunta": "O que é captação de pacientes?",
+      "origem": [
+        "Google: as pessoas também perguntam (captação de pacientes)"
+      ],
+      "respondida_em": "/blog/captacao-de-pacientes/"
+    },
+    {
+      "pergunta": "O que fazer para captar pacientes?",
+      "origem": [
+        "Google: as pessoas também perguntam (captação de pacientes)"
+      ],
+      "respondida_em": "/blog/captacao-de-pacientes/"
+    },
+    {
+      "pergunta": "Qual a melhor plataforma para captar pacientes?",
+      "origem": [
+        "Google: as pessoas também perguntam (captação de pacientes)"
+      ],
+      "respondida_em": "/blog/captacao-de-pacientes/"
+    },
+    {
+      "pergunta": "Qual é a função de um captador?",
+      "origem": [
+        "Google: as pessoas também perguntam (captação de pacientes)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Qual o valor de uma consulta no particular?",
+      "origem": [
+        "Google: as pessoas também perguntam (como conseguir pacientes particulares)"
+      ],
+      "respondida_em": "/blog/como-atrair-pacientes-particulares/"
+    },
+    {
+      "pergunta": "Como atrair pacientes para clínica?",
+      "origem": [
+        "Google: as pessoas também perguntam (como conseguir pacientes particulares)"
+      ],
+      "respondida_em": "/blog/como-atrair-pacientes-particulares/"
+    },
+    {
+      "pergunta": "O que fazer para atrair clientes urgentemente?",
+      "origem": [
+        "Google: as pessoas também perguntam (como aumentar pacientes no consultório)",
+        "Google: as pessoas também perguntam (como conseguir pacientes particulares)"
+      ],
+      "respondida_em": "/blog/como-atrair-pacientes-particulares/"
+    },
+    {
+      "pergunta": "Quais são as regras do Instagram para médicos?",
+      "origem": [
+        "Google: as pessoas também perguntam (o que o médico pode postar no instagram)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "Um médico pode postar fotos de pacientes antes e depois?",
+      "origem": [
+        "Google: as pessoas também perguntam (o que o médico pode postar no instagram)"
+      ],
+      "respondida_em": "/blog/depoimentos-de-pacientes-na-publicidade-medica/"
+    },
+    {
+      "pergunta": "Um médico pode fazer propaganda em outdoor?",
+      "origem": [
+        "Google: as pessoas também perguntam (o que o médico pode postar no instagram)"
+      ],
+      "respondida_em": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+    },
+    {
+      "pergunta": "Quais são as novas regras do Instagram para 2026?",
+      "origem": [
+        "Google: as pessoas também perguntam (o que o médico pode postar no instagram)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "Quanto custa contratar um marketing?",
+      "origem": [
+        "Google: as pessoas também perguntam (quanto custa marketing médico)"
+      ],
+      "respondida_em": "/blog/quanto-custa-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "O marketing digital é uma furada?",
+      "origem": [
+        "Google: as pessoas também perguntam (quanto custa marketing médico)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Um médico pode divulgar valores de consultas?",
+      "origem": [
+        "Google: as pessoas também perguntam (médico pode divulgar o valor da consulta)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Pode cobrar do paciente que falta na consulta?",
+      "origem": [
+        "Google: as pessoas também perguntam (médico pode divulgar o valor da consulta)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Pode postar antes e depois?",
+      "origem": [
+        "Google: as pessoas também perguntam (médico pode postar antes e depois)"
+      ],
+      "respondida_em": "/blog/depoimentos-de-pacientes-na-publicidade-medica/"
+    },
+    {
+      "pergunta": "O que médicos não podem fazer?",
+      "origem": [
+        "Google: as pessoas também perguntam (médico pode postar antes e depois)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Quais são as regras de publicidade para médicos?",
+      "origem": [
+        "Google: as pessoas também perguntam (médico pode postar antes e depois)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Quais são as funções de uma secretária de consultório médico?",
+      "origem": [
+        "Google: as pessoas também perguntam (secretária de consultório médico)"
+      ],
+      "respondida_em": "/blog/secretaria-de-consultorio-medico/"
+    },
+    {
+      "pergunta": "Qual é a diferença entre recepcionista e secretária?",
+      "origem": [
+        "Google: as pessoas também perguntam (secretária de consultório médico)"
+      ],
+      "respondida_em": "/blog/secretaria-de-consultorio-medico/"
+    },
+    {
+      "pergunta": "Vale a pena contratar uma agência de marketing digital para médicos?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/blog/como-escolher-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Qual o melhor canal de Marketing Médico para obter resultados a longo prazo?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Qual o melhor canal de Marketing Médico para obter resultados a médio prazo?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Qual o melhor canal de Marketing Médico para obter resultados a curto prazo?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Médico pode fazer propaganda na internet e redes sociais?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+    },
+    {
+      "pergunta": "Marketing Médico funciona para qualquer especialidade?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Investir em marketing é caro?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/blog/quanto-investir-em-marketing-medico/"
+    },
+    {
+      "pergunta": "Ainda vale a pena ter um site?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/blog/site-para-medicos/"
+    },
+    {
+      "pergunta": "Tendências de Marketing Médico",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Quais são as melhores estratégias de Marketing Médico atualmente?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/blog/estrategias-de-marketing-medico/"
+    },
+    {
+      "pergunta": "O que funciona melhor para médicos? Google ou Instagram?",
+      "origem": [
+        "FAQ de concorrente (agenciamarketingmedicobr.com.br)",
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "O que não é permitido no marketing médico?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)",
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+    },
+    {
+      "pergunta": "O que é tráfego pago?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/trafego-pago-para-medicos/"
+    },
+    {
+      "pergunta": "O que o médico precisa fazer ter de começar a investir em Marketing?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/blog/quanto-investir-em-marketing-medico/"
+    },
+    {
+      "pergunta": "Marketing digital tradicional é diferente de marketing médico?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "O que é tráfego?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/trafego-pago-para-medicos/"
+    },
+    {
+      "pergunta": "qual a Diferença entre tráfego orgânico e tráfego pago?",
+      "origem": [
+        "FAQ de concorrente (wemarketingmedico.com.br)"
+      ],
+      "respondida_em": "/trafego-pago-para-medicos/"
+    },
+    {
+      "pergunta": "O que é Marketing Médico?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Principais serviços de uma Agência de Marketing Médico?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/como-escolher-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Por que contratar uma Agência de Marketing Médico em 2026?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/como-escolher-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "O que é uma Agência de Marketing Médico?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/como-escolher-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Uma Agência de Marketing Médico segue as regras do CFM?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/como-escolher-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Por que investir no Marketing Médico?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/quanto-investir-em-marketing-medico/"
+    },
+    {
+      "pergunta": "Uma Agência de Marketing Médico cuida somente do Instagram?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "Existe multa ou fidelização na contratação de um serviço?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Marketing Médico é postar no Instagram?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "Como começar o Marketing Médico no meu consultório?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/estrategias-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Quais são as principais ferramentas do Marketing Médico?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Google Ads para médicos funciona?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "Médicos podem anunciar no Google Ads?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "Quanto custa anunciar no Google Ads sendo médico?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "Como se divide o pagamento da Gestão de Google Ads para Médicos?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)",
+        "FAQ de concorrente (googleadsmedico.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "Quanto eu posso pagar para colocar créditos no Google Ads?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)",
+        "FAQ de concorrente (googleadsmedico.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "Qual o valor ideal para inclusão de créditos?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)",
+        "FAQ de concorrente (googleadsmedico.com.br)",
+        "FAQ de concorrente (trafegopagomedico.com.br)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Como é feita a contratação?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/como-escolher-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Qual a forma de pagamento?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)",
+        "FAQ de concorrente (googleadsmedico.com.br)"
+      ],
+      "respondida_em": "/servicos/"
+    },
+    {
+      "pergunta": "Emitem nota fiscal do serviço?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)",
+        "FAQ de concorrente (googleadsmedico.com.br)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Quais tipos de anúncio o médico pode usar no Google?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Em quanto tempo aparecem os primeiros resultados?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Preciso ter um site para anunciar no Google?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/blog/site-para-medicos/"
+    },
+    {
+      "pergunta": "Dá para aparecer na primeira posição do Google com anúncio?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Google Ads funciona para todas as especialidades médicas?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "Quais erros mais desperdiçam verba no Google Ads?",
+      "origem": [
+        "FAQ de concorrente (agenciadomedico.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "O que é tráfego pago para médicos?",
+      "origem": [
+        "FAQ de concorrente (trafegopagomedico.com.br)"
+      ],
+      "respondida_em": "/trafego-pago-para-medicos/"
+    },
+    {
+      "pergunta": "Como se divide o pagamento do Tráfego Pago para Médicos?",
+      "origem": [
+        "FAQ de concorrente (trafegopagomedico.com.br)"
+      ],
+      "respondida_em": "/trafego-pago-para-medicos/"
+    },
+    {
+      "pergunta": "Google Ads ou Facebook Ads — por qual começar?",
+      "origem": [
+        "FAQ de concorrente (trafegopagomedico.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "Como é feita a contratação do serviço?",
+      "origem": [
+        "FAQ de concorrente (googleadsmedico.com.br)",
+        "FAQ de concorrente (trafegopagomedico.com.br)"
+      ],
+      "respondida_em": "/blog/como-escolher-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Qual a forma de pagamento? Emitem nota fiscal?",
+      "origem": [
+        "FAQ de concorrente (trafegopagomedico.com.br)"
+      ],
+      "respondida_em": "/servicos/"
+    },
+    {
+      "pergunta": "Quais são as melhores estratégias de marketing para médicos?",
+      "origem": [
+        "FAQ de concorrente (agenciamarketingmedicobr.com.br)"
+      ],
+      "respondida_em": "/blog/estrategias-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Qual o melhor canal para resultados a curto prazo?",
+      "origem": [
+        "FAQ de concorrente (agenciamarketingmedicobr.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Qual o melhor canal para resultados a longo prazo?",
+      "origem": [
+        "FAQ de concorrente (agenciamarketingmedicobr.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Vale a pena contratar uma agência de marketing para médicos?",
+      "origem": [
+        "FAQ de concorrente (agenciamarketingmedicobr.com.br)"
+      ],
+      "respondida_em": "/blog/como-escolher-agencia-de-marketing-medico/"
+    },
+    {
+      "pergunta": "O que é Marketing Odontológico?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "O que é uma Agência de Marketing Odontológico?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "Uma Agência de Marketing Odontológico segue as regras do CRO?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "Por que Investir no Marketing Odontológico?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "Uma Agência de Marketing Odontológico cuida somente do Instagram?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "Existe Multa ou Fidelização na contratação de um serviço?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Marketing Odontológico é postar no Instagram?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "Como começar o Marketing Odontológico no meu consultório?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "Quais são as principais ferramentas do Marketing Odontológico?",
+      "origem": [
+        "FAQ de concorrente (agenciadodentista.com.br)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "O que uma agência de tráfego pago faz?",
+      "origem": [
+        "FAQ de concorrente (fireads.digital)"
+      ],
+      "respondida_em": "/trafego-pago-para-medicos/"
+    },
+    {
+      "pergunta": "Quanto preciso investir em anúncios?",
+      "origem": [
+        "FAQ de concorrente (fireads.digital)"
+      ],
+      "respondida_em": "/blog/quanto-investir-em-marketing-medico/"
+    },
+    {
+      "pergunta": "Vocês assumem campanhas que já estão rodando?",
+      "origem": [
+        "FAQ de concorrente (fireads.digital)"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Existe garantia de resultado?",
+      "origem": [
+        "FAQ de concorrente (fireads.digital)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "O que é permitido no marketing médico?",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+    },
+    {
+      "pergunta": "Como atrair mais pacientes pela internet?",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/como-atrair-pacientes-particulares/"
+    },
+    {
+      "pergunta": "Quais são as estratégias mais eficazes de marketing para médicos?",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/estrategias-de-marketing-medico/"
+    },
+    {
+      "pergunta": "Por que o SEO para médicos é importante?",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/seo-local-para-clinicas/"
+    },
+    {
+      "pergunta": "Vale a pena ter um site para médicos ainda hoje?",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/site-para-medicos/"
+    },
+    {
+      "pergunta": "Tráfego pago para médicos: Google e Meta",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/trafego-pago-para-medicos/"
+    },
+    {
+      "pergunta": "Qual é melhor: Google Ads ou Instagram para médicos?",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "O que é permitido no Marketing digital para clínicas?",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+    },
+    {
+      "pergunta": "O que não é permitido no Marketing digital para clínicas?",
+      "origem": [
+        "FAQ de concorrente (wta3.com.br)"
+      ],
+      "respondida_em": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+    },
+    {
+      "pergunta": "O que é marketing médico?",
+      "origem": [
+        "FAQ de concorrente (blog-prod.iclinic.com.br (iclinic.com.br))"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Qual a importância do marketing médico?",
+      "origem": [
+        "FAQ de concorrente (blog-prod.iclinic.com.br (iclinic.com.br))"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Como construir autoridade online da sua clínica?",
+      "origem": [
+        "FAQ de concorrente (blog-prod.iclinic.com.br (iclinic.com.br))"
+      ],
+      "respondida_em": null
+    },
+    {
+      "pergunta": "Como escolher a melhor rede social para o seu marketing médico?",
+      "origem": [
+        "FAQ de concorrente (blog-prod.iclinic.com.br (iclinic.com.br))"
+      ],
+      "respondida_em": "/marketing-medico/"
+    },
+    {
+      "pergunta": "Médico pode anunciar no Google Ads sem violar as regras do CFM?",
+      "origem": [
+        "FAQ de concorrente (agilize.com.br)"
+      ],
+      "respondida_em": "/google-ads-para-medicos/"
+    },
+    {
+      "pergunta": "Qual o orçamento mínimo para começar a ter resultados?",
+      "origem": [
+        "FAQ de concorrente (agilize.com.br)"
+      ],
+      "respondida_em": "/"
+    },
+    {
+      "pergunta": "Quanto custa uma estratégia de marketing para dentistas?",
+      "origem": [
+        "FAQ de concorrente (usebip.com)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "Dentista pode fazer anúncios pagos no Google e no Instagram?",
+      "origem": [
+        "FAQ de concorrente (usebip.com)"
+      ],
+      "respondida_em": "/blog/o-que-medico-pode-postar-no-instagram/"
+    },
+    {
+      "pergunta": "Vale a pena contratar uma agência especializada em marketing odontológico?",
+      "origem": [
+        "FAQ de concorrente (usebip.com)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "Qual rede social funciona melhor para dentistas?",
+      "origem": [
+        "FAQ de concorrente (usebip.com)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    },
+    {
+      "pergunta": "Como medir o retorno do marketing odontológico?",
+      "origem": [
+        "FAQ de concorrente (usebip.com)"
+      ],
+      "respondida_em": "/marketing-para-dentistas/"
+    }
+  ],
+  "serp": {
+    "coleta": "Google Brasil (hl=pt-BR, gl=br), navegador logado, 29/10/2026",
+    "consultas": {
+      "marketing médico": {
+        "paa": [
+          "O que o marketing médico faz?",
+          "Como fazer marketing médico?",
+          "Quais são as normas de marketing médico?",
+          "Onde posso encontrar um curso de marketing para médicos?"
+        ],
+        "relacionadas": [
+          "marketing médico curso",
+          "marketing médico livro",
+          "marketing médico instagram",
+          "agência marketing médico",
+          "marketing medico digital",
+          "agência de marketing digital para médicos"
+        ],
+        "top": [
+          "estacio.br",
+          "slmandic.edu.br",
+          "instagram.com",
+          "educa.cetrus.com.br",
+          "medway.com.br",
+          "medicina.afya.com.br",
+          "carreiramedica.pucpr.br",
+          "agenciakos.com.br"
+        ],
+        "visao_geral_ia": "sim; cita Estácio, Shantal Marketing Médico e Medway; destaca CRM + RQE obrigatórios, até duas especialidades e canais digitais"
+      },
+      "agência de marketing médico": {
+        "paa": [],
+        "relacionadas": [
+          "agência de marketing digital para médicos",
+          "agencia de marketing para clinica",
+          "marketing medico digital"
+        ],
+        "top": [
+          "wemarketingmedico.com.br",
+          "wta3.com.br",
+          "labmkt.agency",
+          "marketingestrategia.com.br",
+          "esaudemarketing.com.br",
+          "agenciakos.com.br",
+          "ohub.com.br",
+          "hcagencia.com.br"
+        ],
+        "nota": "SERP local (Florianópolis) para o usuário logado em SC"
+      },
+      "marketing para médicos": {
+        "paa": [],
+        "relacionadas": [
+          "marketing médico curso",
+          "agência de marketing digital para médicos",
+          "marketing médico instagram",
+          "marketing para medicos livro",
+          "marketing para clinicas",
+          "marketing medico sao paulo"
+        ],
+        "top": [
+          "estacio.br",
+          "instagram.com",
+          "futuremarketing.com.br",
+          "medway.com.br",
+          "educacaomedica.afya.com.br",
+          "uolhost.uol.com.br",
+          "espm.br",
+          "eurofarma.com.br"
+        ]
+      },
+      "marketing digital para médicos": {
+        "paa": [
+          "Quais são as estratégias de marketing para médicos?",
+          "Qual empresa oferece serviços de marketing digital médico?",
+          "O que o marketing médico faz?",
+          "O médico pode divulgar o valor da consulta?"
+        ],
+        "relacionadas": [
+          "curso marketing digital para profissionais da saúde",
+          "mba em marketing medico",
+          "pos graduacao em marketing medico",
+          "como fazer marketing medico"
+        ],
+        "top": [
+          "iclinic.com.br",
+          "ensino.einstein.br",
+          "wemarketingmedico.com.br",
+          "futuremarketing.com.br",
+          "alume.com",
+          "sobamed.com.br",
+          "educacaomedica.afya.com.br"
+        ]
+      },
+      "marketing para clínicas": {
+        "paa": [],
+        "relacionadas": [],
+        "top": [
+          "telemedicinamorsch.com.br",
+          "saocamilo-sp.br",
+          "pro.doctoralia.com.br",
+          "wemarketingmedico.com.br",
+          "clinicanasnuvens.com.br",
+          "rdstation.com",
+          "quarkclinic.com.br",
+          "futuremarketing.com.br",
+          "sevengestao.com.br"
+        ]
+      },
+      "tráfego pago para médicos": {
+        "paa": [],
+        "relacionadas": [
+          "google ads",
+          "agencia de marketing para medicos",
+          "agencia do medico"
+        ],
+        "top": [
+          "trafegopagomedico.com.br",
+          "wemarketingmedico.com.br",
+          "instagram.com",
+          "agenciam4h.com.br",
+          "agenciamarketingmedicobr.com.br",
+          "pedrosobral.com.br",
+          "valor.globo.com",
+          "fireads.digital"
+        ]
+      },
+      "google ads para médicos": {
+        "paa": [],
+        "relacionadas": [
+          "agência de marketing digital para médicos",
+          "agencia do medico",
+          "google meu negócio"
+        ],
+        "top": [
+          "iclinic.com.br",
+          "googleadsmedico.com.br",
+          "support.google.com",
+          "gestaods.com.br",
+          "agenciadomedico.com.br",
+          "agenciarizzo.com.br",
+          "conclinica.com.br",
+          "phelcom.com"
+        ]
+      },
+      "meta ads para médicos": {
+        "paa": [],
+        "relacionadas": [],
+        "top": [
+          "portaltelemedicina.com.br",
+          "agenciarizzo.com.br",
+          "xpertads.com.br",
+          "mediconogoogle.com.br",
+          "medvoxagency.com",
+          "coqueiromidia.com.br",
+          "bpmarketing.com.br",
+          "sitese.com.br"
+        ]
+      },
+      "marketing odontológico": {
+        "paa": [],
+        "relacionadas": [
+          "marketing odontológico instagram",
+          "agência de marketing odontológico",
+          "marketing digital odontologia",
+          "marketing para consultorio odontologico",
+          "frases para chamar pacientes para consultório odontológico"
+        ],
+        "top": [
+          "sinimplantsystem.com.br",
+          "agenciadodentista.com.br",
+          "blog.suryadental.com.br",
+          "instagram.com",
+          "straumann.com",
+          "yller.com.br",
+          "ricardonovack.com.br"
+        ]
+      },
+      "captação de pacientes": {
+        "paa": [
+          "O que é captação de pacientes?",
+          "O que fazer para captar pacientes?",
+          "Qual a melhor plataforma para captar pacientes?",
+          "Qual é a função de um captador?"
+        ],
+        "relacionadas": [
+          "captação de pacientes odontologia",
+          "doctoralia"
+        ],
+        "top": [
+          "maislaudo.com.br",
+          "anahealth.com.br",
+          "agilize.com.br",
+          "instagram.com",
+          "healthchess.com.br",
+          "rdstation.com",
+          "telemedicinamorsch.com.br",
+          "pixeon.com"
+        ]
+      },
+      "como conseguir pacientes particulares": {
+        "paa": [
+          "Qual o valor de uma consulta no particular?",
+          "Como atrair pacientes para clínica?",
+          "O que fazer para atrair clientes urgentemente?"
+        ],
+        "relacionadas": [
+          "como atrair pacientes para o consultório odontológico",
+          "doctoralia",
+          "google ads"
+        ],
+        "top": [
+          "pro.doctoralia.com.br",
+          "amplimed.com.br",
+          "gestaods.com.br",
+          "maislaudo.com.br",
+          "usebip.com",
+          "coqueiromidia.com.br"
+        ]
+      },
+      "marketing para clínica de estética": {
+        "paa": [],
+        "relacionadas": [],
+        "top": [
+          "tulipia.com.br",
+          "clinicaexperts.com.br",
+          "c4marketing.com.br",
+          "reddit.com",
+          "quarkclinic.com.br",
+          "eclinica.digital"
+        ]
+      },
+      "publicidade médica": {
+        "paa": [],
+        "relacionadas": [
+          "manual de publicidade médica pdf",
+          "manual de publicidade médica 2026",
+          "publicidade médica cfm",
+          "publicidade médica irregular",
+          "resolução cfm publicidade médica",
+          "médico pode fazer propaganda de produtos",
+          "cartilha publicidade médica"
+        ],
+        "top": [
+          "crmma.org.br",
+          "portal.cfm.org.br",
+          "crmpr.org.br",
+          "publicidademedica.cfm.org.br",
+          "sbd.org.br",
+          "cremec.org.br",
+          "cremers.org.br"
+        ]
+      },
+      "o que o médico pode postar no instagram": {
+        "paa": [
+          "Quais são as regras do Instagram para médicos?",
+          "Um médico pode postar fotos de pacientes antes e depois?",
+          "O médico pode divulgar o valor da consulta?",
+          "Um médico pode fazer propaganda em outdoor?",
+          "Quais são as novas regras do Instagram para 2026?"
+        ],
+        "top": [
+          "jusbrasil.com.br",
+          "quarkclinic.com.br",
+          "publicidademedica.cfm.org.br",
+          "impactdoctor.com.br",
+          "livance.com.br",
+          "medicina.afya.com.br"
+        ]
+      },
+      "quanto custa marketing médico": {
+        "paa": [
+          "Quanto custa contratar um marketing?",
+          "O marketing digital é uma furada?",
+          "Como fazer marketing médico?"
+        ],
+        "top": [
+          "grupomovmed.com.br",
+          "wemarketingmedico.com.br",
+          "fernandatavares.ia.br",
+          "saudeintegrada.com.br",
+          "octoagencia.com.br",
+          "zyllah.com.br",
+          "ranqiai.com.br"
+        ]
+      },
+      "como aumentar pacientes no consultório": {
+        "paa": [
+          "Quais são os 3 pilares da experiência do paciente?",
+          "O que fazer para atrair clientes urgentemente?"
+        ],
+        "relacionadas": [
+          "como atrair pacientes para o consultório odontológico",
+          "doctoralia"
+        ],
+        "top": [
+          "maislaudo.com.br",
+          "iclinic.com.br",
+          "telemedicinamorsch.com.br",
+          "yller.com.br",
+          "pro.doctoralia.com.br",
+          "doctorview.com.br",
+          "gestaods.com.br"
+        ]
+      },
+      "médico pode divulgar o valor da consulta": {
+        "paa": [
+          "Como informar o valor da consulta ao paciente?",
+          "Um médico pode divulgar valores de consultas?",
+          "Pode cobrar do paciente que falta na consulta?"
+        ],
+        "relacionadas": [
+          "resolução cfm nº 2.336 2023",
+          "médico pode fazer propaganda de produtos",
+          "manual de publicidade médica",
+          "código de ética médica"
+        ],
+        "top": [
+          "portal.cfm.org.br",
+          "silvapimenta.com.br",
+          "besan.com.br",
+          "alphamedagencia.com.br",
+          "julianahasse.com.br",
+          "crmma.org.br"
+        ]
+      },
+      "marketing médico florianópolis": {
+        "relacionadas": [
+          "lab marketing florianopolis",
+          "marketing para clinica medica",
+          "marketing para saude",
+          "mkt medico"
+        ],
+        "top": [
+          "labmkt.agency",
+          "ohub.com.br",
+          "wemarketingmedico.com.br",
+          "marketingestrategia.com.br",
+          "sigmahealth.com.br",
+          "wta3.com.br",
+          "klmarketing.com.br",
+          "esaudemarketing.com.br"
+        ]
+      },
+      "médico pode postar antes e depois": {
+        "paa": [
+          "Pode postar antes e depois?",
+          "O que médicos não podem fazer?",
+          "Quais são as regras de publicidade para médicos?"
+        ],
+        "relacionadas": [
+          "dentista pode postar antes e depois",
+          "antes e depois cfm",
+          "antes e depois é proibido",
+          "lei que proíbe tirar fotos de pacientes"
+        ],
+        "top": [
+          "portal.cfm.org.br",
+          "amb.org.br",
+          "silvapimenta.com.br",
+          "crmmt.org.br",
+          "clinicanasnuvens.com.br",
+          "jusbrasil.com.br"
+        ]
+      },
+      "secretária de consultório médico": {
+        "paa": [
+          "Quais são as funções de uma secretária de consultório médico?",
+          "Qual é a diferença entre recepcionista e secretária?",
+          "Qual o valor do salário de uma secretária de consultório médico?"
+        ],
+        "top": [
+          "glassdoor.com.br",
+          "medassistservicos.com.br",
+          "br.indeed.com",
+          "iclinic.com.br",
+          "educacaomedica.afya.com.br"
+        ]
+      },
+      "google meu negócio para médicos": {
+        "relacionadas": [
+          "google perfil da empresa",
+          "doctoralia",
+          "google business"
+        ],
+        "top": [
+          "atfmarketing.com.br",
+          "content.iclinic.com.br",
+          "agilize.com.br",
+          "conclinica.com.br",
+          "gestaods.com.br",
+          "phelcom.com",
+          "futuremarketing.com.br"
+        ]
+      }
+    }
+  },
+  "concorrentes": {
+    "arquivo": "docs/pesquisa/concorrentes.json",
+    "dominios": [
+      "wemarketingmedico.com.br",
+      "agenciakos.com.br",
+      "labmkt.agency",
+      "esaudemarketing.com.br",
+      "hcagencia.com.br",
+      "agenciadomedico.com.br",
+      "futuremarketing.com.br",
+      "trafegopagomedico.com.br",
+      "googleadsmedico.com.br",
+      "agenciamarketingmedicobr.com.br",
+      "agenciam4h.com.br",
+      "agenciarizzo.com.br",
+      "agenciadodentista.com.br",
+      "fireads.digital",
+      "wta3.com.br",
+      "blog-prod.iclinic.com.br (iclinic.com.br)",
+      "medway.com.br",
+      "rdstation.com",
+      "telemedicinamorsch.com.br",
+      "agilize.com.br",
+      "hostgator.com.br",
+      "usebip.com"
+    ],
+    "padroes": {
+      "termos_mais_usados": [
+        "CFM / normas do CFM / ética médica (presente em quase todas as páginas)",
+        "Resolução CFM nº 2.336/2023 (só nas páginas mais fortes: agenciadomedico /google-ads, agilize, medway; WE só no blog)",
+        "RQE e CRM do médico no anúncio",
+        "Google Ads",
+        "Google Meu Negócio / Perfil da Empresa no Google",
+        "SEO / SEO local",
+        "tráfego pago / Meta Ads / Instagram Ads",
+        "landing page",
+        "pacientes particulares / agendamentos / agenda cheia",
+        "CRM (sistema) e secretária virtual com IA",
+        "jornada do paciente (blogs e hcagencia)",
+        "funil (pouco usado em páginas de agência)",
+        "Google Partner / Meta Business Partner",
+        "'perto de mim' + especialidade + cidade",
+        "2026 no H2 ('Por que investir em ... em 2026?')"
+      ],
+      "perguntas_mais_comuns": [
+        "O que é marketing médico?",
+        "Médico pode fazer propaganda / anunciar no Google e no Instagram? (segue as regras do CFM?)",
+        "O que é permitido e o que não é permitido no marketing médico?",
+        "Vale a pena contratar uma agência de marketing para médicos?",
+        "O que funciona melhor para médicos: Google ou Instagram?",
+        "Qual o melhor canal para resultados a curto / médio / longo prazo?",
+        "Quanto custa / qual o valor ideal de verba para anúncios?",
+        "Como se divide o pagamento (gestão x verba paga ao Google/Meta)?",
+        "Como é feita a contratação? Tem multa ou fidelidade?",
+        "Emitem nota fiscal? Qual a forma de pagamento?",
+        "Marketing médico é só postar no Instagram?",
+        "Como começar o marketing médico no consultório?",
+        "Ainda vale a pena ter um site?",
+        "Em quanto tempo aparecem os primeiros resultados?",
+        "Funciona para qualquer especialidade?",
+        "Existe garantia de resultado?"
+      ],
+      "secoes_comuns": [
+        "Hero com H1 = palavra-chave exata + CTA de WhatsApp",
+        "Números da agência (médicos atendidos, anos, verba gerenciada)",
+        "Lista de serviços com links para páginas próprias",
+        "Bloco 'ética / dentro das normas do CFM'",
+        "Cases com especialidade, cidade e métrica",
+        "Depoimentos de médicos com nome e especialidade + widget de avaliações do Google (Trustindex)",
+        "Como funciona (3-4 passos)",
+        "FAQ de 6 a 17 perguntas",
+        "Teasers do blog",
+        "Rodapé com links para especialidades e cidades/estados",
+        "CTA final de diagnóstico/análise/consultoria"
+      ],
+      "lacunas_para_adr": [
+        "Quase ninguém tem JSON-LD visível (só a Agilize, com FAQPage + BlogPosting + AggregateRating): ADR pode marcar Organization/ProfessionalService, Service, FAQPage, BreadcrumbList e Article em todas as páginas e sair na frente",
+        "Citação explícita da Resolução CFM nº 2.336/2023 com explicação prática (o que pode: preço, antes e depois com critério, equipamentos; o que não pode) nas páginas de serviço — a maioria só diz 'dentro das normas do CFM'",
+        "Página dedicada a 'Meta Ads para médicos' — nenhum dos domínios lidos tem uma página forte e específica (Rizzo tem /meta-ads/, mas não carregou; Astra usa 'Facebook Ads'); a ADR pode explicar a lógica público frio → LP/formulário e WhatsApp só no remarketing",
+        "Página 'publicidade médica' feita por agência: a SERP é dominada por Medway (artigo de 2023, não atualizado), conselhos e escritórios de advocacia",
+        "'Marketing para clínica de estética' e 'marketing odontológico' têm SERP fraca (HostGator 2021, loja de jalecos, página com Lorem ipsum): espaço para LPs completas com CFO/CRO, ANVISA e regras de antes e depois",
+        "LGPD quase não aparece (só no rodapé da E-saúde): dados de paciente no WhatsApp/CRM e formulários são um diferencial de confiança",
+        "CRM + atendimento/comercial (Kommo, secretária, script) só aparece na HC Agência (SP) e como produto na WE/Agência do Médico: a ADR, parceira Kommo e com a parceria comercial, pode ter página 'do clique à consulta' / 'CRM para clínicas'",
+        "Cases datados com especialidade, cidade, verba e custo por agendamento (modelo Agência do Médico/Rizzo) e modelo de relatório mensal explicado em linguagem simples",
+        "FAQ comercial honesta: como se divide gestão x verba, verba mínima, tempo para resultados, garantia, fidelidade — perguntas que os médicos buscam e poucas páginas respondem bem",
+        "Explicar os dias de veiculação/sazonalidade (seg-qua) e dados próprios de busca ('[especialidade] perto de mim') — ninguém publica dados de desempenho por dia da semana",
+        "Página sobre AEO/ser recomendado por ChatGPT existe só na WTA3: espaço para a ADR",
+        "Psiquiatria e odontologia aparecem como especialidades atendidas por concorrentes; ADR ainda não tem essas LPs no ar",
+        "Autor/responsável nomeado com credenciais nas páginas (E-E-A-T): páginas de agência raramente mostram quem escreveu",
+        "Google Meu Negócio da própria ADR: concorrentes exibem avaliações do Google como prova; a ADR ainda não tem perfil"
+      ],
+      "o_que_evitar": [
+        "Usar 'grátis/gratuito' em ofertas (comum: 'Landing Page grátis', 'diagnóstico gratuito', 'eBook grátis') — fora do posicionamento da ADR",
+        "Selos autodeclarados como 'CFM Compliant' (o CFM não certifica agências) e ROI médio sem metodologia (+340%)",
+        "Páginas de cidade/especialidade que são cópia da home com troca de palavra (WTA3) — risco de conteúdo duplicado/thin",
+        "Resíduos de template, contadores '+1', erros de digitação e alts repetidos (Agência do Dentista, WTA3)",
+        "Títulos de seção sem tag de heading (KOS) e H1 duplicado/caixa alta genérica",
+        "Promessa de resultado ('consultório cheio', 'agenda lotada') sem contexto — o próprio CFM veda promessa de resultado ao paciente; para o médico, preferir números com data e explicação",
+        "Jargão sem explicação (ROAS, CAC, ROI) — os médicos leigos não entendem",
+        "Datas inconsistentes (14 vs 15 anos, 2006 vs 2007) e conteúdos com ano antigo no URL"
+      ]
+    }
+  },
+  "paginas_do_site": [
+    {
+      "url": "/blog/anuncios-no-instagram-para-medicos/",
+      "title": "Anúncios no Instagram para médicos: como fazer | ADR",
+      "description": "Anúncios no Instagram para médicos: como escolher objetivo, público e criativo, para onde levar o contato e o que as regras do CFM e da Meta vedam.",
+      "h1": "Anúncios no Instagram para médicos: objetivo, público, criativo e regras",
+      "faq": [
+        "Impulsionar um post é a mesma coisa que anunciar no Instagram?",
+        "Posso usar foto de antes e depois nos anúncios?",
+        "Por que meu anúncio gera muitas mensagens e poucos agendamentos?"
+      ]
+    },
+    {
+      "url": "/blog/atendimento-whatsapp-para-clinicas/",
+      "title": "Atendimento no WhatsApp para clínicas: boas práticas | ADR",
+      "description": "Tempo de resposta, primeira mensagem, como responder à pergunta de preço, triagem, áudio e cuidados com dados de saúde: boas práticas para o WhatsApp da clínica.",
+      "h1": "Atendimento no WhatsApp para clínicas: como converter interessados em agendamentos",
+      "faq": [
+        "Devo responder o valor da consulta no WhatsApp?",
+        "Posso usar mensagens automáticas e chatbot?",
+        "Quem deve responder o WhatsApp: a recepção ou alguém dedicado?"
+      ]
+    },
+    {
+      "url": "/blog/autoridade-digital-para-medicos/",
+      "title": "Autoridade digital para médicos: como construir | ADR Marketing",
+      "description": "O que é autoridade digital na medicina, por que ela antecede a conversão, os cinco pilares (identidade, conteúdo, consistência, prova permitida e canais) e os erros comuns.",
+      "h1": "Autoridade digital para médicos: como desenvolver presença e reconhecimento sem ferir as normas",
+      "faq": [
+        "Preciso postar todo dia para ter autoridade digital?",
+        "Posso mostrar depoimentos de pacientes e resultados?",
+        "Autoridade digital substitui anúncio?"
+      ]
+    },
+    {
+      "url": "/blog/avaliacoes-no-google-para-clinicas/",
+      "title": "Avaliações no Google para clínicas | ADR Marketing",
+      "description": "Avaliações no Google para clínicas: como pedir aos pacientes, responder sem expor dados de saúde, lidar com críticas e o que nunca fazer com reviews.",
+      "h1": "Avaliações no Google para clínicas: como pedir, responder e lidar com críticas",
+      "faq": [
+        "Posso apagar uma avaliação negativa da minha clínica?",
+        "Posso dar desconto ou brinde para o paciente avaliar?",
+        "Como responder quando o paciente cita o tratamento na avaliação?"
+      ]
+    },
+    {
+      "url": "/blog/branding-medico/",
+      "title": "Branding médico: como construir a sua marca | ADR",
+      "description": "Branding médico: o que é, como definir posicionamento, linguagem e identidade visual do consultório e manter tudo coerente, dentro da publicidade médica.",
+      "h1": "Branding médico: como construir uma marca pessoal que o paciente reconhece e escolhe",
+      "faq": [
+        "Branding médico é só para quem atende particular?",
+        "Preciso de um logotipo para ter uma marca médica?",
+        "Quanto tempo leva para construir uma marca médica?"
+      ]
+    },
+    {
+      "url": "/blog/captacao-de-pacientes/",
+      "title": "Captação de pacientes: guia para clínicas | ADR Marketing",
+      "description": "Captação de pacientes na prática: canais, papel de cada um, atendimento que converte e indicadores para montar um sistema previsível.",
+      "h1": "Captação de pacientes: como clínicas e consultórios geram demanda e transformam contato em consulta",
+      "faq": [
+        "Qual é o melhor canal para captação de pacientes?",
+        "Captação de pacientes é a mesma coisa que marketing médico?",
+        "Posso coletar informações de saúde no formulário de captação?"
+      ]
+    },
+    {
+      "url": "/blog/como-anunciar-no-google-ads-sendo-medico/",
+      "title": "Como anunciar no Google Ads sendo médico | ADR Marketing",
+      "description": "Como anunciar no Google Ads sendo médico: estrutura da conta, palavras-chave, anúncios dentro das regras, página de destino e o que medir.",
+      "h1": "Como anunciar no Google Ads sendo médico: da conta ao primeiro agendamento",
+      "faq": [
+        "Preciso de CNPJ para anunciar no Google Ads como médico?",
+        "Posso usar o nome de uma doença como palavra-chave?",
+        "Quanto preciso investir para começar no Google Ads?"
+      ]
+    },
+    {
+      "url": "/blog/como-atrair-pacientes-particulares/",
+      "title": "Como atrair pacientes particulares para a clínica | ADR Marketing",
+      "description": "Por que a indicação não escala, de onde vem o paciente particular hoje e como posicionamento, tráfego pago e atendimento se combinam para encher a agenda.",
+      "h1": "Como atrair pacientes particulares para clínicas e consultórios médicos",
+      "faq": [
+        "Qual é a forma mais rápida de atrair pacientes particulares?",
+        "Clínica pequena consegue competir com clínicas grandes na captação?",
+        "Preciso de redes sociais para atrair pacientes particulares?"
+      ]
+    },
+    {
+      "url": "/blog/como-aumentar-o-valor-da-consulta/",
+      "title": "Como aumentar o valor da consulta médica | ADR Marketing",
+      "description": "Como aumentar o valor da consulta com segurança: o que justifica o preço, como testar o reajuste e preparar a recepção para objeções.",
+      "h1": "Como aumentar o valor da consulta sem perder pacientes: posicionamento, experiência e comunicação do reajuste",
+      "faq": [
+        "Posso divulgar o valor da consulta no Instagram ou no site?",
+        "Devo aumentar o valor para os pacientes antigos também?",
+        "Como saber se o aumento deu certo?"
+      ]
+    },
+    {
+      "url": "/blog/como-avaliar-campanhas-de-marketing-medico/",
+      "title": "Como avaliar campanhas de marketing médico | ADR Marketing",
+      "description": "Cliques e leads não pagam a clínica. Veja quais indicadores avaliar em cada etapa, como montar o relatório mensal mínimo e quais perguntas fazer à agência.",
+      "h1": "Como avaliar campanhas de marketing médico: indicadores e método",
+      "faq": [
+        "Qual é o indicador mais importante de uma campanha médica?",
+        "Em quanto tempo uma campanha médica mostra resultado?",
+        "Como saber se a agência está entregando?"
+      ]
+    },
+    {
+      "url": "/blog/como-deixar-de-depender-do-convenio/",
+      "title": "Como sair do convênio médico com segurança | ADR Marketing",
+      "description": "Como sair do convênio médico com segurança: quando faz sentido, como planejar a transição, gerar demanda particular e preparar a recepção.",
+      "h1": "Como sair do convênio médico sem esvaziar a agenda: transição gradual para o atendimento particular",
+      "faq": [
+        "Preciso avisar os pacientes antes de sair de um convênio?",
+        "Vale a pena oferecer recibo para reembolso do plano?",
+        "Quanto tempo leva para trocar convênio por particular?"
+      ]
+    },
+    {
+      "url": "/blog/como-escolher-agencia-de-marketing-medico/",
+      "title": "Agência de marketing médico: como escolher | ADR Marketing",
+      "description": "Agência de marketing médico: o que perguntar antes de contratar, sinais de alerta, conhecimento de publicidade médica e o que exigir no contrato.",
+      "h1": "Agência de marketing médico: critérios honestos para escolher quem vai cuidar da captação da sua clínica",
+      "faq": [
+        "Agência especializada em saúde é melhor que agência generalista?",
+        "Devo exigir que as contas de anúncio fiquem no nome da clínica?",
+        "Quanto tempo devo esperar antes de avaliar a agência?"
+      ]
+    },
+    {
+      "url": "/blog/como-reduzir-faltas-de-pacientes/",
+      "title": "Como reduzir faltas de pacientes na clínica | ADR Marketing",
+      "description": "Como reduzir faltas de pacientes: confirmação na véspera, lembretes, política de remarcação, lista de espera e ajustes no agendamento.",
+      "h1": "Como reduzir faltas de pacientes: confirmação, lembretes, regras de remarcação e lista de espera",
+      "faq": [
+        "Posso cobrar do paciente que falta sem avisar?",
+        "Com quanto tempo de antecedência devo confirmar a consulta?",
+        "Lembrete automático resolve o problema das faltas?"
+      ]
+    },
+    {
+      "url": "/blog/crm-para-clinicas/",
+      "title": "CRM para clínicas: quando usar e como implantar | ADR",
+      "description": "CRM para clínicas: o que é, diferença para o prontuário, quando sair da planilha, etapas do funil, campos mínimos, cuidados com LGPD e implantação.",
+      "h1": "CRM para clínicas: o que é, quando vale a pena e como implantar sem travar a recepção",
+      "faq": [
+        "CRM e sistema de prontuário são a mesma coisa?",
+        "Planilha não basta?",
+        "Preciso de um CRM integrado ao WhatsApp?"
+      ]
+    },
+    {
+      "url": "/blog/depoimentos-de-pacientes-na-publicidade-medica/",
+      "title": "Depoimento de paciente na publicidade médica | ADR",
+      "description": "Depoimento de paciente na publicidade médica: o que a Resolução CFM 2.336/2023 admite, o que segue vedado e os cuidados com LGPD e avaliações.",
+      "h1": "Depoimento de paciente na publicidade médica: o que a norma admite, o que continua vedado e como agir na prática",
+      "faq": [
+        "Posso repostar nos stories o elogio que um paciente me mandou?",
+        "Posso usar depoimento de paciente em anúncio pago?",
+        "O que fazer se um paciente publicar algo sobre mim e me marcar?"
+      ]
+    },
+    {
+      "url": "/blog/do-anuncio-ao-agendamento/",
+      "title": "Do anúncio ao agendamento: a jornada na clínica | ADR Marketing",
+      "description": "Um mapa da jornada em cinco etapas — anúncio, página, primeiro contato, triagem e agendamento — com o que cada uma precisa entregar e onde as clínicas costumam quebrar.",
+      "h1": "Do anúncio ao agendamento: como estruturar a jornada entre campanha, atendimento e agenda",
+      "faq": [
+        "Anúncio deve levar para o site ou direto para o WhatsApp?",
+        "Quem deve ser o dono da jornada dentro da clínica?"
+      ]
+    },
+    {
+      "url": "/blog/doctoralia-vale-a-pena/",
+      "title": "Doctoralia vale a pena para médicos? | ADR Marketing",
+      "description": "Doctoralia vale a pena para médicos? Comparação neutra entre plataformas de agendamento, Perfil no Google, site próprio e anúncios, com limites de cada um.",
+      "h1": "Doctoralia vale a pena para médicos? Plataformas de agendamento, Google, site e anúncios comparados",
+      "faq": [
+        "Doctoralia é pago?",
+        "Posso usar Doctoralia e Perfil da Empresa no Google ao mesmo tempo?",
+        "Se eu sair da plataforma, perco os pacientes que vieram por ela?"
+      ]
+    },
+    {
+      "url": "/blog/estrategias-de-marketing-medico/",
+      "title": "Estratégias de marketing médico: passo a passo | ADR",
+      "description": "Estratégias de marketing médico em ordem: posicionamento, Google, site, conteúdo, anúncios, WhatsApp, follow-up e indicadores, dentro das normas do CFM.",
+      "h1": "Estratégias de marketing médico: o passo a passo para atrair pacientes particulares com método",
+      "faq": [
+        "Preciso fazer todas as estratégias ao mesmo tempo?",
+        "Marketing médico funciona para quem está começando o consultório?",
+        "O médico pode fazer marketing sozinho ou precisa de agência?"
+      ]
+    },
+    {
+      "url": "/blog/follow-up-de-pacientes/",
+      "title": "Follow-up de pacientes: como acompanhar interessados | ADR Marketing",
+      "description": "Como organizar o acompanhamento de contatos que não agendaram: cadência, canais, mensagens úteis, registro em planilha ou CRM e os limites da LGPD e da publicidade médica.",
+      "h1": "Follow-up de pacientes: como acompanhar quem demonstrou interesse, com respeito à privacidade",
+      "faq": [
+        "Quantas vezes posso entrar em contato com quem não agendou?",
+        "Preciso de um CRM para fazer follow-up?",
+        "Posso oferecer desconto para quem não agendou?"
+      ]
+    },
+    {
+      "url": "/blog/google-ads-ou-meta-ads-para-medicos/",
+      "title": "Google Ads ou Meta Ads para médicos: qual usar? | ADR Marketing",
+      "description": "Comparação prática entre Google Ads e Meta Ads no marketing médico: intenção, tipo de procedimento, custo por contato, restrições das plataformas e quando combinar os dois.",
+      "h1": "Google Ads ou Meta Ads para médicos: qual canal faz sentido para a sua clínica",
+      "faq": [
+        "Google Ads é mais caro que Meta Ads para médicos?",
+        "Posso anunciar qualquer procedimento médico nas duas plataformas?",
+        "Quanto tempo leva para saber se um canal funciona?"
+      ]
+    },
+    {
+      "url": "/blog/google-meu-negocio-para-medicos/",
+      "title": "Google Meu Negócio para médicos: guia prático | ADR",
+      "description": "Google Meu Negócio para médicos: como criar e verificar o perfil, escolher categoria, montar a descrição e manter tudo atualizado sem ferir as regras.",
+      "h1": "Google Meu Negócio para médicos: como criar, verificar e manter o perfil do consultório",
+      "faq": [
+        "Médico que atende em vários consultórios pode ter um perfil em cada endereço?",
+        "Quanto custa ter o consultório no Google Maps?",
+        "Posso colocar 'melhor dermatologista' ou o nome da especialidade no nome do perfil?"
+      ]
+    },
+    {
+      "url": "/blog/",
+      "title": "Conteúdos sobre marketing médico para clínicas | ADR Marketing",
+      "description": "Artigos da ADR Marketing sobre captação de pacientes particulares, Google Ads e Meta Ads, atendimento no WhatsApp, indicadores e publicidade médica.",
+      "h1": "Marketing médico explicado com método",
+      "faq": []
+    },
+    {
+      "url": "/blog/indicadores-de-marketing-para-clinicas/",
+      "title": "Indicadores de marketing para clínicas: o que acompanhar | ADR",
+      "description": "Os indicadores que mostram onde a clínica ganha e perde paciente: custo por contato, tempo de resposta, taxa de qualificação, agendamento, comparecimento e custo por paciente.",
+      "h1": "Indicadores de marketing para clínicas: aquisição, atendimento e conversão comercial",
+      "faq": [
+        "Quais indicadores uma clínica pequena deve acompanhar primeiro?",
+        "Com que frequência devo olhar os indicadores?",
+        "Como saber de qual canal veio cada paciente?"
+      ]
+    },
+    {
+      "url": "/blog/instagram-para-medicos/",
+      "title": "Instagram para médicos: como usar com estratégia | ADR",
+      "description": "Instagram para médicos: como montar o perfil, escolher temas, manter constância, responder directs e ligar o conteúdo à agenda, dentro da ética.",
+      "h1": "Instagram para médicos: como transformar o perfil em autoridade e em consultas, dentro da ética",
+      "faq": [
+        "Quantas vezes por semana o médico precisa postar no Instagram?",
+        "Ter muitos seguidores significa ter mais pacientes?",
+        "Posso responder dúvidas de pacientes pelo direct do Instagram?"
+      ]
+    },
+    {
+      "url": "/blog/landing-page-para-medicos/",
+      "title": "Landing page para médicos: o que ela precisa ter | ADR",
+      "description": "Landing page para médicos: o que colocar em cada dobra, como pedir contato sem expor dados de saúde e o que a publicidade médica exige na página.",
+      "h1": "Landing page para médicos: estrutura, conteúdo e cuidados para receber o paciente do anúncio",
+      "faq": [
+        "Posso usar o site da clínica em vez de uma landing page?",
+        "Formulário ou WhatsApp: qual é melhor na landing page?",
+        "Quem deve construir a landing page da clínica?"
+      ]
+    },
+    {
+      "url": "/blog/marketing-para-clinica-odontologica/",
+      "title": "Marketing para clínica odontológica: por onde começar | ADR",
+      "description": "Marketing para clínica odontológica: urgência x eletivo, Google Ads, Instagram, regras do CFO e como a recepção transforma avaliação em tratamento.",
+      "h1": "Marketing para clínica odontológica: como atrair pacientes para tratamentos particulares e converter avaliação em tratamento",
+      "faq": [
+        "Posso divulgar fotos de antes e depois dos meus pacientes?",
+        "Devo anunciar o preço do implante ou do clareamento?",
+        "Por que tenho muitas avaliações e poucos tratamentos fechados?"
+      ]
+    },
+    {
+      "url": "/blog/marketing-para-consultorio-medico/",
+      "title": "Marketing para consultório médico: guia prático | ADR",
+      "description": "Marketing para consultório médico: o que fazer antes de anunciar, qual canal escolher primeiro, o papel da secretária e como medir com a agenda do médico.",
+      "h1": "Marketing para consultório médico: como um consultório pequeno atrai pacientes particulares sem virar agência de si mesmo",
+      "faq": [
+        "Consultório pequeno precisa de agência de marketing?",
+        "Vale a pena anunciar se a agenda já está quase cheia?",
+        "O médico precisa aparecer nos vídeos e anúncios?"
+      ]
+    },
+    {
+      "url": "/blog/medico-pode-divulgar-valor-da-consulta/",
+      "title": "Médico pode divulgar o valor da consulta? | ADR Marketing",
+      "description": "Médico pode divulgar o valor da consulta? Sim, com limites. Veja o que a Resolução CFM 2.336/2023 admite e como informar o preço no WhatsApp.",
+      "h1": "Médico pode divulgar o valor da consulta? O que a norma permite e como informar o paciente",
+      "faq": [
+        "Posso colocar o valor da consulta na bio do Instagram ou no anúncio?",
+        "Posso dar desconto para quem paga no Pix ou à vista?",
+        "O paciente pode desistir depois de saber o preço. Vale a pena informar logo?"
+      ]
+    },
+    {
+      "url": "/blog/o-que-medico-pode-postar-no-instagram/",
+      "title": "O que médico pode postar no Instagram | ADR Marketing",
+      "description": "O que médico pode postar no Instagram: tipos de conteúdo permitidos, o que exige cuidado, o que evitar e como revisar cada post antes de publicar.",
+      "h1": "O que médico pode postar no Instagram: conteúdos permitidos, cuidados e limites",
+      "faq": [
+        "Médico pode mostrar o valor da consulta no Instagram?",
+        "Posso responder dúvidas de pacientes nos comentários e no direct?",
+        "Preciso colocar CRM e RQE em todos os posts?"
+      ]
+    },
+    {
+      "url": "/blog/palavras-chave-negativas-para-clinicas/",
+      "title": "Palavras-chave negativas para clínicas | ADR Marketing",
+      "description": "Palavras-chave negativas no Google Ads para clínica: o que bloquear, como montar listas por categoria e como revisar os termos de pesquisa toda semana.",
+      "h1": "Palavras-chave negativas no Google Ads para clínicas: lista inicial e rotina de revisão",
+      "faq": [
+        "Com que frequência devo revisar os termos de pesquisa?",
+        "Palavras negativas funcionam com sinônimos e plurais?",
+        "Devo negativar a palavra 'preço' ou 'valor'?"
+      ]
+    },
+    {
+      "url": "/blog/politica-de-saude-do-google-ads/",
+      "title": "Política de saúde do Google Ads para médicos | ADR Marketing",
+      "description": "Política de saúde do Google Ads: o que ela restringe, por que anúncios de clínicas são reprovados ou limitados e como corrigir sem arriscar a conta.",
+      "h1": "Google Ads e saúde: como a política da plataforma afeta os anúncios de médicos e clínicas",
+      "faq": [
+        "Por que meu anúncio de clínica aparece como aprovado, mas com limitação?",
+        "Posso citar o nome de um medicamento no anúncio da minha clínica?",
+        "Contestar uma reprovação pode prejudicar a conta?"
+      ]
+    },
+    {
+      "url": "/blog/por-que-clinicas-perdem-agendamentos/",
+      "title": "Por que clínicas recebem contatos e não agendam | ADR Marketing",
+      "description": "Os sete pontos onde o contato se perde entre o anúncio e a agenda: demora, resposta de preço, triagem ausente, falta de follow-up e mais — e como corrigir cada um.",
+      "h1": "Por que clínicas recebem contatos, mas não convertem em agendamentos",
+      "faq": [
+        "Quantos contatos uma clínica deveria converter em agendamento?",
+        "O problema é o anúncio ou o atendimento?",
+        "Vale a pena contratar uma pessoa só para responder o WhatsApp?"
+      ]
+    },
+    {
+      "url": "/blog/programa-de-indicacao-de-pacientes/",
+      "title": "Como conseguir indicação de pacientes | ADR Marketing",
+      "description": "Como conseguir indicação de pacientes de forma ética: experiência que gera lembrança, momento certo de pedir, indicação entre colegas e o que a norma veda.",
+      "h1": "Como conseguir indicação de pacientes: um programa de indicação ético, sem prêmio e sem depender da sorte",
+      "faq": [
+        "Posso dar desconto para o paciente que indicar outro?",
+        "Posso pagar comissão a outro médico que me encaminha pacientes?",
+        "Como saber quantos pacientes chegam por indicação?"
+      ]
+    },
+    {
+      "url": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/",
+      "title": "Publicidade médica: o que pode e o que não pode | ADR",
+      "description": "Publicidade médica na prática: situações comuns de anúncios, Instagram, site e WhatsApp, com o que costuma ser permitido e o que continua vedado pelo CFM.",
+      "h1": "Publicidade médica na prática: o que pode e o que não pode em situações do dia a dia",
+      "faq": [
+        "Médico pode fazer anúncio pago no Instagram e no Google?",
+        "Posso dizer que sou especialista sem ter RQE?",
+        "Quem confere se o meu anúncio está dentro da norma: eu ou a agência?"
+      ]
+    },
+    {
+      "url": "/blog/quanto-custa-agencia-de-marketing-medico/",
+      "title": "Quanto custa marketing médico? Modelos de cobrança | ADR",
+      "description": "Quanto custa marketing médico: fee da agência x verba de mídia, o que é setup, o que encarece o projeto e como comparar propostas com justiça.",
+      "h1": "Quanto custa marketing médico: como funcionam fee mensal, verba de mídia, setup e contrato de uma agência",
+      "faq": [
+        "A verba de anúncios está incluída no valor da agência?",
+        "Por que algumas agências cobram setup?",
+        "Marketing médico mais caro dá mais resultado?"
+      ]
+    },
+    {
+      "url": "/blog/quanto-custa-um-paciente-no-google-ads/",
+      "title": "Quanto custa um paciente no Google Ads? | ADR Marketing",
+      "description": "Custo por paciente no Google Ads: como calcular do clique ao comparecimento, o que encarece cada etapa e por que olhar só o clique engana.",
+      "h1": "Custo por paciente no Google Ads: como calcular quanto custa conquistar um paciente pela busca",
+      "faq": [
+        "Qual é um custo por paciente bom no Google Ads?",
+        "Por que o custo por clique da minha especialidade é tão alto?",
+        "Como medir quantos pacientes vieram do Google Ads se o contato chega pelo WhatsApp?"
+      ]
+    },
+    {
+      "url": "/blog/quanto-investir-em-marketing-medico/",
+      "title": "Quanto investir em marketing médico: como planejar | ADR Marketing",
+      "description": "Não existe valor único. Veja as variáveis que definem a verba de marketing médico, a diferença entre mídia e honorário, como começar com um teste e quando ajustar.",
+      "h1": "Quanto investir em marketing médico: como médicos e clínicas planejam a verba",
+      "faq": [
+        "Existe um valor mínimo para começar a anunciar?",
+        "Marketing médico deve ser uma porcentagem do faturamento?",
+        "O que acontece com a verba se eu pausar a campanha?"
+      ]
+    },
+    {
+      "url": "/blog/regras-de-publicidade-medica-cfm/",
+      "title": "Regras de publicidade médica: Resolução CFM 2.336/2023 | ADR",
+      "description": "Resumo educativo da Resolução CFM nº 2.336/2023: vigência, identificação obrigatória, imagens de pacientes, preços, redes sociais e o que continua proibido.",
+      "h1": "Regras de publicidade médica: o que a Resolução CFM nº 2.336/2023 permite e o que continua vedado",
+      "faq": [
+        "A Resolução CFM nº 2.336/2023 já está em vigor?",
+        "O médico pode divulgar o valor da consulta?",
+        "Quem responde por um anúncio irregular: o médico ou a agência?"
+      ]
+    },
+    {
+      "url": "/blog/remarketing-para-clinicas/",
+      "title": "Remarketing para clínicas: como funciona | ADR Marketing",
+      "description": "Remarketing para clínicas: como montar públicos de quem visitou o site ou interagiu no Instagram, que mensagem usar e quais limites respeitar.",
+      "h1": "Remarketing para clínicas: como voltar a falar com quem já demonstrou interesse",
+      "faq": [
+        "Remarketing para médicos é permitido no Google Ads?",
+        "Posso subir a lista de telefones dos meus pacientes para fazer remarketing?",
+        "Por quanto tempo vale mostrar anúncios para quem visitou o site?"
+      ]
+    },
+    {
+      "url": "/blog/script-de-atendimento-para-clinicas/",
+      "title": "Script de atendimento para clínicas: modelos | ADR Marketing",
+      "description": "Script de atendimento para clínica: modelos de primeira resposta, triagem, valor da consulta, objeções e retorno, para WhatsApp e telefone.",
+      "h1": "Script de atendimento para clínicas: modelos de conversa do primeiro contato ao agendamento",
+      "faq": [
+        "Script não deixa o atendimento robótico?",
+        "Devo informar o valor da consulta logo na primeira mensagem?",
+        "O mesmo script serve para WhatsApp e telefone?"
+      ]
+    },
+    {
+      "url": "/blog/sdr-para-clinicas/",
+      "title": "SDR para clínicas: o que faz e quando ter | ADR Marketing",
+      "description": "SDR para clínicas: o que faz o pré-atendimento comercial, diferença para a recepção, quando contratar, rotina, metas coerentes e cuidados com ética e LGPD.",
+      "h1": "SDR para clínicas: o que faz, quando a clínica precisa de um e como estruturar a função",
+      "faq": [
+        "SDR é a mesma coisa que telemarketing?",
+        "O SDR pode ser alguém de vendas sem experiência em saúde?",
+        "Vale terceirizar o SDR da clínica?"
+      ]
+    },
+    {
+      "url": "/blog/secretaria-de-consultorio-medico/",
+      "title": "Secretária de consultório médico: o papel | ADR Marketing",
+      "description": "Secretária de consultório médico: o que ela faz além de agendar, perfil para contratar, como treinar, rotina diária, indicadores e cuidados com a LGPD.",
+      "h1": "Secretária de consultório médico: funções, perfil e rotina de quem transforma contato em consulta",
+      "faq": [
+        "A secretária precisa ter experiência na área da saúde?",
+        "Uma secretária dá conta do WhatsApp, do telefone e da recepção ao mesmo tempo?",
+        "Devo pagar comissão por agendamento para a secretária?"
+      ]
+    },
+    {
+      "url": "/blog/seo-local-para-clinicas/",
+      "title": "SEO local para clínicas: como aparecer no Google | ADR Marketing",
+      "description": "Perfil da Empresa no Google, consistência de dados, avaliações, site e conteúdo local: o básico para uma clínica aparecer quando o paciente pesquisa perto dele.",
+      "h1": "SEO local para clínicas: como melhorar a presença nas pesquisas locais do Google",
+      "faq": [
+        "Quanto tempo leva para uma clínica aparecer no Google Maps?",
+        "Posso pedir avaliações aos meus pacientes?",
+        "SEO local substitui o Google Ads?"
+      ]
+    },
+    {
+      "url": "/blog/site-para-medicos/",
+      "title": "Site para médicos: o que precisa ter | ADR Marketing",
+      "description": "Site para médicos: páginas essenciais, identificação exigida, velocidade no celular, LGPD, SEO básico e o que cobrar de quem cria o site do consultório.",
+      "h1": "Site para médicos: o que um site de consultório precisa ter para gerar confiança e agendamentos",
+      "faq": [
+        "Médico precisa de site se já tem Instagram?",
+        "É melhor um site completo ou uma landing page?",
+        "Posso colocar formulário pedindo sintomas para triagem?"
+      ]
+    },
+    {
+      "url": "/blog/trafego-pago-para-clinica-de-estetica/",
+      "title": "Tráfego pago para clínica de estética | ADR Marketing",
+      "description": "Tráfego pago para clínica de estética: como usar Meta Ads e Google Ads, filtrar o público, seguir a publicidade médica e não depender de promoção.",
+      "h1": "Tráfego pago para clínica de estética médica: como anunciar procedimentos sem cair na guerra de preço",
+      "faq": [
+        "Posso usar fotos de antes e depois nos anúncios da minha clínica de estética?",
+        "Fazer promoção de procedimento estético atrai mais pacientes?",
+        "Meta Ads ou Google Ads: qual é melhor para estética?"
+      ]
+    },
+    {
+      "url": "/blog/youtube-para-medicos/",
+      "title": "YouTube para médicos: como começar | ADR Marketing",
+      "description": "YouTube para médicos: quando o canal vale o esforço, que vídeos gravar, como organizar a produção, o que a publicidade médica exige e como medir resultado.",
+      "h1": "YouTube para médicos: quando vale a pena, o que gravar e como manter o canal sem virar refém dele",
+      "faq": [
+        "Preciso de equipamento profissional para gravar vídeos para o YouTube?",
+        "Com que frequência um médico deve publicar no YouTube?",
+        "Posso responder dúvidas de pacientes nos comentários dos vídeos?"
+      ]
+    },
+    {
+      "url": "/contato/",
+      "title": "Contato e diagnóstico de marketing médico | ADR Marketing",
+      "description": "Fale com a ADR Marketing pelo WhatsApp ou pelo formulário e solicite um diagnóstico comercial prévio, sem compromisso, para a sua clínica. Resposta em horário comercial.",
+      "h1": "Fale com a ADR Marketing",
+      "faq": []
+    },
+    {
+      "url": "/google-ads-para-medicos/",
+      "title": "Google Ads para Médicos e Clínicas | ADR Marketing",
+      "description": "Google Ads para médicos: campanhas de pesquisa por especialidade e região, palavras-chave negativas, política de saúde do Google e foco em agendamento.",
+      "h1": "Google Ads para médicos para quem já está procurando você",
+      "faq": [
+        "Quanto custa o clique no Google Ads para médicos?",
+        "Preciso de site para anunciar no Google?",
+        "Posso anunciar meu nome e especialidade no Google?",
+        "O Google Ads substitui o Perfil da Empresa no Google?",
+        "Médicos podem anunciar no Google Ads?",
+        "Quais erros mais desperdiçam verba no Google Ads médico?",
+        "Google Ads funciona para todas as especialidades?"
+      ]
+    },
+    {
+      "url": "/",
+      "title": "Agência de Marketing Médico para Clínicas e Médicos | ADR",
+      "description": "Assessoria de marketing médico para clínicas e consultórios: posicionamento, autoridade digital e tráfego pago para captar pacientes particulares — do anúncio ao agendamento.",
+      "h1": "Assessoria de Marketing para Clínicas e Médicos",
+      "faq": [
+        "O que faz uma assessoria de marketing para clínicas?",
+        "Tráfego pago funciona para médicos e clínicas?",
+        "Em quanto tempo é possível observar o retorno sobre o investimento (ROI)?",
+        "Como funciona a gestão diária e quem conduzirá o projeto?",
+        "A assessoria atende a qualquer perfil de negócio na área da saúde?",
+        "A atração de pacientes também inclui o atendimento e o agendamento final?",
+        "Médico pode fazer propaganda na internet e nas redes sociais?",
+        "O que funciona melhor para médicos: Google ou Instagram?",
+        "Como se divide o investimento: assessoria e verba de anúncios?",
+        "Existe fidelidade ou multa na contratação?",
+        "A ADR atende clínicas de qualquer cidade?",
+        "Marketing médico é só postar no Instagram?",
+        "Existe garantia de resultado no marketing médico?"
+      ]
+    },
+    {
+      "url": "/marketing-medico/",
+      "title": "Marketing médico: o que é, como fazer e regras do CFM | ADR",
+      "description": "O que é marketing médico, como fazer na prática, o que a Resolução CFM nº 2.336/2023 permite e veda, Google Ads × Meta Ads e como escolher uma agência.",
+      "h1": "Marketing médico: como clínicas e médicos atraem pacientes particulares",
+      "faq": [
+        "O que o marketing médico faz?",
+        "Como fazer marketing médico?",
+        "Quais são as normas do marketing médico?",
+        "O médico pode divulgar o valor da consulta?",
+        "Marketing em saúde e marketing médico são a mesma coisa?",
+        "Qual a melhor forma de atrair pacientes particulares?",
+        "Como escolher uma agência de marketing médico?",
+        "Quanto custa contratar marketing para uma clínica?",
+        "Vale a pena investir em Google Ads para consultório médico?",
+        "Qual a diferença entre tráfego pago e SEO médico?",
+        "Como aumentar os agendamentos de uma clínica?",
+        "O que avaliar antes de contratar uma agência de marketing médico?"
+      ]
+    },
+    {
+      "url": "/marketing-para-cardiologistas/",
+      "title": "Marketing para Cardiologistas | ADR Marketing",
+      "description": "Marketing para cardiologistas: Google Ads para check-up e exames, Meta Ads para prevenção e atendimento que acolhe paciente e família, sem alarmismo.",
+      "h1": "Marketing para cardiologistas que gera consultas particulares",
+      "faq": [
+        "Posso anunciar check-up cardiológico?",
+        "Como lidar com a família que participa da decisão?",
+        "Meta Ads faz sentido para cardiologia?",
+        "O que a ADR mede?"
+      ]
+    },
+    {
+      "url": "/marketing-para-cirurgioes-plasticos/",
+      "title": "Marketing para Cirurgiões Plásticos | ADR Marketing",
+      "description": "Marketing para cirurgiões plásticos: Google Ads para quem busca a cirurgia pelo nome, remarketing no Meta Ads e comercial que leva à consulta de avaliação.",
+      "h1": "Marketing para cirurgiões plásticos que transforma pesquisa em avaliação",
+      "faq": [
+        "Posso mostrar antes e depois nos anúncios?",
+        "Como lidar com o paciente que demora meses para decidir?",
+        "Meta Ads faz sentido para cirurgia plástica?",
+        "O que a ADR mede?"
+      ]
+    },
+    {
+      "url": "/marketing-para-clinicas/",
+      "title": "Marketing para Clínicas Médicas | ADR Marketing",
+      "description": "Marketing para clínicas médicas: posicionamento, Google Ads, Meta Ads e estruturação da recepção para atrair pacientes particulares e reduzir perdas no WhatsApp.",
+      "h1": "Marketing para clínicas do anúncio à recepção",
+      "faq": [
+        "O marketing da clínica deve focar na marca da clínica ou nos médicos?",
+        "Como dividir a verba entre especialidades?",
+        "A ADR treina a recepção da clínica?",
+        "Clínica pequena também pode ter esse trabalho?",
+        "O que é permitido no marketing digital para clínicas?"
+      ]
+    },
+    {
+      "url": "/marketing-para-dentistas/",
+      "title": "Marketing Odontológico para Dentistas e Clínicas | ADR",
+      "description": "Marketing odontológico para dentistas e clínicas: Google Ads para implantes, lentes e alinhadores, Meta Ads e comercial que transforma avaliação em tratamento.",
+      "h1": "Marketing para dentistas que lota a agenda de avaliação",
+      "faq": [
+        "Posso anunciar implante ou lente de contato dental?",
+        "Como lidar com o paciente que só pergunta o preço?",
+        "Meta Ads faz sentido para odontologia?",
+        "O que a ADR mede?"
+      ]
+    },
+    {
+      "url": "/marketing-para-dermatologistas/",
+      "title": "Marketing para Dermatologistas | ADR Marketing",
+      "description": "Marketing para dermatologistas: campanhas separadas para consulta clínica e procedimentos, Google Ads, Meta Ads e roteiro para a pergunta de valor.",
+      "h1": "Marketing para dermatologistas que enche a agenda certa",
+      "faq": [
+        "Posso anunciar procedimentos estéticos?",
+        "Vale separar consulta clínica e estética nas campanhas?",
+        "Meta Ads faz sentido para dermatologia?",
+        "O que a ADR mede?"
+      ]
+    },
+    {
+      "url": "/marketing-para-endocrinologistas/",
+      "title": "Marketing para Endocrinologistas | ADR Marketing",
+      "description": "Marketing para endocrinologistas: Google Ads, Meta Ads e atendimento para atrair pacientes particulares de acompanhamento, dentro das regras do CFM.",
+      "h1": "Marketing para endocrinologistas que gera acompanhamento contínuo",
+      "faq": [
+        "Marketing para endocrinologista funciona com tanta concorrência de convênio?",
+        "Posso anunciar tratamento para obesidade?",
+        "Qual canal faz mais sentido: Google ou Instagram?",
+        "Como medir se o investimento está dando retorno?"
+      ]
+    },
+    {
+      "url": "/marketing-para-ginecologistas/",
+      "title": "Marketing para Ginecologistas | ADR Marketing",
+      "description": "Marketing para ginecologistas: posicionamento acolhedor, Google Ads e Meta Ads conforme o CFM e uma recepção preparada para agendar pacientes particulares.",
+      "h1": "Marketing para ginecologistas que constrói vínculo e agenda",
+      "faq": [
+        "Faz sentido anunciar procedimentos como inserção de DIU?",
+        "Como o marketing ajuda a reduzir a dependência do convênio?",
+        "A comunicação no Instagram ajuda a agenda?",
+        "O que muda no atendimento da recepção?"
+      ]
+    },
+    {
+      "url": "/marketing-para-neurologistas/",
+      "title": "Marketing para Neurologistas | ADR Marketing",
+      "description": "Marketing para neurologistas: Google Ads para enxaqueca, sono e memória, comunicação sem alarmismo e atendimento que acolhe paciente e família.",
+      "h1": "Marketing para neurologistas que acolhe e agenda",
+      "faq": [
+        "Posso anunciar consulta para enxaqueca ou distúrbios do sono?",
+        "Quem costuma agendar a consulta de neurologia: o paciente ou um familiar?",
+        "Instagram ajuda o neurologista a ter agenda particular?",
+        "Como a recepção deve tratar uma mensagem que parece urgência neurológica?"
+      ]
+    },
+    {
+      "url": "/marketing-para-nutrologos/",
+      "title": "Marketing para Nutrólogos | ADR Marketing",
+      "description": "Marketing para nutrólogos sem promessa de resultado: posicionamento médico, Google Ads e Meta Ads dentro das regras do CFM e das plataformas.",
+      "h1": "Marketing para nutrólogos sem promessas, com agenda cheia",
+      "faq": [
+        "Como me diferenciar de influenciadores e dietas da moda?",
+        "Posso mostrar resultados de pacientes?",
+        "Google ou Instagram para nutrologia?",
+        "Como a ADR trata as expectativas do paciente no atendimento?"
+      ]
+    },
+    {
+      "url": "/marketing-para-ortopedistas/",
+      "title": "Marketing para Ortopedistas | ADR Marketing",
+      "description": "Marketing para ortopedistas: Google Ads para dor e lesões por região do corpo, Meta Ads para autoridade e recepção que agenda rápido o paciente particular.",
+      "h1": "Marketing para ortopedistas que atrai o paciente particular",
+      "faq": [
+        "Vale anunciar por região do corpo, como joelho ou ombro?",
+        "Como atrair paciente particular se a maioria chega pelo convênio?",
+        "Meta Ads faz sentido para ortopedia?",
+        "O que a ADR mede?"
+      ]
+    },
+    {
+      "url": "/marketing-para-psiquiatras/",
+      "title": "Marketing para Psiquiatras | ADR Marketing",
+      "description": "Marketing para psiquiatras: comunicação discreta e sem estigma, Google Ads para consulta presencial e online e atendimento acolhedor no WhatsApp.",
+      "h1": "Marketing para psiquiatras que acolhe sem expor o paciente",
+      "faq": [
+        "Posso anunciar consulta psiquiátrica online?",
+        "Como anunciar sem expor quem procura ajuda?",
+        "Meta Ads faz sentido para psiquiatria?",
+        "O que a ADR mede?"
+      ]
+    },
+    {
+      "url": "/marketing-para-urologistas/",
+      "title": "Marketing para Urologistas | ADR Marketing",
+      "description": "Marketing para urologistas: Google Ads para quem busca por sintoma ou procedimento, comunicação discreta e atendimento rápido no WhatsApp, conforme o CFM.",
+      "h1": "Marketing para urologistas para o paciente que adia a consulta",
+      "faq": [
+        "Dá para anunciar vasectomia?",
+        "Por que o paciente some depois do primeiro contato?",
+        "Instagram funciona para urologia?",
+        "Como a ADR mede o retorno?"
+      ]
+    },
+    {
+      "url": "/meta-ads-para-medicos/",
+      "title": "Meta Ads para Médicos: Instagram e Facebook | ADR",
+      "description": "Meta Ads para médicos: anúncios no Instagram e no Facebook para construir autoridade e gerar contatos particulares, dentro das regras do CFM e da Meta.",
+      "h1": "Meta Ads para médicos autoridade antes da primeira consulta",
+      "faq": [
+        "Vale anunciar no Instagram sendo médico?",
+        "Posso usar o botão de WhatsApp nos anúncios?",
+        "Impulsionar post é a mesma coisa que Meta Ads?",
+        "Por que meu anúncio de saúde foi reprovado?",
+        "Médico pode anunciar no Instagram?"
+      ]
+    },
+    {
+      "url": "/metodologia/",
+      "title": "Metodologia ADR: do diagnóstico ao paciente na cadeira | ADR Marketing",
+      "description": "As quatro etapas da metodologia ADR: diagnóstico comercial prévio, posicionamento de autoridade, tráfego pago (Google Ads e Meta Ads) e comercial de alta conversão.",
+      "h1": "Do diagnóstico ao paciente na cadeira",
+      "faq": []
+    },
+    {
+      "url": "/politica-de-privacidade/",
+      "title": "Política de Privacidade | ADR Marketing",
+      "description": "Como a ADR Marketing trata os dados pessoais coletados no site agenciaadrmarketing.com.",
+      "h1": "Política de Privacidade",
+      "faq": []
+    },
+    {
+      "url": "/servicos/",
+      "title": "Serviços de marketing médico para clínicas | ADR Marketing",
+      "description": "Tráfego pago (Google Ads e Meta Ads), posicionamento e autoridade digital, captação de pacientes particulares e comercial de alta conversão, conduzidos pela liderança sênior.",
+      "h1": "Serviços de marketing médico para clínicas e consultórios",
+      "faq": [
+        "O que faz uma assessoria de marketing para clínicas?",
+        "Qual agência de marketing contratar para uma clínica?",
+        "O que diferencia uma agência especializada em marketing médico de uma agência generalista?",
+        "Tráfego pago funciona para médicos e clínicas?",
+        "Quanto investir em tráfego pago para médicos?",
+        "A atração de pacientes também inclui o atendimento e o agendamento final?",
+        "Como funciona a gestão diária e quem conduzirá o projeto?"
+      ]
+    },
+    {
+      "url": "/sobre/",
+      "title": "Sobre a ADR Marketing — assessoria de marketing médico | ADR",
+      "description": "Conheça a ADR Marketing: assessoria especializada em marketing para médicos e clínicas, conduzida por Caio Souza Anderle. Modelo premium e diagnóstico comercial prévio.",
+      "h1": "Uma assessoria de marketing médico conduzida pela liderança sênior",
+      "faq": []
+    },
+    {
+      "url": "/trafego-pago-para-medicos/",
+      "title": "Tráfego Pago para Médicos e Clínicas | ADR Marketing",
+      "description": "Tráfego pago para médicos: Google Ads e Meta Ads planejados por especialidade, filtro de pacientes particulares e acompanhamento até o agendamento.",
+      "h1": "Tráfego pago para médicos que termina na agenda, não no clique",
+      "faq": [
+        "Quanto investir em tráfego pago sendo médico?",
+        "Em quanto tempo o tráfego pago traz pacientes?",
+        "Google Ads ou Meta Ads: por onde começar?",
+        "A ADR atende clínicas de qualquer cidade?",
+        "Como se divide o pagamento do tráfego pago?",
+        "Tráfego pago para médicos tem fidelidade?"
       ]
     }
   ]
