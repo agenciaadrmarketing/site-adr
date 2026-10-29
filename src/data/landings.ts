@@ -66,6 +66,8 @@ export const LANDINGS: Record<string, Landing> = {
       { q: 'Em quanto tempo o tráfego pago traz pacientes?', a: 'Os primeiros contatos costumam surgir logo que a campanha é ativada, mas a estabilidade vem depois de algumas semanas de ajuste de termos, público e atendimento. O desempenho varia com especialidade, região, investimento e qualidade do comercial; não existe prazo garantido.' },
       { q: 'Google Ads ou Meta Ads: por onde começar?', a: 'Quando existe busca ativa pela especialidade ou procedimento, o Google costuma ser o primeiro canal. Procedimentos eletivos e decisões longas pedem a Meta para construir confiança. Na maioria das especialidades os dois atuam juntos, em papéis diferentes.' },
       { q: 'A ADR atende clínicas de qualquer cidade?', a: 'Sim. A operação é remota e atende médicos e clínicas em todo o Brasil; as campanhas são segmentadas pela região onde a clínica atende.' },
+      { q: 'Como se divide o pagamento do tráfego pago?', a: 'São dois valores: a verba de mídia, paga direto ao Google e à Meta pela própria clínica, e o honorário da assessoria, que remunera estratégia, gestão e acompanhamento. A clínica mantém o controle da verba e das contas de anúncio.' },
+      { q: 'Tráfego pago para médicos tem fidelidade?', a: 'Na ADR, não: o contrato é mensal, com renovação automática, sem taxa de implantação e sem multa por cancelamento.' },
     ],
     relacionados: [
       { label: 'Google Ads para médicos', href: '/google-ads-para-medicos/', text: 'Campanhas para quem já procura a especialidade.' },
@@ -121,6 +123,9 @@ export const LANDINGS: Record<string, Landing> = {
       { q: 'Preciso de site para anunciar no Google?', a: 'É necessária uma página de destino: pode ser o site da clínica ou uma landing page específica, rápida no celular, com informação clara, identificação do médico e botão de WhatsApp. Página lenta ou genérica encarece o clique e derruba a conversão.' },
       { q: 'Posso anunciar meu nome e especialidade no Google?', a: 'Pode, informando especialidade, formação e forma de atendimento, sem promessa de resultado e sem sensacionalismo. O texto precisa respeitar a publicidade médica e as políticas de saúde do Google.' },
       { q: 'O Google Ads substitui o Perfil da Empresa no Google?', a: 'Não. O Perfil da Empresa aparece no mapa e não exige verba de anúncio; o Google Ads compra espaço na página de resultados. Os dois se reforçam: quem vê o anúncio e um perfil bem avaliado confia mais.' },
+      { q: 'Médicos podem anunciar no Google Ads?', a: 'Podem. O Google permite anúncios de serviços médicos, com restrições para medicamentos, alguns procedimentos e segmentação por condição de saúde, e a Resolução CFM nº 2.336/2023 vale para o texto do anúncio: identificação do médico, sem promessa de resultado e sem sensacionalismo.' },
+      { q: 'Quais erros mais desperdiçam verba no Google Ads médico?', a: 'Os mais comuns são correspondência ampla sem palavras-chave negativas (a verba vai para quem busca convênio, vaga, curso ou faculdade), uma única campanha misturando consulta e procedimento, página de destino lenta ou genérica, anúncios rodando em horários sem atendimento e medir só cliques em vez de agendamentos.' },
+      { q: 'Google Ads funciona para todas as especialidades?', a: 'Funciona melhor onde existe busca ativa: sintoma, exame, procedimento pelo nome ou especialidade na cidade. Em especialidades com pouca busca ou decisão muito longa, ele costuma complementar o Meta Ads. O diagnóstico mostra o volume de busca da especialidade na região antes de investir.' },
     ],
     relacionados: [
       { label: 'Tráfego pago para médicos', href: '/trafego-pago-para-medicos/', text: 'Como Google e Meta trabalham juntos.' },
@@ -176,6 +181,7 @@ export const LANDINGS: Record<string, Landing> = {
       { q: 'Posso usar o botão de WhatsApp nos anúncios?', a: 'Pode, mas para público que ainda não conhece o médico a conversa direta tende a trazer muito curioso. A ADR prefere página de destino ou formulário para público novo e o WhatsApp direto para remarketing, onde a intenção já é maior.' },
       { q: 'Impulsionar post é a mesma coisa que Meta Ads?', a: 'O impulsionamento é a forma mais simples de anunciar e oferece pouco controle de objetivo, público e medição. O Gerenciador de Anúncios permite estruturar campanhas por etapa da decisão e medir o que virou contato e agendamento.' },
       { q: 'Por que meu anúncio de saúde foi reprovado?', a: 'Os motivos mais comuns são frases que sugerem condição de saúde de quem vê, imagens de corpo ou de antes e depois e promessas de resultado. Ajustar o texto para falar do serviço e da avaliação médica costuma resolver.' },
+      { q: 'Médico pode anunciar no Instagram?', a: 'Pode, dentro da Resolução CFM nº 2.336/2023 e dos Padrões de Publicidade da Meta: identificação do médico, sem promessa de resultado, sem antes e depois fora das regras e sem frases que sugiram que quem vê o anúncio tem uma condição de saúde.' },
     ],
     relacionados: [
       { label: 'Tráfego pago para médicos', href: '/trafego-pago-para-medicos/', text: 'Como Google e Meta trabalham juntos.' },
@@ -231,6 +237,7 @@ export const LANDINGS: Record<string, Landing> = {
       { q: 'Como dividir a verba entre especialidades?', a: 'Pelo cruzamento de ticket, capacidade de agenda e demanda na região. Especialidades com agenda livre e procedimento particular de valor costumam vir primeiro; as que já lotam pelo convênio entram depois.' },
       { q: 'A ADR treina a recepção da clínica?', a: 'A assessoria atua de forma consultiva na estruturação do comercial: roteiro de WhatsApp, triagem, follow-up e treinamento de qualificação para a recepção, ou orientação para implementar um SDR. Não é atendimento terceirizado.' },
       { q: 'Clínica pequena também pode ter esse trabalho?', a: 'Pode, desde que atenda pacientes particulares e tenha capacidade de agenda. O diagnóstico comercial prévio mostra se a parceria faz sentido antes de qualquer proposta.' },
+      { q: 'O que é permitido no marketing digital para clínicas?', a: 'Divulgar especialidades, estrutura, serviços, corpo clínico identificado (nome, CRM e RQE), horários, canais de atendimento e conteúdo educativo. Continua vedado prometer resultado, usar sensacionalismo, preço promocional como chamariz e depoimentos de pacientes com fim publicitário.' },
     ],
     relacionados: [
       { label: 'Serviços da ADR', href: '/servicos/', text: 'As quatro frentes e o que cada uma inclui.' },

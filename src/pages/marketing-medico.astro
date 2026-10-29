@@ -10,14 +10,19 @@ import RelatedLinks from '../components/RelatedLinks.astro';
 import { SPECIALTIES } from '../data/site';
 import { webPage, breadcrumbList, faqPage } from '../data/seo';
 
-const title = 'Marketing médico: como atrair pacientes particulares | ADR Marketing';
+const title = 'Marketing médico: o que é, como fazer e regras do CFM | ADR';
 const description =
-  'O que é marketing médico, o que a Resolução CFM nº 2.336/2023 permite, Google Ads × Meta Ads e como escolher uma agência especializada. Guia da ADR Marketing.';
+  'O que é marketing médico, como fazer na prática, o que a Resolução CFM nº 2.336/2023 permite e veda, Google Ads × Meta Ads e como escolher uma agência.';
 const crumbs = [{ label: 'Início', href: '/' }, { label: 'Marketing médico', href: '/marketing-medico/' }];
 const wa = 'Olá! Li o guia de marketing médico da ADR e quero conversar sobre a minha clínica.';
 const especialidades = [...SPECIALTIES].sort((a, b) => a.priority - b.priority);
 
 const faq = [
+  { tag: 'Conceito', q: 'O que o marketing médico faz?', a: 'Faz o médico ou a clínica ser encontrado, escolhido e agendado pelo paciente certo. Na prática, reúne posicionamento (por que escolher este profissional), demanda (anúncios no Google e no Instagram, Perfil da Empresa no Google, site e conteúdo) e conversão (atendimento no WhatsApp, triagem e acompanhamento até a consulta), sempre dentro das regras de publicidade médica do CFM.' },
+  { tag: 'Conceito', q: 'Como fazer marketing médico?', a: 'Comece pelo posicionamento: especialidade, público e o que diferencia o atendimento. Em seguida, garanta o básico de presença (Perfil da Empresa no Google completo e um site rápido com páginas por especialidade), ative a demanda com Google Ads para quem já procura e Meta Ads para quem ainda vai decidir, e prepare a recepção para responder rápido e acompanhar quem não agendou. Por fim, meça agendamentos, não cliques.' },
+  { tag: 'Normas', q: 'Quais são as normas do marketing médico?', a: 'As principais estão na Resolução CFM nº 2.336/2023: identificar o médico com nome, CRM e RQE quando citar especialidade; divulgar no máximo duas especialidades registradas; não prometer resultado; não usar sensacionalismo nem concorrência desleal; e seguir regras próprias para imagens de pacientes e "antes e depois". Este resumo é educativo; consulte sempre o texto vigente no portal do CFM.' },
+  { tag: 'Normas', q: 'O médico pode divulgar o valor da consulta?', a: 'A norma atual admite informar valores de consulta. O que continua vedado é usar o preço como chamariz: desconto promocional, "pacotes" em oferta, sorteios ou condições que transformem a consulta em mercadoria. Informar o valor com transparência, no momento certo da conversa, costuma ser a melhor prática.' },
+  { tag: 'Conceito', q: 'Marketing em saúde e marketing médico são a mesma coisa?', a: 'Marketing em saúde é o termo amplo, que inclui hospitais, laboratórios, odontologia, psicologia, nutrição e outras áreas. Marketing médico é a parte voltada a médicos e clínicas médicas, com regras próprias do CFM. Odontologia, por exemplo, segue o CFO (Resolução CFO nº 196/2019).' },
   { tag: 'Captação', q: 'Qual a melhor forma de atrair pacientes particulares?', a: 'Combinando três frentes: um posicionamento claro (por que escolher você, e não o convênio ou o concorrente), demanda qualificada (Google Ads para quem já procura o tratamento e Meta Ads para quem ainda vai desejá-lo) e um atendimento preparado para converter o contato em agendamento. Indicação continua importante, mas não é previsível nem escalável sozinha.' },
   { tag: 'Contratação', q: 'Como escolher uma agência de marketing médico?', a: 'Avalie quem vai operar a conta de fato (liderança sênior ou gestor júnior), se a agência conhece as regras de publicidade médica, se mede agendamentos — e não só cliques —, se integra marketing e comercial, e se começa por um diagnóstico em vez de uma proposta pronta. Desconfie de garantias de resultado, prazo ou volume de pacientes.' },
   { tag: 'Investimento', q: 'Quanto custa contratar marketing para uma clínica?', a: 'Depende de três variáveis: a verba de mídia paga às plataformas (Google e Meta), o escopo do serviço e o estágio da clínica (posicionamento, comercial, região). A ADR não publica tabela de preços; o investimento é definido após o diagnóstico comercial prévio, com a verba de mídia tratada separadamente dos honorários.' },
@@ -90,7 +95,7 @@ const jsonLd = [webPage({ path: '/marketing-medico/', title, description }), bre
         <p class="lead" style="margin-top:14px">A ADR adota uma linha mais conservadora do que a norma exige: não usa "antes e depois" nas campanhas e não trabalha com garantias de resultado, prazo ou volume de pacientes.</p>
       </div>
       <ul class="checks norma" data-reveal>
-        {['Divulgar especialidade e títulos registrados no conselho', 'Comunicar serviços, horários e canais de atendimento', 'Produzir conteúdo educativo com responsabilidade técnica', 'Anunciar com segmentação por região e interesse'].map((t) => (
+        {['Identificar o médico com nome, CRM e RQE', 'Divulgar até duas especialidades registradas no conselho', 'Informar valores de consulta, sem usar preço como chamariz', 'Comunicar serviços, horários e canais de atendimento', 'Produzir conteúdo educativo com responsabilidade técnica', 'Anunciar com segmentação por região e interesse'].map((t) => (
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>{t}</li>
         ))}
         {['Prometer ou garantir resultado de tratamento', 'Sensacionalismo e autopromoção exagerada', 'Depoimentos de pacientes com fim publicitário', 'Concorrência desleal e comparação com colegas'].map((t) => (

@@ -195,6 +195,41 @@ export const FAQ = [
     q: 'A atração de pacientes também inclui o atendimento e o agendamento final?',
     a: 'A inteligência de tráfego é responsável por gerar e filtrar a demanda, mas o fechamento ocorre no ambiente interno da clínica. Por essa razão, a metodologia vai além do marketing e integra um pilar dedicado ao comercial de alta conversão: atuação consultiva na estruturação desse setor, com treinamento de qualificação para equipes de recepção ou orientação para implementar SDRs de alta performance.',
   },
+  {
+    tag: 'Normas',
+    q: 'Médico pode fazer propaganda na internet e nas redes sociais?',
+    a: 'Pode. A Resolução CFM nº 2.336/2023 permite que o médico divulgue seu trabalho em site, redes sociais e anúncios pagos no Google e no Instagram, desde que se identifique com nome, CRM e RQE quando citar especialidade, não prometa resultado, não use sensacionalismo e siga as regras específicas para imagens de pacientes. As plataformas de anúncio também têm políticas próprias para temas de saúde, e a campanha precisa respeitar as duas coisas.',
+  },
+  {
+    tag: 'Canais',
+    q: 'O que funciona melhor para médicos: Google ou Instagram?',
+    a: 'Depende de como o paciente da especialidade decide. O Google Ads funciona melhor quando existe busca ativa — sintoma, exame, procedimento pelo nome — e a decisão é rápida. O Instagram e o Facebook (Meta Ads) funcionam melhor para construir confiança em decisões longas e em especialidades com pouca busca. Na maioria das clínicas os dois atuam juntos, em papéis diferentes, e a proporção é definida no diagnóstico.',
+  },
+  {
+    tag: 'Investimento',
+    q: 'Como se divide o investimento: assessoria e verba de anúncios?',
+    a: 'São dois valores separados. A verba de mídia é paga diretamente ao Google e à Meta, no cartão ou boleto da própria clínica, e fica sob o controle dela. O honorário da ADR remunera a estratégia, a gestão das campanhas e a estruturação do comercial. Os dois valores são definidos depois do diagnóstico comercial prévio.',
+  },
+  {
+    tag: 'Contratação',
+    q: 'Existe fidelidade ou multa na contratação?',
+    a: 'Não. O contrato da ADR é mensal, com renovação automática, sem taxa de implantação e sem multa por cancelamento. A ideia é que a parceria continue porque faz sentido para a clínica, não por obrigação contratual.',
+  },
+  {
+    tag: 'Atendimento',
+    q: 'A ADR atende clínicas de qualquer cidade?',
+    a: 'Sim. A operação é remota e atende médicos, clínicas e consultórios em todo o Brasil. As campanhas são segmentadas pela região onde a clínica atende, e o acompanhamento acontece por WhatsApp e reuniões on-line.',
+  },
+  {
+    tag: 'Serviço',
+    q: 'Marketing médico é só postar no Instagram?',
+    a: 'Não. Postar com frequência ajuda a construir autoridade, mas o paciente particular normalmente chega por uma combinação de posicionamento, anúncios no Google e no Instagram, página de destino clara e um atendimento no WhatsApp preparado para agendar. Sem a parte comercial, mesmo um perfil bonito gera pouca consulta.',
+  },
+  {
+    tag: 'Resultados',
+    q: 'Existe garantia de resultado no marketing médico?',
+    a: 'Não, e desconfie de quem garante. O desempenho depende de especialidade, concorrência na região, investimento, posicionamento e qualidade do atendimento. Além disso, prometer resultado é vedado na publicidade médica. O que a ADR assume é o método: indicadores acompanhados mês a mês, do investimento ao agendamento, com ajustes contínuos.',
+  },
 ];
 
 // Perguntas de contratação respondidas em /servicos/ (GEO/AEO: respostas
