@@ -35,6 +35,7 @@ const FORBIDDEN = [
   /base64,/u,
   /__bundler\/template/u,
   /llms\.txt/u,
+  /gratuit|grátis|sem custo/iu, // preferência do cliente: nunca "gratuito"
 ];
 
 const pagesJson = JSON.parse(readFileSync(join(ROOT, 'src/data/pages.json'), 'utf8'));
@@ -148,8 +149,11 @@ for (const file of htmlFiles) {
   const ids = new Set([...body.matchAll(/\sid\s*=\s*"([^"]+)"/g)].map((m) => m[1]));
 
   const forbidden = [];
+  // CSS inline (inlineStylesheets: 'always') tem porcentagens como "90%"; regras de texto
+  // olham só o HTML sem <style>, regras de cor olham o documento inteiro.
+  const textOnly = html.replace(/<style[\s\S]*?<\/style>/gi, '');
   for (const re of FORBIDDEN) {
-    const m = html.match(re);
+    const m = (/#[0-9a-f]{6}/i.test(re.source) ? html : textOnly).match(re);
     if (m) forbidden.push(m[0]);
   }
 

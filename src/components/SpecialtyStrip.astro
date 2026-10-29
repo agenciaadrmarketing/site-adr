@@ -1,0 +1,40 @@
+---
+// Faixa compacta acima do rodapé com as páginas de especialidade.
+// Substitui a lista longa que ficava no rodapé (rodapé limpo, só navegação e contato).
+import { SPECIALTIES } from '../data/site';
+
+const current = Astro.url.pathname;
+const items = [...SPECIALTIES].filter((s) => s.status === 'publicada').sort((a, b) => a.priority - b.priority);
+---
+
+<section class="sstrip" aria-labelledby="sstrip-title">
+  <div class="container sstrip__in">
+    <p class="sstrip__label" id="sstrip-title">Marketing médico por especialidade</p>
+    <ul class="sstrip__list">
+      {items.map((s) => {
+        const href = `/${s.slug}/`;
+        const on = current === href;
+        return (
+          <li>
+            <a class:list={['sstrip__chip', { 'is-on': on }]} href={href} aria-current={on ? 'page' : undefined}>{s.name}</a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .sstrip { border-top: 1px solid var(--line); padding: 28px 0; }
+  .sstrip__in { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+  .sstrip__label { margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--n-500, #8a8a8f); white-space: nowrap; }
+  .sstrip__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .sstrip__chip { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; font-size: 13px; font-weight: 500; color: var(--n-400); text-decoration: none; border: 1px solid var(--line); border-radius: var(--radius-pill); transition: color 0.3s, border-color 0.3s, background 0.3s; }
+  .sstrip__chip:hover, .sstrip__chip:focus-visible { color: var(--ink); border-color: var(--line-3); background: rgba(242, 242, 243, 0.04); }
+  .sstrip__chip.is-on { color: var(--ink); border-color: var(--line-3); }
+  @media (max-width: 640px) {
+    .sstrip__list { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px 4px; width: calc(100% + 32px); }
+    .sstrip__list::-webkit-scrollbar { display: none; }
+    .sstrip__chip { white-space: nowrap; }
+  }
+</style>

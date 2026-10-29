@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-neurologistas",
+  "nome": "Neurologia",
+  "plural": "neurologistas",
+  "status": "publicada",
+  "title": "Marketing para Neurologistas | ADR Marketing",
+  "description": "Marketing para neurologistas: Google Ads para enxaqueca, sono e memória, comunicação sem alarmismo e atendimento que acolhe paciente e família.",
+  "h1": "Marketing para neurologistas",
+  "h1Accent": "que acolhe e agenda",
+  "resposta": "Pacientes particulares para enxaqueca, sono, memória e acompanhamento, com comunicação sem alarmismo e atendimento que acolhe paciente e família.",
+  "wa": "Olá! Vim pela página de marketing para neurologistas da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de neurologia — e a família — decide",
+    "texto": "Há quem chegue por um sintoma que preocupa e quer entender o que está acontecendo, e quem precisa de acompanhamento contínuo, como enxaqueca, epilepsia, Parkinson ou alterações de memória. Nos dois casos, credenciais, tempo de consulta e acolhimento pesam, e a família costuma participar da escolha.",
+    "pontos": [
+      "Paciente preocupado: acolhimento e explicação clara fazem diferença",
+      "Familiares pesquisam e agendam, principalmente para pacientes idosos",
+      "Enxaqueca, sono e memória como portas de entrada particulares",
+      "Acompanhamento contínuo: a relação de confiança mantém o paciente"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'neurologista' com cidade e por sintomas e condições (enxaqueca, tontura, perda de memória, distúrbios do sono). Intenção alta; separar convênio de particular e primeira consulta de acompanhamento melhora a qualidade do contato.",
+    "meta": "Informação sobre enxaqueca, sono e memória para o público da região, inclusive filhos que cuidam dos pais. Sem apelo ao medo e sem sugerir que quem vê o anúncio tem uma doença.",
+    "conteudo": "Conteúdo sobre sintomas comuns, quando procurar o neurologista e como funciona o acompanhamento sustenta a credibilidade antes do primeiro contato."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Segurança e acolhimento: trajetória, tempo de consulta e forma de atendimento, sem alarmismo."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para sintomas e consulta com busca ativa; Meta Ads para informação e alcance de familiares."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil particular e por tipo de demanda: primeira consulta, segunda opinião ou acompanhamento."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Roteiro que acolhe paciente e familiar, orienta urgências para o pronto-socorro e organiza retornos de acompanhamento."
+    }
+  ],
+  "sensiveis": [
+    "Sem alarmismo ou mensagens baseadas em medo — sensacionalismo é vedado pelo CFM",
+    "Sem promessa de cura ou de resultado de tratamento",
+    "Sinais de AVC e outras urgências: a comunicação orienta a procurar emergência",
+    "Nenhum dado clínico em formulários do site"
+  ],
+  "faq": [
+    {
+      "q": "Posso anunciar consulta para enxaqueca ou distúrbios do sono?",
+      "a": "Pode, como informação sobre a consulta e o acompanhamento, sem promessa de cura nem preço promocional. O Google Ads captura essa busca ativa com boa qualidade."
+    },
+    {
+      "q": "Quem costuma agendar a consulta de neurologia: o paciente ou um familiar?",
+      "a": "Nos quadros de memória e nos pacientes idosos, muitas vezes é o filho ou o cônjuge que pesquisa e chama no WhatsApp. A comunicação precisa responder às dúvidas dessa pessoa — tempo de consulta, exames, acompanhamento — sem expor o paciente."
+    },
+    {
+      "q": "Instagram ajuda o neurologista a ter agenda particular?",
+      "a": "Ajuda como vitrine de informação: explicar sintomas comuns, quando procurar o especialista e como é o acompanhamento. Para quem já sente o sintoma e procura agora, a busca no Google costuma trazer o contato mais pronto."
+    },
+    {
+      "q": "Como a recepção deve tratar uma mensagem que parece urgência neurológica?",
+      "a": "Com um roteiro claro: sinais como fraqueza súbita, fala enrolada ou perda de consciência são orientados para o pronto-socorro na hora, sem tentar agendar. Os demais contatos seguem para a triagem de primeira consulta ou retorno."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-urologistas",
+    "marketing-para-nutrologos"
+  ]
+}

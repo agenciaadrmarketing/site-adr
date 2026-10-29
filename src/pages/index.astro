@@ -19,7 +19,7 @@ const artigos = (await getCollection('artigos'))
   .sort((a, b) => a.data.ordem - b.data.ordem)
   .slice(0, 3);
 
-const title = 'Assessoria de Marketing Médico para Clínicas e Médicos | ADR Marketing';
+const title = 'Agência de Marketing Médico para Clínicas e Médicos | ADR';
 const description =
   'Assessoria de marketing médico para clínicas e consultórios: posicionamento, autoridade digital e tráfego pago para captar pacientes particulares — do anúncio ao agendamento.';
 const jsonLd = [webPage({ path: '/', title, description }), faqPage(FAQ, '/')];
@@ -54,10 +54,10 @@ const ribbon2 = ['Google Ads e Meta Ads', 'Pacientes particulares', 'Comercial d
       <div class="hero__copy" data-reveal>
         <SectionLabel label="Assessoria premium · Medicina" class="hero__kicker" />
         <h1 class="h1" id="hero-title">Assessoria de Marketing para <span class="silver">Clínicas e Médicos</span></h1>
-        <p class="hero__lead">Agência especializada em marketing médico. Estruturamos posicionamento, autoridade digital e tráfego pago para captar pacientes particulares — e preparamos o comercial da sua clínica para transformar contato em agendamento.</p>
+        <p class="hero__lead">Posicionamento, autoridade digital e tráfego pago para atrair pacientes particulares — e um comercial preparado para transformar contato em agendamento.</p>
         <div class="btn-row hero__ctas">
           <WhatsAppButton id="hero" label="Solicitar diagnóstico pelo WhatsApp" message={waHome} size="lg" arrow />
-          <Button variant="outline" size="lg" openModal="hero-form">Pedir análise gratuita</Button>
+          <Button variant="outline" size="lg" openModal="hero-form">Pedir diagnóstico da agenda</Button>
         </div>
         <p class="hero__note">Vagas limitadas — o modelo admite um número restrito de parceiros simultâneos.</p>
       </div>
@@ -169,7 +169,7 @@ const ribbon2 = ['Google Ads e Meta Ads', 'Pacientes particulares', 'Comercial d
       </div>
       <div class="grid-cards serv-grid">
         {CONFIRMED_SERVICES.map((s, i) => (
-          <ServiceCard service={{ ...s, href: '/servicos/' }} num={String(i + 1).padStart(2, '0')} tall={i === 0 || i === 2} large={i === 0 || i === 2} />
+          <ServiceCard service={{ ...s, href: s.slug === 'trafego-pago-para-medicos' ? '/trafego-pago-para-medicos/' : `/servicos/#${s.slug}` }} num={String(i + 1).padStart(2, '0')} tall={i === 0 || i === 2} large={i === 0 || i === 2} />
         ))}
         {principios.map((p, i) => (
           <ServiceCard service={p} num={String(CONFIRMED_SERVICES.length + i + 1).padStart(2, '0')} />
@@ -444,8 +444,8 @@ const ribbon2 = ['Google Ads e Meta Ads', 'Pacientes particulares', 'Comercial d
     <div class="analise__scrim" aria-hidden="true"></div>
     <div class="container analise__in">
       <div class="analise__copy" data-reveal>
-        <p class="analise__pre">Preencha o formulário e receba uma</p>
-        <h2 class="h2" id="an-title">Análise <span class="silver">gratuita de marketing</span></h2>
+        <p class="analise__pre">Preencha o formulário e receba um</p>
+        <h2 class="h2" id="an-title">Diagnóstico <span class="silver">da sua agenda</span></h2>
         <p class="lead">para entender como estruturar a captação de pacientes particulares na sua clínica. Sem compromisso, com resposta pelo WhatsApp em horário comercial.</p>
         <p class="analise__alt">Prefere ir direto? <a href="https://api.whatsapp.com/send/?phone=5548988809542&text=Ol%C3%A1%21+Vim+pelo+site+da+ADR+e+quero+um+diagn%C3%B3stico+de+marketing+para+a+minha+cl%C3%ADnica." target="_blank" rel="noopener" data-wa="analise-link">Chamar no WhatsApp</a>.</p>
       </div>

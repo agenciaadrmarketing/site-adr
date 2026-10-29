@@ -46,12 +46,12 @@ const detalhes: Record<string, { entrega: string[]; nao: string; para: string }>
     kicker="Soluções"
     title="Serviços de marketing médico para"
     titleAccent="clínicas e consultórios"
-    text="A ADR Marketing presta quatro frentes de serviço, sempre integradas: tráfego pago (Google Ads e Meta Ads), posicionamento e autoridade digital, captação de pacientes particulares e estruturação do comercial da clínica. Não vendemos pacotes isolados — cada frente só faz sentido conectada às outras."
+    text="Tráfego pago, posicionamento, captação de pacientes particulares e comercial da clínica: quatro frentes integradas, sem pacotes isolados."
     crumbs={crumbs}
     variant="service"
   >
     <WhatsAppButton id="servicos-hero" label="Qual frente faz sentido para mim?" message={wa} arrow />
-    <Button variant="outline" openModal="servicos-hero">Pedir análise gratuita</Button>
+    <Button variant="outline" openModal="servicos-hero">Pedir diagnóstico da agenda</Button>
   </PageHero>
 
   <section class="section" aria-labelledby="lista-title">
@@ -79,6 +79,12 @@ const detalhes: Record<string, { entrega: string[]; nao: string; para: string }>
                   <ul class="checks">{d.entrega.map((e) => (<li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>{e}</li>))}</ul>
                 </div>
                 <div class="svc__aside">
+                  {s.slug === 'trafego-pago-para-medicos' && (
+                    <div><h4 class="svc__h">Por canal</h4><p><a href="/trafego-pago-para-medicos/">Tráfego pago para médicos</a> · <a href="/google-ads-para-medicos/">Google Ads</a> · <a href="/meta-ads-para-medicos/">Meta Ads</a></p></div>
+                  )}
+                  {s.slug === 'captacao-de-pacientes' && (
+                    <div><h4 class="svc__h">Para clínicas</h4><p><a href="/marketing-para-clinicas/">Marketing para clínicas médicas</a></p></div>
+                  )}
                   <div><h4 class="svc__h">O que não é</h4><p>{d.nao}</p></div>
                   <div><h4 class="svc__h">Para quem</h4><p>{d.para}</p></div>
                 </div>

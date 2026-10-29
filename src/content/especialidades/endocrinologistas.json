@@ -4,10 +4,10 @@
   "plural": "endocrinologistas",
   "status": "publicada",
   "title": "Marketing para Endocrinologistas | ADR Marketing",
-  "description": "Marketing para endocrinologistas: posicionamento, Google Ads e Meta Ads conforme o CFM e comercial preparado para pacientes de acompanhamento contínuo.",
-  "h1": "Marketing para endocrinologistas:",
-  "h1Accent": "do primeiro contato ao acompanhamento contínuo",
-  "resposta": "Na endocrinologia, o paciente particular raramente é de uma consulta só: diabetes, tireoide, obesidade e saúde hormonal pedem acompanhamento contínuo. O marketing para endocrinologistas, portanto, não é só gerar a primeira consulta — é posicionar o médico como referência no tema que o paciente pesquisa, filtrar quem tem perfil para o tratamento particular e preparar a clínica para manter esse paciente em acompanhamento. A ADR Marketing atua nessas três frentes, dentro das normas de publicidade médica do CFM.",
+  "description": "Marketing para endocrinologistas: Google Ads, Meta Ads e atendimento para atrair pacientes particulares de acompanhamento, dentro das regras do CFM.",
+  "h1": "Marketing para endocrinologistas",
+  "h1Accent": "que gera acompanhamento contínuo",
+  "resposta": "Pacientes particulares para consulta e acompanhamento, com anúncios dentro das regras do CFM e um atendimento que transforma contato em agendamento.",
   "wa": "Olá! Vim pela página de marketing para endocrinologistas da ADR e quero um diagnóstico para a minha clínica.",
   "jornada": {
     "titulo": "Como o paciente de endocrinologia decide",
@@ -25,10 +25,22 @@
     "conteudo": "Posicionamento educativo — o que o exame significa, quando procurar o especialista, como funciona o acompanhamento — sustenta tanto a busca quanto a mídia social."
   },
   "frentes": [
-    { "t": "Posicionamento e autoridade", "d": "Referência em um tema (tireoide, obesidade, saúde hormonal) na sua região, com linguagem didática e dentro das normas do CFM." },
-    { "t": "Tráfego pago", "d": "Google Ads para quem busca o especialista ou a condição; Meta Ads para educar e aproximar quem ainda não decidiu." },
-    { "t": "Captação de pacientes particulares", "d": "Filtro por perfil de tratamento particular e acompanhamento, não por volume de contatos." },
-    { "t": "Comercial de alta conversão", "d": "Atendimento que explica como funciona o acompanhamento, triagem de convênio × particular e follow-up de retornos." }
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Referência em um tema (tireoide, obesidade, saúde hormonal) na sua região, com linguagem didática e dentro das normas do CFM."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para quem busca o especialista ou a condição; Meta Ads para educar e aproximar quem ainda não decidiu."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil de tratamento particular e acompanhamento, não por volume de contatos."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Atendimento que explica como funciona o acompanhamento, triagem de convênio × particular e follow-up de retornos."
+    }
   ],
   "sensiveis": [
     "Nada de promessa de emagrecimento, \"antes e depois\" ou garantia de resultado — vedadas pelo CFM e restrito pelas plataformas",
@@ -37,10 +49,26 @@
     "Dados de saúde do paciente nunca entram em formulários ou ferramentas de medição"
   ],
   "faq": [
-    { "q": "Marketing para endocrinologista funciona com tanta concorrência de convênio?", "a": "Funciona quando o posicionamento deixa claro o que o atendimento particular oferece — tempo de consulta, acompanhamento próximo, acesso ao médico — e a mídia filtra quem procura exatamente isso. Competir por preço com o convênio não é o caminho." },
-    { "q": "Posso anunciar tratamento para obesidade?", "a": "Pode falar sobre acompanhamento de obesidade como condição clínica, sem prometer perda de peso, sem \"antes e depois\" e respeitando as políticas de anúncio das plataformas, que restringem mensagens sobre peso. A ADR estrutura a comunicação dentro desses limites." },
-    { "q": "Qual canal faz mais sentido: Google ou Instagram?", "a": "Os dois, em papéis diferentes. Google captura quem já procura o especialista ou a condição; Instagram e Facebook constroem autoridade e educam quem ainda vai procurar. A proporção depende da região e do foco da clínica e é definida no diagnóstico." },
-    { "q": "Como medir se o investimento está dando retorno?", "a": "Pelo agendamento e pelo retorno, não pelo clique: contatos, pacientes qualificados na triagem, consultas agendadas e pacientes que seguem em acompanhamento. A ADR reporta esses indicadores mês a mês, pelo WhatsApp da clínica." }
+    {
+      "q": "Marketing para endocrinologista funciona com tanta concorrência de convênio?",
+      "a": "Funciona quando o posicionamento deixa claro o que o atendimento particular oferece — tempo de consulta, acompanhamento próximo, acesso ao médico — e a mídia filtra quem procura exatamente isso. Competir por preço com o convênio não é o caminho."
+    },
+    {
+      "q": "Posso anunciar tratamento para obesidade?",
+      "a": "Pode falar sobre acompanhamento de obesidade como condição clínica, sem prometer perda de peso, sem \"antes e depois\" e respeitando as políticas de anúncio das plataformas, que restringem mensagens sobre peso. A ADR estrutura a comunicação dentro desses limites."
+    },
+    {
+      "q": "Qual canal faz mais sentido: Google ou Instagram?",
+      "a": "Os dois, em papéis diferentes. Google captura quem já procura o especialista ou a condição; Instagram e Facebook constroem autoridade e educam quem ainda vai procurar. A proporção depende da região e do foco da clínica e é definida no diagnóstico."
+    },
+    {
+      "q": "Como medir se o investimento está dando retorno?",
+      "a": "Pelo agendamento e pelo retorno, não pelo clique: contatos, pacientes qualificados na triagem, consultas agendadas e pacientes que seguem em acompanhamento. A ADR reporta esses indicadores mês a mês, pelo WhatsApp da clínica."
+    }
   ],
-  "relacionadas": ["marketing-para-nutrologos", "marketing-para-ginecologistas", "marketing-para-cardiologistas"]
+  "relacionadas": [
+    "marketing-para-nutrologos",
+    "marketing-para-ginecologistas",
+    "marketing-para-cardiologistas"
+  ]
 }

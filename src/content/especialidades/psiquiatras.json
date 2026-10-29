@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-psiquiatras",
+  "nome": "Psiquiatria",
+  "plural": "psiquiatras",
+  "status": "publicada",
+  "title": "Marketing para Psiquiatras | ADR Marketing",
+  "description": "Marketing para psiquiatras: comunicação discreta e sem estigma, Google Ads para consulta presencial e online e atendimento acolhedor no WhatsApp.",
+  "h1": "Marketing para psiquiatras",
+  "h1Accent": "que acolhe sem expor o paciente",
+  "resposta": "Pacientes particulares para consulta e acompanhamento, com comunicação discreta, sem estigma e dentro das regras do CFM — e um atendimento que acolhe desde a primeira mensagem.",
+  "wa": "Olá! Vim pela página de marketing para psiquiatras da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de psiquiatria decide",
+    "texto": "A decisão de procurar o psiquiatra costuma ser adiada por receio, estigma ou dúvida sobre a necessidade. Quando acontece, o paciente — ou um familiar — quer discrição, acolhimento e rapidez para conseguir horário. Credenciais, forma de atendimento (presencial ou online) e continuidade do acompanhamento pesam na escolha.",
+    "pontos": [
+      "Decisão adiada por receio ou estigma: a comunicação precisa acolher",
+      "Discrição é decisiva, do anúncio à primeira mensagem",
+      "A consulta online amplia o alcance do consultório particular",
+      "Acompanhamento contínuo: a relação de confiança mantém o paciente"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'psiquiatra' com cidade, por consulta online e por temas como ansiedade, depressão e TDAH. Intenção alta; separar convênio de particular e primeira consulta de acompanhamento melhora a qualidade do contato.",
+    "meta": "Posicionamento com conteúdo informativo e acolhedor. As políticas da Meta restringem anúncios que sugerem condições de saúde de quem vê, então a mensagem fala do serviço, nunca do diagnóstico da pessoa.",
+    "conteudo": "Conteúdo informativo sobre saúde mental, quando procurar o psiquiatra e como funciona o acompanhamento reduz o estigma e sustenta a credibilidade antes do primeiro contato."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Acolhimento e credibilidade: formação, forma de atendimento e continuidade, sem estigma."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para quem busca psiquiatra e consulta online; Meta Ads para informação e posicionamento."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil particular e por tipo de demanda: primeira consulta, consulta online ou acompanhamento."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Atendimento discreto e acolhedor no WhatsApp, agenda ágil e orientação clara em situações de crise."
+    }
+  ],
+  "sensiveis": [
+    "Sem sensacionalismo, estigma ou mensagens baseadas em medo",
+    "Sem promessa de cura ou de resultado de tratamento",
+    "Situações de crise: a comunicação orienta a procurar emergência ou o CVV (188)",
+    "Nenhum dado clínico em formulários do site"
+  ],
+  "faq": [
+    {
+      "q": "Posso anunciar consulta psiquiátrica online?",
+      "a": "Pode, como informação sobre o serviço e a forma de atendimento, sem promessa de resultado. A consulta online amplia o alcance, e o Google Ads captura essa busca ativa com boa qualidade."
+    },
+    {
+      "q": "Como anunciar sem expor quem procura ajuda?",
+      "a": "Com mensagens que falam do serviço e do acolhimento, nunca do diagnóstico de quem vê o anúncio, e com um atendimento no WhatsApp discreto desde a primeira resposta."
+    },
+    {
+      "q": "Meta Ads faz sentido para psiquiatria?",
+      "a": "Para informação e posicionamento, sim, respeitando as políticas de saúde da plataforma. Para captação direta, o Google costuma pesar mais nesta especialidade."
+    },
+    {
+      "q": "O que a ADR mede?",
+      "a": "Contatos, pacientes qualificados, consultas agendadas e, quando a clínica compartilha, comparecimento — mês a mês, pelo WhatsApp."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-urologistas",
+    "marketing-para-nutrologos"
+  ]
+}

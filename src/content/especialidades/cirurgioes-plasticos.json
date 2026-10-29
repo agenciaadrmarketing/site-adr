@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-cirurgioes-plasticos",
+  "nome": "Cirurgia plástica",
+  "plural": "cirurgiões plásticos",
+  "status": "publicada",
+  "title": "Marketing para Cirurgiões Plásticos | ADR Marketing",
+  "description": "Marketing para cirurgiões plásticos: Google Ads para quem busca a cirurgia pelo nome, remarketing no Meta Ads e comercial que leva à consulta de avaliação.",
+  "h1": "Marketing para cirurgiões plásticos",
+  "h1Accent": "que transforma pesquisa em avaliação",
+  "resposta": "Seu paciente pesquisa por meses. A ADR mantém sua clínica presente nessa decisão e leva quem tem perfil até a consulta de avaliação.",
+  "wa": "Olá! Vim pela página de marketing para cirurgiões plásticos da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de cirurgia plástica decide",
+    "texto": "A decisão é longa e emocional. O paciente começa pelo conteúdo, segue o perfil, tira dúvidas sobre recuperação, anestesia e valores, e só então agenda a avaliação. Formação, RQE, estrutura hospitalar e segurança pesam mais do que preço — e quem compara apenas valor costuma não ter o perfil procurado.",
+    "pontos": [
+      "Decisão longa: semanas ou meses entre o primeiro contato e a cirurgia",
+      "Formação, RQE, estrutura e segurança pesam mais do que preço",
+      "A consulta de avaliação é a principal porta de entrada particular",
+      "Pergunta de valor e parcelamento aparecem cedo e precisam de roteiro"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'cirurgião plástico' com cidade e pelo nome da cirurgia (rinoplastia, mamoplastia, abdominoplastia, lipoaspiração). Intenção alta; separar cirurgia de procedimento estético não cirúrgico melhora a qualidade do contato.",
+    "meta": "Acompanha o paciente durante a pesquisa com conteúdo educativo e remarketing para quem já visitou o site ou o perfil. Sem promessa de resultado e sem antes e depois fora das regras do CFM.",
+    "conteudo": "Conteúdo sobre como funciona cada cirurgia, recuperação, riscos e expectativas realistas sustenta a confiança durante a pesquisa."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Formação, RQE, estrutura e segurança comunicadas com clareza, com expectativas realistas."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para quem busca a cirurgia pelo nome; Meta Ads para conteúdo e remarketing durante a fase de pesquisa."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil particular, tipo de cirurgia e momento de decisão."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Condução da consulta de avaliação, roteiro para a pergunta de valor e acompanhamento de quem ainda está decidindo."
+    }
+  ],
+  "sensiveis": [
+    "Antes e depois só dentro das regras da Resolução CFM nº 2.336/2023, com finalidade educativa",
+    "Sem promessa de resultado, sorteio de procedimento ou preço promocional",
+    "Riscos e recuperação comunicados com clareza, sem minimizar a cirurgia",
+    "Nenhum dado clínico ou foto do paciente em formulários do site"
+  ],
+  "faq": [
+    {
+      "q": "Posso mostrar antes e depois nos anúncios?",
+      "a": "A Resolução CFM nº 2.336/2023 permite em situações específicas, com consentimento do paciente, caráter educativo e sem promessa de resultado. As plataformas de anúncio também têm regras próprias, então cada peça é avaliada antes de subir."
+    },
+    {
+      "q": "Como lidar com o paciente que demora meses para decidir?",
+      "a": "Com conteúdo e remarketing que acompanham a pesquisa, e com um atendimento que registra cada contato e retoma a conversa no momento certo, sem pressão."
+    },
+    {
+      "q": "Meta Ads faz sentido para cirurgia plástica?",
+      "a": "Faz, principalmente para autoridade e remarketing, porque o paciente acompanha o perfil antes de decidir. Para quem já busca a cirurgia pelo nome, o Google costuma trazer contatos mais prontos."
+    },
+    {
+      "q": "O que a ADR mede?",
+      "a": "Contatos, pacientes qualificados, consultas de avaliação agendadas e, quando a clínica compartilha, cirurgias fechadas — mês a mês, pelo WhatsApp."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-urologistas",
+    "marketing-para-nutrologos"
+  ]
+}

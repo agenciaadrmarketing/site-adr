@@ -18,6 +18,21 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 # Rastreadores usados para TREINAMENTO de modelos (não são busca).
 # Decisão documentada: permitidos por padrão para não reduzir a presença da
 # ADR nas respostas de IA. Para bloquear, troque "Allow: /" por "Disallow: /"
@@ -45,3 +60,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://agenciaadrmarketing.com/sitemap.xml
+Sitemap: https://agenciaadrmarketing.com/sitemap-index.xml

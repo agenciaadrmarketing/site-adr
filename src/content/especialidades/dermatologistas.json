@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-dermatologistas",
+  "nome": "Dermatologia",
+  "plural": "dermatologistas",
+  "status": "publicada",
+  "title": "Marketing para Dermatologistas | ADR Marketing",
+  "description": "Marketing para dermatologistas: campanhas separadas para consulta clínica e procedimentos, Google Ads, Meta Ads e roteiro para a pergunta de valor.",
+  "h1": "Marketing para dermatologistas",
+  "h1Accent": "que enche a agenda certa",
+  "resposta": "Consulta clínica e procedimentos em campanhas separadas, para atrair pacientes particulares com perfil — não curiosos atrás de preço.",
+  "wa": "Olá! Vim pela página de marketing para dermatologistas da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de dermatologia decide",
+    "texto": "Quem chega por queixa clínica quer resolver um problema que incomoda há tempo e compara disponibilidade e localização. Quem busca procedimento estético pesquisa mais: olha o perfil do médico, o consultório, a forma de explicar o procedimento, e muitas vezes pergunta o valor antes de agendar. Nos dois casos, a diferença entre o dermatologista e um serviço sem médico precisa ficar clara.",
+    "pontos": [
+      "Queixa clínica e estética têm públicos e tempos de decisão diferentes",
+      "Instagram pesa na escolha: o paciente avalia o perfil antes de chamar",
+      "Pergunta sobre valor logo no primeiro contato é comum e precisa de roteiro",
+      "Concorrência com clínicas de estética sem médico exige posicionamento claro"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'dermatologista' com cidade e por queixas e procedimentos (acne, melasma, queda de cabelo, avaliação de pintas). Intenção alta; separar consulta clínica de procedimento estético melhora a qualidade do contato.",
+    "meta": "Constrói desejo e confiança com conteúdo educativo sobre pele e procedimentos, para o público certo da região. Sem antes e depois fora das regras do CFM e sem promessa de resultado.",
+    "conteudo": "Conteúdo educativo sobre cuidados com a pele, sinais de alerta e como funciona cada procedimento sustenta a autoridade antes do primeiro contato."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Formação, RQE e critério médico em primeiro plano, diferenciando o consultório de serviços sem médico."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para consulta e queixas com busca ativa; Meta Ads para procedimentos e construção de autoridade."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil particular e por tipo de demanda: consulta clínica, procedimento ou acompanhamento."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Roteiro para a pergunta de valor, agendamento de avaliação e retorno ágil a quem chega pelo Instagram."
+    }
+  ],
+  "sensiveis": [
+    "Antes e depois só dentro das regras da Resolução CFM nº 2.336/2023, com finalidade educativa",
+    "Sem promessa de resultado, preço promocional ou “pacotes” de procedimentos",
+    "Nome, CRM e RQE do médico presentes na comunicação da especialidade",
+    "Nenhum dado clínico ou foto de lesão em formulários do site"
+  ],
+  "faq": [
+    {
+      "q": "Posso anunciar procedimentos estéticos?",
+      "a": "Pode, como informação sobre o procedimento e a avaliação médica, sem preço promocional nem promessa de resultado. Imagens de antes e depois seguem regras próprias do CFM."
+    },
+    {
+      "q": "Vale separar consulta clínica e estética nas campanhas?",
+      "a": "Sim. São públicos e tempos de decisão diferentes. Separar campanhas, mensagens e roteiro de atendimento evita encher a agenda com quem não tem o perfil procurado."
+    },
+    {
+      "q": "Meta Ads faz sentido para dermatologia?",
+      "a": "Faz, principalmente para procedimentos e autoridade, porque o paciente avalia o perfil antes de chamar. Para queixa clínica com busca ativa, o Google costuma trazer contatos mais prontos."
+    },
+    {
+      "q": "O que a ADR mede?",
+      "a": "Contatos, pacientes qualificados, consultas e procedimentos agendados e, quando a clínica compartilha, comparecimento — mês a mês, pelo WhatsApp."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-urologistas",
+    "marketing-para-nutrologos"
+  ]
+}

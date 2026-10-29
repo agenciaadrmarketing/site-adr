@@ -16,7 +16,7 @@ const especialidades = defineCollection({
     description: z.string().max(175),
     h1: z.string(),
     h1Accent: z.string(),
-    resposta: z.string().min(200),
+    resposta: z.string().min(80),
     wa: z.string(),
     jornada: z.object({ titulo: z.string(), texto: z.string(), pontos: z.array(z.string()).min(3) }),
     demanda: z.object({ google: z.string(), meta: z.string(), conteudo: z.string() }),
@@ -53,6 +53,10 @@ const artigos = defineCollection({
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     wa: z.string(),
     cta: z.object({ title: z.string(), text: z.string() }),
+    // Imagem de capa (foto licenciada, salva em /public/assets/blog/). Opcional.
+    imagem: z.object({ src: z.string().regex(/^\/assets\/blog\/[a-z0-9-]+\.webp$/), alt: z.string().min(8), credito: z.string(), creditoUrl: z.string().url(), width: z.number().int(), height: z.number().int() }).optional(),
+    imagemBusca: z.string().optional(),
+    imagemAlt: z.string().optional(),
   }),
 });
 

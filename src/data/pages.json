@@ -4,6 +4,10 @@
   { "path": "/contato/", "status": "publicada" },
   { "path": "/servicos/", "status": "publicada" },
   { "path": "/marketing-medico/", "status": "publicada" },
+  { "path": "/trafego-pago-para-medicos/", "status": "publicada" },
+  { "path": "/google-ads-para-medicos/", "status": "publicada" },
+  { "path": "/meta-ads-para-medicos/", "status": "publicada" },
+  { "path": "/marketing-para-clinicas/", "status": "publicada" },
   { "path": "/metodologia/", "status": "publicada" },
   { "path": "/politica-de-privacidade/", "status": "publicada" },
   { "path": "/marketing-para-endocrinologistas/", "status": "publicada" },
@@ -26,10 +30,10 @@
   { "path": "/blog/regras-de-publicidade-medica-cfm/", "status": "pendente", "motivo": "conteúdo regulatório: aguarda validação por profissional habilitado (gerado com noindex para revisão)" },
   { "path": "/termos-de-uso/", "status": "pendente", "motivo": "rascunho aguardando revisão jurídica do cliente" },
   { "path": "/cases/", "status": "pendente", "motivo": "sem cases verificáveis; só estrutura técnica" },
-  { "path": "/marketing-para-dermatologistas/", "status": "pendente", "motivo": "Fase 2, segunda leva" },
-  { "path": "/marketing-para-cirurgioes-plasticos/", "status": "pendente", "motivo": "Fase 2, segunda leva" },
-  { "path": "/marketing-para-ortopedistas/", "status": "pendente", "motivo": "Fase 2, segunda leva" },
-  { "path": "/marketing-para-neurologistas/", "status": "pendente", "motivo": "Fase 2, segunda leva" },
-  { "path": "/marketing-para-psiquiatras/", "status": "pendente", "motivo": "Fase 2, segunda leva" },
-  { "path": "/niches/odonto/", "status": "legado", "motivo": "sem equivalente aprovado; aguarda decisão do cliente" }
+  { "path": "/marketing-para-dermatologistas/", "status": "publicada" },
+  { "path": "/marketing-para-cirurgioes-plasticos/", "status": "publicada" },
+  { "path": "/marketing-para-ortopedistas/", "status": "publicada" },
+  { "path": "/marketing-para-neurologistas/", "status": "publicada" },
+  { "path": "/marketing-para-psiquiatras/", "status": "publicada" },
+  { "path": "/marketing-para-dentistas/", "status": "publicada" }
 ]

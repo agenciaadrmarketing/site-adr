@@ -69,6 +69,7 @@ export function articleJsonLd(a: {
   section: string;
   keywords: string[];
   wordCount: number;
+  image?: string;
 }): Json {
   const url = `${SITE.url}${a.path}`;
   return {
@@ -85,7 +86,7 @@ export function articleJsonLd(a: {
     articleSection: a.section,
     keywords: a.keywords.join(', '),
     wordCount: a.wordCount,
-    image: SITE.ogImage,
+    image: a.image ?? SITE.ogImage,
     author: { '@id': `${SITE.url}/#org` },
     publisher: { '@id': `${SITE.url}/#org` },
   };

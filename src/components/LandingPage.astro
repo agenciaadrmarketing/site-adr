@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from './PageHero.astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+import Button from './Button.astro';
+import SectionLabel from './SectionLabel.astro';
+import Faq from './Faq.astro';
+import LeadForm from './LeadForm.astro';
+import RelatedLinks from './RelatedLinks.astro';
+import { SITE, whatsappUrl } from '../data/site';
+import { webPage, breadcrumbList, faqPage } from '../data/seo';
+import { LANDINGS } from '../data/landings';
+
+interface Props { slug: string }
+const d = LANDINGS[Astro.props.slug];
+const path = `/${d.slug}/`;
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Soluções', href: '/servicos/' }, { label: d.kicker, href: path }];
+const faq = d.faq.map((f) => ({ ...f, tag: d.kicker }));
+const service = {
+  '@type': 'Service',
+  '@id': `${SITE.url}${path}#service`,
+  name: d.serviceName,
+  serviceType: d.kicker,
+  description: d.description,
+  provider: { '@id': `${SITE.url}/#org` },
+  areaServed: 'BR',
+  audience: { '@type': 'Audience', audienceType: 'Médicos, clínicas e consultórios' },
+  url: `${SITE.url}${path}`,
+};
+const jsonLd = [webPage({ path, title: d.title, description: d.description }), breadcrumbList(crumbs), service, faqPage(faq, path)];
+const check = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>';
+const x = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></svg>';
+---
+
+<BaseLayout title={d.title} description={d.description} jsonLd={jsonLd} waMessage={d.wa} cta={{ title: 'Vamos ver se faz sentido para a sua clínica?', text: 'A viabilidade de novas parcerias é sempre condicionada a um diagnóstico comercial prévio — e o modelo admite poucos parceiros simultâneos.', waMessage: d.wa, id: `cta-${d.slug}` }}>
+  <PageHero kicker={d.kicker} title={d.h1} titleAccent={d.h1Accent} text={d.resposta} crumbs={crumbs} variant="service">
+    <WhatsAppButton id={`${d.slug}-hero`} label="Solicitar diagnóstico pelo WhatsApp" message={d.wa} arrow />
+    <Button variant="outline" openModal={`${d.slug}-hero`}>Pedir diagnóstico da agenda</Button>
+  </PageHero>
+
+  <section class="section" aria-labelledby="def-title">
+    <div class="container split">
+      <div class="col" data-reveal>
+        <SectionLabel n="01" label="Como funciona" />
+        <h2 class="h2" id="def-title">{d.definicao.titulo}</h2>
+        {d.definicao.texto.map((t) => <p class="lead">{t}</p>)}
+      </div>
+      <ul class="checks col col--list" data-reveal>
+        {d.definicao.pontos.map((p) => <li><Fragment set:html={check} />{p}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--light" aria-labelledby="qd-title">
+    <div class="container">
+      <div class="head-row" data-reveal>
+        <div class="head-row__title">
+          <SectionLabel n="02" label="Quando faz sentido" />
+          <h2 class="h2" id="qd-title">{d.quando.titulo}</h2>
+        </div>
+      </div>
+      <div class="grid-cards">
+        {d.quando.itens.map((it, i) => (
+          <article class="card card--white card--static" data-reveal>
+            <span class="card__num">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="card__title" style="margin-top:14px">{it.t}</h3>
+            <p class="card__text">{it.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="como-title">
+    <div class="container">
+      <div class="head-row" data-reveal>
+        <div class="head-row__title">
+          <SectionLabel n="03" label="Método ADR" />
+          <h2 class="h2" id="como-title">{d.como.titulo}</h2>
+        </div>
+        <p class="lead head-row__text">As mesmas etapas da <a href="/metodologia/">metodologia da ADR</a>, aplicadas a este canal.</p>
+      </div>
+      <div class="grid-cards">
+        {d.como.passos.map((p, i) => (
+          <article class="card card--static" data-reveal>
+            <span class="card__num">Etapa {String(i + 1).padStart(2, '0')}</span>
+            <h3 class="card__title" style="margin-top:14px">{p.t}</h3>
+            <p class="card__text">{p.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light" aria-labelledby="cui-title">
+    <div class="container split">
+      <div class="col" data-reveal>
+        <SectionLabel n="04" label="Normas e políticas" />
+        <h2 class="h2" id="cui-title">{d.cuidados.titulo}</h2>
+        <p class="lead">{d.cuidados.texto} Texto da resolução no portal do <a href="https://portal.cfm.org.br/" target="_blank" rel="noopener noreferrer">Conselho Federal de Medicina</a>.</p>
+      </div>
+      <ul class="checks col col--list sens" data-reveal>
+        {d.cuidados.itens.map((s) => <li><Fragment set:html={x} />{s}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-title">
+    <div class="container container--narrow">
+      <div data-reveal style="margin-bottom:clamp(24px,2.8vw,36px)">
+        <SectionLabel n="05" label="Dúvidas frequentes" />
+        <h2 class="h2" id="faq-title">Perguntas sobre <span class="silver">{d.kicker.toLowerCase()}</span></h2>
+      </div>
+      <Faq items={faq} />
+      <p class="caption" style="margin-top:20px">Conteúdo produzido pela ADR Marketing (57.872.304 CAIO SOUZA ANDERLE, CNPJ 57.872.304/0001-66) com base na sua prática em marketing para a saúde. Não substitui orientação jurídica sobre publicidade médica nem garante resultado.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight section--line" aria-labelledby="an-title">
+    <div class="container split an">
+      <div class="col" data-reveal>
+        <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Diagnóstico da agenda</p>
+        <h2 class="h2" id="an-title">Diagnóstico de <span class="silver">{d.kicker.toLowerCase()}</span> para a sua clínica</h2>
+        <p class="lead">Conte o cenário da sua clínica e a ADR responde pelo WhatsApp em horário comercial com um diagnóstico comercial prévio, sem compromisso.</p>
+        <p class="small">Prefere ir direto? <a class="an__link" href={whatsappUrl(d.wa)} target="_blank" rel="noopener" data-wa={`${d.slug}-analise-link`}>Chamar no WhatsApp</a>.</p>
+      </div>
+      <div data-reveal><LeadForm origem={`pagina_${d.slug}`} title="Solicite um diagnóstico da agenda" /></div>
+    </div>
+  </section>
+
+  <RelatedLinks title="Continue por aqui" links={[...d.relacionados, { label: 'Serviços da ADR', href: '/servicos/', text: 'O que cada frente inclui e para quem é.' }]} />
+</BaseLayout>
+
+<style>
+  .col { flex: 1 1 380px; max-width: 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+  .col .kicker { margin: 0; }
+  .col--list { max-width: none; flex: 1 1 360px; gap: 14px; }
+  .col a, .lead a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+  .sens li { color: var(--muted-dark); }
+  .sens svg { color: var(--text); }
+  .an { align-items: flex-start; }
+  .an__link { color: var(--ink); }
+</style>

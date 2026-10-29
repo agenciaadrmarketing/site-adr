@@ -14,8 +14,11 @@ export const GET: APIRoute = async () => {
       .filter((a) => a.data.status === 'publicada')
       .map((a) => [`/blog/${a.id}/`, a.data.dateModified ?? a.data.datePublished]),
   );
-  const urls = (pages as { path: string; status: string }[])
-    .filter((p) => p.status === 'publicada' || p.status === 'legado')
+  const listed = (pages as { path: string; status: string }[]).filter((p) => p.status === 'publicada' || p.status === 'legado');
+  const known = new Set((pages as { path: string }[]).map((p) => p.path));
+  // Artigos publicados entram automaticamente, mesmo sem linha própria em pages.json.
+  const extras = [...datas.keys()].filter((p) => !known.has(p)).map((path) => ({ path, status: 'publicada' }));
+  const urls = [...listed, ...extras]
     .map((p) => {
       const lastmod = datas.get(p.path);
       return `  <url>\n    <loc>${SITE.url}${p.path}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;

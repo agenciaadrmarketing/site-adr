@@ -26,6 +26,7 @@ const card = (e: (typeof all)[number]) => ({
   categoria: categoria(e.data.categoria).short,
   date: `${e.data.datePublished} ${formatDate(e.data.datePublished)}`,
   minutes: readingTime(e.body ?? ''),
+  image: e.data.imagem ? { src: e.data.imagem.src, alt: e.data.imagem.alt } : undefined,
 });
 const jsonLd = [
   webPage({ path: '/blog/', title, description, type: 'CollectionPage' }),
@@ -35,8 +36,8 @@ const jsonLd = [
 const especialidades = SPECIALTIES.filter((s) => s.status === 'publicada').slice(0, 3);
 ---
 
-<BaseLayout title={title} description={description} jsonLd={jsonLd} waMessage={BLOG_WA} cta={{ title: 'Prefere conversar sobre o seu caso?', text: 'Os artigos explicam o método. O diagnóstico comercial prévio aplica o método à sua clínica — sem custo e sem compromisso.', waMessage: BLOG_WA, id: 'cta-blog' }}>
-  <PageHero kicker="Conteúdos ADR" title="Marketing médico" titleAccent="explicado com método" text="Artigos sobre o que acontece entre o anúncio e o paciente na cadeira: captação de pacientes particulares, Google Ads e Meta Ads, atendimento no WhatsApp, indicadores e os limites da publicidade médica. Sem promessas, com fontes." crumbs={crumbs} variant="service">
+<BaseLayout title={title} description={description} jsonLd={jsonLd} waMessage={BLOG_WA} cta={{ title: 'Prefere conversar sobre o seu caso?', text: 'Os artigos explicam o método. O diagnóstico comercial prévio aplica o método à sua clínica, sem compromisso.', waMessage: BLOG_WA, id: 'cta-blog' }}>
+  <PageHero kicker="Conteúdos ADR" title="Marketing médico" titleAccent="explicado com método" text="Artigos práticos sobre marketing médico, tráfego pago e atendimento para clínicas que querem mais pacientes particulares." crumbs={crumbs} variant="service">
     <nav class="topics" aria-label="Navegar por tema">
       <ul class="topics__list">
         {CATEGORIAS.map((c) => (

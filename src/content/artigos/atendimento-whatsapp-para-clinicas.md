@@ -126,7 +126,7 @@ Este não é um texto jurídico; em dúvida, a clínica deve consultar quem a as
 
 ## Ferramentas: o básico que ajuda
 
-O WhatsApp Business oferece recursos que organizam o atendimento sem custo adicional: perfil comercial com endereço e horário, mensagem de saudação e de ausência, respostas rápidas para perguntas frequentes e etiquetas para classificar conversas (novo contato, aguardando resposta, agendado, não decidiu). Para clínicas com mais volume, ferramentas de múltiplos atendentes e integração com agenda ou CRM fazem sentido — desde que o processo exista antes da ferramenta.
+O WhatsApp Business oferece recursos que organizam o atendimento sem pagar a mais: perfil comercial com endereço e horário, mensagem de saudação e de ausência, respostas rápidas para perguntas frequentes e etiquetas para classificar conversas (novo contato, aguardando resposta, agendado, não decidiu). Para clínicas com mais volume, ferramentas de múltiplos atendentes e integração com agenda ou CRM fazem sentido — desde que o processo exista antes da ferramenta.
 
 > Ferramenta não resolve atendimento. Uma recepção com processo claro e WhatsApp Business converte mais do que uma plataforma cara sem roteiro.
 

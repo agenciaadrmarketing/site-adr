@@ -54,7 +54,7 @@ const related = d.relacionadas
 <BaseLayout title={d.title} description={d.description} jsonLd={jsonLd} waMessage={d.wa} cta={{ title: `Vamos estruturar a captação em ${d.nome.toLowerCase()}?`, text: 'A viabilidade de novas parcerias é sempre condicionada a um diagnóstico comercial prévio — e o modelo admite poucos parceiros simultâneos.', waMessage: d.wa, id: `cta-${d.slug}` }}>
   <PageHero kicker={`Especialidade · ${d.nome}`} title={d.h1} titleAccent={d.h1Accent} text={d.resposta} crumbs={crumbs} variant="specialty">
     <WhatsAppButton id={`${d.slug}-hero`} label="Solicitar diagnóstico pelo WhatsApp" message={d.wa} arrow />
-    <Button variant="outline" openModal={`${d.slug}-hero`}>Pedir análise gratuita</Button>
+    <Button variant="outline" openModal={`${d.slug}-hero`}>Pedir diagnóstico da agenda</Button>
   </PageHero>
 
   <section class="section" aria-labelledby="jor-title">
@@ -146,9 +146,9 @@ const related = d.relacionadas
   <section class="section section--tight section--line" aria-labelledby="an-title">
     <div class="container split an">
       <div class="col" data-reveal>
-        <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Análise gratuita</p>
+        <p class="kicker"><span class="kicker__line" aria-hidden="true"></span>Diagnóstico da agenda</p>
         <h2 class="h2" id="an-title">Análise de marketing para <span class="silver">{d.plural}</span></h2>
-        <p class="lead">Conte o cenário da sua clínica e a ADR responde pelo WhatsApp em horário comercial com um diagnóstico comercial prévio — sem custo e sem compromisso.</p>
+        <p class="lead">Conte o cenário da sua clínica e a ADR responde pelo WhatsApp em horário comercial com um diagnóstico comercial prévio, sem compromisso.</p>
         <p class="small">Prefere ir direto? <a class="an__link" href={whatsappUrl(d.wa)} target="_blank" rel="noopener" data-wa={`${d.slug}-analise-link`}>Chamar no WhatsApp</a>.</p>
       </div>
       <div data-reveal><LeadForm origem={`especialidade_${d.slug}`} title={`Solicite uma análise para ${d.plural}`} /></div>

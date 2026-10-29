@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-dentistas",
+  "nome": "Odontologia",
+  "plural": "dentistas",
+  "status": "publicada",
+  "title": "Marketing Odontológico para Dentistas e Clínicas | ADR",
+  "description": "Marketing odontológico para dentistas e clínicas: Google Ads para implantes, lentes e alinhadores, Meta Ads e comercial que transforma avaliação em tratamento.",
+  "h1": "Marketing para dentistas",
+  "h1Accent": "que lota a agenda de avaliação",
+  "resposta": "Implantes, lentes, alinhadores e clareamento para pacientes particulares, com anúncios no Google e no Instagram e uma recepção preparada para transformar avaliação em tratamento.",
+  "wa": "Olá! Vim pela página de marketing para dentistas da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de odontologia decide",
+    "texto": "Na urgência — dor, dente quebrado — o paciente procura perto de casa e decide no mesmo dia. Nos tratamentos de valor alto, como implantes, lentes de contato dental e alinhadores, ele pesquisa, compara clínicas, olha o Instagram e pergunta preço e parcelamento antes de agendar a avaliação. É aqui que aparece a diferença entre a clínica que compete por preço e a que vende pelo valor.",
+    "pontos": [
+      "Urgência decide rápido; tratamentos de valor alto pedem pesquisa",
+      "Instagram e avaliações no Google pesam na escolha da clínica",
+      "A avaliação é a principal porta de entrada para o tratamento particular",
+      "Pergunta de preço e parcelamento aparece cedo e precisa de roteiro"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'dentista' com cidade e por tratamentos (implante dentário, lente de contato dental, alinhador invisível, clareamento). Intenção alta; separar urgência de tratamento planejado melhora a qualidade do contato.",
+    "meta": "Constrói desejo e confiança com conteúdo sobre tratamentos, para o público certo da região. Antes e depois só dentro das regras do CFO e sem promessa de resultado.",
+    "conteudo": "Conteúdo sobre como funciona cada tratamento, cuidados e expectativas realistas sustenta a confiança antes do primeiro contato."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Estrutura, tecnologia e forma de atendimento em primeiro plano, para vender pelo valor e não pelo preço."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para tratamentos e urgências com busca ativa; Meta Ads para tratamentos estéticos e autoridade."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil particular e por tipo de tratamento: urgência, avaliação ou tratamento planejado."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Roteiro para a pergunta de preço, agendamento da avaliação e acompanhamento do orçamento até o fechamento."
+    }
+  ],
+  "sensiveis": [
+    "Antes e depois só dentro das regras da Resolução CFO nº 196/2019",
+    "Sem preço promocional, “promoção” de tratamento ou promessa de resultado",
+    "Nome e número de inscrição no CRO presentes na comunicação",
+    "Nenhum dado clínico ou foto do paciente em formulários do site"
+  ],
+  "faq": [
+    {
+      "q": "Posso anunciar implante ou lente de contato dental?",
+      "a": "Pode, como informação sobre o tratamento e a avaliação, sem preço promocional nem promessa de resultado. O Google Ads captura essa busca ativa com boa qualidade."
+    },
+    {
+      "q": "Como lidar com o paciente que só pergunta o preço?",
+      "a": "Com um roteiro de atendimento que explica a avaliação e o valor do tratamento antes do número, e com acompanhamento do orçamento até a decisão."
+    },
+    {
+      "q": "Meta Ads faz sentido para odontologia?",
+      "a": "Faz, principalmente para tratamentos estéticos e autoridade, porque o paciente avalia o Instagram antes de chamar. Para urgência e para quem já busca o tratamento pelo nome, o Google costuma trazer contatos mais prontos."
+    },
+    {
+      "q": "O que a ADR mede?",
+      "a": "Contatos, pacientes qualificados, avaliações agendadas e, quando a clínica compartilha, tratamentos fechados — mês a mês, pelo WhatsApp."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-urologistas",
+    "marketing-para-nutrologos"
+  ]
+}

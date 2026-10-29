@@ -8,11 +8,13 @@ interface Props {
   minutes: number;
   onLight?: boolean;
   large?: boolean;
+  image?: { src: string; alt: string };
 }
-const { href, title, description, categoria, date, minutes, onLight = false, large = false } = Astro.props;
+const { href, title, description, categoria, date, minutes, onLight = false, large = false, image } = Astro.props;
 ---
 
 <a class:list={['acard', { 'acard--light': onLight, 'acard--large': large }]} href={href} data-reveal>
+  {image && <img class="acard__img" src={image.src} alt="" width="640" height="360" loading="lazy" decoding="async" />}
   <span class="acard__top">
     <span class="acard__cat">{categoria}</span>
     <span class="acard__meta">{minutes} min</span>
@@ -31,6 +33,7 @@ const { href, title, description, categoria, date, minutes, onLight = false, lar
   .acard--light { background: var(--white); border-color: var(--line-light-2); color: var(--text); box-shadow: var(--shadow-white); }
   .acard--light:hover { border-color: var(--line-light-3); color: var(--text); }
   .acard--large { min-height: 280px; }
+  .acard__img { display: block; width: calc(100% + 2 * clamp(20px, 2.2vw, 28px)); max-width: none; margin: calc(-1 * clamp(20px, 2.2vw, 28px)) calc(-1 * clamp(20px, 2.2vw, 28px)) 4px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-card) var(--radius-card) 0 0; filter: grayscale(0.35); }
   .acard__top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
   .acard__cat { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--n-500); }
   .acard--light .acard__cat { color: var(--muted-mid); }

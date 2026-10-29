@@ -148,11 +148,12 @@ export const SPECIALTIES: Specialty[] = [
   { slug: 'marketing-para-urologistas', name: 'Urologia', plural: 'Urologistas', priority: 3, status: 'publicada' },
   { slug: 'marketing-para-nutrologos', name: 'Nutrologia', plural: 'Nutrólogos', priority: 4, status: 'publicada' },
   { slug: 'marketing-para-cardiologistas', name: 'Cardiologia', plural: 'Cardiologistas', priority: 5, status: 'publicada' },
-  { slug: 'marketing-para-dermatologistas', name: 'Dermatologia', plural: 'Dermatologistas', priority: 6, status: 'pendente' },
-  { slug: 'marketing-para-cirurgioes-plasticos', name: 'Cirurgia plástica', plural: 'Cirurgiões plásticos', priority: 7, status: 'pendente' },
-  { slug: 'marketing-para-ortopedistas', name: 'Ortopedia', plural: 'Ortopedistas', priority: 8, status: 'pendente' },
-  { slug: 'marketing-para-neurologistas', name: 'Neurologia', plural: 'Neurologistas', priority: 9, status: 'pendente' },
-  { slug: 'marketing-para-psiquiatras', name: 'Psiquiatria', plural: 'Psiquiatras', priority: 10, status: 'pendente' },
+  { slug: 'marketing-para-dermatologistas', name: 'Dermatologia', plural: 'Dermatologistas', priority: 6, status: 'publicada' },
+  { slug: 'marketing-para-cirurgioes-plasticos', name: 'Cirurgia plástica', plural: 'Cirurgiões plásticos', priority: 7, status: 'publicada' },
+  { slug: 'marketing-para-ortopedistas', name: 'Ortopedia', plural: 'Ortopedistas', priority: 8, status: 'publicada' },
+  { slug: 'marketing-para-neurologistas', name: 'Neurologia', plural: 'Neurologistas', priority: 9, status: 'publicada' },
+  { slug: 'marketing-para-psiquiatras', name: 'Psiquiatria', plural: 'Psiquiatras', priority: 10, status: 'publicada' },
+  { slug: 'marketing-para-dentistas', name: 'Odontologia', plural: 'Dentistas', priority: 11, status: 'publicada' },
 ];
 
 export function specialtyHref(s: Specialty): string | undefined {
@@ -236,6 +237,7 @@ export const ORG_JSONLD = {
   telephone: CONTACT.whatsappDisplay,
   taxID: CONTACT.cnpj,
   areaServed: 'BR',
+  sameAs: ['https://www.instagram.com/agencia.adrmarketing/'],
   description:
     'Assessoria de marketing especializada em clínicas médicas, médicos e consultórios, com foco em tráfego pago, autoridade digital e captação de pacientes particulares.',
   knowsAbout: ['Marketing médico', 'Marketing para clínicas', 'Tráfego pago', 'Google Ads', 'Meta Ads', 'Captação de pacientes particulares'],

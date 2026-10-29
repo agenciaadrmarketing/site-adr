@@ -25,7 +25,7 @@ faq:
   - q: "Posso pedir avaliações aos meus pacientes?"
     a: "As políticas do Google permitem pedir avaliações, desde que não se ofereça incentivo, não se peça só a quem teve boa experiência de forma seletiva e não se escreva a avaliação pelo paciente. Ao responder, nunca confirme que a pessoa é paciente nem comente informações de saúde: isso expõe dados sensíveis."
   - q: "SEO local substitui o Google Ads?"
-    a: "Não; eles atuam em lugares diferentes da mesma página de resultados. O SEO local constrói presença orgânica no mapa e nos resultados, de forma gradual e sem custo por clique. O Google Ads compra visibilidade imediata e controlável. Clínicas com boa presença local costumam ter anúncios mais eficientes, porque o paciente que vê os dois confia mais."
+    a: "Não; eles atuam em lugares diferentes da mesma página de resultados. O SEO local constrói presença orgânica no mapa e nos resultados, de forma gradual e sem pagar por clique. O Google Ads compra visibilidade imediata e controlável. Clínicas com boa presença local costumam ter anúncios mais eficientes, porque o paciente que vê os dois confia mais."
 wa: "Olá! Li o artigo sobre SEO local para clínicas e quero conversar sobre a presença digital da minha clínica."
 cta:
   title: "Quer uma presença digital que confirme o que o seu anúncio promete?"
@@ -50,7 +50,7 @@ O Google não publica o peso exato de cada fator nem garante posição. Qualquer
 
 ## Perfil da Empresa no Google: o ponto de partida
 
-O Perfil da Empresa no Google (antigo Google Meu Negócio) é o que aparece no mapa e no painel lateral quando alguém pesquisa a clínica. É gratuito e é, de longe, o item de maior impacto no SEO local.
+O Perfil da Empresa no Google (antigo Google Meu Negócio) é o que aparece no mapa e no painel lateral quando alguém pesquisa a clínica. Não exige verba de anúncio e é, de longe, o item de maior impacto no SEO local.
 
 Checklist do perfil:
 

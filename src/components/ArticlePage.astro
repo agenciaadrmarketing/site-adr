@@ -24,6 +24,9 @@ const minutes = readingTime(body);
 const words = body.trim().split(/\s+/).filter(Boolean).length;
 const cat = categoria(d.categoria);
 const draft = d.status !== 'publicada';
+const cover = d.imagem;
+const coverAbs = cover ? `https://agenciaadrmarketing.com${cover.src}` : undefined;
+
 const published = all.filter((e) => e.data.status === 'publicada' && e.id !== entry.id);
 const related = d.relacionados
   .map((slug) => published.find((e) => e.id === slug))
@@ -36,13 +39,13 @@ const jsonLd = draft
   : [
       webPage({ path, title: d.title, description: d.description, datePublished: d.datePublished, dateModified: d.dateModified }),
       breadcrumbList(crumbs),
-      articleJsonLd({ path, headline: d.h1, description: d.description, datePublished: d.datePublished, dateModified: d.dateModified, section: cat.label, keywords: [d.palavraChave, ...d.termos], wordCount: words }),
+      articleJsonLd({ path, headline: d.h1, description: d.description, datePublished: d.datePublished, dateModified: d.dateModified, section: cat.label, keywords: [d.palavraChave, ...d.termos], wordCount: words, image: coverAbs }),
       ...(faq.length ? [faqPage(d.faq, path)] : []),
     ];
 const comercial = d.comerciais[0];
 ---
 
-<BaseLayout title={d.title} description={d.description} noindex={draft} noCanonical={draft} jsonLd={jsonLd} waMessage={d.wa} cta={{ title: d.cta.title, text: d.cta.text, waMessage: d.wa, id: `cta-${entry.id}` }}>
+<BaseLayout title={d.title} description={d.description} ogImage={coverAbs} preloadHero={cover?.src} noindex={draft} noCanonical={draft} jsonLd={jsonLd} waMessage={d.wa} cta={{ title: d.cta.title, text: d.cta.text, waMessage: d.wa, id: `cta-${entry.id}` }}>
   {draft && (
     <div class="draft" role="status">
       <div class="container"><strong>Rascunho em revisão.</strong> {d.motivoRevisao ?? 'Este artigo aguarda validação antes de ser publicado.'} A página não está indexada nem listada no blog.</div>
@@ -63,6 +66,12 @@ const comercial = d.comerciais[0];
         )}
         <div><dt>Leitura</dt><dd>{minutes} min</dd></div>
       </dl>
+      {cover && (
+        <figure class="ahero__fig">
+          <img src={cover.src} alt={cover.alt} width={cover.width} height={cover.height} fetchpriority="high" decoding="async" />
+          <figcaption>Foto: <a href={cover.creditoUrl} target="_blank" rel="noopener nofollow">{cover.credito}</a> / Unsplash</figcaption>
+        </figure>
+      )}
     </div>
   </header>
 
@@ -149,7 +158,7 @@ const comercial = d.comerciais[0];
         </div>
         <div class="grid-cards">
           {related.map((r) => (
-            <ArticleCard href={`/blog/${r.id}/`} title={r.data.h1} description={r.data.description} categoria={categoria(r.data.categoria).short} date={`${r.data.datePublished} ${formatDate(r.data.datePublished)}`} minutes={readingTime(r.body ?? '')} />
+            <ArticleCard href={`/blog/${r.id}/`} title={r.data.h1} description={r.data.description} categoria={categoria(r.data.categoria).short} date={`${r.data.datePublished} ${formatDate(r.data.datePublished)}`} minutes={readingTime(r.body ?? '')} image={r.data.imagem ? { src: r.data.imagem.src, alt: r.data.imagem.alt } : undefined} />
           ))}
         </div>
       </div>
@@ -168,6 +177,10 @@ const comercial = d.comerciais[0];
   .ahero__cat { color: var(--n-300); }
   .ahero__cat:hover { border-color: var(--line-3); color: var(--ink); }
   .ahero__title { font-size: clamp(29px, 3.9vw, 52px); max-width: 24ch; }
+  .ahero__fig { margin: clamp(24px, 3vw, 40px) 0 0; max-width: 960px; }
+  .ahero__fig img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-card); border: 1px solid var(--line-2); filter: grayscale(0.35) contrast(1.02); }
+  .ahero__fig figcaption { margin-top: 8px; font-size: 11.5px; color: var(--n-600); }
+  .ahero__fig figcaption a { color: inherit; }
   .ahero__dek { font-size: clamp(15.5px, 1.25vw, 19px); line-height: 1.6; color: var(--ink-72); max-width: 58ch; text-wrap: pretty; }
   .ahero__meta { display: flex; flex-wrap: wrap; gap: 18px 32px; padding-top: 10px; }
   .ahero__meta div { display: grid; gap: 3px; }

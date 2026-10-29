@@ -6,5 +6,5 @@ export default defineConfig({
   site: 'https://agenciaadrmarketing.com',
   trailingSlash: 'always',
   compressHTML: true,
-  build: { format: 'directory', inlineStylesheets: 'auto' },
+  build: { format: 'directory', inlineStylesheets: 'always' },
 });

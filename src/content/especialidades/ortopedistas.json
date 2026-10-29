@@ -1,0 +1,74 @@
+{
+  "slug": "marketing-para-ortopedistas",
+  "nome": "Ortopedia",
+  "plural": "ortopedistas",
+  "status": "publicada",
+  "title": "Marketing para Ortopedistas | ADR Marketing",
+  "description": "Marketing para ortopedistas: Google Ads para dor e lesões por região do corpo, Meta Ads para autoridade e recepção que agenda rápido o paciente particular.",
+  "h1": "Marketing para ortopedistas",
+  "h1Accent": "que atrai o paciente particular",
+  "resposta": "Quem sente dor busca agora. A ADR coloca seu consultório nessa busca, por região do corpo, e prepara a recepção para agendar rápido.",
+  "wa": "Olá! Vim pela página de marketing para ortopedistas da ADR e quero um diagnóstico para a minha clínica.",
+  "jornada": {
+    "titulo": "Como o paciente de ortopedia decide",
+    "texto": "Quem sente dor procura perto de casa, quer horário rápido e decide em poucos dias. Quem tem lesão esportiva ou um problema que se arrasta compara mais: procura o médico pela região do corpo, lê sobre o tratamento e quer saber se vai precisar de cirurgia. Nos dois casos, agilidade e clareza sobre o que acontece na consulta pesam na escolha.",
+    "pontos": [
+      "Decisão rápida em caso de dor: agilidade e localização pesam",
+      "O paciente busca pela região do corpo (joelho, ombro, coluna)",
+      "Ortopedia do esporte e lesões que se arrastam como portas de entrada particulares",
+      "Convênio dominante: o particular precisa de agilidade e área de atuação claras"
+    ]
+  },
+  "demanda": {
+    "google": "Buscas por 'ortopedista' com cidade e pela região do corpo ou lesão (dor no joelho, ombro, coluna, menisco, tendinite). Intenção alta; separar convênio de particular e urgência de acompanhamento melhora a qualidade do contato.",
+    "meta": "Posicionamento por área de atuação e conteúdo educativo para o público certo da região, incluindo praticantes de esporte. Sem promessa de cura ou de recuperação garantida.",
+    "conteudo": "Conteúdo sobre dores comuns, lesões, tratamento e quando procurar o ortopedista sustenta a credibilidade antes do primeiro contato."
+  },
+  "frentes": [
+    {
+      "t": "Posicionamento e autoridade",
+      "d": "Área de atuação clara, formação e forma de atendimento, sem prometer cura."
+    },
+    {
+      "t": "Tráfego pago",
+      "d": "Google Ads para dor e lesões com busca ativa; Meta Ads para autoridade e ortopedia do esporte."
+    },
+    {
+      "t": "Captação de pacientes particulares",
+      "d": "Filtro por perfil particular e por tipo de demanda: consulta, segunda opinião ou acompanhamento."
+    },
+    {
+      "t": "Comercial de alta conversão",
+      "d": "Triagem de urgência × rotina, agenda ágil e resposta rápida para quem está com dor."
+    }
+  ],
+  "sensiveis": [
+    "Sem promessa de cura, de recuperação garantida ou de “evitar cirurgia”",
+    "Sem preço promocional nem comparação com outros médicos",
+    "Urgências não são tema de anúncio: a comunicação orienta a procurar emergência",
+    "Nenhum dado clínico ou exame em formulários do site"
+  ],
+  "faq": [
+    {
+      "q": "Vale anunciar por região do corpo, como joelho ou ombro?",
+      "a": "Vale, quando corresponde à área de atuação do médico. O paciente busca assim, e campanhas separadas por região trazem contatos mais alinhados ao que o consultório atende."
+    },
+    {
+      "q": "Como atrair paciente particular se a maioria chega pelo convênio?",
+      "a": "Com agilidade de agenda, área de atuação clara e um atendimento que explica bem a consulta particular. O filtro nas campanhas evita gastar verba com quem procura só o convênio."
+    },
+    {
+      "q": "Meta Ads faz sentido para ortopedia?",
+      "a": "Para autoridade e ortopedia do esporte, sim. Para quem está com dor e procura agora, o Google costuma pesar mais nesta especialidade."
+    },
+    {
+      "q": "O que a ADR mede?",
+      "a": "Contatos, pacientes qualificados, consultas agendadas e, quando a clínica compartilha, comparecimento — mês a mês, pelo WhatsApp."
+    }
+  ],
+  "relacionadas": [
+    "marketing-para-endocrinologistas",
+    "marketing-para-urologistas",
+    "marketing-para-nutrologos"
+  ]
+}
