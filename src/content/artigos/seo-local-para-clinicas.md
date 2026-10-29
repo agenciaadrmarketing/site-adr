@@ -30,6 +30,7 @@ wa: "Olá! Li o artigo sobre SEO local para clínicas e quero conversar sobre a 
 cta:
   title: "Quer uma presença digital que confirme o que o seu anúncio promete?"
   text: "A ADR trabalha posicionamento e autoridade digital integrados ao tráfego pago. Comece pelo diagnóstico comercial prévio."
+imagem: { src: "/assets/blog/seo-local-para-clinicas.webp", alt: "Pessoa segurando um smartphone para buscar um endereço", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/BJXAxQ1L7dI", width: 1280, height: 720 }
 ---
 
 Quando um paciente pesquisa "ginecologista perto de mim" ou "cardiologista em [cidade]", o Google costuma mostrar primeiro um mapa com algumas clínicas e consultórios. Quem aparece ali recebe uma parte importante dos cliques e ligações — e quem não aparece, para esse paciente, quase não existe.

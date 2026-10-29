@@ -26,6 +26,7 @@ wa: "Olá! Li o artigo sobre por que clínicas perdem agendamentos e quero avali
 cta:
   title: "Quer descobrir onde a sua clínica perde o paciente?"
   text: "O diagnóstico comercial prévio da ADR mapeia o caminho do contato até a agenda e aponta os pontos de perda antes de qualquer proposta de mídia."
+imagem: { src: "/assets/blog/por-que-clinicas-perdem-agendamentos.webp", alt: "Sala de espera com duas cadeiras vazias", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/SqgSOjRyjzU", width: 1280, height: 720 }
 ---
 
 "Recebemos muitos contatos, mas poucos agendam." É a frase mais comum nas primeiras conversas da ADR com clínicas que já investem em marketing. Quase sempre ela vem acompanhada de uma conclusão precipitada: o anúncio está trazendo gente desqualificada.

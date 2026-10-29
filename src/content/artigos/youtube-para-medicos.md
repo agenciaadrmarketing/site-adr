@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia como o seu paciente decide e onde vídeo, anúncio e atendimento se encaixam antes de recomendar qualquer canal."
 imagemBusca: "doctor recording video camera"
 imagemAlt: "Médico de jaleco gravando vídeo educativo com celular em tripé no consultório"
+imagem: { src: "/assets/blog/youtube-para-medicos.webp", alt: "Câmera em um tripé preparada para gravar um vídeo", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/kbd1oAf-9Ms", width: 1280, height: 720 }
 ---
 
 O YouTube vale a pena para o médico quando o paciente dele pesquisa antes de decidir e quando o médico consegue gravar com regularidade por bastante tempo. Diferente do feed do Instagram, onde o conteúdo some em poucos dias, um vídeo no YouTube é encontrado por busca — no próprio YouTube e no Google — e pode continuar trazendo audiência meses depois de publicado. Na prática, o canal funciona como uma biblioteca das perguntas que você responde todos os dias no consultório.

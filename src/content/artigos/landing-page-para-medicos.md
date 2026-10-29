@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR olha anúncio, página e atendimento juntos para encontrar onde o paciente se perde."
 imagemBusca: "website mockup laptop clinic"
 imagemAlt: "Notebook aberto exibindo uma página web limpa de clínica médica com botão de contato"
+imagem: { src: "/assets/blog/landing-page-para-medicos.webp", alt: "Notebook com o código de uma página web na tela", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/m_HRfLhgABo", width: 1280, height: 720 }
 ---
 
 Landing page para médicos é uma página criada para receber quem clicou em um anúncio e levar essa pessoa a um único próximo passo: entrar em contato com o consultório. Ela fala de um só procedimento ou tipo de consulta, apresenta o médico com nome, CRM e RQE, explica como o atendimento funciona, responde as dúvidas que costumam travar a decisão e oferece um botão de WhatsApp ou um formulário curto. Tudo isso carregando rápido no celular.

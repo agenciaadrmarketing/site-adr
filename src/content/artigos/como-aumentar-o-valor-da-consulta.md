@@ -31,6 +31,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR olha posicionamento, origem dos pacientes e atendimento antes de qualquer recomendação sobre valor e captação."
 imagemBusca: "doctor consultation explaining patient"
 imagemAlt: "Médico explicando exame a paciente com calma em consulta no consultório"
+imagem: { src: "/assets/blog/como-aumentar-o-valor-da-consulta.webp", alt: "Médico sorridente conversando com a paciente na consulta", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/tl447mekwuQ", width: 1280, height: 720 }
 ---
 
 Para aumentar o valor da consulta sem perder pacientes, o paciente precisa perceber mais valor antes de ver o novo preço. Isso significa posicionamento claro, consulta que entrega mais do que a média, recepção que sabe falar de valor e um reajuste planejado, aplicado primeiro a pacientes novos e medido de perto. Quem só muda o número na tabela, sem mudar nada do que o paciente vê, costuma sentir a agenda esvaziar e voltar atrás.
@@ -148,6 +149,8 @@ Este resumo é educativo. Antes de publicar valores ou condições, confira o te
 3. **Público errado:** os anúncios ou o conteúdo atraem quem procura o preço mais baixo da região.
 
 Cada hipótese pede uma ação diferente, e os indicadores do comercial mostram qual delas está acontecendo.
+
+Uma forma simples de separar as hipóteses é olhar a planilha de contatos: se o número de contatos novos caiu, o problema está antes da recepção; se os contatos continuam chegando, mas a taxa de agendamento despencou logo depois de informar o valor, a conversa sobre preço precisa de ajuste.
 
 ## Checklist para aumentar o valor da consulta
 

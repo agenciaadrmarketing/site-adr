@@ -33,6 +33,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia o caminho completo: anúncio, página, atendimento e agendamento."
 imagemBusca: "medical website laptop clinic"
 imagemAlt: "Notebook sobre mesa de consultório exibindo o site de uma clínica médica"
+imagem: { src: "/assets/blog/site-para-medicos.webp", alt: "Pessoa usando um notebook sobre uma mesa de trabalho", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/OGOWDVLbMSc", width: 1280, height: 720 }
 ---
 
 Um site para médicos precisa fazer uma coisa bem: responder, em poucos segundos, às perguntas do paciente que acabou de chegar. Quem é esse médico, ele trata o que eu preciso, onde atende, aceita meu convênio ou é particular, como eu marco. Se essas respostas estão claras no celular, carregam rápido e levam a um contato simples, o site cumpre o papel. Se não estão, nenhum visual sofisticado compensa.

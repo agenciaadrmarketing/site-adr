@@ -28,6 +28,7 @@ wa: "Olá! Li o artigo sobre autoridade digital para médicos e quero conversar 
 cta:
   title: "Quer construir reconhecimento na sua especialidade e região?"
   text: "A ADR estrutura posicionamento e autoridade digital dentro das normas do setor, integrados ao tráfego pago e ao comercial da clínica."
+imagem: { src: "/assets/blog/autoridade-digital-para-medicos.webp", alt: "Médico de camisa branca e óculos em retrato profissional", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/pTrhfmj2jDA", width: 1280, height: 720 }
 ---
 
 Autoridade digital é a palavra que mais aparece em propostas de marketing para médicos e a que menos recebe definição. Este artigo define o termo no contexto da medicina, explica por que ela vem antes da conversão e organiza a construção em cinco pilares — todos dentro do que a publicidade médica permite.

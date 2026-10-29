@@ -31,6 +31,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia a dependência atual de planos, a demanda particular possível na sua região e o que o atendimento precisa mudar."
 imagemBusca: "doctor office calendar planning"
 imagemAlt: "Médico revisando agenda e planilha de atendimentos na mesa do consultório"
+imagem: { src: "/assets/blog/como-deixar-de-depender-do-convenio.webp", alt: "Agenda mensal aberta sobre uma mesa de madeira", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/FoKO4DpXamQ", width: 1280, height: 720 }
 ---
 
 Sair do convênio médico com segurança é uma transição gradual: primeiro você cria demanda particular, depois libera os horários dos planos que menos compensam. Quem descredencia de uma vez, sem ter quem ocupe a agenda, costuma enfrentar meses de buracos e voltar atrás. Quem faz plano a plano, medindo o efeito de cada saída, troca volume por margem sem perder o controle do caixa.

@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia demanda, canais e atendimento da sua clínica antes de propor qualquer investimento."
 imagemBusca: "clinic reception desk patient"
 imagemAlt: "Recepção de clínica com atendente acolhendo paciente no balcão de entrada"
+imagem: { src: "/assets/blog/captacao-de-pacientes.webp", alt: "Recepção de um hospital com balcão e sinalização", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/nMyM7fxpokE", width: 1280, height: 720 }
 ---
 
 Captação de pacientes é o processo que leva uma pessoa que precisa de atendimento a encontrar a clínica, entrar em contato e chegar à consulta. Ela tem três partes que precisam funcionar juntas: gerar demanda, converter o contato em agendamento e garantir o comparecimento. Quando uma delas falha, as outras perdem efeito — anúncio bom com recepção lenta desperdiça verba, e recepção ótima sem demanda fica ociosa.
@@ -83,6 +84,12 @@ O contato chegou. A partir daqui, o que decide é o atendimento:
 - **Registro.** Cada contato anotado com origem, status e motivo de não agendamento.
 
 O artigo [do anúncio ao agendamento](/blog/do-anuncio-ao-agendamento/) descreve esse caminho em detalhe, e [follow-up de pacientes](/blog/follow-up-de-pacientes/) mostra como retomar quem não marcou.
+
+### O primeiro contato decide muito
+
+Pense no caminho de quem chama pelo WhatsApp numa terça à noite depois de ver um anúncio. Se a resposta chega só na quarta à tarde, a pessoa provavelmente já falou com outras clínicas. Se chega rápido, mas é uma lista de preços sem nenhuma pergunta, ela compara só pelo valor. Se chega rápido, com uma pergunta simples sobre o que ela procura, uma explicação curta de como é o atendimento e duas opções de horário, a chance de agendar aumenta — sem nenhuma pressão.
+
+Para clínicas que recebem contatos fora do horário comercial, vale definir o que acontece nesse intervalo: uma mensagem automática honesta, informando quando a equipe vai responder, e uma rotina de retorno logo no início do expediente seguinte.
 
 ## Quem faz o quê na captação
 

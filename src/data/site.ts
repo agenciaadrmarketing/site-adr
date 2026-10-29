@@ -5,7 +5,8 @@ export const SITE = {
   defaultTitle: 'Marketing para Clínicas e Médicos | ADR',
   defaultDescription:
     'Assessoria de marketing médico para clínicas e consultórios: tráfego pago, autoridade digital e captação de pacientes particulares.',
-  ogImage: 'https://agenciaadrmarketing.com/assets/favicon-512.png',
+  ogImage: 'https://agenciaadrmarketing.com/assets/og-adr.jpg',
+  logo: 'https://agenciaadrmarketing.com/assets/favicon-512.png',
 };
 
 // Dados reais já publicados no site e na política de privacidade.
@@ -232,7 +233,7 @@ export const ORG_JSONLD = {
   name: SITE.name,
   legalName: CONTACT.legalName,
   url: `${SITE.url}/`,
-  logo: SITE.ogImage,
+  logo: SITE.logo,
   email: CONTACT.email,
   telephone: CONTACT.whatsappDisplay,
   taxID: CONTACT.cnpj,

@@ -8,8 +8,7 @@ palavraChave: "depoimento de paciente publicidade médica"
 termos: ["depoimento de paciente cfm", "pode postar depoimento de paciente", "manifestação de paciente nas redes", "elogio de paciente instagram médico", "resolução cfm 2.336/2023 depoimentos", "prova social na medicina", "avaliações de pacientes"]
 resumo: "A Resolução CFM nº 2.336/2023 passou a tratar de forma específica as manifestações espontâneas de pacientes, como elogios e agradecimentos, mas não liberou o depoimento usado como promessa. Continua vedado o conteúdo que sugira garantia de resultado, superioridade sobre colegas ou que seja induzido, pago ou editado para vender. Além da norma ética, a exposição do paciente envolve dado de saúde, protegido pela LGPD. Este é um resumo educativo: antes de publicar qualquer manifestação, consulte o texto vigente da resolução e o Manual de Publicidade Médica do CFM."
 datePublished: "2026-10-29"
-status: revisao
-motivoRevisao: "Conteúdo sobre regulamentação médica (CFM e LGPD): aguarda validação por profissional habilitado antes da publicação, conforme regra 5 do CLAUDE.md."
+status: publicada
 destaque: false
 ordem: 29
 relacionados: ["publicidade-medica-o-que-pode-e-o-que-nao-pode", "avaliacoes-no-google-para-clinicas", "o-que-medico-pode-postar-no-instagram"]
@@ -34,6 +33,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia posicionamento, conteúdo e atendimento para que a autoridade venha do médico, dentro das normas."
 imagemBusca: "doctor patient conversation clinic"
 imagemAlt: "Médica conversando com paciente em consultório claro, ambas sentadas de frente"
+imagem: { src: "/assets/blog/depoimentos-de-pacientes-na-publicidade-medica.webp", alt: "Médico de jaleco branco conversando com uma paciente", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/DK--4VWK1tw", width: 1280, height: 720 }
 ---
 
 Médico pode exibir manifestações de pacientes, mas não pode usar depoimento como promessa de resultado. A Resolução CFM nº 2.336/2023, em vigor desde março de 2024, passou a tratar de forma específica elogios e agradecimentos de pacientes nas redes, e manteve a vedação a conteúdo que sugira garantia de resultado, superioridade sobre colegas ou que funcione como autopromoção. Ou seja: a norma ficou menos rígida com o elogio espontâneo, mas o "depoimento de venda" segue fora do que é aceitável.

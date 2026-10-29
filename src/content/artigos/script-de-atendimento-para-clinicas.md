@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR lê como a recepção conversa hoje e mostra onde o roteiro pode ajudar a transformar contato em consulta."
 imagemBusca: "receptionist phone call clinic"
 imagemAlt: "Recepcionista de clínica conversa ao telefone com anotações sobre a mesa"
+imagem: { src: "/assets/blog/script-de-atendimento-para-clinicas.webp", alt: "Mulher falando ao telefone diante de um notebook", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/2OnT7IKfLyw", width: 1280, height: 720 }
 ---
 
 Um script de atendimento para clínicas é o roteiro que a recepção segue em cada conversa com um possível paciente: como responder a primeira mensagem, quais perguntas fazer, como apresentar o valor, como oferecer horário e o que dizer quando a pessoa hesita. Ele existe para que a conversa tenha sempre a mesma ordem e termine sempre com um próximo passo, não importa quem esteja atendendo.

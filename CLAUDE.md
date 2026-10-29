@@ -12,8 +12,7 @@ Fonte de verdade das decisões: Prompt Mestre V2 + Decisões Finais + Complement
   (publicada + legado); `/sitemap-index.xml` aponta para ele.
 - `npm run audit` (depois do build): links, canonicals, sitemap, JSON-LD, títulos, strings proibidas,
   órfãs e similaridade entre páginas do mesmo template. Precisa terminar com "Sem erros".
-- `public/niches/odonto/` é a única página legada restante (export antigo, ~1 MB) e segue no ar até
-  decisão do cliente; `legacy/` guarda os exports originais só como referência (não é publicado).
+- `/niches/odonto/` redireciona (301) para `/marketing-para-dentistas/`; `legacy/` guarda os exports originais só como referência (não é publicado).
 - Especialidades: um JSON por especialidade em `src/content/especialidades/` (template
   `SpecialtyPage.astro`). Blog: um `.md` por artigo em `src/content/artigos/` (template
   `ArticlePage.astro`, hub `src/pages/blog/index.astro`, categorias em `src/data/blog.ts`).
@@ -56,7 +55,16 @@ parágrafos, títulos semânticos, definições objetivas, fontes para afirmaç�
 artificial), links internos contextuais, identificação da ADR como responsável, JSON-LD verdadeiro
 (`WebPage`, `BreadcrumbList`, `Service`, `FAQPage`, `Article`/`Person` só com autor real), canonical
 com barra final, título e description únicos. Sem `llms.txt` ou marcações experimentais no lugar de
-SEO convencional. Nunca prometer posição, citação em IA ou volume de leads.
+SEO convencional (há um `/llms.txt` gerado como complemento). Nunca prometer posição, citação em IA ou volume de leads.
+
+## Lote 2 (29/10/2026)
+
+- Capas do blog ficam no servidor em `public_html/assets/blog/` (não versionadas); `public/assets/blog/manifest.json`
+  lista a origem (Unsplash) e `node scripts/fetch-blog-images.mjs` baixa de novo. Nunca apagar essa pasta no deploy.
+- Páginas comerciais por intenção em `src/data/landings.ts` (template `LandingPage.astro`).
+- Rodapé sem lista de especialidades; elas ficam na faixa `SpecialtyStrip.astro` acima do rodapé.
+- Nunca usar "gratuito", "grátis" ou "sem custo" (preferência do cliente; o audit bloqueia).
+- Relatório e palavras-chave: `docs/relatorio-seo-lote-2.md` e `docs/seo-palavras-chave.json`.
 
 ## Antes de entregar
 

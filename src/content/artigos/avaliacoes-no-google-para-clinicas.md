@@ -33,6 +33,7 @@ cta:
   text: "A ADR trabalha autoridade digital, tráfego pago e estruturação do comercial. Comece pelo diagnóstico comercial prévio."
 imagemBusca: "smartphone five star review"
 imagemAlt: "Pessoa segurando celular com tela de avaliação em estrelas de um estabelecimento"
+imagem: { src: "/assets/blog/avaliacoes-no-google-para-clinicas.webp", alt: "Fileira de estrelas amarelas de avaliação", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/0ZUoBtLw3y4", width: 1280, height: 720 }
 ---
 
 Avaliações no Google funcionam para a clínica como a conversa de sala de espera funcionava antes: são o que outros pacientes dizem quando você não está ouvindo. Elas pesam na decisão de quem compara opções no mapa e fazem parte da proeminência que o Google considera nos resultados locais. O caminho seguro é pedir a todos os pacientes, sem incentivo, e responder sempre sem expor nada sobre saúde ou atendimento.

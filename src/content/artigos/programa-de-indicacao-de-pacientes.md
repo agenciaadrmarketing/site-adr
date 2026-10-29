@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR mapeia de onde vêm seus pacientes hoje e onde a jornada perde quem já foi indicado."
 imagemBusca: "friends conversation coffee recommendation"
 imagemAlt: "Duas pessoas conversando em um café, uma delas recomendando algo à outra"
+imagem: { src: "/assets/blog/programa-de-indicacao-de-pacientes.webp", alt: "Amigas conversando à mesa de um café", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/IjkIOe-2fF4", width: 1280, height: 720 }
 ---
 
 Para conseguir indicação de pacientes de forma consistente, a clínica precisa de duas coisas: uma experiência que o paciente queira contar e um jeito fácil de o indicado chegar até o médico. Indicação não aparece porque se pediu com insistência nem porque se ofereceu um brinde. Ela aparece quando o paciente sai da consulta com uma frase pronta na cabeça — "ele explica tudo", "a recepção resolve rápido", "foi o primeiro que entendeu meu problema" — e encontra a oportunidade de dizê-la.

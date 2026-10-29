@@ -26,6 +26,7 @@ wa: "Olá! Li o artigo sobre indicadores de marketing para clínicas e quero mon
 cta:
   title: "Quer saber, todo mês, de onde vem o seu paciente e quanto ele custou?"
   text: "Os relatórios da ADR acompanham investimento, contatos, qualificados e agendamentos por canal — e a liderança discute os números com a clínica."
+imagem: { src: "/assets/blog/indicadores-de-marketing-para-clinicas.webp", alt: "Notebook aberto com gráficos de indicadores", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/tR0jvlsmCuQ", width: 1280, height: 720 }
 ---
 
 Clínicas costumam ter dois extremos de relação com indicadores: nenhum (decisões por sensação) ou excesso (painéis da plataforma com dezenas de métricas que ninguém usa). O meio-termo útil é um conjunto pequeno de indicadores organizado pela jornada do paciente — da mídia até a cadeira. Este artigo apresenta esse conjunto, como coletar cada número sem sistema caro e quais armadilhas evitar.

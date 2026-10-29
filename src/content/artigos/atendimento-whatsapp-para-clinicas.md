@@ -29,6 +29,7 @@ wa: "Olá! Li o artigo sobre atendimento no WhatsApp para clínicas e quero melh
 cta:
   title: "Quer estruturar o atendimento da sua clínica?"
   text: "A ADR atua de forma consultiva na estruturação do comercial: roteiro de WhatsApp, triagem, recepção ou SDR e acompanhamento até o agendamento."
+imagem: { src: "/assets/blog/atendimento-whatsapp-para-clinicas.webp", alt: "Homem segurando um celular para responder mensagens", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/IvTDlixcg_E", width: 1280, height: 720 }
 ---
 
 O anúncio traz o contato; o WhatsApp decide se ele vira paciente. Em clínicas particulares, a conversa no WhatsApp concentra a pergunta do preço, a primeira impressão sobre o atendimento e a decisão de agendar. Este artigo reúne boas práticas para essa conversa — do tempo de resposta aos cuidados com dados de saúde.

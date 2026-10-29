@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR mapeia como os contatos são registrados hoje e qual estrutura de funil faz sentido para o seu volume."
 imagemBusca: "laptop dashboard office desk"
 imagemAlt: "Notebook com painel de acompanhamento de contatos sobre a mesa da recepção"
+imagem: { src: "/assets/blog/crm-para-clinicas.webp", alt: "Painel com gráficos de desempenho na tela do computador", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/JKUTrJ4vK00", width: 1280, height: 720 }
 ---
 
 CRM para clínicas é o sistema que organiza quem ainda não é paciente: a pessoa que mandou mensagem, pediu valor, ficou de pensar ou agendou e ainda não veio. Ele registra de onde cada contato chegou, em que etapa está, quem cuida dele e qual é o próximo passo. Faz sentido quando a planilha já não acompanha o volume ou quando mais de uma pessoa atende, e só funciona bem quando o processo de atendimento já existe.

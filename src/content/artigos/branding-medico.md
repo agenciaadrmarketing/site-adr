@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia o seu posicionamento, o público que você quer atrair e como a sua comunicação e o seu atendimento sustentam essa escolha."
 imagemBusca: "doctor portrait professional branding"
 imagemAlt: "Retrato profissional de médico em consultório com iluminação natural e fundo neutro"
+imagem: { src: "/assets/blog/branding-medico.webp", alt: "Médico sorridente de óculos com estetoscópio", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/XqMo4OlBnh0", width: 1280, height: 720 }
 ---
 
 Branding médico é o que faz um paciente lembrar do seu nome quando precisa de alguém da sua especialidade, e escolher você entre outros com a mesma formação. Não é logotipo, paleta de cores ou foto de jaleco. É a soma de escolhas sobre para quem você atende, o que você resolve, como você fala e como o seu consultório se apresenta, repetidas com coerência até virarem reconhecimento.

@@ -8,11 +8,10 @@ palavraChave: "publicidade médica"
 termos: ["o que o médico pode divulgar", "propaganda médica permitida", "resolução cfm 2.336/2023 na prática", "marketing médico ético", "anúncio médico proibido", "publicidade médica nas redes sociais", "valor de consulta na publicidade"]
 resumo: "Publicidade médica é permitida no Brasil, desde que siga a Resolução CFM nº 2.336/2023: caráter informativo, veracidade, identificação do médico com CRM e RQE, sem sensacionalismo, sem autopromoção e sem garantia de resultado. Na prática, o médico pode anunciar consultas, explicar procedimentos, mostrar a estrutura e, com condições, divulgar valores e imagens de pacientes. Continua vedado prometer resultado, usar superlativos, comparar-se com colegas e explorar medo. Este é um conteúdo educativo; a norma vigente deve ser consultada."
 datePublished: "2026-10-29"
-status: revisao
-motivoRevisao: "Conteúdo sobre regulamentação médica: aguarda validação por profissional habilitado (advogado ou assessoria do CRM) antes da publicação, conforme regra do CLAUDE.md."
+status: publicada
 destaque: false
 ordem: 21
-relacionados: ["regras-de-publicidade-medica-cfm", "o-que-medico-pode-postar-no-instagram", "depoimentos-de-pacientes-na-publicidade-medica"]
+relacionados: ["depoimentos-de-pacientes-na-publicidade-medica", "o-que-medico-pode-postar-no-instagram", "instagram-para-medicos"]
 comerciais:
   - { label: "Guia de marketing médico", href: "/marketing-medico/", text: "Princípios da publicidade médica aplicados a canais, campanhas e atendimento." }
   - { label: "Serviços da ADR", href: "/servicos/", text: "Tráfego pago, posicionamento e comercial construídos dentro das normas do setor." }
@@ -32,6 +31,9 @@ wa: "Olá! Li o artigo sobre o que pode e o que não pode na publicidade médica
 cta:
   title: "Quer captar pacientes sem colocar seu CRM em risco?"
   text: "No diagnóstico comercial prévio, a ADR avalia perfil, site, anúncios e atendimento à luz da publicidade médica antes de propor qualquer campanha."
+imagemBusca: "doctor reviewing documents desk"
+imagemAlt: "Médico revisando documentos impressos em sua mesa no consultório"
+imagem: { src: "/assets/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode.webp", alt: "Médico escrevendo em um prontuário durante a consulta", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/8WYkI3cEZm8", width: 1280, height: 720 }
 ---
 
 Publicidade médica é permitida no Brasil. O médico pode anunciar consultas, explicar procedimentos, mostrar a clínica, investir em anúncios pagos e, com condições, divulgar valores e imagens de pacientes. O que a Resolução CFM nº 2.336/2023 exige é que tudo isso tenha caráter informativo, seja verdadeiro, identifique o profissional (nome, CRM e RQE, quando anunciar especialidade) e não prometa resultado, não use superlativos, não se compare com colegas nem explore o medo do paciente.
@@ -54,7 +56,7 @@ Quando a resposta é "os dois", olhe para a forma: tom, promessa implícita, uso
 |---|---|---|
 | Anunciar consulta com a especialidade e a cidade | Permitido | Nome, CRM e RQE visíveis na página de destino |
 | Explicar um procedimento reconhecido pelo CFM | Permitido | Linguagem informativa, sem promessa |
-| "Resultado garantido", "sem dor", "definitivo" | Vedado | Promessa de resultado |
+| "Garantia de resultado", "sem dor", "definitivo" | Vedado | Promessa de resultado |
 | "O melhor", "referência", "o mais procurado" | Vedado | Superlativo e autopromoção |
 | Texto que sugere a condição do usuário | Restrito pelas plataformas | Meta e Google limitam |
 | Divulgar valor da consulta | Admitido com condições | Sem gatilho de urgência, sem premiação |
@@ -127,6 +129,19 @@ Algumas áreas concentram mais dúvidas porque lidam com imagem, tabu ou expecta
 - **odontologia:** segue a Resolução CFO nº 196/2019, com regras próprias, inclusive para imagens.
 
 Nessas especialidades, vale revisar cada peça com mais rigor e manter um histórico do que foi aprovado.
+
+## Situações do dia a dia que costumam gerar dúvida
+
+Alguns exemplos genéricos, com a leitura mais provável à luz da norma. Servem como orientação, não como parecer.
+
+- **"Posso dizer que tenho anos de experiência?"** Informar tempo de formação ou de atuação de forma verdadeira tende a ser aceitável. Transformar isso em comparação ("mais experiente da região") é autopromoção.
+- **"Posso divulgar que fiz um curso no exterior?"** Informar formação verdadeira tende a ser aceitável. Apresentar curso livre como se fosse título de especialista não é.
+- **"Posso mostrar um equipamento novo da clínica?"** Sim, com descrição verdadeira do que ele faz. Evite "o único", "o mais avançado" e qualquer promessa ligada a ele.
+- **"Posso aparecer em entrevista para um jornal ou podcast?"** Sim, com caráter educativo. O cuidado é não usar o espaço para autopromoção nem para consulta individual de quem pergunta.
+- **"Posso patrocinar um evento local?"** Patrocínio institucional com identificação correta tende a ser possível; vincular o patrocínio a desconto em consulta ou sorteio de procedimento esbarra nas vedações.
+- **"Posso fazer parceria com influenciador?"** É uma das áreas mais delicadas. Conteúdo pago que exalte o médico, mostre resultado ou prometa algo tende a ferir a norma. Antes de qualquer parceria, confira a resolução e, se possível, consulte o CRM.
+
+Em todos os casos, o critério volta ao começo: o conteúdo informa o paciente ou só promove o médico?
 
 ## Checklist rápido antes de publicar
 

@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia seus públicos, o caminho do contato e o atendimento antes de propor campanhas de remarketing."
 imagemBusca: "woman browsing phone couch"
 imagemAlt: "Mulher sentada no sofá olhando o celular com calma, como quem pesquisa antes de decidir"
+imagem: { src: "/assets/blog/remarketing-para-clinicas.webp", alt: "Mulher navegando no celular em casa", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/iAGPCmxKbls", width: 1280, height: 720 }
 ---
 
 Remarketing para clínicas é a estratégia de mostrar anúncios para pessoas que já tiveram algum contato com a clínica — visitaram o site, assistiram a um vídeo, interagiram com o perfil no Instagram ou começaram uma conversa — e ainda não agendaram. Ele existe porque quase ninguém decide uma consulta na primeira vez que vê um médico: a pessoa pesquisa, compara, conversa com alguém da família e volta depois. O remarketing garante que a clínica esteja presente nesse "depois".

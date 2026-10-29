@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia especialidade, região, criativos e atendimento antes de propor uma estrutura de campanhas."
 imagemBusca: "doctor smartphone social media"
 imagemAlt: "Médica segurando celular com o feed de uma rede social aberto na tela"
+imagem: { src: "/assets/blog/anuncios-no-instagram-para-medicos.webp", alt: "Médico segurando um celular no consultório", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/BCgiDtl0_K0", width: 1280, height: 720 }
 ---
 
 Anúncios no Instagram para médicos funcionam quando a campanha é montada para gerar contato com o paciente certo, e não para juntar curtidas. Na prática, isso significa escolher um objetivo de cadastro ou de tráfego para uma página, separar quem ainda não conhece o médico de quem já interagiu com ele e produzir criativos que apresentem o profissional e expliquem o problema — sem promessa de resultado, sem antes e depois fora das regras e sem falar com o usuário como se ele estivesse doente.

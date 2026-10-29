@@ -33,6 +33,7 @@ cta:
   text: "A ADR trabalha posicionamento, autoridade digital e anúncios no Instagram dentro das regras da publicidade médica. Comece pelo diagnóstico comercial prévio."
 imagemBusca: "doctor smartphone social media"
 imagemAlt: "Médica de jaleco segurando o celular e revisando uma publicação antes de postar"
+imagem: { src: "/assets/blog/o-que-medico-pode-postar-no-instagram.webp", alt: "Smartphone ao lado de um estetoscópio", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/SJwYvNVW1qY", width: 1280, height: 720 }
 ---
 
 O médico pode postar no Instagram praticamente tudo o que educa, apresenta e aproxima: conteúdo sobre a especialidade, bastidores do consultório, a equipe, como funciona uma consulta, respostas a dúvidas comuns. O que não pode é transformar o perfil em vitrine de promessa: garantir resultado, usar sensacionalismo, anunciar desconto ou atender caso individual pela rede social. No meio do caminho ficam os temas que exigem cuidado específico, como imagens de pacientes, antes e depois, depoimentos e valores.

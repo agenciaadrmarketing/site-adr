@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR analisa tratamentos, região, ticket e o caminho da avaliação ao plano fechado antes de recomendar mídia."
 imagemBusca: "dental clinic treatment room"
 imagemAlt: "Consultório odontológico moderno e limpo, com cadeira odontológica e luz natural"
+imagem: { src: "/assets/blog/marketing-para-clinica-odontologica.webp", alt: "Consultório odontológico moderno com cadeira de atendimento", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/e7MJLM5VGjY", width: 1280, height: 720 }
 ---
 
 Marketing para clínica odontológica é o trabalho de fazer o paciente certo chegar à avaliação e, depois, aceitar o plano de tratamento. Na prática, ele precisa lidar com dois pacientes muito diferentes. Um tem dor ou quebrou um dente e quer resolver hoje, perto de casa. O outro pensa há meses em implante, alinhador ou lentes, pesquisa várias clínicas e só agenda quando confia. Misturar os dois na mesma campanha e na mesma conversa de recepção é o erro mais caro do setor.

@@ -30,6 +30,7 @@ wa: "Olá! Li o artigo sobre Google Ads e Meta Ads para médicos e quero avaliar
 cta:
   title: "Quer saber qual canal faz sentido para a sua especialidade?"
   text: "No diagnóstico comercial prévio, a ADR analisa procedimento, região, ticket e maturidade do comercial antes de recomendar onde investir."
+imagem: { src: "/assets/blog/google-ads-ou-meta-ads-para-medicos.webp", alt: "Profissional de saúde usando um notebook", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/NFvdKIhxYlU", width: 1280, height: 720 }
 ---
 
 "Devo anunciar no Google ou no Instagram?" é uma das perguntas mais frequentes de médicos e gestores de clínica — e uma das que mais recebem respostas genéricas. A resposta útil começa por outra pergunta: o paciente que você quer já sabe que precisa de você?

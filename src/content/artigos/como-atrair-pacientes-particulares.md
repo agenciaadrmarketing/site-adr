@@ -29,6 +29,7 @@ wa: "Olá! Li o artigo sobre como atrair pacientes particulares e quero conversa
 cta:
   title: "Quer estruturar a captação de pacientes particulares na sua clínica?"
   text: "O diagnóstico comercial prévio da ADR mostra em qual dos três caminhos a sua clínica está perdendo paciente antes de propor qualquer investimento em mídia."
+imagem: { src: "/assets/blog/como-atrair-pacientes-particulares.webp", alt: "Médico com estetoscópio sentado à mesa do consultório", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/JJEOuvnY1Tw", width: 1280, height: 720 }
 ---
 
 A pergunta "como atrair pacientes particulares" costuma chegar à ADR de duas formas. A primeira é a do médico que vive de indicação, tem uma boa reputação clínica e percebe que a agenda oscila sem explicação. A segunda é a do gestor que já anuncia, recebe contatos todos os dias e mesmo assim não vê a agenda encher. Os dois estão olhando para partes diferentes do mesmo sistema.

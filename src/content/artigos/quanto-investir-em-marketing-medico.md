@@ -26,6 +26,7 @@ wa: "Olá! Li o artigo sobre quanto investir em marketing médico e quero planej
 cta:
   title: "Quer definir a verba com base na sua clínica, não em média de mercado?"
   text: "A ADR define o investimento no diagnóstico comercial prévio e separa, na proposta, o que é mídia paga às plataformas e o que é honorário da assessoria."
+imagem: { src: "/assets/blog/quanto-investir-em-marketing-medico.webp", alt: "Calculadora e caneta sobre a mesa de planejamento", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/Vs6ip7fsld8", width: 1280, height: 720 }
 ---
 
 "Quanto devo investir em marketing?" é uma pergunta legítima que costuma receber respostas ruins: um número redondo, uma porcentagem do faturamento ou "depende" sem explicação. Este artigo explica do que a verba depende de verdade, como separar os custos envolvidos e como começar sem apostar.

@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR olha os termos de pesquisa, a estrutura da conta e o caminho do contato até o agendamento."
 imagemBusca: "spreadsheet keywords laptop desk"
 imagemAlt: "Notebook sobre mesa de escritório com planilha de termos de pesquisa aberta na tela"
+imagem: { src: "/assets/blog/palavras-chave-negativas-para-clinicas.webp", alt: "Pessoa trabalhando em um notebook com uma planilha aberta", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/RbQ4j2ggOmY", width: 1280, height: 720 }
 ---
 
 Palavras-chave negativas são termos que você informa ao Google Ads para impedir que o anúncio da clínica apareça em buscas que não trazem paciente. Para uma clínica, a lista inicial quase sempre inclui vagas de emprego, cursos e residência, conteúdo acadêmico, procedimentos que a clínica não faz, cidades fora da área de atendimento e buscas por atendimento público. Ela deve estar pronta antes de ligar a campanha e ser revisada toda semana nos primeiros meses.

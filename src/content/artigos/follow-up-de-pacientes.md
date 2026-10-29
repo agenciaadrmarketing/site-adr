@@ -30,6 +30,7 @@ wa: "Olá! Li o artigo sobre follow-up de pacientes e quero organizar o acompanh
 cta:
   title: "Quer recuperar os contatos que a sua clínica deixa escapar?"
   text: "A ADR estrutura o acompanhamento comercial junto com a recepção: cadência, mensagens, registro e indicadores — com respeito às regras do setor."
+imagem: { src: "/assets/blog/follow-up-de-pacientes.webp", alt: "Jovem mulher falando ao telefone na mesa de trabalho", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/n1yI8oExVns", width: 1280, height: 720 }
 ---
 
 A maior parte das pessoas que entra em contato com uma clínica não decide na hora. Elas perguntam, recebem a informação, dizem "vou ver" — e desaparecem da conversa. Em clínicas sem processo de acompanhamento, essas pessoas também desaparecem da memória da recepção. Follow-up é o processo que impede isso, dentro de limites claros de privacidade e ética.

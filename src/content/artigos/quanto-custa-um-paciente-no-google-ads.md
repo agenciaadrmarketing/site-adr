@@ -1,7 +1,7 @@
 ---
 title: "Quanto custa um paciente no Google Ads? | ADR Marketing"
 h1: "Custo por paciente no Google Ads: como calcular quanto custa conquistar um paciente pela busca"
-description: "Custo por paciente no Google Ads: como calcular do clique ao comparecimento, o que encarece cada etapa e por que o custo por clique sozinho engana a clínica."
+description: "Custo por paciente no Google Ads: como calcular do clique ao comparecimento, o que encarece cada etapa e por que olhar só o clique engana."
 categoria: trafego
 intencao: "Investimento: o médico ou gestor quer saber quanto custa, de fato, um paciente vindo do Google Ads."
 palavraChave: "custo por paciente google ads"
@@ -30,6 +30,9 @@ wa: "Olá! Li o artigo sobre custo por paciente no Google Ads e quero entender q
 cta:
   title: "Sabe quanto custa, de verdade, cada paciente que chega pelo Google?"
   text: "No diagnóstico comercial prévio, a ADR olha a cadeia inteira, do clique ao comparecimento, antes de falar em aumentar ou reduzir verba."
+imagemBusca: "calculator spreadsheet budget planning"
+imagemAlt: "Calculadora e planilha impressa sobre a mesa durante o planejamento de custos"
+imagem: { src: "/assets/blog/quanto-custa-um-paciente-no-google-ads.webp", alt: "Pessoa fazendo contas em uma calculadora sobre a mesa", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/JhevWHCbVyw", width: 1280, height: 720 }
 ---
 
 O custo por paciente no Google Ads é a verba investida em um período dividida pelo número de pacientes que, vindos dos anúncios, efetivamente compareceram à consulta. Não existe preço de tabela: esse número sai de uma cadeia de etapas — clique, contato, agendamento, comparecimento — e cada etapa pode encarecer ou baratear o resultado final. Por isso a resposta honesta para "quanto custa um paciente no Google?" é "depende de quanto a sua clínica perde em cada etapa".
@@ -106,6 +109,18 @@ Para saber o custo por paciente, a clínica precisa ligar cada contato à campan
 - **Retorno ao Google Ads.** Agendamentos e comparecimentos podem ser importados como conversões offline, para que a plataforma aprenda quais cliques geram paciente.
 
 O cuidado com a LGPD é inegociável: nada de diagnóstico, sintoma ou dado clínico na planilha de marketing nem na importação. O que circula é o identificador do clique, a data e o status. Dados de saúde ficam no prontuário, que é outro sistema, com outro acesso.
+
+## Por que o custo por paciente muda de um mês para o outro
+
+Mesmo com a campanha bem montada, o número oscila. Algumas causas comuns, que não significam que algo quebrou:
+
+- **Sazonalidade.** Férias escolares, fim de ano e feriados prolongados mudam o volume de busca e a disponibilidade dos pacientes.
+- **Entrada ou saída de concorrentes.** Uma clínica nova anunciando os mesmos termos na região pode encarecer o clique de uma semana para outra.
+- **Mudanças na agenda.** Se o médico reduz horários, a consulta passa a ser marcada para mais longe e as faltas tendem a subir.
+- **Troca na recepção.** Uma pessoa nova, ainda em treinamento, costuma agendar menos no começo.
+- **Poucos dados.** Com volume pequeno, um ou dois pacientes a mais ou a menos mexem muito na média.
+
+Por isso vale olhar a tendência de alguns meses, e não reagir a cada variação isolada. Quando a oscilação é grande, a pergunta certa é "em qual etapa ela aconteceu?" — e a resposta quase sempre aponta para o ajuste certo.
 
 ## Erros que distorcem o custo por paciente
 

@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR olha agenda, ticket, especialidade, região e atendimento antes de recomendar qualquer verba."
 imagemBusca: "doctor office desk consultation"
 imagemAlt: "Médico em consultório pequeno e organizado, sentado à mesa diante de uma cadeira vazia"
+imagem: { src: "/assets/blog/marketing-para-consultorio-medico.webp", alt: "Médico conversando com um paciente no consultório", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/IDM3n0LfNCY", width: 1280, height: 720 }
 ---
 
 Marketing para consultório médico é o conjunto de ações que fazem um paciente particular encontrar, confiar e agendar com um médico que trabalha com estrutura pequena: uma sala, uma agenda e, muitas vezes, uma única secretária. Ele não é uma versão reduzida do marketing de uma clínica grande. Começa pelo que o consultório consegue sustentar — quantos horários existem, quais consultas pagam as contas e quem responde o WhatsApp — e só depois passa por anúncios e redes sociais.
@@ -117,7 +118,7 @@ Quem delega a operação de anúncios ganha tempo, mas não pode delegar o conte
 
 - Impulsionar posts aleatórios esperando que virem consultas.
 - Anunciar sem ter definido o que se quer vender, e receber contatos para o que não interessa.
-- Usar linguagem de promessa ("resolva de vez", "resultado garantido"), vedada pela publicidade médica e reprovada pelas plataformas.
+- Usar linguagem de promessa ("resolva de vez", "garantia de resultado"), vedada pela publicidade médica e reprovada pelas plataformas.
 - Medir sucesso por seguidores, quando o objetivo é agenda.
 - Ligar os anúncios na semana em que a secretária entra de férias.
 - Mudar tudo depois de poucos dias, antes de existirem dados para decidir.

@@ -8,8 +8,7 @@ palavraChave: "regras de publicidade médica CFM"
 termos: ["resolução cfm 2.336/2023", "publicidade médica", "marketing médico ético", "antes e depois na medicina", "manual de publicidade médica", "propaganda médica"]
 resumo: "A Resolução CFM nº 2.336/2023, publicada em setembro de 2023 e em vigor desde março de 2024, substituiu a Resolução CFM nº 1.974/2011 e atualizou as regras de publicidade médica. Ela manteve os princípios (caráter educativo, veracidade, sem sensacionalismo, sem autopromoção, sem garantia de resultado), exigiu identificação do médico (nome, CRM e RQE, quando houver) nos canais e passou a admitir, com condições, recursos antes vedados — como imagens de pacientes com finalidade educativa e divulgação de valores. Este artigo é um resumo educativo e não substitui a leitura da norma, do Manual de Publicidade Médica do CFM nem orientação jurídica."
 datePublished: "2026-10-17"
-status: revisao
-motivoRevisao: "Conteúdo sobre regulamentação médica: aguarda validação por profissional habilitado (advogado ou assessoria do CRM) antes da publicação."
+status: publicada
 destaque: false
 ordem: 11
 relacionados: ["autoridade-digital-para-medicos", "google-ads-ou-meta-ads-para-medicos", "como-atrair-pacientes-particulares"]

@@ -32,6 +32,7 @@ cta:
   text: "A ADR integra autoridade digital e Google Ads para médicos. No diagnóstico comercial prévio, avaliamos como o paciente encontra e confere o seu consultório."
 imagemBusca: "doctor office map location"
 imagemAlt: "Celular exibindo mapa com a localização de um consultório médico na cidade"
+imagem: { src: "/assets/blog/google-meu-negocio-para-medicos.webp", alt: "Pessoa usando um aplicativo de mapa no smartphone", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/jb-LAz1hGog", width: 1280, height: 720 }
 ---
 
 Google Meu Negócio é o nome antigo do que o Google hoje chama de Perfil da Empresa no Google: a ficha com endereço, horário, telefone, fotos e avaliações que aparece no Maps e ao lado dos resultados quando alguém pesquisa o seu nome ou "[especialidade] perto de mim". Para o médico, é a forma mais direta de existir na busca local. Criar e manter o perfil não exige verba de anúncio; exige preencher com cuidado, verificar o endereço e manter tudo atualizado.

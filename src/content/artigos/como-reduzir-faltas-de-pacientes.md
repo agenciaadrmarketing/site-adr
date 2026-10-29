@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR olha o caminho do contato até a consulta realizada e aponta onde os pacientes estão se perdendo."
 imagemBusca: "empty waiting room chairs"
 imagemAlt: "Sala de espera de consultório com cadeiras vazias e luz natural"
+imagem: { src: "/assets/blog/como-reduzir-faltas-de-pacientes.webp", alt: "Poltronas vazias em uma sala de espera", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/FFA8yd4OynY", width: 1280, height: 720 }
 ---
 
 Para reduzir faltas de pacientes, a clínica precisa de um processo que comece no momento do agendamento e só termine quando o paciente está na sala de espera. Na prática, isso significa agendar com intervalo curto, deixar claro o que é a consulta, confirmar na véspera pedindo resposta, lembrar no dia, facilitar a remarcação e ter uma lista de espera pronta para ocupar o horário que abriu.

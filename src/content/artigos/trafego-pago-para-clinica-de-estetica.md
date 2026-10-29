@@ -1,7 +1,7 @@
 ---
 title: "Tráfego pago para clínica de estética | ADR Marketing"
 h1: "Tráfego pago para clínica de estética médica: como anunciar procedimentos sem cair na guerra de preço"
-description: "Tráfego pago para clínica de estética: como usar Meta Ads e Google Ads, filtrar o público, respeitar as regras de publicidade médica e não depender de promoção."
+description: "Tráfego pago para clínica de estética: como usar Meta Ads e Google Ads, filtrar o público, seguir a publicidade médica e não depender de promoção."
 categoria: trafego
 intencao: "Planejamento: o médico ou gestor de clínica de estética quer saber como anunciar procedimentos com tráfego pago de forma ética e sustentável."
 palavraChave: "tráfego pago para clínica de estética"
@@ -31,6 +31,9 @@ wa: "Olá! Li o artigo sobre tráfego pago para clínica de estética e quero en
 cta:
   title: "Quer anunciar procedimentos estéticos sem entrar na guerra de preço?"
   text: "No diagnóstico comercial prévio, a ADR analisa procedimentos, ticket, posicionamento e atendimento antes de recomendar canal e verba."
+imagemBusca: "aesthetic clinic treatment room"
+imagemAlt: "Sala de atendimento de clínica de estética médica iluminada e organizada"
+imagem: { src: "/assets/blog/trafego-pago-para-clinica-de-estetica.webp", alt: "Sala de atendimento de clínica com mesa e cadeira", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/-i6kaig732w", width: 1280, height: 720 }
 ---
 
 Tráfego pago para clínica de estética médica funciona quando o anúncio ajuda a pessoa a confiar no médico e a entender o procedimento — e falha quando tenta vencer pelo menor preço. Na prática, o Meta Ads (Instagram e Facebook) costuma ser o canal que constrói desejo e familiaridade com quem ainda está pesquisando, e o Google Ads captura quem já procura um procedimento pelo nome. O que decide se o contato vira avaliação é o atendimento.
@@ -109,6 +112,16 @@ O que costuma funcionar:
 5. **Fazer follow-up** com quem não respondeu, com respeito e sem insistência.
 
 Cuidado com a LGPD: a recepção não deve pedir fotos do rosto, histórico de procedimentos ou informações de saúde pelo WhatsApp antes da consulta. Isso fica para a avaliação, em ambiente adequado. O fluxo completo está em [do anúncio ao agendamento](/blog/do-anuncio-ao-agendamento/).
+
+## Como avaliar a campanha de estética
+
+O número de mensagens é o indicador mais enganoso em estética, porque muita gente pergunta e pouca gente agenda. Uma avaliação honesta acompanha, por campanha:
+
+- custo por contato qualificado (região atendida, procedimento que a clínica faz);
+- custo por avaliação agendada e taxa de comparecimento;
+- quantas avaliações viram procedimento realizado, ao longo de algumas semanas — a decisão em estética costuma levar tempo.
+
+Comparar campanhas por esses números, e não por curtidas ou mensagens, mostra qual criativo e qual público trazem pacientes de verdade.
 
 ## Erros comuns em tráfego pago para estética
 

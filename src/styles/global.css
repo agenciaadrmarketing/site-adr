@@ -102,8 +102,8 @@ summary::-webkit-details-marker { display: none; }
 .brilho::before { width: calc(100% - 6px); height: calc(100% - 6px); border-radius: inherit; background: radial-gradient(circle at 2px 2px, #fff 0.5px, transparent 0) padding-box; background-size: 4px 4px; background-repeat: space; mask-image: conic-gradient(from calc(var(--ang) + 45deg), #000, transparent 10% 90%, #000); -webkit-mask-image: conic-gradient(from calc(var(--ang) + 45deg), #000, transparent 10% 90%, #000); opacity: 0.3; transition: opacity 420ms; }
 .brilho::after { width: 100%; aspect-ratio: 1; background: linear-gradient(-50deg, transparent, var(--luz), transparent); mask-image: radial-gradient(circle at bottom, transparent 40%, #000); -webkit-mask-image: radial-gradient(circle at bottom, transparent 40%, #000); opacity: 0.4; transition: opacity 420ms; }
 .brilho > * { position: relative; z-index: 1; }
-.brilho, .brilho::before, .brilho::after { animation: brilhoAng var(--dur) linear infinite paused; }
-.brilho::after { animation: brilhoGira var(--dur) linear infinite paused; }
+.brilho, .brilho::before, .brilho::after { animation: brilhoAng var(--dur) linear infinite running; }
+.brilho::after { animation: brilhoGira var(--dur) linear infinite running; }
 .brilho:is(:hover, :focus-visible) { --pct: 20%; --angOff: 95deg; --shine: var(--luzSuave); transform: translateY(-3px) scale(1.02); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.14), 0 0 0 3px rgba(37, 211, 102, 0.18), 0 16px 36px -12px var(--wa-glow); }
 .brilho:is(:hover, :focus-visible), .brilho:is(:hover, :focus-visible)::before, .brilho:is(:hover, :focus-visible)::after { animation-play-state: running; }
 .brilho:active { transform: translateY(0) scale(0.99); transition-duration: 90ms; }
@@ -214,6 +214,8 @@ select.input { background: var(--bg-2); padding: 0 11px; }
 .js [data-reveal].is-in { opacity: 1; transform: none; will-change: auto; }
 @media (prefers-reduced-motion: reduce) {
   .js [data-reveal] { opacity: 1; transform: none; transition: none; }
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  *:not(.brilho), *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
   .brilho::before, .brilho::after { display: none; }
+  /* A luz da borda do botão de WhatsApp continua girando (só a borda, devagar). */
+  .brilho { --dur: 6s; }
 }

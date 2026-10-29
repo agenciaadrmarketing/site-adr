@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia busca na sua região, ticket, página de destino e capacidade de atendimento antes de recomendar uma campanha."
 imagemBusca: "doctor laptop search engine"
 imagemAlt: "Médico em consultório usando notebook para revisar campanha de anúncios no Google"
+imagem: { src: "/assets/blog/como-anunciar-no-google-ads-sendo-medico.webp", alt: "Médico digitando em um notebook com estetoscópio sobre a mesa", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/ncFLAv-IDmU", width: 1280, height: 720 }
 ---
 
 Anunciar no Google Ads sendo médico significa aparecer para quem já está procurando o que você faz: uma consulta, um exame, um procedimento ou um especialista na sua cidade. O caminho tem cinco partes — termos de busca bem escolhidos, região limitada ao que a clínica atende, anúncios dentro das regras da publicidade médica e do Google, uma página de destino específica e uma medição que vá além do clique. Quem pula alguma delas costuma pagar por visitas que não viram agendamento.

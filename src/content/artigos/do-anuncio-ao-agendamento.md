@@ -24,6 +24,7 @@ wa: "Olá! Li o artigo sobre a jornada do anúncio ao agendamento e quero estrut
 cta:
   title: "Quer desenhar a jornada completa da sua clínica?"
   text: "A ADR integra mídia, posicionamento e comercial em um único processo, com indicadores em cada etapa. Comece pelo diagnóstico comercial prévio."
+imagem: { src: "/assets/blog/do-anuncio-ao-agendamento.webp", alt: "Caderno de planejamento aberto com um marcador", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/zni0zgb3bkQ", width: 1280, height: 720 }
 ---
 
 Campanha é um pedaço da captação; jornada é o todo. Quando uma clínica pensa só na campanha, otimiza o anúncio e deixa ao acaso tudo o que acontece depois do clique — que é onde o paciente decide. Este artigo descreve a jornada completa em cinco etapas, com o que cada uma precisa entregar, quem é o responsável e qual indicador mostra se ela está funcionando.

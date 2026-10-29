@@ -1,7 +1,7 @@
 ---
 title: "Política de saúde do Google Ads para médicos | ADR Marketing"
 h1: "Google Ads e saúde: como a política da plataforma afeta os anúncios de médicos e clínicas"
-description: "Política de saúde do Google Ads: o que ela restringe, por que anúncios de clínicas são reprovados ou limitados e como corrigir sem colocar a conta em risco."
+description: "Política de saúde do Google Ads: o que ela restringe, por que anúncios de clínicas são reprovados ou limitados e como corrigir sem arriscar a conta."
 categoria: trafego
 intencao: "Resolução de problema: o médico ou gestor teve anúncio reprovado ou limitado e quer entender as regras de saúde do Google Ads."
 palavraChave: "google ads saúde política"
@@ -30,6 +30,9 @@ wa: "Olá! Li o artigo sobre a política de saúde do Google Ads e quero entende
 cta:
   title: "Seus anúncios de saúde vivem sendo reprovados ou limitados?"
   text: "No diagnóstico comercial prévio, a ADR revisa a conta, os anúncios e a página de destino antes de recomendar qualquer ajuste ou nova campanha."
+imagemBusca: "laptop advertising dashboard review"
+imagemAlt: "Notebook aberto com painel de anúncios sendo revisado em uma mesa de escritório"
+imagem: { src: "/assets/blog/politica-de-saude-do-google-ads.webp", alt: "Notebook com gráficos de campanha sobre uma mesa", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/hpjSkU2UYSU", width: 1280, height: 720 }
 ---
 
 A política de saúde do Google Ads permite que médicos e clínicas anunciem consultas, especialidades e procedimentos, mas restringe três coisas que aparecem o tempo todo no marketing médico: promoção de medicamentos com prescrição, promessas e tratamentos sem comprovação, e uso de informações de saúde para segmentar ou perseguir o usuário com anúncios. Quase toda reprovação de anúncio de clínica cai em um desses grupos — ou em problemas da página de destino.
@@ -76,7 +79,7 @@ Por isso o remarketing em saúde precisa ser pensado com mais cuidado do que no 
 | Situação | O que costuma disparar | Como corrigir |
 |---|---|---|
 | Nome de medicamento | Marca ou princípio ativo de remédio com prescrição no anúncio, na palavra-chave ou na página | Anunciar a consulta e o acompanhamento, sem citar o medicamento |
-| Promessa de resultado | "Resultado garantido", "cura definitiva", "sem efeitos colaterais" | Linguagem informativa e verificável, sem garantias |
+| Promessa de resultado | "Garantia de resultado", "cura definitiva", "sem efeitos colaterais" | Linguagem informativa e verificável, sem garantias |
 | Linguagem que sugere condição | Perguntas diretas sobre a doença do usuário | Falar do serviço, não do problema da pessoa |
 | Página de destino | Site fora do ar, lento, sem informação do serviço ou diferente do anúncio | Página específica, rápida, com identificação médica e contato |
 | Padrões editoriais | Excesso de maiúsculas, símbolos, pontuação repetida, telefone no título | Texto limpo, dentro dos padrões da plataforma |

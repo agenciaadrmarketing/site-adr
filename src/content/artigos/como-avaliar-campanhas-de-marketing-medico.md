@@ -26,6 +26,7 @@ wa: "Olá! Li o artigo sobre como avaliar campanhas de marketing médico e quero
 cta:
   title: "Quer um relatório que mostre pacientes, não só cliques?"
   text: "A ADR acompanha investimento, contatos, qualificados e agendamentos por canal e discute os números com a clínica todo mês. Comece pelo diagnóstico comercial prévio."
+imagem: { src: "/assets/blog/como-avaliar-campanhas-de-marketing-medico.webp", alt: "Tela com gráficos de monitoramento de resultados", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/qwtCeJ5cLYs", width: 1280, height: 720 }
 ---
 
 Toda plataforma de anúncios entrega um painel bonito: impressões, cliques, taxa de clique, "conversões", custo por resultado. Para uma clínica, esse painel conta só o começo da história. O paciente não está no painel; está na agenda. Este artigo mostra como avaliar campanhas de marketing médico pelo que importa, com um método que qualquer clínica consegue aplicar.

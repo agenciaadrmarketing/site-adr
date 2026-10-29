@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR avalia volume, tempo de resposta e taxa de agendamento para indicar se a clínica precisa de uma função dedicada."
 imagemBusca: "headset woman laptop office"
 imagemAlt: "Profissional com fone de ouvido atende contatos em um notebook no escritório"
+imagem: { src: "/assets/blog/sdr-para-clinicas.webp", alt: "Mulher sorridente usando fone de ouvido com microfone", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/wnpf3Q5pkXA", width: 1280, height: 720 }
 ---
 
 SDR para clínicas é a pessoa ou a função dedicada a atender e qualificar os contatos que chegam pelo marketing, do primeiro "oi" até a consulta marcada. A sigla vem do inglês *sales development representative*, mas, numa clínica, o papel é bem concreto: responder rápido, entender o que o paciente procura, apresentar a consulta com clareza e acompanhar quem ficou de pensar. Faz sentido quando o volume de contatos digitais passa do que a recepção consegue atender com qualidade.

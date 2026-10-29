@@ -32,6 +32,7 @@ cta:
   text: "No diagnóstico comercial prévio, a ADR analisa como os contatos são atendidos hoje e o que precisa mudar na rotina e no roteiro da recepção."
 imagemBusca: "medical receptionist front desk"
 imagemAlt: "Secretária atende paciente no balcão da recepção de um consultório médico"
+imagem: { src: "/assets/blog/secretaria-de-consultorio-medico.webp", alt: "Mulher sorridente falando ao telefone no escritório", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/iw7gOkFLNI0", width: 1280, height: 720 }
 ---
 
 A secretária de consultório médico é quem transforma interesse em consulta. Ela atende o telefone, responde o WhatsApp, explica valores, encaixa horários, confirma a agenda e acompanha quem ficou de pensar. Em consultório particular, isso quer dizer que boa parte do que o marketing traz passa pelas mãos dela antes de chegar ao médico. Se essa etapa falha, nenhuma campanha compensa.

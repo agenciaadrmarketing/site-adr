@@ -33,6 +33,7 @@ cta:
   text: "O diagnóstico comercial prévio mostra como a ADR pensaria o seu caso antes de qualquer contrato: canal, verba, atendimento e indicadores."
 imagemBusca: "business meeting contract review"
 imagemAlt: "Duas pessoas revisando um contrato impresso sobre uma mesa de reunião"
+imagem: { src: "/assets/blog/como-escolher-agencia-de-marketing-medico.webp", alt: "Duas pessoas apertando as mãos sobre uma mesa de reunião", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/4mEyvORkbN0", width: 1280, height: 720 }
 ---
 
 Uma boa agência de marketing médico é aquela que entende as regras da publicidade médica, começa pelo diagnóstico da sua clínica antes de falar em verba, mede o trabalho até o agendamento e é transparente sobre quem faz o quê, de quem são as contas e o que está no contrato. Portfólio bonito e promessa de "agenda cheia" dizem pouco. O que diz muito é como a agência responde a perguntas específicas sobre o seu caso.

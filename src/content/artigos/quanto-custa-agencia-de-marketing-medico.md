@@ -32,6 +32,7 @@ cta:
   text: "A ADR não trabalha com pacote fixo: o diagnóstico comercial prévio define canal, escopo e verba antes de qualquer valor."
 imagemBusca: "calculator budget planning desk"
 imagemAlt: "Calculadora, caderno e caneta sobre uma mesa durante um planejamento de orçamento"
+imagem: { src: "/assets/blog/quanto-custa-agencia-de-marketing-medico.webp", alt: "Calculadora sobre uma mesa de escritório", credito: "Unsplash", creditoUrl: "https://unsplash.com/photos/8wLZi9OhsWU", width: 1280, height: 720 }
 ---
 
 Quanto custa marketing médico depende de duas contas que precisam ficar separadas: quanto você paga à agência pelo trabalho e quanto você investe em anúncios, pago diretamente ao Google e à Meta. A primeira costuma ser um fee mensal, às vezes com uma taxa inicial de setup. A segunda é a verba de mídia, que varia conforme a especialidade, a região e o objetivo. Produção de vídeo, site e ferramentas podem somar à parte.
