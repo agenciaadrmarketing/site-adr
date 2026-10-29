@@ -39,6 +39,8 @@ blog/como-reduzir-faltas-de-pacientes/index.html
 blog/crm-para-clinicas/index.html
 blog/depoimentos-de-pacientes-na-publicidade-medica/index.html
 blog/do-anuncio-ao-agendamento/index.html
+blog/doctoralia-vale-a-pena/index.html
+blog/estrategias-de-marketing-medico/index.html
 blog/follow-up-de-pacientes/index.html
 blog/google-ads-ou-meta-ads-para-medicos/index.html
 blog/google-meu-negocio-para-medicos/index.html
@@ -48,6 +50,7 @@ blog/instagram-para-medicos/index.html
 blog/landing-page-para-medicos/index.html
 blog/marketing-para-clinica-odontologica/index.html
 blog/marketing-para-consultorio-medico/index.html
+blog/medico-pode-divulgar-valor-da-consulta/index.html
 blog/o-que-medico-pode-postar-no-instagram/index.html
 blog/palavras-chave-negativas-para-clinicas/index.html
 blog/politica-de-saude-do-google-ads/index.html
