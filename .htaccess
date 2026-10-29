@@ -1,0 +1,81 @@
+# ADR Marketing — configuração para Apache (Hostinger)
+
+Options -Indexes
+ErrorDocument 404 /404.html
+
+# ---------------------------------------------------------------------------
+# Redirecionamentos
+# ---------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Páginas sem barra final → com barra (padrão de URL do site)
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+  # URLs antigas → novas (equivalência 1:1; páginas legadas removidas do pacote).
+
+  RewriteRule ^niches/cardiologia/?(index\.html)?$  /marketing-para-cardiologistas/   [R=301,L]
+  RewriteRule ^niches/endocrino/?(index\.html)?$    /marketing-para-endocrinologistas/ [R=301,L]
+  RewriteRule ^niches/ginecologia/?(index\.html)?$  /marketing-para-ginecologistas/   [R=301,L]
+  RewriteRule ^niches/nutri/?(index\.html)?$        /marketing-para-nutrologos/       [R=301,L]
+  RewriteRule ^niches/urologia/?(index\.html)?$     /marketing-para-urologistas/      [R=301,L]
+  RewriteRule ^niches/odonto/?(index\.html)?$       /marketing-para-dentistas/        [R=301,L]
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Compressão (gzip/deflate)
+# ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript text/xml text/plain
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Cache-Control
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/xml "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  # Assets gerados pelo build têm hash no nome: cache longo e imutável.
+  <FilesMatch "\.(webp|png|jpe?g|ico|svg|woff2|css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Headers de segurança. Sem Content-Security-Policy enquanto /niches/odonto/
+  # (única página legada restante) usar o runtime antigo com eval. Quando ela
+  # for removida ou redirecionada, uma CSP pode ser adicionada com segurança.
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  # Isola a janela do site de páginas abertas por ele; "allow-popups" mantém
+  # o WhatsApp abrindo normalmente em nova aba.
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+</IfModule>
