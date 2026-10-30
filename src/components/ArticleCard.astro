@@ -14,7 +14,7 @@ const { href, title, description, categoria, date, minutes, onLight = false, lar
 ---
 
 <a class:list={['acard', { 'acard--light': onLight, 'acard--large': large }]} href={href} data-reveal>
-  {image && <img class="acard__img" src={image.src} alt="" width="640" height="360" loading="lazy" decoding="async" />}
+  {image && <img class="acard__img" src={image.src} alt={image.alt} width="640" height="360" loading="lazy" decoding="async" />}
   <span class="acard__top">
     <span class="acard__cat">{categoria}</span>
     <span class="acard__meta">{minutes} min</span>

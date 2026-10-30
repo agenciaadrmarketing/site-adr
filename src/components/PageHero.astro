@@ -14,7 +14,7 @@ const { kicker, title, titleAccent, text, crumbs, variant = 'institutional', ima
 ---
 
 <header class:list={['phero', `phero--${variant}`]}>
-  {image && <img class="phero__img" src={image} alt="" width="1920" height="1080" decoding="async" fetchpriority="high" />}
+  {image && <img class="phero__img" src={image} alt="Imagem ilustrativa da página" width="1920" height="1080" decoding="async" fetchpriority="high" />}
   <div class="phero__scrim" aria-hidden="true"></div>
   <div class="container phero__in">
     {crumbs && <Breadcrumbs items={crumbs} class="phero__crumbs" />}
