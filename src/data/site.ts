@@ -273,12 +273,16 @@ export const ORG_JSONLD = {
   telephone: CONTACT.whatsappDisplay,
   taxID: CONTACT.cnpj,
   areaServed: 'BR',
-  sameAs: ['https://www.instagram.com/agencia.adrmarketing/', 'https://www.tiktok.com/@adr.marketing1'],
+  sameAs: ['https://www.instagram.com/agencia.adrmarketing/', 'https://www.youtube.com/@ADRMKT', 'https://www.tiktok.com/@adr.marketing1'],
   description:
     'Assessoria de marketing especializada em clínicas médicas, médicos e consultórios, com foco em tráfego pago, autoridade digital e captação de pacientes particulares.',
   knowsAbout: ['Marketing médico', 'Marketing para clínicas', 'Tráfego pago', 'Google Ads', 'Meta Ads', 'Captação de pacientes particulares'],
   founder: { '@type': 'Person', name: CONTACT.leader, url: `${SITE.url}/sobre/` },
-  contactPoint: { '@type': 'ContactPoint', contactType: 'sales', telephone: CONTACT.whatsappDisplay, email: CONTACT.email, availableLanguage: 'pt-BR', areaServed: 'BR' },
+  contactPoint: {
+    '@type': 'ContactPoint', contactType: 'sales', telephone: CONTACT.whatsappDisplay, email: CONTACT.email, availableLanguage: 'pt-BR', areaServed: 'BR',
+    // Cliente informou "horário comercial"; convertido para seg–sex, 8h–18h (ajustar se for outro).
+    hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
+  },
 };
 
 export const WEBSITE_JSONLD = {
