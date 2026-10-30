@@ -11,7 +11,7 @@ datePublished: "2026-10-17"
 status: publicada
 destaque: false
 ordem: 12
-relacionados: ["autoridade-digital-para-medicos", "como-atrair-pacientes-particulares", "google-ads-ou-meta-ads-para-medicos"]
+relacionados: ["marketing-para-clinica-odontologica", "autoridade-digital-para-medicos", "como-atrair-pacientes-particulares", "google-ads-ou-meta-ads-para-medicos"]
 comerciais:
   - { label: "Guia de marketing médico", href: "/marketing-medico/", text: "Tráfego pago, SEO e publicidade médica: como se complementam." }
   - { label: "Serviços da ADR", href: "/servicos/", text: "Posicionamento, autoridade digital e tráfego pago." }

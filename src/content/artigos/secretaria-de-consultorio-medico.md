@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 38
-relacionados: ["script-de-atendimento-para-clinicas", "atendimento-whatsapp-para-clinicas", "por-que-clinicas-perdem-agendamentos"]
+relacionados: ["marketing-para-consultorio-medico", "script-de-atendimento-para-clinicas", "atendimento-whatsapp-para-clinicas", "por-que-clinicas-perdem-agendamentos"]
 comerciais:
   - { label: "Serviços da ADR", href: "/servicos/", text: "Estruturação do comercial da clínica, com consultoria e treinamento da recepção." }
   - { label: "Metodologia ADR", href: "/metodologia/", text: "Como o atendimento entra no caminho entre o anúncio e a consulta." }

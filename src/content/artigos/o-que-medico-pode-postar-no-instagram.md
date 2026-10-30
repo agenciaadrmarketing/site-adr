@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 23
-relacionados: ["instagram-para-medicos", "publicidade-medica-o-que-pode-e-o-que-nao-pode", "depoimentos-de-pacientes-na-publicidade-medica"]
+relacionados: ["medico-pode-divulgar-valor-da-consulta", "instagram-para-medicos", "publicidade-medica-o-que-pode-e-o-que-nao-pode", "depoimentos-de-pacientes-na-publicidade-medica"]
 comerciais:
   - { label: "Meta Ads para médicos", href: "/meta-ads-para-medicos/", text: "Anúncios no Instagram e no Facebook com filtragem de público e atenção às regras de saúde." }
   - { label: "Serviços da ADR", href: "/servicos/", text: "Posicionamento, autoridade digital e tráfego pago para médicos." }

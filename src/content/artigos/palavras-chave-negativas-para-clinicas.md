@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 15
-relacionados: ["como-anunciar-no-google-ads-sendo-medico", "como-avaliar-campanhas-de-marketing-medico", "quanto-investir-em-marketing-medico"]
+relacionados: ["quanto-custa-um-paciente-no-google-ads", "como-anunciar-no-google-ads-sendo-medico", "como-avaliar-campanhas-de-marketing-medico", "quanto-investir-em-marketing-medico"]
 comerciais:
   - { label: "Google Ads para médicos", href: "/google-ads-para-medicos/", text: "Campanhas de pesquisa com revisão constante de termos e foco em paciente agendado." }
   - { label: "Metodologia da ADR", href: "/metodologia/", text: "Como a ADR acompanha campanhas do clique ao agendamento." }

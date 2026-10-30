@@ -1,7 +1,7 @@
 ---
 title: "Google Ads ou Meta Ads para médicos: qual usar? | ADR Marketing"
 h1: "Google Ads ou Meta Ads para médicos: qual canal faz sentido para a sua clínica"
-description: "Comparação prática entre Google Ads e Meta Ads no marketing médico: intenção, tipo de procedimento, custo por contato, restrições das plataformas e quando combinar os dois."
+description: "Google Ads ou Meta Ads para médicos: intenção de busca, tipo de procedimento, custo por contato, regras das plataformas e quando usar os dois juntos."
 categoria: trafego
 intencao: "Comparação: o médico ou gestor decide onde começar a investir em mídia paga."
 palavraChave: "google ads ou meta ads para médicos"

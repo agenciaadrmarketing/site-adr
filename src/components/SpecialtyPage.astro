@@ -45,6 +45,12 @@ const service = {
   url: `${SITE.url}${path}`,
 };
 const jsonLd = [webPage({ path, title: d.title, description: d.description }), breadcrumbList(crumbs), faqPage(faq, path), service];
+// Artigo do blog mais próximo de cada especialidade (reforça links internos para conteúdos novos).
+const ARTIGO: Record<string, { label: string; href: string; text: string }> = {
+  'marketing-para-dentistas': { label: 'Marketing para clínica odontológica', href: '/blog/marketing-para-clinica-odontologica/', text: 'Artigo: captação para odontologia dentro das regras do CFO.' },
+  'marketing-para-dermatologistas': { label: 'Tráfego pago para clínica de estética', href: '/blog/trafego-pago-para-clinica-de-estetica/', text: 'Artigo: anúncios para procedimentos estéticos.' },
+  'marketing-para-cirurgioes-plasticos': { label: 'Tráfego pago para clínica de estética', href: '/blog/trafego-pago-para-clinica-de-estetica/', text: 'Artigo: anúncios para procedimentos estéticos.' },
+};
 const related = d.relacionadas
   .map((slug) => SPECIALTIES.find((s) => s.slug === slug))
   .filter((s): s is NonNullable<typeof s> => !!s && s.status === 'publicada')
@@ -155,7 +161,7 @@ const related = d.relacionadas
     </div>
   </section>
 
-  <RelatedLinks title="Continue por aqui" links={[...related, { label: 'Serviços da ADR', href: '/servicos/', text: 'O que cada frente inclui e para quem é.' }, { label: 'Metodologia', href: '/metodologia/', text: 'Do diagnóstico ao paciente na cadeira.' }, { label: 'Como atrair pacientes particulares', href: '/blog/como-atrair-pacientes-particulares/', text: 'Artigo: de onde vem a demanda e o que a segura.' }, { label: 'Atendimento no WhatsApp para clínicas', href: '/blog/atendimento-whatsapp-para-clinicas/', text: 'Artigo: do contato ao agendamento.' }]} />
+  <RelatedLinks title="Continue por aqui" links={[...related, ...(ARTIGO[d.slug] ? [ARTIGO[d.slug]] : []), { label: 'Serviços da ADR', href: '/servicos/', text: 'O que cada frente inclui e para quem é.' }, { label: 'Metodologia', href: '/metodologia/', text: 'Do diagnóstico ao paciente na cadeira.' }, { label: 'Como atrair pacientes particulares', href: '/blog/como-atrair-pacientes-particulares/', text: 'Artigo: de onde vem a demanda e o que a segura.' }, { label: 'Atendimento no WhatsApp para clínicas', href: '/blog/atendimento-whatsapp-para-clinicas/', text: 'Artigo: do contato ao agendamento.' }]} />
 </BaseLayout>
 
 <style>

@@ -11,7 +11,7 @@ datePublished: "2026-10-17"
 status: publicada
 destaque: false
 ordem: 6
-relacionados: ["indicadores-de-marketing-para-clinicas", "quanto-investir-em-marketing-medico", "por-que-clinicas-perdem-agendamentos"]
+relacionados: ["como-escolher-agencia-de-marketing-medico", "indicadores-de-marketing-para-clinicas", "quanto-investir-em-marketing-medico", "por-que-clinicas-perdem-agendamentos"]
 comerciais:
   - { label: "Metodologia ADR", href: "/metodologia/", text: "Como a ADR acompanha os indicadores em cada etapa." }
   - { label: "Serviços da ADR", href: "/servicos/", text: "O que os relatórios da ADR incluem." }

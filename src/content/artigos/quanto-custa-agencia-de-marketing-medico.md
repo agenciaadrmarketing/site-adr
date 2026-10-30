@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 37
-relacionados: ["quanto-investir-em-marketing-medico", "como-escolher-agencia-de-marketing-medico", "como-avaliar-campanhas-de-marketing-medico"]
+relacionados: ["como-escolher-agencia-de-marketing-medico", "estrategias-de-marketing-medico", "quanto-investir-em-marketing-medico", "como-avaliar-campanhas-de-marketing-medico"]
 comerciais:
   - { label: "Serviços da ADR", href: "/servicos/", text: "O que está incluído em cada frente: tráfego pago, posicionamento e comercial." }
   - { label: "Contato", href: "/contato/", text: "Solicite o diagnóstico comercial prévio para receber uma proposta sob medida." }

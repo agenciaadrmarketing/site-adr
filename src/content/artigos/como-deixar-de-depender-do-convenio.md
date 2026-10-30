@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 30
-relacionados: ["como-atrair-pacientes-particulares", "como-aumentar-o-valor-da-consulta", "quanto-investir-em-marketing-medico"]
+relacionados: ["captacao-de-pacientes", "programa-de-indicacao-de-pacientes", "como-atrair-pacientes-particulares", "como-aumentar-o-valor-da-consulta", "quanto-investir-em-marketing-medico"]
 comerciais:
   - { label: "Marketing para clínicas", href: "/marketing-para-clinicas/", text: "Captação de pacientes particulares e estruturação do comercial." }
   - { label: "Metodologia da ADR", href: "/metodologia/", text: "Do diagnóstico comercial prévio ao acompanhamento de agendamentos." }

@@ -70,6 +70,7 @@ export const LANDINGS: Record<string, Landing> = {
       { q: 'Tráfego pago para médicos tem fidelidade?', a: 'Na ADR, não: o contrato é mensal, com renovação automática, sem taxa de implantação e sem multa por cancelamento.' },
     ],
     relacionados: [
+      { label: 'Captação de pacientes', href: '/blog/captacao-de-pacientes/', text: 'Artigo: os canais que trazem paciente particular.' },
       { label: 'Google Ads para médicos', href: '/google-ads-para-medicos/', text: 'Campanhas para quem já procura a especialidade.' },
       { label: 'Meta Ads para médicos', href: '/meta-ads-para-medicos/', text: 'Instagram e Facebook dentro das regras do CFM.' },
       { label: 'Quanto investir em marketing médico', href: '/blog/quanto-investir-em-marketing-medico/', text: 'Como planejar a verba de mídia.' },
@@ -128,6 +129,7 @@ export const LANDINGS: Record<string, Landing> = {
       { q: 'Google Ads funciona para todas as especialidades?', a: 'Funciona melhor onde existe busca ativa: sintoma, exame, procedimento pelo nome ou especialidade na cidade. Em especialidades com pouca busca ou decisão muito longa, ele costuma complementar o Meta Ads. O diagnóstico mostra o volume de busca da especialidade na região antes de investir.' },
     ],
     relacionados: [
+      { label: 'Quanto custa um paciente no Google Ads', href: '/blog/quanto-custa-um-paciente-no-google-ads/', text: 'Artigo: como calcular o custo real por paciente.' },
       { label: 'Tráfego pago para médicos', href: '/trafego-pago-para-medicos/', text: 'Como Google e Meta trabalham juntos.' },
       { label: 'Google Ads ou Meta Ads para médicos', href: '/blog/google-ads-ou-meta-ads-para-medicos/', text: 'Artigo: qual canal faz sentido para a sua clínica.' },
       { label: 'SEO local para clínicas', href: '/blog/seo-local-para-clinicas/', text: 'Artigo: presença no mapa sem pagar por clique.' },
@@ -184,6 +186,7 @@ export const LANDINGS: Record<string, Landing> = {
       { q: 'Médico pode anunciar no Instagram?', a: 'Pode, dentro da Resolução CFM nº 2.336/2023 e dos Padrões de Publicidade da Meta: identificação do médico, sem promessa de resultado, sem antes e depois fora das regras e sem frases que sugiram que quem vê o anúncio tem uma condição de saúde.' },
     ],
     relacionados: [
+      { label: 'Tráfego pago para clínica de estética', href: '/blog/trafego-pago-para-clinica-de-estetica/', text: 'Artigo: anúncios para procedimentos estéticos.' },
       { label: 'Tráfego pago para médicos', href: '/trafego-pago-para-medicos/', text: 'Como Google e Meta trabalham juntos.' },
       { label: 'Autoridade digital para médicos', href: '/blog/autoridade-digital-para-medicos/', text: 'Artigo: presença que sustenta a decisão do paciente.' },
       { label: 'Marketing para dermatologistas', href: '/marketing-para-dermatologistas/', text: 'Especialidade em que o Instagram pesa na escolha.' },
@@ -194,7 +197,7 @@ export const LANDINGS: Record<string, Landing> = {
   'marketing-para-clinicas': {
     slug: 'marketing-para-clinicas',
     title: 'Marketing para Clínicas Médicas | ADR Marketing',
-    description: 'Marketing para clínicas médicas: posicionamento, Google Ads, Meta Ads e estruturação da recepção para atrair pacientes particulares e reduzir perdas no WhatsApp.',
+    description: 'Marketing para clínicas médicas: posicionamento, Google Ads, Meta Ads e recepção estruturada para atrair pacientes particulares e perder menos no WhatsApp.',
     kicker: 'Clínicas médicas',
     h1: 'Marketing para clínicas',
     h1Accent: 'do anúncio à recepção',
@@ -240,6 +243,8 @@ export const LANDINGS: Record<string, Landing> = {
       { q: 'O que é permitido no marketing digital para clínicas?', a: 'Divulgar especialidades, estrutura, serviços, corpo clínico identificado (nome, CRM e RQE), horários, canais de atendimento e conteúdo educativo. Continua vedado prometer resultado, usar sensacionalismo, preço promocional como chamariz e depoimentos de pacientes com fim publicitário.' },
     ],
     relacionados: [
+      { label: 'Marketing para consultório médico', href: '/blog/marketing-para-consultorio-medico/', text: 'Artigo: o que muda no consultório pequeno.' },
+      { label: 'Estratégias de marketing médico', href: '/blog/estrategias-de-marketing-medico/', text: 'Artigo: as estratégias que funcionam e as que não valem.' },
       { label: 'Serviços da ADR', href: '/servicos/', text: 'As quatro frentes e o que cada uma inclui.' },
       { label: 'Atendimento no WhatsApp para clínicas', href: '/blog/atendimento-whatsapp-para-clinicas/', text: 'Artigo: do contato ao agendamento.' },
       { label: 'Por que clínicas perdem agendamentos', href: '/blog/por-que-clinicas-perdem-agendamentos/', text: 'Artigo: os pontos onde o contato se perde.' },

@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 16
-relacionados: ["anuncios-no-instagram-para-medicos", "follow-up-de-pacientes", "do-anuncio-ao-agendamento"]
+relacionados: ["trafego-pago-para-clinica-de-estetica", "anuncios-no-instagram-para-medicos", "follow-up-de-pacientes", "do-anuncio-ao-agendamento"]
 comerciais:
   - { label: "Meta Ads para médicos", href: "/meta-ads-para-medicos/", text: "Campanhas para público frio e remarketing no Instagram e no Facebook." }
   - { label: "Tráfego pago para médicos", href: "/trafego-pago-para-medicos/", text: "Como a ADR organiza os canais em cada etapa da decisão do paciente." }

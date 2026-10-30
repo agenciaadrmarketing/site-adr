@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 14
-relacionados: ["remarketing-para-clinicas", "google-ads-ou-meta-ads-para-medicos", "landing-page-para-medicos"]
+relacionados: ["trafego-pago-para-clinica-de-estetica", "remarketing-para-clinicas", "google-ads-ou-meta-ads-para-medicos", "landing-page-para-medicos"]
 comerciais:
   - { label: "Meta Ads para médicos", href: "/meta-ads-para-medicos/", text: "Campanhas no Instagram e no Facebook com filtragem de público e criativos dentro das regras." }
   - { label: "Tráfego pago para médicos", href: "/trafego-pago-para-medicos/", text: "Como a ADR integra Meta Ads, Google Ads e o atendimento da clínica." }

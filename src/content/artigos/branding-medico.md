@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 27
-relacionados: ["autoridade-digital-para-medicos", "instagram-para-medicos", "como-aumentar-o-valor-da-consulta"]
+relacionados: ["youtube-para-medicos", "autoridade-digital-para-medicos", "instagram-para-medicos", "como-aumentar-o-valor-da-consulta"]
 comerciais:
   - { label: "Serviços da ADR", href: "/servicos/", text: "Posicionamento e autoridade digital integrados ao tráfego pago e ao comercial." }
   - { label: "Guia de marketing médico", href: "/marketing-medico/", text: "Canais, publicidade médica e como as frentes se complementam." }

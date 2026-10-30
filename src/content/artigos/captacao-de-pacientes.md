@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 32
-relacionados: ["como-atrair-pacientes-particulares", "do-anuncio-ao-agendamento", "indicadores-de-marketing-para-clinicas"]
+relacionados: ["estrategias-de-marketing-medico", "como-atrair-pacientes-particulares", "do-anuncio-ao-agendamento", "indicadores-de-marketing-para-clinicas"]
 comerciais:
   - { label: "Marketing para clínicas", href: "/marketing-para-clinicas/", text: "Captação de pacientes particulares com tráfego pago e comercial estruturado." }
   - { label: "Tráfego pago para médicos", href: "/trafego-pago-para-medicos/", text: "Google Ads e Meta Ads conduzidos pela liderança sênior." }

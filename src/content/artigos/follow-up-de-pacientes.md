@@ -1,7 +1,7 @@
 ---
-title: "Follow-up de pacientes: como acompanhar interessados | ADR Marketing"
+title: "Follow-up de pacientes: como acompanhar interessados | ADR"
 h1: "Follow-up de pacientes: como acompanhar quem demonstrou interesse, com respeito à privacidade"
-description: "Como organizar o acompanhamento de contatos que não agendaram: cadência, canais, mensagens úteis, registro em planilha ou CRM e os limites da LGPD e da publicidade médica."
+description: "Follow-up de pacientes: cadência, canais, mensagens e registro para recuperar quem não agendou, respeitando a LGPD e as regras de publicidade médica."
 categoria: comercial
 intencao: "Processo: a clínica quer recuperar contatos que não decidiram, sem incomodar nem infringir regras."
 palavraChave: "follow-up de pacientes"
@@ -11,7 +11,7 @@ datePublished: "2026-10-17"
 status: publicada
 destaque: false
 ordem: 8
-relacionados: ["atendimento-whatsapp-para-clinicas", "por-que-clinicas-perdem-agendamentos", "indicadores-de-marketing-para-clinicas"]
+relacionados: ["programa-de-indicacao-de-pacientes", "atendimento-whatsapp-para-clinicas", "por-que-clinicas-perdem-agendamentos", "indicadores-de-marketing-para-clinicas"]
 comerciais:
   - { label: "Metodologia ADR", href: "/metodologia/", text: "Comercial de alta conversão: do contato ao agendamento." }
   - { label: "Serviços da ADR", href: "/servicos/", text: "Estruturação do comercial da clínica." }

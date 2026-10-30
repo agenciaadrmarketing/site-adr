@@ -1,7 +1,7 @@
 ---
 title: "Atendimento no WhatsApp para clínicas: boas práticas | ADR"
 h1: "Atendimento no WhatsApp para clínicas: como converter interessados em agendamentos"
-description: "Tempo de resposta, primeira mensagem, como responder à pergunta de preço, triagem, áudio e cuidados com dados de saúde: boas práticas para o WhatsApp da clínica."
+description: "WhatsApp da clínica: tempo de resposta, primeira mensagem, pergunta de preço, triagem, áudio e cuidados com dados de saúde. Boas práticas para agendar mais."
 categoria: comercial
 intencao: "Operacional: a recepção ou o gestor quer melhorar o atendimento pelo WhatsApp."
 palavraChave: "atendimento whatsapp para clínicas"

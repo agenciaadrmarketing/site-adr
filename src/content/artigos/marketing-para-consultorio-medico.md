@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 33
-relacionados: ["como-atrair-pacientes-particulares", "atendimento-whatsapp-para-clinicas", "quanto-investir-em-marketing-medico"]
+relacionados: ["captacao-de-pacientes", "como-atrair-pacientes-particulares", "atendimento-whatsapp-para-clinicas", "quanto-investir-em-marketing-medico"]
 comerciais:
   - { label: "Tráfego pago para médicos", href: "/trafego-pago-para-medicos/", text: "Google Ads e Meta Ads planejados para a capacidade real da agenda do consultório." }
   - { label: "Metodologia da ADR", href: "/metodologia/", text: "Diagnóstico comercial prévio antes de qualquer investimento em mídia." }

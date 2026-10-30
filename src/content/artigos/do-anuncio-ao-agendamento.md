@@ -1,7 +1,7 @@
 ---
 title: "Do anúncio ao agendamento: a jornada na clínica | ADR Marketing"
 h1: "Do anúncio ao agendamento: como estruturar a jornada entre campanha, atendimento e agenda"
-description: "Um mapa da jornada em cinco etapas — anúncio, página, primeiro contato, triagem e agendamento — com o que cada uma precisa entregar e onde as clínicas costumam quebrar."
+description: "A jornada do anúncio ao agendamento em cinco etapas: anúncio, página, primeiro contato, triagem e agendamento, e onde as clínicas costumam perder pacientes."
 categoria: captacao
 intencao: "Estrutural: o gestor quer desenhar o processo completo, não só a campanha."
 palavraChave: "jornada do paciente do anúncio ao agendamento"

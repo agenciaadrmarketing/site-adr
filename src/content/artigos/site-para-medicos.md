@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 26
-relacionados: ["landing-page-para-medicos", "seo-local-para-clinicas", "autoridade-digital-para-medicos"]
+relacionados: ["marketing-para-clinica-odontologica", "doctoralia-vale-a-pena", "landing-page-para-medicos", "seo-local-para-clinicas", "autoridade-digital-para-medicos"]
 comerciais:
   - { label: "Tráfego pago para médicos", href: "/trafego-pago-para-medicos/", text: "Google Ads e Meta Ads levando o paciente certo até o site do consultório." }
   - { label: "Metodologia da ADR", href: "/metodologia/", text: "Como a ADR conecta posicionamento, mídia e comercial." }

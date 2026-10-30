@@ -11,7 +11,7 @@ datePublished: "2026-10-17"
 status: publicada
 destaque: true
 ordem: 1
-relacionados: ["por-que-clinicas-perdem-agendamentos", "do-anuncio-ao-agendamento", "google-ads-ou-meta-ads-para-medicos"]
+relacionados: ["captacao-de-pacientes", "marketing-para-consultorio-medico", "por-que-clinicas-perdem-agendamentos", "do-anuncio-ao-agendamento", "google-ads-ou-meta-ads-para-medicos"]
 comerciais:
   - { label: "Serviços da ADR", href: "/servicos/", text: "Tráfego pago, posicionamento, captação e comercial." }
   - { label: "Metodologia", href: "/metodologia/", text: "As quatro etapas, do diagnóstico ao paciente na cadeira." }

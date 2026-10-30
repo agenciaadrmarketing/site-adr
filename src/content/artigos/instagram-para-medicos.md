@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 22
-relacionados: ["o-que-medico-pode-postar-no-instagram", "anuncios-no-instagram-para-medicos", "autoridade-digital-para-medicos"]
+relacionados: ["youtube-para-medicos", "o-que-medico-pode-postar-no-instagram", "anuncios-no-instagram-para-medicos", "autoridade-digital-para-medicos"]
 comerciais:
   - { label: "Marketing médico", href: "/marketing-medico/", text: "Como posicionamento, conteúdo e tráfego pago trabalham juntos." }
   - { label: "Meta Ads para médicos", href: "/meta-ads-para-medicos/", text: "Anúncios no Instagram que levam o conteúdo certo ao paciente certo da região." }

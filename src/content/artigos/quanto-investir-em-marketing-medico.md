@@ -1,7 +1,7 @@
 ---
-title: "Quanto investir em marketing médico: como planejar | ADR Marketing"
+title: "Quanto investir em marketing médico: como planejar | ADR"
 h1: "Quanto investir em marketing médico: como médicos e clínicas planejam a verba"
-description: "Não existe valor único. Veja as variáveis que definem a verba de marketing médico, a diferença entre mídia e honorário, como começar com um teste e quando ajustar."
+description: "Não existe valor único: veja o que define a verba de marketing médico, a diferença entre mídia e honorário, como começar com um teste e quando ajustar."
 categoria: trafego
 intencao: "Investimento: o médico ou gestor quer saber quanto reservar e como justificar o valor."
 palavraChave: "quanto investir em marketing médico"
@@ -11,7 +11,7 @@ datePublished: "2026-10-17"
 status: publicada
 destaque: false
 ordem: 5
-relacionados: ["google-ads-ou-meta-ads-para-medicos", "como-avaliar-campanhas-de-marketing-medico", "indicadores-de-marketing-para-clinicas"]
+relacionados: ["quanto-custa-um-paciente-no-google-ads", "quanto-custa-agencia-de-marketing-medico", "google-ads-ou-meta-ads-para-medicos", "como-avaliar-campanhas-de-marketing-medico", "indicadores-de-marketing-para-clinicas"]
 comerciais:
   - { label: "Serviços da ADR", href: "/servicos/", text: "O que cada frente inclui e como a proposta separa mídia e honorário." }
   - { label: "Contato", href: "/contato/", text: "Solicite um diagnóstico comercial prévio." }

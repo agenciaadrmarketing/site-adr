@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 13
-relacionados: ["palavras-chave-negativas-para-clinicas", "google-ads-ou-meta-ads-para-medicos", "landing-page-para-medicos"]
+relacionados: ["quanto-custa-um-paciente-no-google-ads", "palavras-chave-negativas-para-clinicas", "google-ads-ou-meta-ads-para-medicos", "landing-page-para-medicos"]
 comerciais:
   - { label: "Google Ads para médicos", href: "/google-ads-para-medicos/", text: "Campanhas de pesquisa para médicos e clínicas, operadas pela liderança sênior da ADR." }
   - { label: "Tráfego pago para médicos", href: "/trafego-pago-para-medicos/", text: "Como a ADR combina Google Ads e Meta Ads com o atendimento da clínica." }

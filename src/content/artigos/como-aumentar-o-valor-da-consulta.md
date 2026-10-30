@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 31
-relacionados: ["como-deixar-de-depender-do-convenio", "como-atrair-pacientes-particulares", "branding-medico"]
+relacionados: ["medico-pode-divulgar-valor-da-consulta", "como-deixar-de-depender-do-convenio", "como-atrair-pacientes-particulares", "branding-medico"]
 comerciais:
   - { label: "Serviços da ADR", href: "/servicos/", text: "Posicionamento, captação de pacientes particulares e estruturação do comercial." }
   - { label: "Marketing para clínicas", href: "/marketing-para-clinicas/", text: "Como captação e atendimento se conectam na clínica." }

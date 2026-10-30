@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 17
-relacionados: ["como-anunciar-no-google-ads-sendo-medico", "anuncios-no-instagram-para-medicos", "do-anuncio-ao-agendamento"]
+relacionados: ["trafego-pago-para-clinica-de-estetica", "como-anunciar-no-google-ads-sendo-medico", "anuncios-no-instagram-para-medicos", "do-anuncio-ao-agendamento"]
 comerciais:
   - { label: "Tráfego pago para médicos", href: "/trafego-pago-para-medicos/", text: "Campanhas no Google Ads e no Meta Ads com destino e atendimento alinhados." }
   - { label: "Metodologia da ADR", href: "/metodologia/", text: "Como a ADR conecta anúncio, página, atendimento e agendamento." }

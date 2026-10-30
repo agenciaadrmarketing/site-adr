@@ -1,7 +1,7 @@
 ---
 title: "Autoridade digital para médicos: como construir | ADR Marketing"
 h1: "Autoridade digital para médicos: como desenvolver presença e reconhecimento sem ferir as normas"
-description: "O que é autoridade digital na medicina, por que ela antecede a conversão, os cinco pilares (identidade, conteúdo, consistência, prova permitida e canais) e os erros comuns."
+description: "Autoridade digital para médicos: o que é, por que vem antes da conversão, os cinco pilares (identidade, conteúdo, consistência, prova e canais) e erros comuns."
 categoria: autoridade
 intencao: "Posicionamento: o médico quer ser reconhecido na especialidade e na região."
 palavraChave: "autoridade digital para médicos"
@@ -11,7 +11,7 @@ datePublished: "2026-10-17"
 status: publicada
 destaque: false
 ordem: 10
-relacionados: ["seo-local-para-clinicas", "como-atrair-pacientes-particulares", "google-ads-ou-meta-ads-para-medicos"]
+relacionados: ["youtube-para-medicos", "estrategias-de-marketing-medico", "seo-local-para-clinicas", "como-atrair-pacientes-particulares", "google-ads-ou-meta-ads-para-medicos"]
 comerciais:
   - { label: "Serviços da ADR", href: "/servicos/", text: "Autoridade digital e posicionamento médico." }
   - { label: "Guia de marketing médico", href: "/marketing-medico/", text: "O que a publicidade médica permite e veda." }

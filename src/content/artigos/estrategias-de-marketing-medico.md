@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 44
-relacionados: ["como-atrair-pacientes-particulares", "google-ads-ou-meta-ads-para-medicos", "indicadores-de-marketing-para-clinicas"]
+relacionados: ["marketing-para-consultorio-medico", "como-escolher-agencia-de-marketing-medico", "como-atrair-pacientes-particulares", "google-ads-ou-meta-ads-para-medicos", "indicadores-de-marketing-para-clinicas", "quanto-custa-agencia-de-marketing-medico"]
 comerciais:
   - { label: "Tráfego pago para médicos", href: "/trafego-pago-para-medicos/", text: "Google Ads e Meta Ads conduzidos pela liderança sênior, com foco em pacientes particulares." }
   - { label: "Guia de marketing médico", href: "/marketing-medico/", text: "Canais, publicidade médica e como as frentes se conectam." }

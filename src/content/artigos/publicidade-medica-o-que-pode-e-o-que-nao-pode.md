@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 21
-relacionados: ["depoimentos-de-pacientes-na-publicidade-medica", "o-que-medico-pode-postar-no-instagram", "instagram-para-medicos"]
+relacionados: ["medico-pode-divulgar-valor-da-consulta", "depoimentos-de-pacientes-na-publicidade-medica", "o-que-medico-pode-postar-no-instagram", "instagram-para-medicos"]
 comerciais:
   - { label: "Guia de marketing médico", href: "/marketing-medico/", text: "Princípios da publicidade médica aplicados a canais, campanhas e atendimento." }
   - { label: "Serviços da ADR", href: "/servicos/", text: "Tráfego pago, posicionamento e comercial construídos dentro das normas do setor." }

@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 25
-relacionados: ["google-meu-negocio-para-medicos", "seo-local-para-clinicas", "atendimento-whatsapp-para-clinicas"]
+relacionados: ["programa-de-indicacao-de-pacientes", "doctoralia-vale-a-pena", "google-meu-negocio-para-medicos", "seo-local-para-clinicas", "atendimento-whatsapp-para-clinicas"]
 comerciais:
   - { label: "Marketing para clínicas", href: "/marketing-para-clinicas/", text: "Posicionamento, tráfego pago e estruturação do comercial para clínicas." }
   - { label: "Serviços da ADR", href: "/servicos/", text: "Autoridade digital, tráfego pago e treinamento de recepção." }

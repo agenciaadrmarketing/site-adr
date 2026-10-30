@@ -1,7 +1,7 @@
 ---
 title: "Indicadores de marketing para clínicas: o que acompanhar | ADR"
 h1: "Indicadores de marketing para clínicas: aquisição, atendimento e conversão comercial"
-description: "Os indicadores que mostram onde a clínica ganha e perde paciente: custo por contato, tempo de resposta, taxa de qualificação, agendamento, comparecimento e custo por paciente."
+description: "Indicadores de marketing para clínicas: custo por contato, tempo de resposta, qualificação, agendamento, comparecimento e custo por paciente."
 categoria: comercial
 intencao: "Referência: o gestor quer montar um painel de indicadores da captação."
 palavraChave: "indicadores de marketing para clínicas"

@@ -11,7 +11,7 @@ datePublished: "2026-10-29"
 status: publicada
 destaque: false
 ordem: 24
-relacionados: ["seo-local-para-clinicas", "avaliacoes-no-google-para-clinicas", "site-para-medicos"]
+relacionados: ["marketing-para-clinica-odontologica", "doctoralia-vale-a-pena", "seo-local-para-clinicas", "avaliacoes-no-google-para-clinicas", "site-para-medicos"]
 comerciais:
   - { label: "Google Ads para médicos", href: "/google-ads-para-medicos/", text: "Campanhas de pesquisa e de local para quem já procura a sua especialidade." }
   - { label: "Marketing para clínicas", href: "/marketing-para-clinicas/", text: "Posicionamento, tráfego pago e comercial para clínicas com mais de um profissional." }
