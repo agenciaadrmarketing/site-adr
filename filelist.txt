@@ -1,3 +1,4 @@
+_astro/BaseLayout.astro_astro_type_script_index_0_lang.h_SJ_d4y.js
 404.html
 blog/anuncios-no-instagram-para-medicos/index.html
 blog/atendimento-whatsapp-para-clinicas/index.html
@@ -68,4 +69,3 @@ servicos/index.html
 sobre/index.html
 termos-de-uso/index.html
 trafego-pago-para-medicos/index.html
-_astro/BaseLayout.astro_astro_type_script_index_0_lang.h_SJ_d4y.js
