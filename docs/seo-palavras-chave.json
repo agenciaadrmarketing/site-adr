@@ -3363,5 +3363,115 @@
         "Tráfego pago para médicos tem fidelidade?"
       ]
     }
-  ]
+  ],
+  "planejador_2026_10_30": {
+    "fonte": "Google Keyword Planner (conta ADR), Brasil, português, média mensal",
+    "palavras": [
+      {
+        "kw": "marketing médico",
+        "vol": 1300,
+        "tendencia_3m": "+60%",
+        "concorrencia": "média",
+        "pagina": "/marketing-medico/"
+      },
+      {
+        "kw": "marketing para médicos",
+        "vol": 260,
+        "concorrencia": "alta",
+        "pagina": "/marketing-medico/"
+      },
+      {
+        "kw": "agência de marketing médico",
+        "vol": 210,
+        "concorrencia": "alta",
+        "pagina": "/"
+      },
+      {
+        "kw": "propaganda médica",
+        "vol": 210,
+        "concorrencia": "média",
+        "pagina": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+      },
+      {
+        "kw": "agência marketing médico",
+        "vol": 170,
+        "pagina": "/"
+      },
+      {
+        "kw": "marketing odontológico",
+        "vol": 170,
+        "concorrencia": "alta",
+        "pagina": "/marketing-para-dentistas/"
+      },
+      {
+        "kw": "marketing para clínicas",
+        "vol": 140,
+        "pagina": "/marketing-para-clinicas/"
+      },
+      {
+        "kw": "marketing digital para médicos",
+        "vol": 140,
+        "pagina": "/marketing-medico/"
+      },
+      {
+        "kw": "publicidade médica",
+        "vol": 140,
+        "pagina": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+      },
+      {
+        "kw": "publicidade para médicos",
+        "vol": 140,
+        "pagina": "/blog/publicidade-medica-o-que-pode-e-o-que-nao-pode/"
+      },
+      {
+        "kw": "google ads para médicos",
+        "vol": 110,
+        "tendencia_3m": "+256%",
+        "concorrencia": "baixa",
+        "pagina": "/google-ads-para-medicos/"
+      },
+      {
+        "kw": "manual de publicidade médica",
+        "vol": 110,
+        "concorrencia": "baixa",
+        "pagina": "/blog/regras-de-publicidade-medica-cfm/"
+      },
+      {
+        "kw": "captação de pacientes",
+        "vol": 90,
+        "pagina": "/blog/captacao-de-pacientes/"
+      },
+      {
+        "kw": "marketing para clínica de estética",
+        "vol": 70,
+        "pagina": "/blog/trafego-pago-para-clinica-de-estetica/"
+      },
+      {
+        "kw": "agência de marketing digital para médicos",
+        "vol": 70,
+        "pagina": "/"
+      },
+      {
+        "kw": "publicidade médica cfm",
+        "vol": 70,
+        "pagina": "/blog/regras-de-publicidade-medica-cfm/"
+      },
+      {
+        "kw": "resolução cfm publicidade médica",
+        "vol": 50,
+        "pagina": "/blog/regras-de-publicidade-medica-cfm/"
+      },
+      {
+        "kw": "marketing dentistas",
+        "vol": 50,
+        "concorrencia": "baixa",
+        "pagina": "/marketing-para-dentistas/"
+      }
+    ],
+    "acoes": [
+      "Google Ads: adicionadas \"google ads para médicos\", \"agência de marketing digital para médicos\", \"empresa de marketing médico\" e \"tráfego pago para médicos\" (frase) no grupo Genérica",
+      "Google Ads: 9 negativas novas (m4h, grow marketing, agencia grow, vitor jaci, we marketing, frases para, modelo de post, vaga, emprego)",
+      "Site: FAQ sobre o Manual da Publicidade Médica do CFM (2024) e sobre propaganda x publicidade médica"
+    ]
+  }
 }

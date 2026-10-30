@@ -21,6 +21,8 @@ fontes:
   - { label: "Google Ads — política de Saúde e medicamentos", url: "https://support.google.com/adspolicy/answer/176031" }
   - { label: "Lei Geral de Proteção de Dados Pessoais — Lei nº 13.709/2018", url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" }
 faq:
+  - q: "Propaganda médica e publicidade médica são a mesma coisa?"
+    a: "Na prática, as regras são as mesmas. A Resolução CFM nº 2.336/2023 trata das duas juntas, como publicidade e propaganda médicas, e vale para qualquer canal: site, Instagram, Google, panfleto ou entrevista. O que muda é o uso comum das palavras, não o que é permitido. Em qualquer caso, a comunicação precisa ser informativa, identificar o médico com CRM e não prometer resultado."
   - q: "Médico pode fazer anúncio pago no Instagram e no Google?"
     a: "Sim. A Resolução CFM nº 2.336/2023 não proíbe anúncios pagos; ela define como a comunicação deve ser feita, em qualquer canal. O anúncio precisa ter caráter informativo, identificar o médico com CRM e RQE quando houver especialidade, não prometer resultado e não ser sensacionalista. Além disso, valem as políticas de saúde de cada plataforma, que podem restringir temas, imagens e segmentações."
   - q: "Posso dizer que sou especialista sem ter RQE?"

@@ -17,9 +17,12 @@ comerciais:
   - { label: "Serviços da ADR", href: "/servicos/", text: "Marketing médico dentro das normas do setor." }
 fontes:
   - { label: "Conselho Federal de Medicina — portal oficial (resoluções e Manual de Publicidade Médica)", url: "https://portal.cfm.org.br/" }
+  - { label: "CFM — lançamento do novo Manual da Publicidade Médica (2024)", url: "https://portal.cfm.org.br/noticias/novo-manual-da-publicidade-medica-foi-lancado-durante-o-i-encm-2024/" }
   - { label: "Google Ads — política de Saúde e medicamentos", url: "https://support.google.com/adspolicy/answer/176031" }
   - { label: "Meta — Padrões de Publicidade", url: "https://transparency.meta.com/policies/ad-standards/" }
 faq:
+  - q: "Existe um manual de publicidade médica do CFM?"
+    a: "Sim. O CFM lançou o Manual da Publicidade Médica em março de 2024, durante o I Encontro Nacional dos Conselhos de Medicina. Ele acompanha a Resolução CFM nº 2.336/2023 com comentários e exemplos práticos, inclusive sobre o uso educativo de antes e depois. O acesso é pelo portal do CFM. Este artigo é educativo: em caso de dúvida, consulte o manual e o CRM do seu estado."
   - q: "A Resolução CFM nº 2.336/2023 já está em vigor?"
     a: "Sim. Ela foi publicada em setembro de 2023 com prazo de entrada em vigor de 180 dias e passou a valer em março de 2024, revogando a Resolução CFM nº 1.974/2011. Confirme sempre a versão vigente e eventuais atualizações no portal do CFM."
   - q: "O médico pode divulgar o valor da consulta?"
