@@ -7,7 +7,7 @@ interface Props {
 const { waMessage = DEFAULT_WA_MESSAGE } = Astro.props;
 ---
 
-<div class="assist" data-assist data-recados={JSON.stringify(RECADOS)}>
+<div class="assist is-hidden" data-assist data-recados={JSON.stringify(RECADOS)}>
   <div class="assist__bubble" data-assist-bubble hidden>
     <button type="button" class="assist__close" data-assist-close aria-label="Fechar mensagem">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
@@ -43,6 +43,9 @@ const { waMessage = DEFAULT_WA_MESSAGE } = Astro.props;
 
 <style>
   .assist { position: fixed; right: clamp(14px, 2.2vw, 26px); bottom: clamp(14px, 2.2vw, 26px); z-index: 940; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; width: min(86vw, 316px); }
+  /* Só aparece quando o visitante chega na segunda seção da página (ver ui.ts). Sem JS, fica sempre visível. */
+  .assist { transition: opacity 0.4s var(--ease), transform 0.4s var(--ease), visibility 0s linear 0s; }
+  :global(.js) .assist.is-hidden { opacity: 0; transform: translate3d(0, 16px, 0); visibility: hidden; pointer-events: none; transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0s linear 0.3s; }
   .assist__bubble { position: relative; width: 100%; border-radius: 20px; background: var(--white); border: 1px solid rgba(31, 31, 30, 0.08); box-shadow: 0 28px 64px -18px rgba(0, 0, 0, 0.6); padding: 18px 18px 20px; color: var(--text); animation: bolhaIn 0.5s var(--ease) both; }
   /* Entrada só com movimento (sem opacidade): o texto mantém o contraste
      final desde o primeiro quadro. */

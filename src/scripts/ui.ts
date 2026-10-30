@@ -287,19 +287,27 @@ if (modal) {
       }, 380);
     }, r.espera || 7000);
   };
+  /* O botão flutuante só aparece quando o visitante chega na segunda seção da página
+     (o primeiro bloco do <main> é o topo/hero; faixas decorativas não contam) e some de novo ao voltar para o topo.
+     O balão de recados começa a girar na primeira vez que o botão aparece. */
+  let comecou = false;
+  const blocos = [...(document.querySelector('#conteudo')?.children || [])].filter((e) => e.matches('section, header, .section')) as HTMLElement[];
+  const segunda = blocos[1];
+  const definir = (visivel: boolean) => {
+    root.classList.toggle('is-hidden', !visivel);
+    if (visivel && !comecou && !dispensada) { comecou = true; window.setTimeout(ciclo, 600); }
+  };
   const iniciar = () => {
-    if (dispensada) return;
-    const alvo = document.querySelector('[data-assist-trigger]');
-    if (mq('(max-width: 900px)') && alvo && typeof IntersectionObserver === 'function') {
-      const io = new IntersectionObserver((ents) => {
-        if (!ents.some((e) => e.isIntersecting)) return;
-        io.disconnect();
-        window.setTimeout(ciclo, 400);
-      }, { threshold: 0.2 });
-      io.observe(alvo);
-      return;
-    }
-    window.setTimeout(ciclo, 2800);
+    if (!segunda) { definir(true); return; }
+    let agendado = false;
+    const checar = () => {
+      agendado = false;
+      definir(window.scrollY > 80 && segunda.getBoundingClientRect().top < window.innerHeight * 0.6);
+    };
+    const onScroll = () => { if (!agendado) { agendado = true; requestAnimationFrame(checar); } };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    checar();
   };
   abrirBtn?.addEventListener('click', () => {
     if (!bolha.hidden) { abrirModal('assistente'); return; }
