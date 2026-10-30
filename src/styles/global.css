@@ -217,3 +217,24 @@ select.input { background: var(--bg-2); padding: 0 11px; }
   .brilho { --dur: 6s; }
   .brilho__aro i { animation-duration: 6s !important; animation-iteration-count: infinite !important; }
 }
+
+/* Celular: textos principais centralizados (topo das páginas, títulos de seção, chamadas e botões).
+   Parágrafos longos, artigos, cards e tabelas continuam alinhados à esquerda para facilitar a leitura. */
+@media (max-width: 760px) {
+  .kicker { justify-content: center; align-self: center; text-align: center; }
+  .h1, .h2 { text-align: center; margin-inline: auto; align-self: center; }
+  /* Só a frase de abertura da seção (bloco com um único .lead); textos de vários parágrafos ficam à esquerda. */
+  :not(:has(> .lead ~ .lead)) > .lead { text-align: center; margin-inline: auto; align-self: center; }
+  .head-row { justify-content: center; }
+  .head-row__title, .head-row__text { text-align: center; }
+  .btn-row { justify-content: center; align-self: center; }
+  .phero__in, .hero__copy { align-items: center; text-align: center; }
+  .phero__text, .hero__lead, .hero__note { margin-inline: auto; text-align: center; }
+  .crumbs ol { justify-content: center; }
+  .card .h2, .card .lead, .article__body .h2, .prose .h2 { text-align: left; margin-inline: 0; align-self: auto; }
+  .ahero__in { align-items: center; text-align: center; }
+  .ahero__cat { align-self: center; }
+  .ahero__dek { margin-inline: auto; }
+  .ahero__meta { justify-content: center; }
+  .field { text-align: left; }
+}
