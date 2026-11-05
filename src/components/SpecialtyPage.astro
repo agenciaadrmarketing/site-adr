@@ -9,6 +9,7 @@ import LeadForm from './LeadForm.astro';
 import RelatedLinks from './RelatedLinks.astro';
 import { SITE, SPECIALTIES, whatsappUrl } from '../data/site';
 import { webPage, breadcrumbList, faqPage } from '../data/seo';
+import { PAGES_UPDATED } from '../data/site';
 
 interface Props {
   data: {
@@ -32,7 +33,16 @@ interface Props {
 const { data: d } = Astro.props;
 const path = `/${d.slug}/`;
 const crumbs = [{ label: 'Início', href: '/' }, { label: 'Marketing médico', href: '/marketing-medico/' }, { label: d.nome, href: path }];
-const faq = d.faq.map((f) => ({ ...f, tag: d.nome }));
+// GEO: a primeira pergunta é a definição direta do tema da página (o que as IAs e o Google procuram citar).
+const odonto = d.slug === 'marketing-para-dentistas';
+const definicao = {
+  q: odonto ? 'O que é marketing odontológico?' : `O que é marketing para ${d.plural}?`,
+  a: odonto
+    ? `Marketing odontológico é o trabalho de posicionamento, anúncios no Google e na Meta e atendimento que leva o paciente particular do primeiro contato até a avaliação no consultório, dentro das regras de publicidade do CFO. ${d.resposta}`
+    : `Marketing para ${d.plural} é o trabalho de posicionamento, anúncios no Google e na Meta e atendimento que leva o paciente particular do primeiro contato até a consulta de ${d.nome.toLowerCase()}, dentro das regras de publicidade do CFM. ${d.resposta}`,
+};
+const faq = [definicao, ...d.faq].map((f) => ({ ...f, tag: d.nome }));
+const atualizado = new Date(`${PAGES_UPDATED}T12:00:00`).toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
 const service = {
   '@type': 'Service',
   '@id': `${SITE.url}${path}#service`,
@@ -44,7 +54,7 @@ const service = {
   audience: { '@type': 'Audience', audienceType: `${d.nome}: médicos e clínicas` },
   url: `${SITE.url}${path}`,
 };
-const jsonLd = [webPage({ path, title: d.title, description: d.description }), breadcrumbList(crumbs), faqPage(faq, path), service];
+const jsonLd = [webPage({ path, title: d.title, description: d.description, dateModified: PAGES_UPDATED }), breadcrumbList(crumbs), faqPage(faq, path), service];
 // Artigo do blog mais próximo de cada especialidade (reforça links internos para conteúdos novos).
 const ARTIGO: Record<string, { label: string; href: string; text: string }> = {
   'marketing-para-dentistas': { label: 'Marketing para clínica odontológica', href: '/blog/marketing-para-clinica-odontologica/', text: 'Artigo: captação para odontologia dentro das regras do CFO.' },
@@ -145,6 +155,7 @@ const related = d.relacionadas
         <h2 class="h2" id="faq-title">O que {d.plural} perguntam <span class="silver">antes de contratar</span></h2>
       </div>
       <Faq items={faq} />
+      <p class="updated">Página atualizada em <time datetime={PAGES_UPDATED}>{atualizado}</time>.</p>
       <p class="caption" style="margin-top:20px">Conteúdo produzido pela ADR Marketing (57.872.304 CAIO SOUZA ANDERLE, CNPJ 57.872.304/0001-66) com base na sua prática em marketing para a saúde. Não substitui orientação jurídica sobre publicidade médica nem garante resultado.</p>
     </div>
   </section>

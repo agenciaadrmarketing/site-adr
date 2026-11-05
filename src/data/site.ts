@@ -1,3 +1,6 @@
+// Data da última revisão de conteúdo das páginas de especialidade e de serviço (GEO, 05/11/2026).
+export const PAGES_UPDATED = '2026-11-05';
+
 export const SITE = {
   name: 'ADR Marketing',
   url: 'https://agenciaadrmarketing.com',

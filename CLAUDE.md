@@ -40,7 +40,8 @@ Fonte de verdade das decisões: Prompt Mestre V2 + Decisões Finais + Complement
    `event_type` (interacao / envio_formulario / erro); lead qualificado e agendamento só por
    importação offline a partir da planilha, nunca disparados pelo navegador.
 7. **Tags**: GTM `GTM-PDFHMCXG`, Google Ads `AW-18381807679`, Clarity `yjdxdq034e` — uma vez por
-   página, no `BaseLayout`, pelo loader adiado (primeira interação ou 4 s após o `load`). Não voltar o
+   página, no `BaseLayout`. GTM e Ads pelo loader adiado (primeira interação ou 4 s após o `load`);
+   o Clarity carrega logo após o `load` (ocioso) para gravar também visitas curtas. Não voltar o
    GTM para o `<head>`: ele carrega ~640 KB (Ads + GA4 `G-1YXFZQPS7P`) e derrubou o PageSpeed mobile
    para 63. Não adicionar tags sem pedido explícito.
 8. **Dados da empresa** (`CONTACT` em `site.ts`): WhatsApp +55 48 98880-9542,
@@ -65,6 +66,9 @@ SEO convencional (há um `/llms.txt` gerado como complemento). Nunca prometer po
 - Rodapé sem lista de especialidades; elas ficam na faixa `SpecialtyStrip.astro` acima do rodapé.
 - Nunca usar "gratuito", "grátis" ou "sem custo" (preferência do cliente; o audit bloqueia).
 - Relatório e palavras-chave: `docs/relatorio-seo-lote-2.md` e `docs/seo-palavras-chave.json`.
+- GEO (05/11/2026): especialidades e páginas de serviço abrem o FAQ com a definição direta ("O que é…?"),
+  têm `dateModified` = `PAGES_UPDATED` (site.ts), lastmod no sitemap e "Página atualizada em" visível.
+  `npm run build` também gera `dist/llms-full.txt` (scripts/llms-full.mjs); `/llms.txt` traz FAQ e redes.
 
 ## Antes de entregar
 

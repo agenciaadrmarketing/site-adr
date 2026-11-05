@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { SITE, CONTACT, SPECIALTIES } from '../data/site';
+import { SITE, CONTACT, SPECIALTIES, FAQ, FAQ_CONTRATACAO, ORG_JSONLD } from '../data/site';
 import { LANDINGS } from '../data/landings';
 
 // Resumo legível por sistemas de IA (complemento ao SEO convencional, não substituto).
@@ -21,7 +21,8 @@ Comunicação dentro das regras de publicidade médica (Resolução CFM nº 2.33
 - Nome: ADR Marketing (razão social ${CONTACT.legalName}, CNPJ ${CONTACT.cnpj})
 - WhatsApp: ${CONTACT.whatsappDisplay}
 - E-mail: ${CONTACT.email}
-- Atendimento: remoto, para todo o Brasil
+- Atendimento: remoto, para todo o Brasil, em horário comercial (segunda a sexta)
+- Redes: ${(ORG_JSONLD.sameAs as string[]).join(' · ')}
 - [Sobre a ADR](${SITE.url}/sobre/) · [Metodologia](${SITE.url}/metodologia/) · [Contato](${SITE.url}/contato/)
 
 ## Serviços
@@ -34,9 +35,17 @@ ${L('Guia de marketing médico', '/marketing-medico/', 'o que é marketing médi
 
 ${esp.map((e) => L(e.data.h1, `/${e.data.slug}/`, e.data.description)).join('\n')}
 
+## Perguntas frequentes
+
+${[...FAQ, ...FAQ_CONTRATACAO].map((f: { q: string; a: string }) => `### ${f.q}\n${f.a}`).join('\n\n')}
+
 ## Artigos
 
 ${artigos.map((a) => L(a.data.h1, `/blog/${a.id}/`, a.data.description)).join('\n')}
+
+## Texto completo
+
+- [llms-full.txt](${SITE.url}/llms-full.txt): texto integral das páginas de serviço, especialidades, guia e artigos.
 `;
   return new Response(txt, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

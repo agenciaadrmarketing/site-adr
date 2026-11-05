@@ -218,6 +218,9 @@ select.input { background: var(--bg-2); padding: 0 11px; }
   .brilho__aro i { animation-duration: 6s !important; animation-iteration-count: infinite !important; }
 }
 
+.updated { margin-top: 22px; font-size: 12.5px; color: var(--n-500); }
+.section--light .updated { color: var(--muted-mid); }
+
 /* Celular: textos principais centralizados (topo das páginas, títulos de seção, chamadas e botões).
    Parágrafos longos, artigos, cards e tabelas continuam alinhados à esquerda para facilitar a leitura. */
 @media (max-width: 760px) {

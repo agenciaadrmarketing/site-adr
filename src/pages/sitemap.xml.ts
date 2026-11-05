@@ -1,11 +1,11 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import pages from '../data/pages.json';
-import { SITE } from '../data/site';
+import { SITE, PAGES_UPDATED } from '../data/site';
 
 // Sitemap único com todas as páginas aprovadas: status "publicada" e "legado"
 // em src/data/pages.json. Rascunhos, noindex e 404 ficam de fora.
-// lastmod só onde existe data real (artigos); nas demais páginas o campo é
+// lastmod só onde existe data real (artigos; especialidades e páginas de serviço revisadas em PAGES_UPDATED); nas demais páginas o campo é
 // omitido para não informar uma data que não corresponde a uma mudança de conteúdo.
 export const GET: APIRoute = async () => {
   const artigos = await getCollection('artigos');
@@ -20,7 +20,8 @@ export const GET: APIRoute = async () => {
   const extras = [...datas.keys()].filter((p) => !known.has(p)).map((path) => ({ path, status: 'publicada' }));
   const urls = [...listed, ...extras]
     .map((p) => {
-      const lastmod = datas.get(p.path);
+      const revisada = /^\/(marketing-para-[a-z-]+|trafego-pago-para-medicos|google-ads-para-medicos|meta-ads-para-medicos)\/$/.test(p.path);
+      const lastmod = datas.get(p.path) ?? (revisada ? PAGES_UPDATED : undefined);
       return `  <url>\n    <loc>${SITE.url}${p.path}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;
     });
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`;
