@@ -1,5 +1,5 @@
 ---
-title: "Por que clínicas recebem contatos e não agendam | ADR Marketing"
+title: "Clínica recebe contatos e não agenda? 7 motivos | ADR"
 h1: "Por que clínicas recebem contatos, mas não convertem em agendamentos"
 description: "Os sete pontos onde o contato se perde entre o anúncio e a agenda (demora, resposta de preço, falta de triagem e de follow-up) e como corrigir cada um."
 categoria: captacao

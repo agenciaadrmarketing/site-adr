@@ -1,7 +1,7 @@
 ---
-title: "Política de saúde do Google Ads para médicos | ADR Marketing"
+title: "Google Ads para saúde: por que reprova anúncio de clínica | ADR"
 h1: "Google Ads e saúde: como a política da plataforma afeta os anúncios de médicos e clínicas"
-description: "Política de saúde do Google Ads: o que ela restringe, por que anúncios de clínicas são reprovados ou limitados e como corrigir sem arriscar a conta."
+description: "Política de saúde do Google Ads: por que anúncios de clínicas e médicos são reprovados ou limitados e como corrigir sem arriscar a conta. Guia prático."
 categoria: trafego
 intencao: "Resolução de problema: o médico ou gestor teve anúncio reprovado ou limitado e quer entender as regras de saúde do Google Ads."
 palavraChave: "google ads saúde política"

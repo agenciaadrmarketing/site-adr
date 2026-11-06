@@ -1,5 +1,5 @@
 ---
-title: "Remarketing para clínicas: como funciona | ADR Marketing"
+title: "Remarketing para clínicas: o que é e como fazer | ADR"
 h1: "Remarketing para clínicas: como voltar a falar com quem já demonstrou interesse"
 description: "Remarketing para clínicas: como montar públicos de quem visitou o site ou interagiu no Instagram, que mensagem usar e quais limites respeitar."
 categoria: trafego

@@ -1,7 +1,7 @@
 ---
-title: "Doctoralia vale a pena para médicos? | ADR Marketing"
+title: "Doctoralia vale a pena? Prós, limites e alternativas | ADR"
 h1: "Doctoralia vale a pena para médicos? Plataformas de agendamento, Google, site e anúncios comparados"
-description: "Doctoralia vale a pena para médicos? Comparação neutra entre plataformas de agendamento, Perfil no Google, site próprio e anúncios, com limites de cada um."
+description: "Doctoralia vale a pena para médicos? Comparação entre plataformas de agendamento, Perfil no Google, site próprio e anúncios, com prós e limites de cada um."
 categoria: captacao
 intencao: "Comparação: o médico avalia se entra ou continua em uma plataforma de agendamento e como ela se encaixa com os canais próprios."
 palavraChave: "doctoralia vale a pena para médicos"

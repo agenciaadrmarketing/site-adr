@@ -1,7 +1,7 @@
 ---
-title: "Captação de pacientes: guia para clínicas | ADR Marketing"
+title: "Captação de pacientes para clínicas: passo a passo | ADR"
 h1: "Captação de pacientes: como clínicas e consultórios geram demanda e transformam contato em consulta"
-description: "Captação de pacientes na prática: canais, papel de cada um, atendimento que converte e indicadores para montar um sistema previsível."
+description: "Captação de pacientes para clínicas: canais, como escolher por onde começar, onde a conversão se perde, indicadores e um passo a passo para estruturar."
 categoria: captacao
 intencao: "Educativa e comercial: o médico ou gestor quer entender como funciona a captação de pacientes de ponta a ponta e por onde começar."
 palavraChave: "captação de pacientes"

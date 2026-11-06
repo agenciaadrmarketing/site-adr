@@ -1,7 +1,7 @@
 ---
-title: "Médico pode divulgar o valor da consulta? | ADR Marketing"
+title: "Médico pode divulgar o valor da consulta? Regra do CFM | ADR"
 h1: "Médico pode divulgar o valor da consulta? O que a norma permite e como informar o paciente"
-description: "Médico pode divulgar o valor da consulta? Sim, com limites. Veja o que a Resolução CFM 2.336/2023 admite e como informar o preço no WhatsApp."
+description: "Médico pode divulgar o valor da consulta? Sim, com limites: o que a Resolução CFM 2.336/2023 permite, o que veda e como informar o preço no WhatsApp."
 categoria: autoridade
 intencao: "Conformidade e prática: o médico quer saber se pode publicar ou informar o valor da consulta e como fazer isso sem infringir a norma."
 palavraChave: "médico pode divulgar o valor da consulta"
