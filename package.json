@@ -5,7 +5,8 @@
     "dev": "astro dev",
     "build": "astro build && node scripts/llms-full.mjs",
     "preview": "astro preview --host 127.0.0.1 --port 4321",
-    "audit": "node scripts/audit.mjs"
+    "audit": "node scripts/audit.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "repository": {
     "type": "git",

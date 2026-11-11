@@ -1,0 +1,31 @@
+{
+  "_instrucoes": "Copie para src/content/cases/<slug>.json, apague as chaves que começam com _ e preencha só com dados comprovados. Sem autorização assinada ou sem origem de cada número, a página não é gerada.",
+  "slug": "ginecologista-cidade-sobrenome",
+  "status": "rascunho",
+  "medico": "Dra. Nome Sobrenome",
+  "especialidade": "Ginecologia",
+  "especialidadeHref": "/marketing-para-ginecologistas/",
+  "cidade": "Cidade",
+  "uf": "SC",
+  "periodo": "Março a agosto de 2026 (6 meses)",
+  "title": "Case: ginecologista em Cidade — agenda particular | ADR",
+  "description": "Como a Dra. Nome organizou anúncios e atendimento da secretária para receber mais pacientes particulares. Antes e depois, mês a mês.",
+  "h1": "Ginecologista em Cidade: do convênio à agenda particular",
+  "resumo": "Quem é, o que travava a agenda, o que mudou e em quanto tempo. Três frases, com o número principal.",
+  "destaque": { "label": "Consultas particulares por mês", "antes": "0", "depois": "0" },
+  "pontoDePartida": ["Como estava o Instagram", "Como estavam os anúncios", "Como a secretária atendia o WhatsApp"],
+  "servicos": ["Google Ads e Meta Ads", "Treinamento comercial da secretária", "Posicionamento no Instagram"],
+  "linhaDoTempo": [
+    { "quando": "Mês 1", "titulo": "Diagnóstico e ajustes", "texto": "O que foi feito e o que aconteceu." },
+    { "quando": "Mês 2", "titulo": "Primeiras campanhas", "texto": "O que foi feito e o que aconteceu." }
+  ],
+  "indicadores": [
+    { "label": "Contatos pelo WhatsApp por mês", "antes": "0", "depois": "0", "evidencia": "Relatório do Google Ads e planilha de leads da clínica, mar–ago/2026" }
+  ],
+  "aprendizado": "Opcional: o que não funcionou e o que foi mudado.",
+  "depoimento": { "texto": "Trecho transcrito do vídeo.", "autor": "Dra. Nome Sobrenome, ginecologista em Cidade/UF" },
+  "video": { "youtubeId": "XXXXXXXXXXX", "titulo": "Depoimento da Dra. Nome", "descricao": "Resumo do vídeo.", "dataPublicacao": "2026-11-15", "duracao": "PT3M20S" },
+  "autorizacao": { "assinada": false, "data": "2026-11-15", "escopo": "nome, imagem, vídeo e números de negócio" },
+  "datePublished": "2026-11-15",
+  "ordem": 1
+}

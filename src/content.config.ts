@@ -60,4 +60,38 @@ const artigos = defineCollection({
   }),
 });
 
-export const collections = { especialidades, artigos };
+// Cases de clientes (estrutura criada em 11/11/2026). Um JSON por case em
+// src/content/cases/. Só vira página com status "publicada", autorização do
+// médico registrada e a origem de cada número (regra 3 do CLAUDE.md: nada
+// inventado). Rascunhos só aparecem no build de revisão (ADR_PREVIEW=1), noindex.
+const cases = defineCollection({
+  loader: glob({ pattern: '[!_]*.json', base: './src/content/cases' }),
+  schema: z.object({
+    slug: z.string().regex(/^[a-z0-9-]+$/),
+    status: z.enum(['publicada', 'rascunho']),
+    medico: z.string(),
+    especialidade: z.string(),
+    especialidadeHref: z.string().regex(/^\/marketing-para-[a-z-]+\/$/).optional(),
+    cidade: z.string(),
+    uf: z.string().length(2),
+    periodo: z.string(),
+    title: z.string().max(70),
+    description: z.string().max(175),
+    h1: z.string(),
+    resumo: z.string().min(80),
+    destaque: z.object({ label: z.string(), antes: z.string(), depois: z.string() }),
+    pontoDePartida: z.array(z.string()).min(2),
+    servicos: z.array(z.string()).min(1),
+    linhaDoTempo: z.array(z.object({ quando: z.string(), titulo: z.string(), texto: z.string() })).min(2),
+    indicadores: z.array(z.object({ label: z.string(), antes: z.string(), depois: z.string(), evidencia: z.string().min(5) })).min(1),
+    aprendizado: z.string().optional(),
+    depoimento: z.object({ texto: z.string(), autor: z.string() }).optional(),
+    video: z.object({ youtubeId: z.string().regex(/^[A-Za-z0-9_-]{11}$/), titulo: z.string(), descricao: z.string(), dataPublicacao: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), duracao: z.string().regex(/^PT/) }).optional(),
+    autorizacao: z.object({ assinada: z.boolean(), data: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(), escopo: z.string().optional() }),
+    datePublished: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    dateModified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    ordem: z.number().int().default(0),
+  }),
+});
+
+export const collections = { especialidades, artigos, cases };

@@ -1,0 +1,141 @@
+---
+// Página de cada case: resumo, vídeo, ponto de partida, linha do tempo,
+// números com a origem, o que foi feito. Só sai com case publicável;
+// rascunhos aparecem apenas no build de revisão (ADR_PREVIEW=1), noindex.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import RelatedLinks from '../../components/RelatedLinks.astro';
+import { webPage, breadcrumbList } from '../../data/seo';
+import { SITE } from '../../data/site';
+import { casesVisiveis } from '../../lib/cases';
+
+export async function getStaticPaths() {
+  const lista = await casesVisiveis();
+  return lista.map((c) => ({ params: { slug: c.data.slug }, props: { c, outros: lista.filter((o) => o.data.slug !== c.data.slug && o.publicavel) } }));
+}
+
+const { c, outros } = Astro.props;
+const d = c.data;
+const path = `/cases/${d.slug}/`;
+const crumbs = [{ label: 'Início', href: '/' }, { label: 'Cases', href: '/cases/' }, { label: d.medico, href: path }];
+const page = webPage({ path, title: d.title, description: d.description, datePublished: d.datePublished, dateModified: d.dateModified ?? d.datePublished });
+const video = d.video && {
+  '@type': 'VideoObject',
+  '@id': `${SITE.url}${path}#video`,
+  name: d.video.titulo,
+  description: d.video.descricao,
+  thumbnailUrl: `https://i.ytimg.com/vi/${d.video.youtubeId}/hqdefault.jpg`,
+  uploadDate: d.video.dataPublicacao,
+  duration: d.video.duracao,
+  embedUrl: `https://www.youtube-nocookie.com/embed/${d.video.youtubeId}`,
+  contentUrl: `https://www.youtube.com/watch?v=${d.video.youtubeId}`,
+  publisher: { '@id': `${SITE.url}/#org` },
+};
+const jsonLd = [page, breadcrumbList(crumbs), ...(video ? [video] : [])];
+const wa = `Olá! Vi o case ${d.medico} (${d.especialidade}) no site da ADR e quero entender como seria no meu consultório.`;
+const fmt = (s: string) => s.split('-').reverse().join('/');
+const links = [
+  ...(d.especialidadeHref ? [{ label: `Marketing para ${d.especialidade.toLowerCase()}`, href: d.especialidadeHref, text: 'Como a ADR trabalha nessa especialidade.' }] : []),
+  { label: 'Todos os cases', href: '/cases/', text: 'Outros médicos e a evolução de cada um.' },
+  { label: 'Metodologia', href: '/metodologia/', text: 'As etapas do trabalho, do anúncio ao agendamento.' },
+  ...outros.slice(0, 2).map((o) => ({ label: o.data.medico, href: `/cases/${o.data.slug}/`, text: `${o.data.especialidade} · ${o.data.cidade}/${o.data.uf}` })),
+];
+---
+
+<BaseLayout title={d.title} description={d.description} jsonLd={jsonLd} noindex={!c.publicavel} waMessage={wa} cta={{ waMessage: wa, id: 'cta-case' }}>
+  <PageHero kicker={`Case · ${d.especialidade} · ${d.cidade}/${d.uf}`} title={d.h1} text={d.resumo} crumbs={crumbs}>
+    <WhatsAppButton id="case-hero" label="Quero ver como seria no meu consultório" message={wa} arrow />
+  </PageHero>
+
+  {d.video && (
+    <section class="section" aria-label="Depoimento em vídeo">
+      <div class="container case-video" data-reveal>
+        <div class="case-video__frame">
+          <iframe src={`https://www.youtube-nocookie.com/embed/${d.video.youtubeId}`} title={d.video.titulo} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="small">{d.video.titulo}</p>
+      </div>
+    </section>
+  )}
+
+  <section class="section section--light" aria-labelledby="num-title">
+    <div class="container">
+      <h2 class="h2" id="num-title">Antes e depois</h2>
+      <p class="lead">Período: {d.periodo}. Cada número traz a origem do dado.</p>
+      <div class="case-table" role="region" aria-label="Indicadores de antes e depois" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Indicador</th><th scope="col">Antes</th><th scope="col">Depois</th><th scope="col">Origem do dado</th></tr></thead>
+          <tbody>
+            {d.indicadores.map((i) => (<tr><th scope="row">{i.label}</th><td>{i.antes}</td><td><strong>{i.depois}</strong></td><td class="caption">{i.evidencia}</td></tr>))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="partida-title">
+    <div class="container case-two">
+      <div class="card card--static" data-reveal>
+        <h2 class="h3" id="partida-title">Ponto de partida</h2>
+        <ul class="case-list">{d.pontoDePartida.map((p) => <li>{p}</li>)}</ul>
+      </div>
+      <div class="card card--static" data-reveal>
+        <h2 class="h3">O que a ADR fez</h2>
+        <ul class="case-list">{d.servicos.map((s) => <li>{s}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--line" aria-labelledby="tempo-title">
+    <div class="container">
+      <h2 class="h2" id="tempo-title">A evolução, mês a mês</h2>
+      <ol class="case-tl">
+        {d.linhaDoTempo.map((t) => (
+          <li class="case-tl__item" data-reveal>
+            <p class="kicker">{t.quando}</p>
+            <h3 class="h3">{t.titulo}</h3>
+            <p class="card__text">{t.texto}</p>
+          </li>
+        ))}
+      </ol>
+      {d.aprendizado && (<div class="card card--static case-learn"><h3 class="h3">O que não funcionou e o que aprendemos</h3><p class="card__text">{d.aprendizado}</p></div>)}
+    </div>
+  </section>
+
+  {d.depoimento && (
+    <section class="section section--light" aria-label="Depoimento">
+      <div class="container">
+        <blockquote class="case-quote"><p>“{d.depoimento.texto}”</p><footer>{d.depoimento.autor}</footer></blockquote>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="container">
+      <p class="caption">Case publicado com autorização de {d.medico}{d.autorizacao.data ? ` (${fmt(d.autorizacao.data)})` : ''}. Números de negócio (contatos, agendamentos, atendimento), sem dados de pacientes. Resultados dependem da especialidade, da concorrência, do investimento e do atendimento de cada consultório.</p>
+      <p class="updated">Página atualizada em <time datetime={d.dateModified ?? d.datePublished}>{fmt(d.dateModified ?? d.datePublished)}</time></p>
+    </div>
+  </section>
+
+  <RelatedLinks links={links} />
+</BaseLayout>
+
+<style>
+  .case-video { display: grid; gap: 10px; }
+  .case-video__frame { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; border: 1px solid var(--line-2); }
+  .case-video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .case-table { overflow-x: auto; margin-top: 18px; }
+  .case-table table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
+  .case-table th, .case-table td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--line-light-2); vertical-align: top; }
+  .case-table thead th { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-dark); }
+  .case-tl { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 22px; border-left: 1px solid var(--line-2); }
+  .case-tl__item { padding-left: 22px; position: relative; }
+  .case-tl__item::before { content: ''; position: absolute; left: -5px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--ink, #f2f2f3); }
+  .case-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .case-list { padding-left: 18px; list-style: disc; display: grid; gap: 8px; margin-top: 12px; color: var(--ink-72, #c9c9cc); font-size: 15px; }
+  .case-learn { margin-top: 26px; }
+  .case-quote { font-size: clamp(18px, 2vw, 22px); line-height: 1.5; border-left: 2px solid var(--line-light-3); padding-left: 18px; }
+  .case-quote footer { margin-top: 10px; font-size: 13px; color: var(--muted-dark); }
+  @media (max-width: 760px) { .case-tl { border-left: 0; } .case-tl__item { padding-left: 0; } .case-tl__item::before { display: none; } }
+</style>
